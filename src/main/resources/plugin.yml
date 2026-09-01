@@ -1,0 +1,15 @@
+name: YknItems
+version: '${version}'
+main: cn.yknitems.YknItemsPlugin
+api-version: '1.21.10'
+authors: [ykn]
+description: 统一管理 RPG 自定义武器、护甲、材料、配方与管理员图鉴
+softdepend: [AuraSkills, CraftEngine, EcoEnchants, Reforges, YknClass]
+commands:
+  yknitems:
+    description: 打开 YknItems 管理界面或重载配置
+    usage: /yknitems <admin|reload>
+permissions:
+  yknitems.admin:
+    description: 允许打开管理员物品图鉴与重载 YknItems
+    default: op

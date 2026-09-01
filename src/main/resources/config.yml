@@ -1,0 +1,49 @@
+gui:
+  catalog-title: '&0YknItems 装备图鉴 &8({page}/{pages})'
+  recipe-title: '&0编辑配方：{item}'
+  previous-page: '&e上一页'
+  next-page: '&e下一页'
+  close: '&c关闭'
+  back: '&e返回图鉴'
+  page-indicator: '&f第 {page}/{pages} 页'
+  crafting-table: '&6合成工作台'
+  recipe-arrow: '&a合成结果'
+  recipe-save: '&a保存配方'
+  recipe-clear: '&c清空 3×3 配方'
+  recipe-reset: '&e恢复默认配方'
+  recipe-help: '&b编辑说明'
+  recipe-help-lore:
+    - '&7先从下方背包拿起一种物品。'
+    - '&7左键配方格：放入 1 个幽灵材料。'
+    - '&7右键配方格：清除该格。'
+    - '&7放入自定义物品时会精确匹配物品 ID。'
+    - '&7点击保存后立即重新注册服务端配方。'
+  catalog-hint:
+    - ''
+    - '&e左键 &7获得 1 个'
+    - '&eShift + 左键 &7获得一组'
+    - '&e右键 &7编辑并保存合成配方'
+
+messages:
+  no-permission: '&c你没有权限使用该指令。'
+  player-only: '&c该指令只能由玩家执行。'
+  reload-complete: '&aYknItems 已重载，共读取 {items} 个物品和 {recipes} 个配方。'
+  item-received: '&a已获得 &f{amount}× {item}&a。'
+  inventory-overflow: '&e背包空间不足，剩余物品已掉落在脚下。'
+  recipe-saved: '&a已保存 {item} 的配方并重新注册。'
+  recipe-reset: '&e已恢复 {item} 的默认配方。'
+  level-required: '&c需要 AuraSkills {skill} 等级 {level}，当前为 {current}。'
+  mana-required: '&c法力不足，需要 {mana} 点法力。'
+  usage: '&e用法：/yknitems admin 或 /yknitems reload'
+
+auraskills:
+  enforce-level-requirements: true
+  consume-staff-mana: true
+  skill-names:
+    fighting: '战斗'
+    archery: '箭术'
+    sorcery: '巫术'
+    defense: '防御'
+
+combat:
+  prevent-ability-friendly-fire: true

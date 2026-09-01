@@ -1,0 +1,3 @@
+# 管理员在 /yknitems admin 的配方编辑器中保存后，覆盖内容会写入这里。
+# AIR 表示空格，@物品ID 表示必须使用对应的 YknItems 自定义物品。
+recipes: {}

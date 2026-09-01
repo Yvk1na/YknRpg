@@ -1,0 +1,391 @@
+stages:
+  early:
+    catalyst: tempered_ingot
+  mid:
+    catalyst: resonant_crystal
+  late:
+    catalyst: eclipse_core
+
+materials:
+  tempered_ingot:
+    stage: early
+    material: IRON_INGOT
+    item-model: yknitems:tempered_ingot
+    name: '&a&l淬炼合金锭'
+    description:
+      - '&7铜与铁反复折叠锻打形成的初阶合金。'
+      - '&8用于制作前期装备。'
+    recipe:
+      - COPPER_INGOT
+      - COAL
+      - COPPER_INGOT
+      - IRON_INGOT
+      - BLAZE_POWDER
+      - IRON_INGOT
+      - COPPER_INGOT
+      - COAL
+      - COPPER_INGOT
+  resonant_crystal:
+    stage: mid
+    material: AMETHYST_SHARD
+    item-model: yknitems:resonant_crystal
+    name: '&d&l共鸣灵晶'
+    description:
+      - '&7能够储存大量战斗能量的中阶晶体。'
+      - '&8用于制作中期装备。'
+    recipe:
+      - AMETHYST_SHARD
+      - DIAMOND
+      - AMETHYST_SHARD
+      - ECHO_SHARD
+      - END_CRYSTAL
+      - ECHO_SHARD
+      - AMETHYST_SHARD
+      - DIAMOND
+      - AMETHYST_SHARD
+  eclipse_core:
+    stage: late
+    material: NETHER_STAR
+    item-model: yknitems:eclipse_core
+    name: '&5&l星蚀核心'
+    description:
+      - '&7光与虚空在核心中维持着危险的平衡。'
+      - '&8用于制作后期装备。'
+    recipe:
+      - ECHO_SHARD
+      - NETHERITE_INGOT
+      - ECHO_SHARD
+      - END_CRYSTAL
+      - NETHER_STAR
+      - END_CRYSTAL
+      - ECHO_SHARD
+      - NETHERITE_INGOT
+      - ECHO_SHARD
+
+weapons:
+  early:
+    required-level: 5
+    items:
+      ember_sword:
+        name: '&a余烬晨锋'
+        type: sword
+        material: IRON_SWORD
+        focus-material: BLAZE_POWDER
+        damage: 24.0
+        attack-speed: 1.8
+        ability: ember_combo
+        ability-name: '余烬连击'
+        ability-description: '每第 4 次命中额外造成 10 点伤害并回复 2 点生命。'
+        ability-args: { hits: 4, bonus-damage: 10, healing: 2 }
+        description: ['&7节奏稳定的初阶单手剑。']
+      copper_colossus:
+        name: '&a铜铸巨刃'
+        type: greatsword
+        material: IRON_AXE
+        focus-material: OBSIDIAN
+        damage: 32.0
+        attack-speed: 0.85
+        ability: ground_slam
+        ability-name: '震地重击'
+        ability-description: '右键重击地面，对 3.5 格内敌人造成 38 点伤害。'
+        ability-args: { damage: 38, radius: 3.5, cooldown: 9 }
+        description: ['&7攻击缓慢，但单次伤害很高。']
+      dusk_dagger:
+        name: '&a暮影短匕'
+        type: dagger
+        material: IRON_SWORD
+        focus-material: RABBIT_HIDE
+        damage: 18.0
+        attack-speed: 2.4
+        ability: backstab
+        ability-name: '背刺'
+        ability-description: '从目标身后攻击时造成 1.45 倍伤害。'
+        ability-args: { multiplier: 1.45, rear-degrees: 65 }
+        description: ['&7高攻速、依赖站位的刺客武器。']
+      gale_bow:
+        name: '&a逐风猎弓'
+        type: bow
+        material: BOW
+        focus-material: STRING
+        damage: 22.0
+        attack-speed: 1.0
+        ability: windshot
+        ability-name: '逐风'
+        ability-description: '箭矢命中后获得 3 秒速度 I。'
+        ability-args: { duration: 3, amplifier: 0 }
+        description: ['&7适合风筝敌人的轻型猎弓。']
+      ridge_spear:
+        name: '&a岩脊猎矛'
+        type: spear
+        material: TRIDENT
+        focus-material: PRISMARINE_SHARD
+        damage: 28.0
+        attack-speed: 1.15
+        ability: thrust
+        ability-name: '岩脊突刺'
+        ability-description: '右键向前突进并对首个目标造成 34 点伤害。'
+        ability-args: { damage: 34, range: 6, cooldown: 7, dash: 0.55 }
+        description: ['&7兼顾距离与机动性的初阶长兵器。']
+      sprout_staff:
+        name: '&a萌芽术杖'
+        type: staff
+        material: BLAZE_ROD
+        focus-material: AMETHYST_SHARD
+        damage: 24.0
+        attack-speed: 1.0
+        ability: arcane_bolt
+        ability-name: '萌芽魔弹'
+        ability-description: '右键消耗 8 法力，发射造成 30 点伤害的魔弹。'
+        ability-args: { damage: 30, range: 18, cooldown: 1.4, mana: 8 }
+        description: ['&7施法者的第一把战斗法杖。']
+  mid:
+    required-level: 20
+    items:
+      dragon_rend:
+        name: '&d龙骨裂山刃'
+        type: sword
+        material: DIAMOND_SWORD
+        focus-material: BONE_BLOCK
+        damage: 48.0
+        attack-speed: 1.65
+        ability: cleave
+        ability-name: '裂山横扫'
+        ability-description: '每第 3 次命中对周围敌人造成本次伤害的 40%。'
+        ability-args: { hits: 3, ratio: 0.40, radius: 3.5 }
+        description: ['&7为持续近战输出打造的中阶战刃。']
+      mountain_breaker:
+        name: '&d断岳重锋'
+        type: greatsword
+        material: DIAMOND_AXE
+        focus-material: OBSIDIAN
+        damage: 64.0
+        attack-speed: 0.82
+        ability: ground_slam
+        ability-name: '山崩'
+        ability-description: '右键重击地面，对 4 格内敌人造成 78 点伤害。'
+        ability-args: { damage: 78, radius: 4, cooldown: 8 }
+        description: ['&7以攻击频率换取强大范围爆发。']
+      storm_fang:
+        name: '&d风暴獠牙'
+        type: dagger
+        material: DIAMOND_SWORD
+        focus-material: PHANTOM_MEMBRANE
+        damage: 36.0
+        attack-speed: 2.55
+        ability: backstab
+        ability-name: '风暴背刺'
+        ability-description: '从目标身后攻击时造成 1.65 倍伤害。'
+        ability-args: { multiplier: 1.65, rear-degrees: 70 }
+        description: ['&7让熟练刺客获得极高回报。']
+      thunder_bow:
+        name: '&d雷痕复合弓'
+        type: bow
+        material: BOW
+        focus-material: LIGHTNING_ROD
+        damage: 46.0
+        attack-speed: 1.0
+        ability: chain_lightning
+        ability-name: '雷链'
+        ability-description: '命中后向附近最多 2 个目标传导 45% 箭矢伤害。'
+        ability-args: { targets: 2, ratio: 0.45, radius: 6 }
+        description: ['&7擅长处理聚集敌人的中阶弓。']
+      sunpiercer:
+        name: '&d烬日穿云枪'
+        type: spear
+        material: TRIDENT
+        focus-material: BLAZE_ROD
+        damage: 56.0
+        attack-speed: 1.08
+        ability: thrust
+        ability-name: '穿云突'
+        ability-description: '右键突进，对首个目标造成 70 点伤害。'
+        ability-args: { damage: 70, range: 8, cooldown: 6, dash: 0.70 }
+        description: ['&7强力的中距离突进武器。']
+      violet_staff:
+        name: '&d紫晶奥术杖'
+        type: staff
+        material: BLAZE_ROD
+        focus-material: AMETHYST_BLOCK
+        damage: 50.0
+        attack-speed: 1.0
+        ability: arcane_bolt
+        ability-name: '奥术穿刺'
+        ability-description: '右键消耗 14 法力，发射造成 62 点伤害的魔弹。'
+        ability-args: { damage: 62, range: 24, cooldown: 1.15, mana: 14 }
+        description: ['&7稳定、高频的中阶法术输出。']
+  late:
+    required-level: 40
+    items:
+      eclipse_judgement:
+        name: '&5&l蚀星终裁'
+        type: sword
+        material: NETHERITE_SWORD
+        focus-material: NETHER_STAR
+        damage: 86.0
+        attack-speed: 1.55
+        ability: execute
+        ability-name: '终裁'
+        ability-description: '目标低于 25% 生命时，造成 1.45 倍伤害。'
+        ability-args: { threshold: 0.25, multiplier: 1.45 }
+        description: ['&7为 Boss 处决阶段准备的传奇单手剑。']
+      worldsplitter:
+        name: '&5&l寰宇断界'
+        type: greatsword
+        material: NETHERITE_AXE
+        focus-material: CRYING_OBSIDIAN
+        damage: 112.0
+        attack-speed: 0.78
+        ability: ground_slam
+        ability-name: '断界震荡'
+        ability-description: '右键重击地面，对 5 格内敌人造成 138 点伤害。'
+        ability-args: { damage: 138, radius: 5, cooldown: 7 }
+        description: ['&7后期最高单次伤害的重型武器。']
+      void_requiem:
+        name: '&5&l虚空挽歌'
+        type: dagger
+        material: NETHERITE_SWORD
+        focus-material: ECHO_SHARD
+        damage: 68.0
+        attack-speed: 2.7
+        ability: backstab
+        ability-name: '虚空背刺'
+        ability-description: '从目标身后攻击时造成 1.90 倍伤害。'
+        ability-args: { multiplier: 1.90, rear-degrees: 75 }
+        description: ['&7高风险、高上限的后期刺客武器。']
+      starfall_bow:
+        name: '&5&l星陨长弓'
+        type: bow
+        material: BOW
+        focus-material: FIREWORK_STAR
+        damage: 82.0
+        attack-speed: 1.0
+        ability: starfall
+        ability-name: '星陨'
+        ability-description: '箭矢命中时对 4 格内敌人造成 50% 范围伤害。'
+        ability-args: { ratio: 0.50, radius: 4, cooldown: 3 }
+        description: ['&7兼顾单体与范围输出的传奇长弓。']
+      myriad_lance:
+        name: '&5&l万军天坠枪'
+        type: spear
+        material: TRIDENT
+        focus-material: END_ROD
+        damage: 98.0
+        attack-speed: 1.02
+        ability: thrust
+        ability-name: '天坠贯军'
+        ability-description: '右键突进，对首个目标造成 124 点伤害。'
+        ability-args: { damage: 124, range: 10, cooldown: 5, dash: 0.85 }
+        description: ['&7可以快速切入 Boss 处决位置。']
+      firmament_staff:
+        name: '&5&l苍穹星辉杖'
+        type: staff
+        material: BLAZE_ROD
+        focus-material: END_CRYSTAL
+        damage: 92.0
+        attack-speed: 1.0
+        ability: arcane_bolt
+        ability-name: '苍穹星枪'
+        ability-description: '右键消耗 22 法力，发射造成 118 点伤害的星枪。'
+        ability-args: { damage: 118, range: 30, cooldown: 0.9, mana: 22 }
+        description: ['&7后期施法者的高频主武器。']
+
+armor-sets:
+  copper_guard:
+    name: '&a铜卫套装'
+    stage: early
+    required-level: 5
+    binding-material: IRON_INGOT
+    color: '#9A6338'
+    pieces: { helmet: '&a铜卫战盔', chestplate: '&a铜卫胸甲', leggings: '&a铜卫腿甲', boots: '&a铜卫战靴' }
+    stats: { armor: [3, 6, 4, 2], toughness: [1, 1, 1, 1], max-health: [1, 3, 2, 2] }
+    bonuses: { incoming-damage: 0.90 }
+    bonus-description: '四件套：受到的伤害降低 10%。'
+    description: ['&7前期生存与容错套装。']
+  forest_hunter:
+    name: '&a林行猎手套装'
+    stage: early
+    required-level: 5
+    binding-material: LEATHER
+    color: '#3F7448'
+    pieces: { helmet: '&a林行兜帽', chestplate: '&a林行皮甲', leggings: '&a林行护腿', boots: '&a林行短靴' }
+    stats: { armor: [2, 5, 3, 2], toughness: [0, 1, 1, 0], max-health: [1, 1, 1, 1] }
+    bonuses: { outgoing-damage: 1.08 }
+    bonus-description: '四件套：武器伤害提高 8%。'
+    description: ['&7前期物理输出套装。']
+  apprentice_weave:
+    name: '&a学徒秘织套装'
+    stage: early
+    required-level: 5
+    binding-material: AMETHYST_SHARD
+    color: '#7560A8'
+    pieces: { helmet: '&a秘织学徒帽', chestplate: '&a秘织学徒袍', leggings: '&a秘织学徒裤', boots: '&a秘织学徒靴' }
+    stats: { armor: [2, 4, 3, 1], toughness: [0, 1, 1, 0], max-health: [1, 2, 2, 1] }
+    bonuses: { staff-damage: 1.12, staff-cooldown: 0.95 }
+    bonus-description: '四件套：法杖伤害提高 12%，冷却缩短 5%。'
+    description: ['&7前期施法套装。']
+  dragon_guard:
+    name: '&d龙脊守卫套装'
+    stage: mid
+    required-level: 20
+    binding-material: BONE_BLOCK
+    color: '#5B6270'
+    pieces: { helmet: '&d龙脊守卫盔', chestplate: '&d龙脊守卫铠', leggings: '&d龙脊守卫腿甲', boots: '&d龙脊守卫战靴' }
+    stats: { armor: [4, 8, 6, 3], toughness: [2, 3, 3, 2], max-health: [2, 6, 4, 4] }
+    bonuses: { incoming-damage: 0.82 }
+    bonus-description: '四件套：受到的伤害降低 18%。'
+    description: ['&7中期团队坦克套装。']
+  tempest_hunter:
+    name: '&d风暴猎手套装'
+    stage: mid
+    required-level: 20
+    binding-material: PHANTOM_MEMBRANE
+    color: '#397BA8'
+    pieces: { helmet: '&d风暴猎手兜帽', chestplate: '&d风暴猎手轻甲', leggings: '&d风暴猎手护腿', boots: '&d风暴猎手长靴' }
+    stats: { armor: [3, 7, 5, 2], toughness: [1, 2, 2, 1], max-health: [1, 3, 2, 2] }
+    bonuses: { outgoing-damage: 1.15 }
+    bonus-description: '四件套：武器伤害提高 15%。'
+    description: ['&7中期物理输出套装。']
+  astral_weave:
+    name: '&d星纹秘仪套装'
+    stage: mid
+    required-level: 20
+    binding-material: AMETHYST_BLOCK
+    color: '#6946A5'
+    pieces: { helmet: '&d星纹秘仪冠', chestplate: '&d星纹秘仪袍', leggings: '&d星纹秘仪裤', boots: '&d星纹秘仪靴' }
+    stats: { armor: [3, 6, 4, 2], toughness: [1, 2, 2, 1], max-health: [2, 3, 3, 2] }
+    bonuses: { staff-damage: 1.22, staff-cooldown: 0.88 }
+    bonus-description: '四件套：法杖伤害提高 22%，冷却缩短 12%。'
+    description: ['&7中期施法输出套装。']
+  eclipse_fortress:
+    name: '&5&l日蚀堡垒套装'
+    stage: late
+    required-level: 40
+    binding-material: NETHERITE_INGOT
+    color: '#302A35'
+    pieces: { helmet: '&5&l日蚀堡垒盔', chestplate: '&5&l日蚀堡垒铠', leggings: '&5&l日蚀堡垒腿甲', boots: '&5&l日蚀堡垒战靴' }
+    stats: { armor: [5, 10, 8, 4], toughness: [3, 5, 5, 3], max-health: [4, 9, 7, 6] }
+    bonuses: { incoming-damage: 0.72 }
+    bonus-description: '四件套：受到的伤害降低 28%。'
+    description: ['&7后期团队主坦套装。']
+  void_hunter:
+    name: '&5&l虚空猎影套装'
+    stage: late
+    required-level: 40
+    binding-material: ECHO_SHARD
+    color: '#33204F'
+    pieces: { helmet: '&5&l虚空猎影兜帽', chestplate: '&5&l虚空猎影轻甲', leggings: '&5&l虚空猎影护腿', boots: '&5&l虚空猎影长靴' }
+    stats: { armor: [4, 9, 6, 3], toughness: [2, 3, 3, 2], max-health: [2, 5, 4, 3] }
+    bonuses: { outgoing-damage: 1.25 }
+    bonus-description: '四件套：武器伤害提高 25%。'
+    description: ['&7后期物理极限输出套装。']
+  nine_luminary:
+    name: '&5&l九曜贤者套装'
+    stage: late
+    required-level: 40
+    binding-material: END_CRYSTAL
+    color: '#6B3E91'
+    pieces: { helmet: '&5&l九曜贤者冠', chestplate: '&5&l九曜贤者法袍', leggings: '&5&l九曜贤者法裤', boots: '&5&l九曜贤者法靴' }
+    stats: { armor: [4, 7, 5, 3], toughness: [2, 3, 3, 2], max-health: [3, 6, 5, 4] }
+    bonuses: { staff-damage: 1.35, staff-cooldown: 0.75 }
+    bonus-description: '四件套：法杖伤害提高 35%，冷却缩短 25%。'
+    description: ['&7后期施法极限输出套装。']
