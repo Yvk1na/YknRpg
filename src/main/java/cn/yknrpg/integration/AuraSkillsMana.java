@@ -230,6 +230,14 @@ public final class AuraSkillsMana {
         }
     }
 
+    /**
+     * Converts a desired final max-health increase into the raw ADD_NUMBER
+     * amount Bukkit needs before class and other scalar modifiers are applied.
+     */
+    public double rawMaxHealthAddNumber(Player player, double actualAmount) {
+        return MaxHealthScaling.rawAddNumber(actualAmount, maxHealthAddNumberScale(player));
+    }
+
     private void syncStatModifier(SkillsUser user, String name,
                                   dev.aurelium.auraskills.api.stat.Stat stat, double amount) {
         double safeAmount = finite(amount);

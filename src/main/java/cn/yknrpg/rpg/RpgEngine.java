@@ -1363,9 +1363,10 @@ public final class RpgEngine implements Listener {
         boolean exposeDisplayTraits =
                 menuDisplayExposureDepths.containsKey(player.getUniqueId());
         Stats attributeDisplayStats = exposeDisplayTraits ? displayedStats : stats;
+        double actualEquipmentHealth = attributeDisplayStats.get(Stat.HEALTH)
+                * plugin.getConfig().getDouble("rpg.health.equipment-value-scale", 1.0);
         applyAttribute(player, Attribute.MAX_HEALTH, healthKey,
-                attributeDisplayStats.get(Stat.HEALTH)
-                        * plugin.getConfig().getDouble("rpg.health.value-scale", 0.05),
+                mana.rawMaxHealthAddNumber(player, actualEquipmentHealth),
                 AttributeModifier.Operation.ADD_NUMBER);
         applyAttribute(player, Attribute.ATTACK_SPEED, attackSpeedKey,
                 Math.max(-0.9, stats.get(Stat.ATTACK_SPEED) / 100.0), AttributeModifier.Operation.ADD_SCALAR);

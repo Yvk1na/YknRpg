@@ -251,6 +251,19 @@ val validateYaml by tasks.registering {
                 ?: throw GradleException("rpg.yml 缺少 sets")
             val rpgConfig = config["rpg"] as? Map<*, *>
                 ?: throw GradleException("config.yml 缺少 rpg")
+            val healthConfig = rpgConfig["health"] as? Map<*, *>
+                ?: throw GradleException("config.yml 缺少 rpg.health")
+            val equipmentHealthScale = healthConfig["equipment-value-scale"] as? Number
+                ?: throw GradleException("config.yml 的 rpg.health.equipment-value-scale 必须是数值")
+            if (!equipmentHealthScale.toDouble().isFinite()
+                || equipmentHealthScale.toDouble() != 1.0) {
+                throw GradleException("config.yml 的 rpg.health.equipment-value-scale 必须为 1.0")
+            }
+            val effectHealthScale = healthConfig["value-scale"] as? Number
+                ?: throw GradleException("config.yml 的 rpg.health.value-scale 必须是数值")
+            if (!effectHealthScale.toDouble().isFinite() || effectHealthScale.toDouble() <= 0.0) {
+                throw GradleException("config.yml 的 rpg.health.value-scale 必须为有限正数")
+            }
             val shieldConfig = rpgConfig["shield"] as? Map<*, *>
                 ?: throw GradleException("config.yml 缺少 rpg.shield")
             val defaultShieldDuration = shieldConfig["default-duration"] as? Number
@@ -365,8 +378,8 @@ val validateYaml by tasks.registering {
                 "luck" to luck, "wisdom" to wisdom, "toughness" to toughness,
                 "crit_chance" to critChance, "crit_damage" to critDamage, "speed" to speed
             )
-            // Lv.100 单项上限按 YknRpg 同阶段武器的真实结算收益制定。
-            // AuraSkills health 1 点等价 20 点 YknRpg health，不能按面板原值直接比较。
+            // 宠物直接使用 AuraSkills 属性单位并保留既有档位预算；
+            // YknRpg 装备生命的 1:1 换算不会改写 EcoPets 数值。
             val petStatCaps = mapOf(
                 "&8普通宠物" to petCaps(8.0, 1.0, 4.0, 4.0, 3.0, 8.0, 2.0, 4.0, 3.0),
                 "&a少见的宠物" to petCaps(14.0, 2.0, 7.0, 7.0, 5.0, 12.0, 3.0, 8.0, 4.0),

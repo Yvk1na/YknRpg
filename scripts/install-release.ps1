@@ -140,6 +140,10 @@ $remappedDirectory = Join-Path $pluginsDirectory '.paper-remapped'
 $updateDirectory = Join-Path $pluginsDirectory 'update'
 $legacyDataDirectory = Join-Path $pluginsDirectory 'YknItems'
 $currentDataDirectory = Join-Path $pluginsDirectory 'YknRpg'
+$skyblockHealthConfigs = @(
+    (Join-Path $pluginsDirectory 'Skyblock-Core\config\hud.yml'),
+    (Join-Path $pluginsDirectory 'Skyblock-Core\config.yml')
+) | Where-Object { Test-Path -LiteralPath $_ -PathType Leaf }
 $backupParent = Join-Path $ServerRoot 'backups\yknrpg-deploy'
 
 foreach ($directory in @($ServerRoot, $pluginsDirectory, $craftEngineResources, $mythicMobsItems, $ecoPetsPets)) {
@@ -161,6 +165,7 @@ Assert-Within $ecoPetsTarget $ServerRoot
 Assert-Within $legacyDataDirectory $ServerRoot
 Assert-Within $currentDataDirectory $ServerRoot
 Assert-Within $backupParent $ServerRoot
+foreach ($file in $skyblockHealthConfigs) { Assert-Within $file $ServerRoot }
 
 $versionHistory = Join-Path $ServerRoot 'version_history.json'
 if (-not (Test-Path -LiteralPath $versionHistory -PathType Leaf)) {
@@ -240,6 +245,7 @@ if (Test-Path -LiteralPath $ecoPetsTarget -PathType Container) {
 }
 Assert-Unlocked (Join-Path $legacyCraftEngineTarget 'pack.yml')
 Assert-Unlocked (Join-Path $craftEngineTarget 'pack.yml')
+foreach ($file in $skyblockHealthConfigs) { Assert-Unlocked $file }
 
 $token = [Guid]::NewGuid().ToString('N')
 $temporaryRoot = Join-Path $backupParent ".staging-$token"
@@ -258,6 +264,8 @@ $movedPluginJars = @()
 $movedMythicFiles = @()
 $movedCraftEnginePacks = @()
 $movedEcoPetsDirectory = $null
+$skyblockConfigBackups = @()
+$skyblockHealthConfigUpdates = 0
 $newMythicFiles = @()
 $newJarPath = Join-Path $pluginsDirectory ([IO.Path]::GetFileName($PluginJar))
 $newJarInstalled = $false
@@ -331,12 +339,14 @@ try {
     $craftEngineBackupDirectory = Join-Path $backupDirectory 'CraftEngine-resources'
     $ecoPetsBackupDirectory = Join-Path $backupDirectory 'EcoPets-pets'
     $pluginDataBackupDirectory = Join-Path $backupDirectory 'plugin-data'
+    $skyblockBackupDirectory = Join-Path $backupDirectory 'Skyblock-Core-config'
     foreach ($directory in @(
         $jarBackupDirectory,
         $mythicBackupDirectory,
         $craftEngineBackupDirectory,
         $ecoPetsBackupDirectory,
-        $pluginDataBackupDirectory
+        $pluginDataBackupDirectory,
+        $skyblockBackupDirectory
     )) {
         [IO.Directory]::CreateDirectory($directory) | Out-Null
     }
@@ -395,6 +405,24 @@ try {
         }
     }
 
+    foreach ($file in $skyblockHealthConfigs) {
+        $content = [IO.File]::ReadAllText($file)
+        if (-not $content.Contains('%auraskills_health_int%')) { continue }
+        $relativePath = (Get-RelativePath $pluginsDirectory $file).Replace('\', '/')
+        $backupName = $relativePath.Replace('/', '__')
+        $backup = Join-Path $skyblockBackupDirectory $backupName
+        Copy-Item -LiteralPath $file -Destination $backup
+        $skyblockConfigBackups += [pscustomobject]@{ Original = $file; Backup = $backup }
+        $updated = $content.Replace('%auraskills_health_int%', '%auraskills_hp_max%')
+        [IO.File]::WriteAllText($file, $updated, [Text.UTF8Encoding]::new($false))
+        $verified = [IO.File]::ReadAllText($file)
+        if ($verified.Contains('%auraskills_health_int%') -or
+                -not $verified.Contains('%auraskills_hp_max%')) {
+            throw "Skyblock-Core health placeholder migration failed: $relativePath"
+        }
+        $skyblockHealthConfigUpdates++
+    }
+
     if ((Get-Sha256 $newJarPath) -ne (Get-Sha256 $PluginJar)) { throw 'Deployed JAR failed SHA-256 verification.' }
     if ((Get-PluginName $newJarPath) -ne 'YknRpg') { throw 'Deployed JAR does not identify as YknRpg.' }
     $deployedAssetFiles = @(Get-ChildItem -LiteralPath (Join-Path $craftEngineTarget 'resourcepack\assets\yknrpg') -File -Recurse)
@@ -448,6 +476,7 @@ try {
         "ecopets_files=$($deployedEcoPetFiles.Count)",
         "data_migration=$dataMigrationMode",
         "data_directory=$currentDataDirectory",
+        "skyblock_health_config_updates=$skyblockHealthConfigUpdates",
         "removed_plugin_jars=$(($movedPluginJars | ForEach-Object { $_.Original }) -join ';')",
         "deployed_at=$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K')"
     )
@@ -475,6 +504,13 @@ catch {
     foreach ($file in $newMythicFiles) {
         Invoke-RollbackStep "remove new MythicMobs file $file" {
             if (Test-Path -LiteralPath $file -PathType Leaf) { Remove-Item -LiteralPath $file -Force }
+        } $rollbackErrors
+    }
+    foreach ($record in $skyblockConfigBackups) {
+        Invoke-RollbackStep "restore Skyblock-Core config $($record.Original)" {
+            if (Test-Path -LiteralPath $record.Backup -PathType Leaf) {
+                Copy-Item -LiteralPath $record.Backup -Destination $record.Original -Force
+            }
         } $rollbackErrors
     }
     Invoke-RollbackStep 'restore plugin data directory' {
@@ -532,4 +568,5 @@ Write-Host "Deployment completed: $newJarPath" -ForegroundColor Green
 Write-Host "CraftEngine resources: $craftEngineTarget"
 Write-Host "MythicMobs items: $mythicMobsItems"
 Write-Host "EcoPets pets: $ecoPetsTarget"
+Write-Host "Skyblock-Core health configs updated: $skyblockHealthConfigUpdates"
 Write-Host "Backup: $backupDirectory"

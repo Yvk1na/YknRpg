@@ -50,7 +50,9 @@ rpg:
     defense-cap: 10000.0
     player-skill-damage: false
   health:
-    # 1 点 SkyBlock 生命对应多少点 Minecraft 生命值。
+    # 装备与临时属性中的 1 点生命，默认精确增加 1 点最终实际最大生命。
+    equipment-value-scale: 1.0
+    # HEAL 与 ABSORPTION 技能数值换算；与装备生命分开，避免装备改为 1:1 后放大技能。
     value-scale: 0.05
   shield:
     # 武器技能护盾默认持续秒数；单个 ABSORPTION 效果可用 duration 覆盖。
