@@ -1,5 +1,18 @@
 gui:
-  catalog-title: '&0YknItems 装备图鉴 &8({page}/{pages})'
+  catalog-title: '&0YknRpg {category}图鉴 &8({page}/{pages})'
+  catalog-titles:
+    items: '&0物品图鉴 &8({page}/{pages})'
+    weapon: '&0武器图鉴 &8({page}/{pages})'
+    armor: '&0装备图鉴 &8({page}/{pages})'
+    pets: '&0宠物蛋图鉴 &8({page}/{pages})'
+    other: '&0YknRpg 其他图鉴 &8({page}/{pages})'
+  catalog-credit: '&7Made by Yvk1na.'
+  catalog-category:
+    items: '物品'
+    weapon: '武器'
+    armor: '装备'
+    pets: '宠物蛋'
+    other: '其他'
   recipe-title: '&0编辑配方：{item}'
   previous-page: '&e上一页'
   next-page: '&e下一页'
@@ -16,7 +29,7 @@ gui:
     - '&7先从下方背包拿起一种物品。'
     - '&7左键配方格：放入 1 个幽灵材料。'
     - '&7右键配方格：清除该格。'
-    - '&7放入自定义物品时会精确匹配物品 ID。'
+    - '&7放入 MythicMobs 物品或 EcoPets 宠物蛋时会精确匹配 ID。'
     - '&7点击保存后立即重新注册服务端配方。'
   catalog-hint:
     - ''
@@ -24,26 +37,38 @@ gui:
     - '&eShift + 左键 &7获得一组'
     - '&e右键 &7编辑并保存合成配方'
 
+rpg:
+  enabled: true
+  tick-interval: 10
+  # 同时发送聊天提示，避免技能反馈被 AuraSkills 或 HUD 的 ActionBar 覆盖。
+  feedback-in-chat: true
+  combat:
+    base-melee-damage: 5.0
+    melee-damage-scale: 0.1
+    skill-damage-scale: 0.1
+    defense-enabled: true
+    defense-cap: 10000.0
+    player-skill-damage: false
+  health:
+    # 1 点 SkyBlock 生命对应多少点 Minecraft 生命值。
+    value-scale: 0.05
+  shield:
+    # 武器技能护盾默认持续秒数；单个 ABSORPTION 效果可用 duration 覆盖。
+    default-duration: 10.0
+
 messages:
   no-permission: '&c你没有权限使用该指令。'
   player-only: '&c该指令只能由玩家执行。'
-  reload-complete: '&aYknItems 已重载，共读取 {items} 个物品和 {recipes} 个配方。'
+  reload-complete: '&aYknRpg 已重载，共读取 {items} 个物品和 {recipes} 个配方。'
   item-received: '&a已获得 &f{amount}× {item}&a。'
   inventory-overflow: '&e背包空间不足，剩余物品已掉落在脚下。'
   recipe-saved: '&a已保存 {item} 的配方并重新注册。'
   recipe-reset: '&e已恢复 {item} 的默认配方。'
-  level-required: '&c需要 AuraSkills {skill} 等级 {level}，当前为 {current}。'
-  mana-required: '&c法力不足，需要 {mana} 点法力。'
-  usage: '&e用法：/yknitems admin 或 /yknitems reload'
-
-auraskills:
-  enforce-level-requirements: true
-  consume-staff-mana: true
-  skill-names:
-    fighting: '战斗'
-    archery: '箭术'
-    sorcery: '巫术'
-    defense: '防御'
-
-combat:
-  prevent-ability-friendly-fire: true
+  ability-used: '&b✦ &f已施放 {ability} &8· &3魔力 {mana}/{max_mana}'
+  ability-cooldown: '&c{ability} &7尚在冷却：&f{seconds} 秒'
+  ability-no-mana: '&c魔力不足：&f{mana}/{cost}'
+  ability-mana-unavailable: '&eAuraSkills 魔力数据尚未加载，请稍后再试。'
+  ability-no-charges: '&c{ability} &7暂无充能，&f{seconds} 秒&7后恢复。'
+  ability-no-target: '&e{ability} &7没有找到有效目标，未消耗资源。'
+  usage: '&e用法：/yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload'
+  admin-usage: '&e用法：/yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload'

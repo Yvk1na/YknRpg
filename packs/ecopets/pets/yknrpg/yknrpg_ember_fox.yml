@@ -1,0 +1,70 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (b6feb761b2f59fabe5cc3cc82a934b534ea99edb9132ccda9f484bd5986d7)
+name: "&a余烬狐"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjZmZWI3NjFiMmY1OWZhYmU1Y2MzY2M4MmE5MzRiNTM0ZWE5OWVkYjkxMzJjY2RhOWY0ODRiZDU5ODZkNyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjZmZWI3NjFiMmY1OWZhYmU1Y2MzY2M4MmE5MzRiNTM0ZWE5OWVkYjkxMzJjY2RhOWY0ODRiZDU5ODZkNyJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.45
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "strength_bonus"
+    value: "%level% * 0.14"
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.04"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-messages:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: "%level% * 0.14"
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.04"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: fox_spawn_egg unbreaking:1 hide_enchants
+  name: "&a余烬狐 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a余烬狐&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_ember_fox
+  withdrawable: true

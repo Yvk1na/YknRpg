@@ -1,0 +1,75 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (f0ef518cb67739c4af18cdfffa05360079afc735ef291528fa7ae0c926804c59)
+name: "&5霜原雪怪"
+description: "&7使用盾牌格挡伤害可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjBlZjUxOGNiNjc3MzljNGFmMThjZGZmZmEwNTM2MDA3OWFmYzczNWVmMjkxNTI4ZmE3YWUwYzkyNjgwNGM1OSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjBlZjUxOGNiNjc3MzljNGFmMThjZGZmZmEwNTM2MDA3OWFmYzczNWVmMjkxNTI4ZmE3YWUwYzkyNjgwNGM1OSJ9fX0=
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: shield_block
+    value: 2.5
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.03"
+  - id: "toughness_bonus"
+    value: "%level% * 0.26"
+  - id: "strength_bonus"
+    value: "%level% * 0.11"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%strength_bonus% 力量"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%strength_bonus% 力量"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%strength_bonus% 力量"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.03"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.26"
+  - id: add_stat
+    args:
+      stat: strength
+      amount: "%level% * 0.11"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: stray_spawn_egg unbreaking:1 hide_enchants
+  name: "&5霜原雪怪 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5霜原雪怪&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_frost_yeti
+  withdrawable: true

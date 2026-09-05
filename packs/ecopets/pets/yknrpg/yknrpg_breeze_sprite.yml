@@ -1,0 +1,59 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (69bceb4cfa2f55e9098092b0b285a76bfc3f2e217bad50e4bfaa97c666833dfb)
+name: "&8微风精灵"
+description: "&7疾跑探索世界可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliY2ViNGNmYTJmNTVlOTA5ODA5MmIwYjI4NWE3NmJmYzNmMmUyMTdiYWQ1MGU0YmZhYTk3YzY2NjgzM2RmYiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliY2ViNGNmYTJmNTVlOTA5ODA5MmIwYjI4NWE3NmJmYzNmMmUyMTdiYWQ1MGU0YmZhYTk3YzY2NjgzM2RmYiJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: move
+    multiplier: 0.5
+    conditions:
+      - id: is_sprinting
+
+level-placeholders:
+  - id: "speed_bonus"
+    value: "%level% * 0.03"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.03"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: breeze_spawn_egg unbreaking:1 hide_enchants
+  name: "&8微风精灵 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8微风精灵&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_breeze_sprite
+  withdrawable: true

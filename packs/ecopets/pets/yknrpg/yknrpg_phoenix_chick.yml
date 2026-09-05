@@ -1,0 +1,79 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (23aaf7b1a778949696cb99d4f04ad1aa518ceee256c72e5ed65bfa5c2d88d9e)
+name: "&5涅槃雏凰"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNhYWY3YjFhNzc4OTQ5Njk2Y2I5OWQ0ZjA0YWQxYWE1MThjZWVlMjU2YzcyZTVlZDY1YmZhNWMyZDg4ZDllIn19fQ=="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNhYWY3YjFhNzc4OTQ5Njk2Y2I5OWQ0ZjA0YWQxYWE1MThjZWVlMjU2YzcyZTVlZDY1YmZhNWMyZDg4ZDllIn19fQ==
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.55
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "regeneration_bonus"
+    value: "%level% * 0.16"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.07"
+  - id: "health_bonus"
+    value: "%level% * 0.02"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&c+%health_bonus% 生命"
+
+level-up-messages:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&c+%health_bonus% 生命"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.16"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.07"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.02"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: chicken_spawn_egg unbreaking:1 hide_enchants
+  name: "&5涅槃雏凰 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5涅槃雏凰&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_phoenix_chick
+  withdrawable: true

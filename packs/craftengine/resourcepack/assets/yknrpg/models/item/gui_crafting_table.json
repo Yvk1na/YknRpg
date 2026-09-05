@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:item/generated",
+    "textures":  {
+                     "layer0":  "yknrpg:item/gui_crafting_table"
+                 }
+}

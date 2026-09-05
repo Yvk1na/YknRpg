@@ -1,0 +1,75 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (117bffc1972acd7f3b4a8f43b5b6c7534695b8fd62677e0306b2831574b)
+name: "&a丰收兔"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE3YmZmYzE5NzJhY2Q3ZjNiNGE4ZjQzYjViNmM3NTM0Njk1YjhmZDYyNjc3ZTAzMDZiMjgzMTU3NGIifX19"
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE3YmZmYzE5NzJhY2Q3ZjNiNGE4ZjQzYjViNmM3NTM0Njk1YjhmZDYyNjc3ZTAzMDZiMjgzMTU3NGIifX19
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.25
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.07"
+  - id: "speed_bonus"
+    value: "%level% * 0.02"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.07"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.02"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: rabbit_spawn_egg unbreaking:1 hide_enchants
+  name: "&a丰收兔 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a丰收兔&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_harvest_rabbit
+  withdrawable: true

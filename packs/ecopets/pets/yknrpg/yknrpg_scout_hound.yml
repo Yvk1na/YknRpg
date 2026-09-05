@@ -1,0 +1,61 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (11954db0133f689f19263de434adfc3af16ccc612be33b0139f59618f6c35682)
+name: "&8侦察猎犬"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE5NTRkYjAxMzNmNjg5ZjE5MjYzZGU0MzRhZGZjM2FmMTZjY2M2MTJiZTMzYjAxMzlmNTk2MThmNmMzNTY4MiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE5NTRkYjAxMzNmNjg5ZjE5MjYzZGU0MzRhZGZjM2FmMTZjY2M2MTJiZTMzYjAxMzlmNTk2MThmNmMzNTY4MiJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.4
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.01"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.01"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: wolf_spawn_egg unbreaking:1 hide_enchants
+  name: "&8侦察猎犬 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8侦察猎犬&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_scout_hound
+  withdrawable: true

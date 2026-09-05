@@ -1,0 +1,66 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (36aae6717f49917e043080241264b43a8f387b2df3f61f8f70c2836cd7c3d95c)
+name: "&a珊瑚幼龟"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZhYWU2NzE3ZjQ5OTE3ZTA0MzA4MDI0MTI2NGI0M2E4ZjM4N2IyZGYzZjYxZjhmNzBjMjgzNmNkN2MzZDk1YyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZhYWU2NzE3ZjQ5OTE3ZTA0MzA4MDI0MTI2NGI0M2E4ZjM4N2IyZGYzZjYxZjhmNzBjMjgzNmNkN2MzZDk1YyJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 2.25
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.02"
+  - id: "toughness_bonus"
+    value: "%level% * 0.06"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.02"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.06"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: turtle_spawn_egg unbreaking:1 hide_enchants
+  name: "&a珊瑚幼龟 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a珊瑚幼龟&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_coral_turtle
+  withdrawable: true

@@ -1,0 +1,70 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (1b43c76c234c56adb3afd476a57a62bb16f43d87bc17ba68f6ecabe62be4b8c7)
+name: "&9风暴隼"
+description: "&7造成弓箭伤害可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWI0M2M3NmMyMzRjNTZhZGIzYWZkNDc2YTU3YTYyYmIxNmY0M2Q4N2JjMTdiYTY4ZjZlY2FiZTYyYmU0YjhjNyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWI0M2M3NmMyMzRjNTZhZGIzYWZkNDc2YTU3YTYyYmIxNmY0M2Q4N2JjMTdiYTY4ZjZlY2FiZTYyYmU0YjhjNyJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: bow_attack
+    value: 2.5
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.12"
+  - id: "speed_bonus"
+    value: "%level% * 0.04"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.04"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: parrot_spawn_egg unbreaking:1 hide_enchants
+  name: "&9风暴隼 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9风暴隼&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_storm_hawk
+  withdrawable: true

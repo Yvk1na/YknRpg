@@ -1,0 +1,75 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (70b33b7a3b24f76bd80a65c3a933e7188be358487342be143c22a7580b4d00e1)
+name: "&6皓月独角兽"
+description: "&7附魔物品可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzBiMzNiN2EzYjI0Zjc2YmQ4MGE2NWMzYTkzM2U3MTg4YmUzNTg0ODczNDJiZTE0M2MyMmE3NTgwYjRkMDBlMSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzBiMzNiN2EzYjI0Zjc2YmQ4MGE2NWMzYTkzM2U3MTg4YmUzNTg0ODczNDJiZTE0M2MyMmE3NTgwYjRkMDBlMSJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: enchant_item
+    multiplier: 5
+
+level-placeholders:
+  - id: "wisdom_bonus"
+    value: "%level% * 0.14"
+  - id: "speed_bonus"
+    value: "%level% * 0.08"
+  - id: "luck_bonus"
+    value: "%level% * 0.1"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+
+level-up-messages:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.14"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.08"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.1"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: horse_spawn_egg unbreaking:1 hide_enchants
+  name: "&6皓月独角兽 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6皓月独角兽&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_moon_unicorn
+  withdrawable: true

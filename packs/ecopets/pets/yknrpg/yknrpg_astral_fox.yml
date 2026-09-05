@@ -1,0 +1,84 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (211cfb2a87f0af0540be6a4e27d7d2785e3eb1cfd2ca59dd8106f02a7c673956)
+name: "&d星界九尾"
+description: "&7附魔物品可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjExY2ZiMmE4N2YwYWYwNTQwYmU2YTRlMjdkN2QyNzg1ZTNlYjFjZmQyY2E1OWRkODEwNmYwMmE3YzY3Mzk1NiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjExY2ZiMmE4N2YwYWYwNTQwYmU2YTRlMjdkN2QyNzg1ZTNlYjFjZmQyY2E1OWRkODEwNmYwMmE3YzY3Mzk1NiJ9fX0=
+
+xp-formula: "(%level% * %level% * 28) + (%level% * 140)"
+max-level: 100
+
+xp-gain-methods:
+  - id: enchant_item
+    multiplier: 6
+
+level-placeholders:
+  - id: "wisdom_bonus"
+    value: "%level% * 0.18"
+  - id: "luck_bonus"
+    value: "%level% * 0.23"
+  - id: "speed_bonus"
+    value: "%level% * 0.08"
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.1"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - ""
+    - "&d神话宠物"
+
+rewards-description:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-messages:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.18"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.23"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.08"
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.1"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: fox_spawn_egg unbreaking:1 hide_enchants
+  name: "&d星界九尾 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &d星界九尾&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_astral_fox
+  withdrawable: true

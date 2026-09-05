@@ -1,0 +1,66 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (5840b6a9afce9ef5148e1677d49bb5b9be860ba2f091d31cb1494717a40379c8)
+name: "&a药师蛙"
+description: "&7酿造药水可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTg0MGI2YTlhZmNlOWVmNTE0OGUxNjc3ZDQ5YmI1YjliZTg2MGJhMmYwOTFkMzFjYjE0OTQ3MTdhNDAzNzljOCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTg0MGI2YTlhZmNlOWVmNTE0OGUxNjc3ZDQ5YmI1YjliZTg2MGJhMmYwOTFkMzFjYjE0OTQ3MTdhNDAzNzljOCJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: brew
+    multiplier: 3
+
+level-placeholders:
+  - id: "regeneration_bonus"
+    value: "%level% * 0.07"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.03"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+
+level-up-messages:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&b+%wisdom_bonus% 智慧"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.07"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.03"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: frog_spawn_egg unbreaking:1 hide_enchants
+  name: "&a药师蛙 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a药师蛙&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_apothecary_frog
+  withdrawable: true

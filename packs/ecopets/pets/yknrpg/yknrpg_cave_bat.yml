@@ -1,0 +1,90 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (f8c32b88443a29b55f167ff54af425c147afa5febf630f1a5d408908d1df5b7f)
+name: "&a洞穴蝙蝠"
+description: "&7挖掘岩石与矿物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjhjMzJiODg0NDNhMjliNTVmMTY3ZmY1NGFmNDI1YzE0N2FmYTVmZWJmNjMwZjFhNWQ0MDg5MDhkMWRmNWI3ZiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjhjMzJiODg0NDNhMjliNTVmMTY3ZmY1NGFmNDI1YzE0N2FmYTVmZWJmNjMwZjFhNWQ0MDg5MDhkMWRmNWI3ZiJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.25
+    filters:
+      player_placed: false
+      blocks:
+        - stone
+        - deepslate
+        - coal_ore
+        - deepslate_coal_ore
+        - copper_ore
+        - deepslate_copper_ore
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - redstone_ore
+        - deepslate_redstone_ore
+        - lapis_ore
+        - deepslate_lapis_ore
+        - diamond_ore
+        - deepslate_diamond_ore
+        - emerald_ore
+        - deepslate_emerald_ore
+        - nether_quartz_ore
+        - nether_gold_ore
+        - ancient_debris
+
+level-placeholders:
+  - id: "wisdom_bonus"
+    value: "%level% * 0.05"
+  - id: "speed_bonus"
+    value: "%level% * 0.02"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.05"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.02"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: bat_spawn_egg unbreaking:1 hide_enchants
+  name: "&a洞穴蝙蝠 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a洞穴蝙蝠&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_cave_bat
+  withdrawable: true

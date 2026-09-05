@@ -1,0 +1,88 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (38c8f5c4720cfea9dc9914acbbb69575f7e2dce27fc6ee76a081ccb6fccc4a3c)
+name: "&d混沌魔龙"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzhjOGY1YzQ3MjBjZmVhOWRjOTkxNGFjYmJiNjk1NzVmN2UyZGNlMjdmYzZlZTc2YTA4MWNjYjZmY2NjNGEzYyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzhjOGY1YzQ3MjBjZmVhOWRjOTkxNGFjYmJiNjk1NzVmN2UyZGNlMjdmYzZlZTc2YTA4MWNjYjZmY2NjNGEzYyJ9fX0=
+
+xp-formula: "(%level% * %level% * 28) + (%level% * 140)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.8
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "strength_bonus"
+    value: "%level% * 0.5"
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.24"
+  - id: "crit_chance_bonus"
+    value: "%level% * 0.06"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.09"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&b+%wisdom_bonus% 智慧"
+    - ""
+    - "&d神话宠物"
+
+rewards-description:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&b+%wisdom_bonus% 智慧"
+
+level-up-messages:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&b+%wisdom_bonus% 智慧"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: "%level% * 0.5"
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.24"
+  - id: add_stat
+    args:
+      stat: crit_chance
+      amount: "%level% * 0.06"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.09"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: warden_spawn_egg unbreaking:1 hide_enchants
+  name: "&d混沌魔龙 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &d混沌魔龙&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_chaos_dragon
+  withdrawable: true

@@ -1,15 +1,15 @@
 items:
-  yknitems:gui_crafting_table:
+  yknrpg:gui_crafting_table:
     material: crafting_table
-    item_model: yknitems:gui_crafting_table
+    item_model: yknrpg:gui_crafting_table
     model:
-      path: yknitems:item/gui_crafting_table
+      path: yknrpg:item/gui_crafting_table
     data:
       item_name: '<!i><gold>合成工作台'
-  yknitems:gui_arrow:
+  yknrpg:gui_arrow:
     material: spectral_arrow
-    item_model: yknitems:gui_arrow
+    item_model: yknrpg:gui_arrow
     model:
-      path: yknitems:item/gui_arrow
+      path: yknrpg:item/gui_arrow
     data:
       item_name: '<!i><green>合成结果'

@@ -1,0 +1,89 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (75434963078128398cd044277003f02ad9d9434fe9c0addcde025f0a320e27cd)
+name: "&5远古树灵"
+description: "&7砍伐天然原木可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzU0MzQ5NjMwNzgxMjgzOThjZDA0NDI3NzAwM2YwMmFkOWQ5NDM0ZmU5YzBhZGRjZGUwMjVmMGEzMjBlMjdjZCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzU0MzQ5NjMwNzgxMjgzOThjZDA0NDI3NzAwM2YwMmFkOWQ5NDM0ZmU5YzBhZGRjZGUwMjVmMGEzMjBlMjdjZCJ9fX0=
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 3
+    filters:
+      player_placed: false
+      blocks:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.04"
+  - id: "regeneration_bonus"
+    value: "%level% * 0.1"
+  - id: "toughness_bonus"
+    value: "%level% * 0.1"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - "&d+%regeneration_bonus% 再生"
+    - "&7+%toughness_bonus% 韧性"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&d+%regeneration_bonus% 再生"
+    - "&7+%toughness_bonus% 韧性"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&d+%regeneration_bonus% 再生"
+    - "&7+%toughness_bonus% 韧性"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.04"
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.1"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.1"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: creaking_spawn_egg unbreaking:1 hide_enchants
+  name: "&5远古树灵 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5远古树灵&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_ancient_treant
+  withdrawable: true

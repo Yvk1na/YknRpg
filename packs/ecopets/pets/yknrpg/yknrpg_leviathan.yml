@@ -1,0 +1,75 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (3f2955e0d1e275ac3b911426c08321be7af6cb0bec20738b7d9f7e6aaed4363f)
+name: "&6深海利维坦"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2YyOTU1ZTBkMWUyNzVhYzNiOTExNDI2YzA4MzIxYmU3YWY2Y2IwYmVjMjA3MzhiN2Q5ZjdlNmFhZWQ0MzYzZiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2YyOTU1ZTBkMWUyNzVhYzNiOTExNDI2YzA4MzIxYmU3YWY2Y2IwYmVjMjA3MzhiN2Q5ZjdlNmFhZWQ0MzYzZiJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 3.25
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.06"
+  - id: "toughness_bonus"
+    value: "%level% * 0.25"
+  - id: "luck_bonus"
+    value: "%level% * 0.1"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.06"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.25"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.1"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: guardian_spawn_egg unbreaking:1 hide_enchants
+  name: "&6深海利维坦 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6深海利维坦&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_leviathan
+  withdrawable: true

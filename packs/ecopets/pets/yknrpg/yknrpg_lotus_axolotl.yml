@@ -1,0 +1,66 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (e8a8a2d7ccf0c3746e23ab5491070e0923f05b235f9a2f5d53d384353853bddc)
+name: "&9莲华美西螈"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhOGEyZDdjY2YwYzM3NDZlMjNhYjU0OTEwNzBlMDkyM2YwNWIyMzVmOWEyZjVkNTNkMzg0MzUzODUzYmRkYyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhOGEyZDdjY2YwYzM3NDZlMjNhYjU0OTEwNzBlMDkyM2YwNWIyMzVmOWEyZjVkNTNkMzg0MzUzODUzYmRkYyJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 2.5
+
+level-placeholders:
+  - id: "regeneration_bonus"
+    value: "%level% * 0.11"
+  - id: "health_bonus"
+    value: "%level% * 0.02"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+
+level-up-messages:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.11"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.02"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: axolotl_spawn_egg unbreaking:1 hide_enchants
+  name: "&9莲华美西螈 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9莲华美西螈&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_lotus_axolotl
+  withdrawable: true

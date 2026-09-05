@@ -1,0 +1,1068 @@
+YKI_WAYFARER_HELMET:
+  Id: LEATHER_HELMET
+  Display: '&8远行者兜帽'
+  Group: YknRpg
+  Lore:
+    - '&7远行者套装'
+    - ''
+    - '&7生命：&a+25'
+    - '&7防御：&a+10'
+    - '&7速度：&f+2'
+    - ''
+    - '&6全套效果：&e轻装远行'
+    - '&7额外获得 12 速度与持续跳跃提升。'
+    - ''
+    - '&8普通 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WAYFARER_CHESTPLATE:
+  Id: LEATHER_CHESTPLATE
+  Display: '&8远行者皮衣'
+  Group: YknRpg
+  Lore:
+    - '&7远行者套装'
+    - ''
+    - '&7生命：&a+40'
+    - '&7防御：&a+22'
+    - '&7速度：&f+2'
+    - ''
+    - '&6全套效果：&e轻装远行'
+    - '&7额外获得 12 速度与持续跳跃提升。'
+    - ''
+    - '&8普通 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WAYFARER_LEGGINGS:
+  Id: LEATHER_LEGGINGS
+  Display: '&8远行者护腿'
+  Group: YknRpg
+  Lore:
+    - '&7远行者套装'
+    - ''
+    - '&7生命：&a+35'
+    - '&7防御：&a+18'
+    - '&7速度：&f+2'
+    - ''
+    - '&6全套效果：&e轻装远行'
+    - '&7额外获得 12 速度与持续跳跃提升。'
+    - ''
+    - '&8普通 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WAYFARER_BOOTS:
+  Id: LEATHER_BOOTS
+  Display: '&8远行者短靴'
+  Group: YknRpg
+  Lore:
+    - '&7远行者套装'
+    - ''
+    - '&7生命：&a+20'
+    - '&7防御：&a+10'
+    - '&7速度：&f+2'
+    - ''
+    - '&6全套效果：&e轻装远行'
+    - '&7额外获得 12 速度与持续跳跃提升。'
+    - ''
+    - '&8普通 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_IRON_SENTINEL_HELMET:
+  Id: IRON_HELMET
+  Display: '&a铁卫头盔'
+  Group: YknRpg
+  Lore:
+    - '&7铁卫套装'
+    - ''
+    - '&7生命：&a+45'
+    - '&7防御：&a+30'
+    - '&7力量：&c+5'
+    - ''
+    - '&7全套额外：&a+40 防御'
+    - '&6全套效果：&e壁垒反应'
+    - '&7受伤时有 20% 几率获得吸收护盾。'
+    - '&8触发冷却：&a6秒'
+    - ''
+    - '&a少见的 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_IRON_SENTINEL_CHESTPLATE:
+  Id: IRON_CHESTPLATE
+  Display: '&a铁卫胸甲'
+  Group: YknRpg
+  Lore:
+    - '&7铁卫套装'
+    - ''
+    - '&7生命：&a+75'
+    - '&7防御：&a+55'
+    - '&7力量：&c+5'
+    - ''
+    - '&7全套额外：&a+40 防御'
+    - '&6全套效果：&e壁垒反应'
+    - '&7受伤时有 20% 几率获得吸收护盾。'
+    - '&8触发冷却：&a6秒'
+    - ''
+    - '&a少见的 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_IRON_SENTINEL_LEGGINGS:
+  Id: IRON_LEGGINGS
+  Display: '&a铁卫护腿'
+  Group: YknRpg
+  Lore:
+    - '&7铁卫套装'
+    - ''
+    - '&7生命：&a+60'
+    - '&7防御：&a+45'
+    - '&7力量：&c+5'
+    - ''
+    - '&7全套额外：&a+40 防御'
+    - '&6全套效果：&e壁垒反应'
+    - '&7受伤时有 20% 几率获得吸收护盾。'
+    - '&8触发冷却：&a6秒'
+    - ''
+    - '&a少见的 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_IRON_SENTINEL_BOOTS:
+  Id: IRON_BOOTS
+  Display: '&a铁卫战靴'
+  Group: YknRpg
+  Lore:
+    - '&7铁卫套装'
+    - ''
+    - '&7生命：&a+40'
+    - '&7防御：&a+30'
+    - '&7力量：&c+5'
+    - ''
+    - '&7全套额外：&a+40 防御'
+    - '&6全套效果：&e壁垒反应'
+    - '&7受伤时有 20% 几率获得吸收护盾。'
+    - '&8触发冷却：&a6秒'
+    - ''
+    - '&a少见的 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TIDECALLER_HELMET:
+  Id: DIAMOND_HELMET
+  Display: '&9潮汐术士头冠'
+  Group: YknRpg
+  Lore:
+    - '&7潮汐术士套装'
+    - ''
+    - '&7生命：&a+65'
+    - '&7防御：&a+40'
+    - '&7智慧：&b+3'
+    - '&7治疗增幅：&a+2.5'
+    - ''
+    - '&7全套额外：&b+6 智慧 &8| &a+10 治疗增幅'
+    - '&6全套被动：&e潮汐亲和'
+    - '&7获得水下呼吸与海豚恩惠。'
+    - '&6全套技能：&e治愈潮汐 &7[潜行右键]'
+    - '&7治疗并净化附近玩家。'
+    - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
+    - ''
+    - '&9稀有 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TIDECALLER_CHESTPLATE:
+  Id: DIAMOND_CHESTPLATE
+  Display: '&9潮汐术士法衣'
+  Group: YknRpg
+  Lore:
+    - '&7潮汐术士套装'
+    - ''
+    - '&7生命：&a+105'
+    - '&7防御：&a+75'
+    - '&7智慧：&b+3'
+    - '&7治疗增幅：&a+2.5'
+    - ''
+    - '&7全套额外：&b+6 智慧 &8| &a+10 治疗增幅'
+    - '&6全套被动：&e潮汐亲和'
+    - '&7获得水下呼吸与海豚恩惠。'
+    - '&6全套技能：&e治愈潮汐 &7[潜行右键]'
+    - '&7治疗并净化附近玩家。'
+    - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
+    - ''
+    - '&9稀有 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TIDECALLER_LEGGINGS:
+  Id: DIAMOND_LEGGINGS
+  Display: '&9潮汐术士护腿'
+  Group: YknRpg
+  Lore:
+    - '&7潮汐术士套装'
+    - ''
+    - '&7生命：&a+90'
+    - '&7防御：&a+60'
+    - '&7智慧：&b+3'
+    - '&7治疗增幅：&a+2.5'
+    - ''
+    - '&7全套额外：&b+6 智慧 &8| &a+10 治疗增幅'
+    - '&6全套被动：&e潮汐亲和'
+    - '&7获得水下呼吸与海豚恩惠。'
+    - '&6全套技能：&e治愈潮汐 &7[潜行右键]'
+    - '&7治疗并净化附近玩家。'
+    - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
+    - ''
+    - '&9稀有 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TIDECALLER_BOOTS:
+  Id: DIAMOND_BOOTS
+  Display: '&9潮汐术士长靴'
+  Group: YknRpg
+  Lore:
+    - '&7潮汐术士套装'
+    - ''
+    - '&7生命：&a+60'
+    - '&7防御：&a+45'
+    - '&7智慧：&b+3'
+    - '&7治疗增幅：&a+2.5'
+    - ''
+    - '&7全套额外：&b+6 智慧 &8| &a+10 治疗增幅'
+    - '&6全套被动：&e潮汐亲和'
+    - '&7获得水下呼吸与海豚恩惠。'
+    - '&6全套技能：&e治愈潮汐 &7[潜行右键]'
+    - '&7治疗并净化附近玩家。'
+    - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
+    - ''
+    - '&9稀有 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NIGHTSTALKER_HELMET:
+  Id: CHAINMAIL_HELMET
+  Display: '&5影行者面罩'
+  Group: YknRpg
+  Lore:
+    - '&7影行者套装'
+    - ''
+    - '&7生命：&a+80 &8| &7防御：&a+50'
+    - '&7伤害：&c+20 &8| &7力量：&c+20'
+    - '&7暴击率：&9+5% &8| &7暴击伤害：&9+15%'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套效果：&e暗影收割'
+    - '&7击杀后回复生命并短暂提高力量和速度。'
+    - '&8触发冷却：&a2秒'
+    - ''
+    - '&5史诗 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NIGHTSTALKER_CHESTPLATE:
+  Id: CHAINMAIL_CHESTPLATE
+  Display: '&5影行者胸甲'
+  Group: YknRpg
+  Lore:
+    - '&7影行者套装'
+    - ''
+    - '&7生命：&a+120 &8| &7防御：&a+80'
+    - '&7伤害：&c+20 &8| &7力量：&c+20'
+    - '&7暴击率：&9+5% &8| &7暴击伤害：&9+15%'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套效果：&e暗影收割'
+    - '&7击杀后回复生命并短暂提高力量和速度。'
+    - '&8触发冷却：&a2秒'
+    - ''
+    - '&5史诗 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NIGHTSTALKER_LEGGINGS:
+  Id: CHAINMAIL_LEGGINGS
+  Display: '&5影行者护腿'
+  Group: YknRpg
+  Lore:
+    - '&7影行者套装'
+    - ''
+    - '&7生命：&a+100 &8| &7防御：&a+65'
+    - '&7伤害：&c+20 &8| &7力量：&c+20'
+    - '&7暴击率：&9+5% &8| &7暴击伤害：&9+15%'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套效果：&e暗影收割'
+    - '&7击杀后回复生命并短暂提高力量和速度。'
+    - '&8触发冷却：&a2秒'
+    - ''
+    - '&5史诗 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NIGHTSTALKER_BOOTS:
+  Id: CHAINMAIL_BOOTS
+  Display: '&5影行者长靴'
+  Group: YknRpg
+  Lore:
+    - '&7影行者套装'
+    - ''
+    - '&7生命：&a+60 &8| &7防御：&a+45'
+    - '&7伤害：&c+20 &8| &7力量：&c+20'
+    - '&7暴击率：&9+5% &8| &7暴击伤害：&9+15%'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套效果：&e暗影收割'
+    - '&7击杀后回复生命并短暂提高力量和速度。'
+    - '&8触发冷却：&a2秒'
+    - ''
+    - '&5史诗 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WYRM_GUARD_HELMET:
+  Id: NETHERITE_HELMET
+  Display: '&6龙卫战盔'
+  Group: YknRpg
+  Lore:
+    - '&7龙卫套装'
+    - ''
+    - '&7生命：&a+110 &8| &7防御：&a+80'
+    - '&7伤害：&c+20 &8| &7力量：&c+30'
+    - '&7活力：&a+5'
+    - ''
+    - '&6全套效果：&e龙鳞反震'
+    - '&7受伤时有 25% 几率召雷、击退攻击者并获得护盾。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&6传说 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WYRM_GUARD_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Display: '&6龙卫胸铠'
+  Group: YknRpg
+  Lore:
+    - '&7龙卫套装'
+    - ''
+    - '&7生命：&a+170 &8| &7防御：&a+130'
+    - '&7伤害：&c+20 &8| &7力量：&c+30'
+    - '&7活力：&a+5'
+    - ''
+    - '&6全套效果：&e龙鳞反震'
+    - '&7受伤时有 25% 几率召雷、击退攻击者并获得护盾。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&6传说 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WYRM_GUARD_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Display: '&6龙卫腿铠'
+  Group: YknRpg
+  Lore:
+    - '&7龙卫套装'
+    - ''
+    - '&7生命：&a+140 &8| &7防御：&a+105'
+    - '&7伤害：&c+20 &8| &7力量：&c+30'
+    - '&7活力：&a+5'
+    - ''
+    - '&6全套效果：&e龙鳞反震'
+    - '&7受伤时有 25% 几率召雷、击退攻击者并获得护盾。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&6传说 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WYRM_GUARD_BOOTS:
+  Id: NETHERITE_BOOTS
+  Display: '&6龙卫战靴'
+  Group: YknRpg
+  Lore:
+    - '&7龙卫套装'
+    - ''
+    - '&7生命：&a+100 &8| &7防御：&a+85'
+    - '&7伤害：&c+20 &8| &7力量：&c+30'
+    - '&7活力：&a+5'
+    - ''
+    - '&6全套效果：&e龙鳞反震'
+    - '&7受伤时有 25% 几率召雷、击退攻击者并获得护盾。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&6传说 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COSMIC_SAGE_HELMET:
+  Id: GOLDEN_HELMET
+  Display: '&d星界贤者冠冕'
+  Group: YknRpg
+  Lore:
+    - '&7星界贤者套装'
+    - ''
+    - '&7生命：&a+100 &8| &7防御：&a+65'
+    - '&7智慧：&b+15 &8| &7技能伤害：&d+15%'
+    - '&7活力：&a+7.5 &8| &7治疗增幅：&a+5'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套技能：&e天象领域 &7[潜行右键]'
+    - '&7对敌人造成伤害，并治疗附近玩家、赋予护盾。'
+    - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
+    - ''
+    - '&d神话 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COSMIC_SAGE_CHESTPLATE:
+  Id: GOLDEN_CHESTPLATE
+  Display: '&d星界贤者法袍'
+  Group: YknRpg
+  Lore:
+    - '&7星界贤者套装'
+    - ''
+    - '&7生命：&a+145 &8| &7防御：&a+95'
+    - '&7智慧：&b+15 &8| &7技能伤害：&d+15%'
+    - '&7活力：&a+7.5 &8| &7治疗增幅：&a+5'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套技能：&e天象领域 &7[潜行右键]'
+    - '&7对敌人造成伤害，并治疗附近玩家、赋予护盾。'
+    - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
+    - ''
+    - '&d神话 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COSMIC_SAGE_LEGGINGS:
+  Id: GOLDEN_LEGGINGS
+  Display: '&d星界贤者护腿'
+  Group: YknRpg
+  Lore:
+    - '&7星界贤者套装'
+    - ''
+    - '&7生命：&a+120 &8| &7防御：&a+80'
+    - '&7智慧：&b+15 &8| &7技能伤害：&d+15%'
+    - '&7活力：&a+7.5 &8| &7治疗增幅：&a+5'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套技能：&e天象领域 &7[潜行右键]'
+    - '&7对敌人造成伤害，并治疗附近玩家、赋予护盾。'
+    - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
+    - ''
+    - '&d神话 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COSMIC_SAGE_BOOTS:
+  Id: GOLDEN_BOOTS
+  Display: '&d星界贤者法靴'
+  Group: YknRpg
+  Lore:
+    - '&7星界贤者套装'
+    - ''
+    - '&7生命：&a+85 &8| &7防御：&a+60'
+    - '&7智慧：&b+15 &8| &7技能伤害：&d+15%'
+    - '&7活力：&a+7.5 &8| &7治疗增幅：&a+5'
+    - '&7速度：&f+5'
+    - ''
+    - '&6全套技能：&e天象领域 &7[潜行右键]'
+    - '&7对敌人造成伤害，并治疗附近玩家、赋予护盾。'
+    - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
+    - ''
+    - '&d神话 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COPPER_TINKER_HELMET:
+  Id: COPPER_HELMET
+  Display: '&8铜炉工匠护目镜'
+  Group: YknRpg
+  Lore:
+    - '&7铜炉工匠套装'
+    - ''
+    - '&7生命：&a+30 &8| &7防御：&a+18'
+    - '&7智慧：&b+1 &8| &7攻击速度：&e+2%'
+    - ''
+    - '&6全套效果：&e炉心节律'
+    - '&7持续获得急迫 I 与夜视。'
+    - ''
+    - '&8普通 头盔'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COPPER_TINKER_CHESTPLATE:
+  Id: COPPER_CHESTPLATE
+  Display: '&8铜炉工匠围甲'
+  Group: YknRpg
+  Lore:
+    - '&7铜炉工匠套装'
+    - ''
+    - '&7生命：&a+45 &8| &7防御：&a+25'
+    - '&7智慧：&b+1 &8| &7攻击速度：&e+3%'
+    - ''
+    - '&6全套效果：&e炉心节律'
+    - '&7持续获得急迫 I 与夜视。'
+    - ''
+    - '&8普通 胸甲'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COPPER_TINKER_LEGGINGS:
+  Id: COPPER_LEGGINGS
+  Display: '&8铜炉工匠护腿'
+  Group: YknRpg
+  Lore:
+    - '&7铜炉工匠套装'
+    - ''
+    - '&7生命：&a+35 &8| &7防御：&a+20'
+    - '&7智慧：&b+1 &8| &7攻击速度：&e+3%'
+    - ''
+    - '&6全套效果：&e炉心节律'
+    - '&7持续获得急迫 I 与夜视。'
+    - ''
+    - '&8普通 护腿'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COPPER_TINKER_BOOTS:
+  Id: COPPER_BOOTS
+  Display: '&8铜炉工匠短靴'
+  Group: YknRpg
+  Lore:
+    - '&7铜炉工匠套装'
+    - ''
+    - '&7生命：&a+20 &8| &7防御：&a+12'
+    - '&7智慧：&b+1 &8| &7攻击速度：&e+2%'
+    - '&7速度：&f+2'
+    - ''
+    - '&6全套效果：&e炉心节律'
+    - '&7持续获得急迫 I 与夜视。'
+    - ''
+    - '&8普通 靴子'
+  Options: {Unbreakable: true}
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BRAMBLE_RANGER_HELMET:
+  Id: LEATHER_HELMET
+  Display: '&a荆棘猎手兜帽'
+  Group: YknRpg
+  Lore:
+    - '&7荆棘猎手套装'
+    - ''
+    - '&7生命：&a+45 &8| &7防御：&a+30'
+    - '&7伤害：&c+5 &8| &7力量：&c+8'
+    - '&7暴击率：&9+2% &8| &7速度：&f+2'
+    - ''
+    - '&6全套效果：&e荆棘疾行'
+    - '&7投射物命中有 30% 几率减速敌人并提升自身速度。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&a少见的 头盔'
+  Options:
+    Unbreakable: true
+    Color: 47,92,52
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BRAMBLE_RANGER_CHESTPLATE:
+  Id: LEATHER_CHESTPLATE
+  Display: '&a荆棘猎手皮衣'
+  Group: YknRpg
+  Lore:
+    - '&7荆棘猎手套装'
+    - ''
+    - '&7生命：&a+65 &8| &7防御：&a+40'
+    - '&7伤害：&c+5 &8| &7力量：&c+8'
+    - '&7暴击率：&9+2% &8| &7速度：&f+2'
+    - ''
+    - '&6全套效果：&e荆棘疾行'
+    - '&7投射物命中有 30% 几率减速敌人并提升自身速度。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&a少见的 胸甲'
+  Options:
+    Unbreakable: true
+    Color: 47,92,52
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BRAMBLE_RANGER_LEGGINGS:
+  Id: LEATHER_LEGGINGS
+  Display: '&a荆棘猎手护腿'
+  Group: YknRpg
+  Lore:
+    - '&7荆棘猎手套装'
+    - ''
+    - '&7生命：&a+50 &8| &7防御：&a+35'
+    - '&7伤害：&c+5 &8| &7力量：&c+8'
+    - '&7暴击率：&9+2% &8| &7速度：&f+2'
+    - ''
+    - '&6全套效果：&e荆棘疾行'
+    - '&7投射物命中有 30% 几率减速敌人并提升自身速度。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&a少见的 护腿'
+  Options:
+    Unbreakable: true
+    Color: 47,92,52
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BRAMBLE_RANGER_BOOTS:
+  Id: LEATHER_BOOTS
+  Display: '&a荆棘猎手长靴'
+  Group: YknRpg
+  Lore:
+    - '&7荆棘猎手套装'
+    - ''
+    - '&7生命：&a+35 &8| &7防御：&a+20'
+    - '&7伤害：&c+5 &8| &7力量：&c+8'
+    - '&7暴击率：&9+2% &8| &7速度：&f+2'
+    - ''
+    - '&6全套效果：&e荆棘疾行'
+    - '&7投射物命中有 30% 几率减速敌人并提升自身速度。'
+    - '&8触发冷却：&a4秒'
+    - ''
+    - '&a少见的 靴子'
+  Options:
+    Unbreakable: true
+    Color: 47,92,52
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_PHANTOM_DUELIST_HELMET:
+  Id: CHAINMAIL_HELMET
+  Display: '&9幻翼决斗者面甲'
+  Group: YknRpg
+  Lore:
+    - '&7幻翼决斗者套装'
+    - ''
+    - '&7生命：&a+65 &8| &7防御：&a+40'
+    - '&7伤害：&c+8 &8| &7力量：&c+10'
+    - '&7暴击率：&9+3% &8| &7暴击伤害：&9+7.5%'
+    - '&7速度：&f+3'
+    - ''
+    - '&6全套技能：&e无相步 &7[潜行右键]'
+    - '&7跃迁并短暂隐身，同时强化暴击伤害与速度。'
+    - '&8魔力消耗：&350 &8| &8冷却：&a5秒'
+    - ''
+    - '&9稀有 头盔'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: amethyst
+      Pattern: vex
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_PHANTOM_DUELIST_CHESTPLATE:
+  Id: CHAINMAIL_CHESTPLATE
+  Display: '&9幻翼决斗者胸甲'
+  Group: YknRpg
+  Lore:
+    - '&7幻翼决斗者套装'
+    - ''
+    - '&7生命：&a+95 &8| &7防御：&a+60'
+    - '&7伤害：&c+8 &8| &7力量：&c+10'
+    - '&7暴击率：&9+3% &8| &7暴击伤害：&9+7.5%'
+    - '&7速度：&f+3'
+    - ''
+    - '&6全套技能：&e无相步 &7[潜行右键]'
+    - '&7跃迁并短暂隐身，同时强化暴击伤害与速度。'
+    - '&8魔力消耗：&350 &8| &8冷却：&a5秒'
+    - ''
+    - '&9稀有 胸甲'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: amethyst
+      Pattern: vex
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_PHANTOM_DUELIST_LEGGINGS:
+  Id: CHAINMAIL_LEGGINGS
+  Display: '&9幻翼决斗者护腿'
+  Group: YknRpg
+  Lore:
+    - '&7幻翼决斗者套装'
+    - ''
+    - '&7生命：&a+75 &8| &7防御：&a+50'
+    - '&7伤害：&c+8 &8| &7力量：&c+10'
+    - '&7暴击率：&9+3% &8| &7暴击伤害：&9+7.5%'
+    - '&7速度：&f+3'
+    - ''
+    - '&6全套技能：&e无相步 &7[潜行右键]'
+    - '&7跃迁并短暂隐身，同时强化暴击伤害与速度。'
+    - '&8魔力消耗：&350 &8| &8冷却：&a5秒'
+    - ''
+    - '&9稀有 护腿'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: amethyst
+      Pattern: vex
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_PHANTOM_DUELIST_BOOTS:
+  Id: CHAINMAIL_BOOTS
+  Display: '&9幻翼决斗者战靴'
+  Group: YknRpg
+  Lore:
+    - '&7幻翼决斗者套装'
+    - ''
+    - '&7生命：&a+50 &8| &7防御：&a+30'
+    - '&7伤害：&c+8 &8| &7力量：&c+10'
+    - '&7暴击率：&9+3% &8| &7暴击伤害：&9+7.5%'
+    - '&7速度：&f+3'
+    - ''
+    - '&6全套技能：&e无相步 &7[潜行右键]'
+    - '&7跃迁并短暂隐身，同时强化暴击伤害与速度。'
+    - '&8魔力消耗：&350 &8| &8冷却：&a5秒'
+    - ''
+    - '&9稀有 靴子'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: amethyst
+      Pattern: vex
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MOLTEN_BERSERKER_HELMET:
+  Id: GOLDEN_HELMET
+  Display: '&5熔心狂战头盔'
+  Group: YknRpg
+  Lore:
+    - '&7熔心狂战套装'
+    - ''
+    - '&7生命：&a+80 &8| &7防御：&a+55'
+    - '&7伤害：&c+12 &8| &7力量：&c+15'
+    - '&7凶猛：&c+4 &8| &7活力：&a+3.75'
+    - ''
+    - '&6全套效果：&e熔心狂怒'
+    - '&7生命低于 40% 受伤时获得护盾、抗火与战斗增益。'
+    - '&8触发冷却：&a15秒'
+    - ''
+    - '&5史诗 头盔'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: redstone
+      Pattern: rib
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MOLTEN_BERSERKER_CHESTPLATE:
+  Id: GOLDEN_CHESTPLATE
+  Display: '&5熔心狂战胸甲'
+  Group: YknRpg
+  Lore:
+    - '&7熔心狂战套装'
+    - ''
+    - '&7生命：&a+125 &8| &7防御：&a+90'
+    - '&7伤害：&c+12 &8| &7力量：&c+15'
+    - '&7凶猛：&c+4 &8| &7活力：&a+3.75'
+    - ''
+    - '&6全套效果：&e熔心狂怒'
+    - '&7生命低于 40% 受伤时获得护盾、抗火与战斗增益。'
+    - '&8触发冷却：&a15秒'
+    - ''
+    - '&5史诗 胸甲'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: redstone
+      Pattern: rib
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MOLTEN_BERSERKER_LEGGINGS:
+  Id: GOLDEN_LEGGINGS
+  Display: '&5熔心狂战护腿'
+  Group: YknRpg
+  Lore:
+    - '&7熔心狂战套装'
+    - ''
+    - '&7生命：&a+105 &8| &7防御：&a+75'
+    - '&7伤害：&c+12 &8| &7力量：&c+15'
+    - '&7凶猛：&c+4 &8| &7活力：&a+3.75'
+    - ''
+    - '&6全套效果：&e熔心狂怒'
+    - '&7生命低于 40% 受伤时获得护盾、抗火与战斗增益。'
+    - '&8触发冷却：&a15秒'
+    - ''
+    - '&5史诗 护腿'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: redstone
+      Pattern: rib
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MOLTEN_BERSERKER_BOOTS:
+  Id: GOLDEN_BOOTS
+  Display: '&5熔心狂战战靴'
+  Group: YknRpg
+  Lore:
+    - '&7熔心狂战套装'
+    - ''
+    - '&7生命：&a+70 &8| &7防御：&a+50'
+    - '&7伤害：&c+12 &8| &7力量：&c+15'
+    - '&7凶猛：&c+4 &8| &7活力：&a+3.75'
+    - ''
+    - '&6全套效果：&e熔心狂怒'
+    - '&7生命低于 40% 受伤时获得护盾、抗火与战斗增益。'
+    - '&8触发冷却：&a15秒'
+    - ''
+    - '&5史诗 靴子'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: redstone
+      Pattern: rib
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_ABYSS_WARDEN_HELMET:
+  Id: DIAMOND_HELMET
+  Display: '&6海渊守望者战盔'
+  Group: YknRpg
+  Lore:
+    - '&7海渊守望者套装'
+    - ''
+    - '&7生命：&a+125 &8| &7防御：&a+100'
+    - '&7伤害：&c+10 &8| &7力量：&c+15'
+    - '&7智慧：&b+4 &8| &7活力：&a+4'
+    - ''
+    - '&7全套额外：&a+80 防御'
+    - '&6全套技能：&e深渊重压 &7[潜行右键]'
+    - '&7重创周围敌人并施加缓慢与虚弱，同时获得厚重护盾。'
+    - '&8魔力消耗：&3120 &8| &8冷却：&a10秒'
+    - ''
+    - '&6传说 头盔'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: lapis
+      Pattern: tide
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_ABYSS_WARDEN_CHESTPLATE:
+  Id: DIAMOND_CHESTPLATE
+  Display: '&6海渊守望者胸铠'
+  Group: YknRpg
+  Lore:
+    - '&7海渊守望者套装'
+    - ''
+    - '&7生命：&a+185 &8| &7防御：&a+160'
+    - '&7伤害：&c+10 &8| &7力量：&c+15'
+    - '&7智慧：&b+4 &8| &7活力：&a+4'
+    - ''
+    - '&7全套额外：&a+80 防御'
+    - '&6全套技能：&e深渊重压 &7[潜行右键]'
+    - '&7重创周围敌人并施加缓慢与虚弱，同时获得厚重护盾。'
+    - '&8魔力消耗：&3120 &8| &8冷却：&a10秒'
+    - ''
+    - '&6传说 胸甲'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: lapis
+      Pattern: tide
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_ABYSS_WARDEN_LEGGINGS:
+  Id: DIAMOND_LEGGINGS
+  Display: '&6海渊守望者腿铠'
+  Group: YknRpg
+  Lore:
+    - '&7海渊守望者套装'
+    - ''
+    - '&7生命：&a+155 &8| &7防御：&a+130'
+    - '&7伤害：&c+10 &8| &7力量：&c+15'
+    - '&7智慧：&b+4 &8| &7活力：&a+4'
+    - ''
+    - '&7全套额外：&a+80 防御'
+    - '&6全套技能：&e深渊重压 &7[潜行右键]'
+    - '&7重创周围敌人并施加缓慢与虚弱，同时获得厚重护盾。'
+    - '&8魔力消耗：&3120 &8| &8冷却：&a10秒'
+    - ''
+    - '&6传说 护腿'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: lapis
+      Pattern: tide
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_ABYSS_WARDEN_BOOTS:
+  Id: DIAMOND_BOOTS
+  Display: '&6海渊守望者战靴'
+  Group: YknRpg
+  Lore:
+    - '&7海渊守望者套装'
+    - ''
+    - '&7生命：&a+105 &8| &7防御：&a+90'
+    - '&7伤害：&c+10 &8| &7力量：&c+15'
+    - '&7智慧：&b+4 &8| &7活力：&a+4'
+    - ''
+    - '&7全套额外：&a+80 防御'
+    - '&6全套技能：&e深渊重压 &7[潜行右键]'
+    - '&7重创周围敌人并施加缓慢与虚弱，同时获得厚重护盾。'
+    - '&8魔力消耗：&3120 &8| &8冷却：&a10秒'
+    - ''
+    - '&6传说 靴子'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: lapis
+      Pattern: tide
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CHRONOWARDEN_HELMET:
+  Id: NETHERITE_HELMET
+  Display: '&d时序裁定者战盔'
+  Group: YknRpg
+  Lore:
+    - '&7时序裁定者套装'
+    - ''
+    - '&7生命：&a+140 &8| &7防御：&a+110'
+    - '&7伤害：&c+5 &8| &7力量：&c+10'
+    - '&7智慧：&b+4 &8| &7活力：&a+5'
+    - '&7治疗增幅：&a+5'
+    - ''
+    - '&7全套额外：&a+80 防御 &8| &7智慧：&b+8'
+    - '&7全套额外：&a+10 治疗增幅'
+    - '&6全套技能：&e时序庇护 &7[潜行右键]'
+    - '&7加速附近玩家、迟滞敌人并赋予治疗、护盾与防御。'
+    - '&8魔力消耗：&3160 &8| &8冷却：&a10秒'
+    - ''
+    - '&d神话 头盔'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: quartz
+      Pattern: silence
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CHRONOWARDEN_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Display: '&d时序裁定者胸铠'
+  Group: YknRpg
+  Lore:
+    - '&7时序裁定者套装'
+    - ''
+    - '&7生命：&a+210 &8| &7防御：&a+170'
+    - '&7伤害：&c+5 &8| &7力量：&c+10'
+    - '&7智慧：&b+4 &8| &7活力：&a+5'
+    - '&7治疗增幅：&a+5'
+    - ''
+    - '&7全套额外：&a+80 防御 &8| &7智慧：&b+8'
+    - '&7全套额外：&a+10 治疗增幅'
+    - '&6全套技能：&e时序庇护 &7[潜行右键]'
+    - '&7加速附近玩家、迟滞敌人并赋予治疗、护盾与防御。'
+    - '&8魔力消耗：&3160 &8| &8冷却：&a10秒'
+    - ''
+    - '&d神话 胸甲'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: quartz
+      Pattern: silence
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CHRONOWARDEN_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Display: '&d时序裁定者腿铠'
+  Group: YknRpg
+  Lore:
+    - '&7时序裁定者套装'
+    - ''
+    - '&7生命：&a+175 &8| &7防御：&a+140'
+    - '&7伤害：&c+5 &8| &7力量：&c+10'
+    - '&7智慧：&b+4 &8| &7活力：&a+5'
+    - '&7治疗增幅：&a+5'
+    - ''
+    - '&7全套额外：&a+80 防御 &8| &7智慧：&b+8'
+    - '&7全套额外：&a+10 治疗增幅'
+    - '&6全套技能：&e时序庇护 &7[潜行右键]'
+    - '&7加速附近玩家、迟滞敌人并赋予治疗、护盾与防御。'
+    - '&8魔力消耗：&3160 &8| &8冷却：&a10秒'
+    - ''
+    - '&d神话 护腿'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: quartz
+      Pattern: silence
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CHRONOWARDEN_BOOTS:
+  Id: NETHERITE_BOOTS
+  Display: '&d时序裁定者战靴'
+  Group: YknRpg
+  Lore:
+    - '&7时序裁定者套装'
+    - ''
+    - '&7生命：&a+120 &8| &7防御：&a+100'
+    - '&7伤害：&c+5 &8| &7力量：&c+10'
+    - '&7智慧：&b+4 &8| &7活力：&a+5'
+    - '&7治疗增幅：&a+5'
+    - ''
+    - '&7全套额外：&a+80 防御 &8| &7智慧：&b+8'
+    - '&7全套额外：&a+10 治疗增幅'
+    - '&6全套技能：&e时序庇护 &7[潜行右键]'
+    - '&7加速附近玩家、迟滞敌人并赋予治疗、护盾与防御。'
+    - '&8魔力消耗：&3160 &8| &8冷却：&a10秒'
+    - ''
+    - '&d神话 靴子'
+  Options:
+    Unbreakable: true
+    Trim:
+      Material: quartz
+      Pattern: silence
+  Enchantments: [DURABILITY:1]
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]

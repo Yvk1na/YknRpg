@@ -1,0 +1,77 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (890efc8aa5aac2742ab04564501c4f56e9c7169b272d0530f78c209865577928)
+name: "&9鎏金蜂"
+description: "&7耕作与繁育动物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwZWZjOGFhNWFhYzI3NDJhYjA0NTY0NTAxYzRmNTZlOWM3MTY5YjI3MmQwNTMwZjc4YzIwOTg2NTU3NzkyOCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwZWZjOGFhNWFhYzI3NDJhYjA0NTY0NTAxYzRmNTZlOWM3MTY5YjI3MmQwNTMwZjc4YzIwOTg2NTU3NzkyOCJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.5
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+  - id: breed
+    value: 12
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.11"
+  - id: "speed_bonus"
+    value: "%level% * 0.04"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.11"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.04"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: bee_spawn_egg unbreaking:1 hide_enchants
+  name: "&9鎏金蜂 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9鎏金蜂&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_golden_bee
+  withdrawable: true

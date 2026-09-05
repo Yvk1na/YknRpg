@@ -1,0 +1,57 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (1a87c317c64c66859260e71111b27b4b351b7c86039cad7c7e5b02747234ba94)
+name: "&8溪流水獭"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE4N2MzMTdjNjRjNjY4NTkyNjBlNzExMTFiMjdiNGIzNTFiN2M4NjAzOWNhZDdjN2U1YjAyNzQ3MjM0YmE5NCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE4N2MzMTdjNjRjNjY4NTkyNjBlNzExMTFiMjdiNGIzNTFiN2M4NjAzOWNhZDdjN2U1YjAyNzQ3MjM0YmE5NCJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 2
+
+level-placeholders:
+  - id: "speed_bonus"
+    value: "%level% * 0.03"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.03"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: dolphin_spawn_egg unbreaking:1 hide_enchants
+  name: "&8溪流水獭 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8溪流水獭&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_river_otter
+  withdrawable: true

@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$assetRoot = Join-Path $projectRoot 'packs\craftengine\resourcepack\assets\yknitems'
+$assetRoot = Join-Path $projectRoot 'packs\craftengine\resourcepack\assets\yknrpg'
 $textureRoot = Join-Path $assetRoot 'textures\item'
 $modelRoot = Join-Path $assetRoot 'models\item'
 $itemRoot = Join-Path $assetRoot 'items'
@@ -12,9 +12,6 @@ if (Test-Path -LiteralPath $assetRoot -PathType Container) {
 New-Item -ItemType Directory -Force -Path $textureRoot, $modelRoot, $itemRoot | Out-Null
 
 $assets = @(
-    @{ Id = 'tempered_ingot'; Kind = 'component'; Stage = 'early' },
-    @{ Id = 'resonant_crystal'; Kind = 'component'; Stage = 'mid' },
-    @{ Id = 'eclipse_core'; Kind = 'component'; Stage = 'late' },
     @{ Id = 'gui_crafting_table'; Kind = 'table'; Stage = 'gui' },
     @{ Id = 'gui_arrow'; Kind = 'arrow'; Stage = 'gui' }
 )
@@ -124,13 +121,13 @@ foreach ($asset in $assets) {
     if ($asset.Kind -in @('component', 'table', 'arrow')) { $parent = 'minecraft:item/generated' }
     $modelJson = [ordered]@{
         parent = $parent
-        textures = [ordered]@{ layer0 = 'yknitems:item/' + $asset.Id }
+        textures = [ordered]@{ layer0 = 'yknrpg:item/' + $asset.Id }
     } | ConvertTo-Json -Depth 4
     $itemJson = [ordered]@{
-        model = [ordered]@{ type = 'minecraft:model'; model = 'yknitems:item/' + $asset.Id }
+        model = [ordered]@{ type = 'minecraft:model'; model = 'yknrpg:item/' + $asset.Id }
     } | ConvertTo-Json -Depth 4
     [System.IO.File]::WriteAllText((Join-Path $modelRoot ($asset.Id + '.json')), $modelJson + "`n", $utf8)
     [System.IO.File]::WriteAllText((Join-Path $itemRoot ($asset.Id + '.json')), $itemJson + "`n", $utf8)
 }
 
-Write-Host ("Generated {0} YknItems CraftEngine assets." -f $assets.Count)
+Write-Host ("Generated {0} YknRpg CraftEngine assets." -f $assets.Count)

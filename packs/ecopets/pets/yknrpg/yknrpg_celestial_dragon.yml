@@ -1,0 +1,79 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (6f7d6e99d88c23c330937f72d3660f80b94aef10b09a0845b1e4ce354caa5cd5)
+name: "&6星穹幼龙"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY3ZDZlOTlkODhjMjNjMzMwOTM3ZjcyZDM2NjBmODBiOTRhZWYxMGIwOWEwODQ1YjFlNGNlMzU0Y2FhNWNkNSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY3ZDZlOTlkODhjMjNjMzMwOTM3ZjcyZDM2NjBmODBiOTRhZWYxMGIwOWEwODQ1YjFlNGNlMzU0Y2FhNWNkNSJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.65
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "strength_bonus"
+    value: "%level% * 0.38"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.1"
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.11"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%strength_bonus% 力量"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-messages:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&6+%crit_damage_bonus% 暴击伤害"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: "%level% * 0.38"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.1"
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.11"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: ghast_spawn_egg unbreaking:1 hide_enchants
+  name: "&6星穹幼龙 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6星穹幼龙&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_celestial_dragon
+  withdrawable: true

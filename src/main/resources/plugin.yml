@@ -1,15 +1,24 @@
-name: YknItems
+name: YknRpg
 version: '${version}'
-main: cn.yknitems.YknItemsPlugin
-api-version: '1.21.10'
+main: cn.yknrpg.YknRpgPlugin
+api-version: '1.21.11'
 authors: [ykn]
-description: 统一管理 RPG 自定义武器、护甲、材料、配方与管理员图鉴
-softdepend: [AuraSkills, CraftEngine, EcoEnchants, Reforges, YknClass]
+description: 使用 AuraSkills 法力的 MythicMobs SkyBlock 属性、技能、套装与配方引擎
+depend: [MythicMobs, AuraSkills]
+softdepend: [CraftEngine, ProtocolLib, EcoPets]
+loadbefore: [Skyblock-Core]
+provides: [YknItems]
 commands:
-  yknitems:
-    description: 打开 YknItems 管理界面或重载配置
-    usage: /yknitems <admin|reload>
+  yknrpg:
+    description: 打开 YknRpg 管理界面或重载配置
+    usage: /yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload
+    aliases: [yknitems]
 permissions:
-  yknitems.admin:
-    description: 允许打开管理员物品图鉴与重载 YknItems
+  yknrpg.admin:
+    description: 允许打开管理员物品图鉴与重载 YknRpg
     default: op
+  yknitems.admin:
+    description: 旧版 YknItems 管理权限兼容节点
+    default: false
+    children:
+      yknrpg.admin: true

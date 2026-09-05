@@ -1,1 +1,1 @@
-rootProject.name = "yknitems"
+rootProject.name = "YknRpg"

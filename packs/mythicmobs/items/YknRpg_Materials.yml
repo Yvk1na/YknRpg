@@ -1,0 +1,371 @@
+YKI_FORGED_IRON:
+  Id: IRON_INGOT
+  Display: '&8锻纹铁锭'
+  Group: YknRpg
+  Lore:
+    - '&7经反复折叠锻打的基础合金。'
+    - '&7用于制作普通武器与远行者护甲。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CHARGED_COAL:
+  Id: COAL
+  Display: '&8聚能煤晶'
+  Group: YknRpg
+  Lore:
+    - '&7内部储存着微弱热能的煤晶。'
+    - '&7是低阶法杖与附魔矿料的基础。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ENCHANTED_GOLD:
+  Id: GOLD_INGOT
+  Display: '&a附魔金锭'
+  Group: YknRpg
+  Lore:
+    - '&7将大量黄金压缩后注入魔力。'
+    - '&7用于少见的守护类装备。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ENCHANTED_LAPIS:
+  Id: LAPIS_LAZULI
+  Display: '&a附魔青金'
+  Group: YknRpg
+  Lore:
+    - '&7高密度的青金魔力结晶。'
+    - '&7适合制作初阶远程与法术道具。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ENCHANTED_DIAMOND:
+  Id: DIAMOND
+  Display: '&9附魔钻晶'
+  Group: YknRpg
+  Lore:
+    - '&7通透而坚硬的高纯度钻晶。'
+    - '&7用于稀有武器与潮汐护甲。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ENCHANTED_REDSTONE:
+  Id: REDSTONE
+  Display: '&9附魔红晶'
+  Group: YknRpg
+  Lore:
+    - '&7持续跃动的能量回路核心。'
+    - '&7为位移和充能型道具提供动力。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_STELLAR_AMETHYST:
+  Id: AMETHYST_SHARD
+  Display: '&5星辉紫晶'
+  Group: YknRpg
+  Lore:
+    - '&7吸收星光后产生共鸣的紫晶。'
+    - '&7用于史诗法器与影行者装备。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ABYSS_ECHO_CRYSTAL:
+  Id: ECHO_SHARD
+  Display: '&5深渊回响晶'
+  Group: YknRpg
+  Lore:
+    - '&7封存远古回声的深层矿晶。'
+    - '&7用于史诗重武器和暗影装备。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DRAGONBREATH_ALLOY:
+  Id: NETHERITE_INGOT
+  Display: '&6龙息合金'
+  Group: YknRpg
+  Lore:
+    - '&7以龙息淬炼的下界合金。'
+    - '&7能够承受传说级武器的力量。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_NETHER_STAR_CORE:
+  Id: NETHER_STAR
+  Display: '&6下界星核'
+  Group: YknRpg
+  Lore:
+    - '&7稳定约束下界星能的锻造核心。'
+    - '&7用于传说护甲与大型法器。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CELESTIAL_CORE:
+  Id: HEART_OF_THE_SEA
+  Display: '&d天穹圣核'
+  Group: YknRpg
+  Lore:
+    - '&7将星核、龙息与海洋之心熔为一体。'
+    - '&7仅用于神话级锻造。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_GENESIS_CORE:
+  Id: END_CRYSTAL
+  Display: '&d创世原核'
+  Group: YknRpg
+  Lore:
+    - '&7凝聚末地与下界法则的原初核心。'
+    - '&7是重塑终局装备法则的神话级核心。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TEMPERED_COPPER:
+  Id: COPPER_INGOT
+  Display: '&8淬火铜锭'
+  Group: YknRpg
+  Lore:
+    - '&7经煤火反复淬炼的坚韧铜锭。'
+    - '&7用于普通武器与铜炉工匠护甲。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_LIVING_RESIN:
+  Id: RESIN_BRICK
+  Display: '&8活性树脂'
+  Group: YknRpg
+  Lore:
+    - '&7仍在缓慢搏动的天然黏合剂。'
+    - '&7适合制作生命与恢复类装备。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_RUNED_QUARTZ:
+  Id: QUARTZ
+  Display: '&a符文石英'
+  Group: YknRpg
+  Lore:
+    - '&7表面刻满导能纹路的纯净石英。'
+    - '&7是少见机械与守护道具的核心。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_VERDANT_ESSENCE:
+  Id: EMERALD
+  Display: '&a翠生精萃'
+  Group: YknRpg
+  Lore:
+    - '&7浓缩苔藓与林地生命力形成的翠色结晶。'
+    - '&7用于荆棘武器与自然系法器。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PRISMATIC_SCALE:
+  Id: PRISMARINE_CRYSTALS
+  Display: '&9棱彩鳞片'
+  Group: YknRpg
+  Lore:
+    - '&7在海光中折射多层能量的鳞片。'
+    - '&7用于稀有远程武器与机动护甲。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PHANTOM_SILK:
+  Id: PHANTOM_MEMBRANE
+  Display: '&9幻灵丝'
+  Group: YknRpg
+  Lore:
+    - '&7以幻翼膜编成、几乎没有重量的丝线。'
+    - '&7能够承载位移与轻盈魔法。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_MOLTEN_SIGIL:
+  Id: MAGMA_CREAM
+  Display: '&5熔火符印'
+  Group: YknRpg
+  Lore:
+    - '&7封住熔岩脉动的炽热战斗符印。'
+    - '&7用于史诗级爆发武器与狂战护甲。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_VOID_PEARL:
+  Id: POPPED_CHORUS_FRUIT
+  Display: '&5虚空珍珠'
+  Group: YknRpg
+  Lore:
+    - '&7吸收紫颂果与末影能量后稳定成形。'
+    - '&7用于史诗位移与空间系锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PHOENIX_EMBER:
+  Id: BLAZE_POWDER
+  Display: '&6不死鸟余烬'
+  Group: YknRpg
+  Lore:
+    - '&7熄灭后仍会重新燃起的永恒余烬。'
+    - '&7用于传说火焰武器与终阶护甲。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_LEVIATHAN_HEART:
+  Id: NAUTILUS_SHELL
+  Display: '&6利维坦之心'
+  Group: YknRpg
+  Lore:
+    - '&7深海巨兽力量凝成的潮汐心核。'
+    - '&7用于传说海渊兵器与重型护甲。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CHRONO_SHARD:
+  Id: CLOCK
+  Display: '&d时序碎晶'
+  Group: YknRpg
+  Lore:
+    - '&7指针在过去与未来之间不断摇摆。'
+    - '&7仅能用于神话级时序锻造。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_WORLDROOT_SEED:
+  Id: PITCHER_POD
+  Display: '&d世界树之种'
+  Group: YknRpg
+  Lore:
+    - '&7蕴藏完整生态循环的原初种子。'
+    - '&7是神话生命法器与护甲的核心。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SABER_CREST:
+  Id: IRON_NUGGET
+  Display: '&5剑士纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由剑士的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ARCHER_CREST:
+  Id: SPECTRAL_ARROW
+  Display: '&5弓兵纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由弓兵的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_LANCER_CREST:
+  Id: PRISMARINE_SHARD
+  Display: '&5枪兵纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由枪兵的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ASSASSIN_CREST:
+  Id: FERMENTED_SPIDER_EYE
+  Display: '&5刺客纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由刺客的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_HEALER_CREST:
+  Id: GLISTERING_MELON_SLICE
+  Display: '&5奶妈纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由奶妈的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TANK_CREST:
+  Id: TURTLE_SCUTE
+  Display: '&5坦克纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由坦克的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CASTER_CREST:
+  Id: ENCHANTED_BOOK
+  Display: '&5法师纹章'
+  Group: YknRpg
+  Lore:
+    - '&7由法师的职业传承凝成。'
+    - '&7可用于职业突破材料模板和专属兵装锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]

@@ -1,0 +1,79 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (6eab75eaa5c9f2c43a0d23cfdce35f4df632e9815001850377385f7b2f039ce1)
+name: "&6虚空行者"
+description: "&7击败生物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmVhYjc1ZWFhNWM5ZjJjNDNhMGQyM2NmZGNlMzVmNGRmNjMyZTk4MTUwMDE4NTAzNzczODVmN2IyZjAzOWNlMSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmVhYjc1ZWFhNWM5ZjJjNDNhMGQyM2NmZGNlMzVmNGRmNjMyZTk4MTUwMDE4NTAzNzczODVmN2IyZjAzOWNlMSJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: kill
+    multiplier: 0.65
+    filters:
+      not_entities:
+        - player
+        - armor_stand
+
+level-placeholders:
+  - id: "crit_damage_bonus"
+    value: "%level% * 0.24"
+  - id: "crit_chance_bonus"
+    value: "%level% * 0.06"
+  - id: "speed_bonus"
+    value: "%level% * 0.05"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&f+%speed_bonus% 速度"
+
+level-up-messages:
+  1:
+    - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&9+%crit_chance_bonus% 暴击率"
+    - "&f+%speed_bonus% 速度"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: "%level% * 0.24"
+  - id: add_stat
+    args:
+      stat: crit_chance
+      amount: "%level% * 0.06"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.05"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: enderman_spawn_egg unbreaking:1 hide_enchants
+  name: "&6虚空行者 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6虚空行者&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_void_enderman
+  withdrawable: true
