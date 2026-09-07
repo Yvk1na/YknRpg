@@ -1,0 +1,95 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (4c27e3cb52a64968e60c861ef1ab84e0a0cb5f07be103ac78da67761731f00c8)
+name: "&6寻界鹏鸟"
+description: "&7疾跑旅行可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGMyN2UzY2I1MmE2NDk2OGU2MGM4NjFlZjFhYjg0ZTBhMGNiNWYwN2JlMTAzYWM3OGRhNjc3NjE3MzFmMDBjOCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGMyN2UzY2I1MmE2NDk2OGU2MGM4NjFlZjFhYjg0ZTBhMGNiNWYwN2JlMTAzYWM3OGRhNjc3NjE3MzFmMDBjOCJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: move
+    multiplier: 0.75
+    conditions:
+      - id: is_sprinting
+
+level-placeholders:
+  - id: "speed_bonus"
+    value: "%level% * 0.09"
+  - id: "health_bonus"
+    value: "%level% * 0.04"
+  - id: "toughness_bonus"
+    value: "%level% * 0.24"
+  - id: "perk_agility_xp"
+    value: "%level% * 0.12"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.05"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&6【寻界远行】&7敏捷技能经验 &a+%perk_agility_xp%%"
+    - "&6【鹏翼缓降】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&6【寻界远行】&7敏捷技能经验 &a+%perk_agility_xp%%"
+    - "&6【鹏翼缓降】&7安全坠落距离 &a+%perk_safe_fall% 格"
+
+level-up-messages:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&6【寻界远行】&7敏捷技能经验 &a+%perk_agility_xp%%"
+    - "&6【鹏翼缓降】&7安全坠落距离 &a+%perk_safe_fall% 格"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.09"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.04"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.24"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0012)"
+      skills:
+        - agility
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.05"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: phantom_spawn_egg unbreaking:1 hide_enchants
+  name: "&6寻界鹏鸟 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6寻界鹏鸟&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_wayfinder_roc
+  withdrawable: true

@@ -1,0 +1,117 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (e4196921cb9cda4b81f38880d9c3239f9bdf8cc5f5f2e752016f57e8311f49)
+name: "&9熔炉蝾螈"
+description: "&7挖掘天然矿石可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQxOTY5MjFjYjljZGE0YjgxZjM4ODgwZDljMzIzOWY5YmRmOGNjNWY1ZjJlNzUyMDE2ZjU3ZTgzMTFmNDkifX19"
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQxOTY5MjFjYjljZGE0YjgxZjM4ODgwZDljMzIzOWY5YmRmOGNjNWY1ZjJlNzUyMDE2ZjU3ZTgzMTFmNDkifX19
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.5
+    filters:
+      player_placed: false
+      blocks:
+        - coal_ore
+        - deepslate_coal_ore
+        - copper_ore
+        - deepslate_copper_ore
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - redstone_ore
+        - deepslate_redstone_ore
+        - lapis_ore
+        - deepslate_lapis_ore
+        - diamond_ore
+        - deepslate_diamond_ore
+        - emerald_ore
+        - deepslate_emerald_ore
+        - nether_quartz_ore
+        - nether_gold_ore
+        - ancient_debris
+
+level-placeholders:
+  - id: "toughness_bonus"
+    value: "%level% * 0.18"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.048"
+  - id: "perk_mining_xp"
+    value: "%level% * 0.07"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - ""
+    - "&6特殊效果："
+    - "&e熔炉吐息 &7自动熔炼天然铁、金与铜矿石"
+    - "&e炽热研习 &7采矿技能经验 +&a%perk_mining_xp%%"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&e熔炉吐息 &7自动熔炼天然铁、金与铜矿石"
+    - "&e炽热研习 &7采矿技能经验 +&a%perk_mining_xp%%"
+
+level-up-messages:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&e熔炉吐息 &7自动熔炼天然铁、金与铜矿石"
+    - "&e炽热研习 &7采矿技能经验 +&a%perk_mining_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.18"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.048"
+  - id: autosmelt
+    args:
+      drop_xp: true
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - copper_ore
+        - deepslate_copper_ore
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0007)"
+      skills:
+        - mining
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: axolotl_spawn_egg unbreaking:1 hide_enchants
+  name: "&9熔炉蝾螈 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9熔炉蝾螈&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_forge_salamander
+  withdrawable: true

@@ -20,6 +20,10 @@ level-placeholders:
     value: "%level% * 0.25"
   - id: "luck_bonus"
     value: "%level% * 0.1"
+  - id: "perk_water_movement"
+    value: "%level% * 0.14"
+  - id: "perk_oxygen"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -27,6 +31,8 @@ effects-description:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&a+%luck_bonus% 幸运"
+    - "&6【洋流之躯】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&6【深海肺腑】&7水下氧气加成 &a+%perk_oxygen%"
     - ""
     - "&6传说宠物"
 
@@ -35,12 +41,16 @@ rewards-description:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&a+%luck_bonus% 幸运"
+    - "&6【洋流之躯】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&6【深海肺腑】&7水下氧气加成 &a+%perk_oxygen%"
 
 level-up-messages:
   1:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&a+%luck_bonus% 幸运"
+    - "&6【洋流之躯】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&6【深海肺腑】&7水下氧气加成 &a+%perk_oxygen%"
 
 level-up-effects: []
 
@@ -57,6 +67,12 @@ effects:
     args:
       stat: luck
       amount: "%level% * 0.1"
+  - id: water_movement_efficiency_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0014)"
+  - id: oxygen_bonus
+    args:
+      amount: "%level% * 0.05"
 
 conditions: []
 activate-conditions: []

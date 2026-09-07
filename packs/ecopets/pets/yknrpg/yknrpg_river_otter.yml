@@ -16,21 +16,28 @@ xp-gain-methods:
 level-placeholders:
   - id: "speed_bonus"
     value: "%level% * 0.03"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.03"
 
 effects-description:
   1:
     - "&7属性加成："
     - "&f+%speed_bonus% 速度"
     - ""
+    - "&6特殊效果："
+    - "&e灵巧收线 &7收线速度 +&a%perk_reel_speed%%"
+    - ""
     - "&8普通宠物"
 
 rewards-description:
   1:
     - "&f+%speed_bonus% 速度"
+    - "&e灵巧收线 &7收线速度 +&a%perk_reel_speed%%"
 
 level-up-messages:
   1:
     - "&f+%speed_bonus% 速度"
+    - "&e灵巧收线 &7收线速度 +&a%perk_reel_speed%%"
 
 level-up-effects: []
 
@@ -39,6 +46,9 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.03"
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0003)"
 
 conditions: []
 activate-conditions: []

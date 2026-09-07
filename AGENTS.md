@@ -8,7 +8,7 @@
 - 普通验证运行 `deploy.cmd -BuildOnly`，不得因此修改服务端。
 - 默认服务端目录为 `F:\mc服务端\Paper-1.21.10-Inf-Skyblock`；未经用户明确要求不得部署、启动或停止服务端。
 - CraftEngine 包产物为 `build\distributions\YknRpg-CraftEngine-Pack-<version>.zip`。
-- MythicMobs 物品包产物为 `build\distributions\YknRpg-MythicMobs-Pack-<version>.zip`；完整内容固定为 31 个材料、44 把武器和 12 套共 48 件护甲，其中包括 7 枚 YknClass 职业纹章与 14 件职业主题武器。
+- MythicMobs 物品包产物为 `build\distributions\YknRpg-MythicMobs-Pack-<version>.zip`；完整内容固定为 90 个材料、105 把武器和 33 套共 132 件护甲（总计 327 件），其中包括 7 枚 YknClass 职业纹章、14 件原有职业主题武器与 12 把具有正常战斗属性、技能偏探索、移动、支援和采集的功能性武器，以及分别以骨龙、烬日冥卫·阿努赫、终焉之魔女·伊芙蕾雅为主题的 6 种材料、覆盖 7 个职业的 7 把武器和 1 套四件护甲。ITEM 六档数量依次为 12、12、12、18、18、18；WEAPON 依现有设计依次为 13、14、15、22、21、20，无需在六档之间平均分配；ARMOR 依次为 20、20、20、24、24、24；护甲四个部位各 33 件；每种材料必须被至少一个位于其后的默认配方以 `@` 引用。
 - 管理员图鉴分为 `admin items`、`admin weapon`、`admin armor`，三者必须互不混入其他分类，并分别按 COMMON、UNCOMMON、RARE、EPIC、LEGENDARY、MYTHIC 排序。
 - 玩家可见稀有度名称和颜色固定为 `&8普通`、`&a少见的`、`&9稀有`、`&5史诗`、`&6传说`、`&d神话`。
 - `rpg.yml` 是通用 SkyBlock 属性、技能与套装配置入口。能力必须配置驱动，不得为某件具体装备重新加入硬编码物品 ID 或专属 Java 监听器。

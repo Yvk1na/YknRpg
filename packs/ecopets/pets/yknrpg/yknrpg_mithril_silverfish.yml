@@ -1,0 +1,118 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (da91dab8391af5fda54acd2c0b18fbd819b865e1a8f1d623813fa761e924540)
+name: "&5秘银蠹虫"
+description: "&7挖掘天然岩石与矿物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ=="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ==
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 3
+    filters:
+      player_placed: false
+      blocks:
+        - stone
+        - deepslate
+        - coal_ore
+        - deepslate_coal_ore
+        - copper_ore
+        - deepslate_copper_ore
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - redstone_ore
+        - deepslate_redstone_ore
+        - lapis_ore
+        - deepslate_lapis_ore
+        - diamond_ore
+        - deepslate_diamond_ore
+        - emerald_ore
+        - deepslate_emerald_ore
+        - nether_quartz_ore
+        - nether_gold_ore
+        - ancient_debris
+
+level-placeholders:
+  - id: "toughness_bonus"
+    value: "%level% * 0.21"
+  - id: "luck_bonus"
+    value: "%level% * 0.12"
+  - id: "speed_bonus"
+    value: "%level% * 0.05"
+  - id: "perk_mining_speed"
+    value: "%level% * 0.12"
+  - id: "perk_mining_xp"
+    value: "%level% * 0.09"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【秘银掘进】&7挖掘速度 &a+%perk_mining_speed%%"
+    - "&d【晶脉研习】&7采矿与挖掘技能经验 &a+%perk_mining_xp%%"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【秘银掘进】&7挖掘速度 &a+%perk_mining_speed%%"
+    - "&d【晶脉研习】&7采矿与挖掘技能经验 &a+%perk_mining_xp%%"
+
+level-up-messages:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【秘银掘进】&7挖掘速度 &a+%perk_mining_speed%%"
+    - "&d【晶脉研习】&7采矿与挖掘技能经验 &a+%perk_mining_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.21"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.05"
+  - id: mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0012)"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0009)"
+      skills:
+        - mining
+        - excavation
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: silverfish_spawn_egg unbreaking:1 hide_enchants
+  name: "&5秘银蠹虫 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5秘银蠹虫&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_mithril_silverfish
+  withdrawable: true

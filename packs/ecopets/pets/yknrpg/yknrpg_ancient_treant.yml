@@ -34,6 +34,10 @@ level-placeholders:
     value: "%level% * 0.1"
   - id: "toughness_bonus"
     value: "%level% * 0.1"
+  - id: "perk_foraging_xp"
+    value: "%level% * 0.1"
+  - id: "perk_log_double_chance"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -41,6 +45,8 @@ effects-description:
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【年轮教诲】&7伐木技能经验 &a+%perk_foraging_xp%%"
+    - "&d【丰饶树冠】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
     - ""
     - "&5史诗宠物"
 
@@ -49,12 +55,16 @@ rewards-description:
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【年轮教诲】&7伐木技能经验 &a+%perk_foraging_xp%%"
+    - "&d【丰饶树冠】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
 
 level-up-messages:
   1:
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【年轮教诲】&7伐木技能经验 &a+%perk_foraging_xp%%"
+    - "&d【丰饶树冠】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
 
 level-up-effects: []
 
@@ -71,6 +81,43 @@ effects:
     args:
       stat: toughness
       amount: "%level% * 0.1"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.001)"
+      skills:
+        - foraging
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.08"
+      on_items:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
 
 conditions: []
 activate-conditions: []

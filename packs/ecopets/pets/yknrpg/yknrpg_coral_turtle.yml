@@ -18,6 +18,8 @@ level-placeholders:
     value: "%level% * 0.02"
   - id: "toughness_bonus"
     value: "%level% * 0.06"
+  - id: "perk_oxygen"
+    value: "%level% * 0.03"
 
 effects-description:
   1:
@@ -25,17 +27,22 @@ effects-description:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - ""
+    - "&6特殊效果："
+    - "&e珊瑚气囊 &7水下氧气 +&a%perk_oxygen%"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
+    - "&e珊瑚气囊 &7水下氧气 +&a%perk_oxygen%"
 
 level-up-messages:
   1:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
+    - "&e珊瑚气囊 &7水下氧气 +&a%perk_oxygen%"
 
 level-up-effects: []
 
@@ -48,6 +55,9 @@ effects:
     args:
       stat: toughness
       amount: "%level% * 0.06"
+  - id: oxygen_bonus
+    args:
+      amount: "%level% * 0.03"
 
 conditions: []
 activate-conditions: []

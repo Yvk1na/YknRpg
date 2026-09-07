@@ -26,6 +26,10 @@ level-placeholders:
     value: "%level% * 0.06"
   - id: "crit_damage_bonus"
     value: "%level% * 0.16"
+  - id: "perk_food_bonus"
+    value: "%level% * 0.15"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -34,6 +38,9 @@ effects-description:
     - "&c+%health_bonus% 生命"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【泰坦猎食】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&d【踏岭如平】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【猎犬衔回】&7驯服生物击杀的掉落物直接进入背包"
     - ""
     - "&d神话宠物"
 
@@ -43,6 +50,9 @@ rewards-description:
     - "&c+%health_bonus% 生命"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【泰坦猎食】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&d【踏岭如平】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【猎犬衔回】&7驯服生物击杀的掉落物直接进入背包"
 
 level-up-messages:
   1:
@@ -50,6 +60,9 @@ level-up-messages:
     - "&c+%health_bonus% 生命"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【泰坦猎食】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&d【踏岭如平】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【猎犬衔回】&7驯服生物击杀的掉落物直接进入背包"
 
 level-up-effects: []
 
@@ -70,6 +83,15 @@ effects:
     args:
       stat: crit_damage
       amount: "%level% * 0.16"
+  - id: food_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0015)"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.05"
+  - id: telekinesis
+    args:
+      on_tamed_mob_kills: true
 
 conditions: []
 activate-conditions: []

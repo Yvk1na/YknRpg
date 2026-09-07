@@ -46,6 +46,12 @@ level-placeholders:
     value: "%level% * 0.15"
   - id: "luck_bonus"
     value: "%level% * 0.15"
+  - id: "perk_underwater_mining_speed"
+    value: "%level% * 0.18"
+  - id: "perk_water_movement"
+    value: "%level% * 0.15"
+  - id: "perk_oxygen"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -54,6 +60,9 @@ effects-description:
     - "&7+%toughness_bonus% 韧性"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【负岳潜掘】&7水下挖掘速度 &a+%perk_underwater_mining_speed%%"
+    - "&d【玄海巡游】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&d【龟息万年】&7水下氧气加成 &a+%perk_oxygen%"
     - ""
     - "&d神话宠物"
 
@@ -63,6 +72,9 @@ rewards-description:
     - "&7+%toughness_bonus% 韧性"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【负岳潜掘】&7水下挖掘速度 &a+%perk_underwater_mining_speed%%"
+    - "&d【玄海巡游】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&d【龟息万年】&7水下氧气加成 &a+%perk_oxygen%"
 
 level-up-messages:
   1:
@@ -70,6 +82,9 @@ level-up-messages:
     - "&7+%toughness_bonus% 韧性"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【负岳潜掘】&7水下挖掘速度 &a+%perk_underwater_mining_speed%%"
+    - "&d【玄海巡游】&7水中移动效率 &a+%perk_water_movement%%"
+    - "&d【龟息万年】&7水下氧气加成 &a+%perk_oxygen%"
 
 level-up-effects: []
 
@@ -90,6 +105,15 @@ effects:
     args:
       stat: luck
       amount: "%level% * 0.15"
+  - id: underwater_mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0018)"
+  - id: water_movement_efficiency_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0015)"
+  - id: oxygen_bonus
+    args:
+      amount: "%level% * 0.05"
 
 conditions: []
 activate-conditions: []

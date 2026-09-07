@@ -22,6 +22,10 @@ level-placeholders:
     value: "%level% * 0.12"
   - id: "speed_bonus"
     value: "%level% * 0.04"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.03"
+  - id: "perk_block_reach"
+    value: "%level% * 0.005"
 
 effects-description:
   1:
@@ -29,17 +33,25 @@ effects-description:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&f+%speed_bonus% 速度"
     - ""
+    - "&6特殊效果："
+    - "&e乘风滑翔 &7安全坠落距离 +&a%perk_safe_fall% 格"
+    - "&e鹰眼丈量 &7方块交互距离 +&a%perk_block_reach% 格"
+    - ""
     - "&9稀有宠物"
 
 rewards-description:
   1:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&f+%speed_bonus% 速度"
+    - "&e乘风滑翔 &7安全坠落距离 +&a%perk_safe_fall% 格"
+    - "&e鹰眼丈量 &7方块交互距离 +&a%perk_block_reach% 格"
 
 level-up-messages:
   1:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&f+%speed_bonus% 速度"
+    - "&e乘风滑翔 &7安全坠落距离 +&a%perk_safe_fall% 格"
+    - "&e鹰眼丈量 &7方块交互距离 +&a%perk_block_reach% 格"
 
 level-up-effects: []
 
@@ -52,6 +64,12 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.04"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.03"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.005"
 
 conditions: []
 activate-conditions: []

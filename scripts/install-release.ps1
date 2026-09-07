@@ -5,7 +5,8 @@ param(
     [Parameter(Mandatory = $true)][string]$CraftEnginePack,
     [Parameter(Mandatory = $true)][string]$MythicMobsPack,
     [Parameter(Mandatory = $true)][string]$EcoPetsPack,
-    [Parameter(Mandatory = $true)][string]$Version
+    [Parameter(Mandatory = $true)][string]$Version,
+    [Parameter(Mandatory = $true)][ValidateRange(1, 10000)][int]$ExpectedMythicItemCount
 )
 
 Set-StrictMode -Version Latest
@@ -149,8 +150,10 @@ $backupParent = Join-Path $ServerRoot 'backups\yknrpg-deploy'
 foreach ($directory in @($ServerRoot, $pluginsDirectory, $craftEngineResources, $mythicMobsItems, $ecoPetsPets)) {
     if (-not (Test-Path -LiteralPath $directory -PathType Container)) { throw "Required directory is missing: $directory" }
 }
-foreach ($dependency in @('MythicMobs', 'AuraSkills', 'EcoPets', 'libreforge')) {
-    if (@(Get-ChildItem -LiteralPath $pluginsDirectory -Filter "$dependency*.jar" -File).Count -eq 0) {
+$installedPluginNames = @(Get-ChildItem -LiteralPath $pluginsDirectory -Filter '*.jar' -File |
+    ForEach-Object { Get-PluginName $_.FullName } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+foreach ($dependency in @('MythicMobs', 'AuraSkills', 'EcoPets', 'eco', 'libreforge')) {
+    if ($installedPluginNames -notcontains $dependency) {
         throw "Required plugin is missing: $dependency"
     }
 }
@@ -311,14 +314,16 @@ try {
         Get-Content -LiteralPath (Join-Path $temporaryMythicItems $_) -Raw -Encoding UTF8
     }) -join "`n"
     $mythicItemCount = ([regex]::Matches($mythicYaml, '(?m)^YKI_[A-Z0-9_]+:\s*$')).Count
-    if ($mythicItemCount -ne 123) { throw "Expected 123 MythicMobs items; found $mythicItemCount." }
+    if ($mythicItemCount -ne $ExpectedMythicItemCount) {
+        throw "Expected $ExpectedMythicItemCount MythicMobs items; found $mythicItemCount."
+    }
 
     if (-not (Test-Path -LiteralPath $temporaryEcoPetsRoot -PathType Container)) {
         throw 'EcoPets pack is missing pets/yknrpg.'
     }
     $temporaryEcoPetFiles = @(Get-ChildItem -LiteralPath $temporaryEcoPetsPack -File -Recurse)
-    if ($temporaryEcoPetFiles.Count -ne 36) {
-        throw "Expected exactly 36 EcoPets files; found $($temporaryEcoPetFiles.Count)."
+    if ($temporaryEcoPetFiles.Count -ne 72) {
+        throw "Expected exactly 72 EcoPets files; found $($temporaryEcoPetFiles.Count)."
     }
     $ecoPetSourceHashes = @{}
     foreach ($file in $temporaryEcoPetFiles) {
@@ -331,7 +336,7 @@ try {
         }
         $ecoPetSourceHashes[$file.Name] = Get-Sha256 $file.FullName
     }
-    if ($ecoPetSourceHashes.Count -ne 36) { throw 'EcoPets pack must contain 36 unique pet IDs.' }
+    if ($ecoPetSourceHashes.Count -ne 72) { throw 'EcoPets pack must contain 72 unique pet IDs.' }
 
     [IO.Directory]::CreateDirectory($backupDirectory) | Out-Null
     $jarBackupDirectory = Join-Path $backupDirectory 'plugin-jars'
@@ -431,8 +436,8 @@ try {
         throw 'Non-GUI CraftEngine assets remain after deployment.'
     }
     $deployedEcoPetFiles = @(Get-ChildItem -LiteralPath $ecoPetsTarget -File -Recurse)
-    if ($deployedEcoPetFiles.Count -ne 36) {
-        throw "Expected 36 deployed EcoPets files; found $($deployedEcoPetFiles.Count)."
+    if ($deployedEcoPetFiles.Count -ne 72) {
+        throw "Expected 72 deployed EcoPets files; found $($deployedEcoPetFiles.Count)."
     }
     foreach ($file in $deployedEcoPetFiles) {
         $relativePath = (Get-RelativePath $ecoPetsTarget $file.FullName).Replace('\', '/')

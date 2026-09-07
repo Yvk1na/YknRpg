@@ -72,5 +72,7 @@ messages:
   ability-mana-unavailable: '&eAuraSkills 魔力数据尚未加载，请稍后再试。'
   ability-no-charges: '&c{ability} &7暂无充能，&f{seconds} 秒&7后恢复。'
   ability-no-target: '&e{ability} &7没有找到有效目标，未消耗资源。'
+  pet-catalog-loading: '&eEcoPets 宠物数据正在载入，准备完成后会自动打开图鉴。'
+  pet-catalog-unavailable: '&cEcoPets 宠物数据暂未就绪，请稍后再次使用该指令。'
   usage: '&e用法：/yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload'
   admin-usage: '&e用法：/yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload'

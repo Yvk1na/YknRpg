@@ -30,21 +30,28 @@ xp-gain-methods:
 level-placeholders:
   - id: "regeneration_bonus"
     value: "%level% * 0.04"
+  - id: "perk_foraging_xp"
+    value: "%level% * 0.03"
 
 effects-description:
   1:
     - "&7属性加成："
     - "&d+%regeneration_bonus% 再生"
     - ""
+    - "&6特殊效果："
+    - "&e林间本能 &7伐木经验 +&a%perk_foraging_xp%%"
+    - ""
     - "&8普通宠物"
 
 rewards-description:
   1:
     - "&d+%regeneration_bonus% 再生"
+    - "&e林间本能 &7伐木经验 +&a%perk_foraging_xp%%"
 
 level-up-messages:
   1:
     - "&d+%regeneration_bonus% 再生"
+    - "&e林间本能 &7伐木经验 +&a%perk_foraging_xp%%"
 
 level-up-effects: []
 
@@ -53,6 +60,11 @@ effects:
     args:
       stat: regeneration
       amount: "%level% * 0.04"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0003)"
+      skills:
+        - foraging
 
 conditions: []
 activate-conditions: []

@@ -1,0 +1,86 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (ad2f867bace5e0bb98988e6e77018c8e2b6bbc3e7477e9ebda76320a9610c3ad)
+name: "&a园丁蜗牛"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQyZjg2N2JhY2U1ZTBiYjk4OTg4ZTZlNzcwMThjOGUyYjZiYmMzZTc0NzdlOWViZGE3NjMyMGE5NjEwYzNhZCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQyZjg2N2JhY2U1ZTBiYjk4OTg4ZTZlNzcwMThjOGUyYjZiYmMzZTc0NzdlOWViZGE3NjMyMGE5NjEwYzNhZCJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.25
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+level-placeholders:
+  - id: "regeneration_bonus"
+    value: "%level% * 0.07"
+  - id: "luck_bonus"
+    value: "%level% * 0.035"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&d+%regeneration_bonus% 再生"
+    - "&a+%luck_bonus% 幸运"
+    - ""
+    - "&6特殊效果："
+    - "&e园丁本能 &7收获成熟作物后消耗种子自动补种"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&a+%luck_bonus% 幸运"
+    - "&e园丁本能 &7收获成熟作物后消耗种子自动补种"
+
+level-up-messages:
+  1:
+    - "&d+%regeneration_bonus% 再生"
+    - "&a+%luck_bonus% 幸运"
+    - "&e园丁本能 &7收获成熟作物后消耗种子自动补种"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.07"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.035"
+  - id: replant_crops
+    args:
+      consume_seeds: true
+      only_fully_grown: true
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: silverfish_spawn_egg unbreaking:1 hide_enchants
+  name: "&a园丁蜗牛 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a园丁蜗牛&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_gardener_snail
+  withdrawable: true

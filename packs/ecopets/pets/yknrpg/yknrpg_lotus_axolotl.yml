@@ -18,6 +18,10 @@ level-placeholders:
     value: "%level% * 0.11"
   - id: "health_bonus"
     value: "%level% * 0.02"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.08"
+  - id: "perk_fish_double"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -25,17 +29,25 @@ effects-description:
     - "&d+%regeneration_bonus% 再生"
     - "&c+%health_bonus% 生命"
     - ""
+    - "&6特殊效果："
+    - "&e莲华牵引 &7收线速度 +&a%perk_reel_speed%%"
+    - "&e清波馈赠 &7指定鱼获有 &a%perk_fish_double%% &7概率双倍掉落"
+    - ""
     - "&9稀有宠物"
 
 rewards-description:
   1:
     - "&d+%regeneration_bonus% 再生"
     - "&c+%health_bonus% 生命"
+    - "&e莲华牵引 &7收线速度 +&a%perk_reel_speed%%"
+    - "&e清波馈赠 &7指定鱼获有 &a%perk_fish_double%% &7概率双倍掉落"
 
 level-up-messages:
   1:
     - "&d+%regeneration_bonus% 再生"
     - "&c+%health_bonus% 生命"
+    - "&e莲华牵引 &7收线速度 +&a%perk_reel_speed%%"
+    - "&e清波馈赠 &7指定鱼获有 &a%perk_fish_double%% &7概率双倍掉落"
 
 level-up-effects: []
 
@@ -48,6 +60,26 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.02"
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.08"
+      on_items:
+        - cod
+        - salmon
+        - tropical_fish
+        - pufferfish
+    triggers:
+      - catch_fish
+    filters:
+      items:
+        - cod
+        - salmon
+        - tropical_fish
+        - pufferfish
 
 conditions: []
 activate-conditions: []

@@ -31,15 +31,20 @@ effects-description:
     - "&7属性加成："
     - "&a+%luck_bonus% 幸运"
     - ""
+    - "&6特殊效果："
+    - "&e田畴轻步 &7不会踩坏耕地"
+    - ""
     - "&8普通宠物"
 
 rewards-description:
   1:
     - "&a+%luck_bonus% 幸运"
+    - "&e田畴轻步 &7不会踩坏耕地"
 
 level-up-messages:
   1:
     - "&a+%luck_bonus% 幸运"
+    - "&e田畴轻步 &7不会踩坏耕地"
 
 level-up-effects: []
 
@@ -48,6 +53,7 @@ effects:
     args:
       stat: luck
       amount: "%level% * 0.04"
+  - id: feather_step
 
 conditions: []
 activate-conditions: []

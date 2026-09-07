@@ -1,0 +1,74 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (818e5c115361025f9b0b0deed82122c6627c7f22ab44a3d2948a4873ddeae9e5)
+name: "&8田垄麻雀"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE4ZTVjMTE1MzYxMDI1ZjliMGIwZGVlZDgyMTIyYzY2MjdjN2YyMmFiNDRhM2QyOTQ4YTQ4NzNkZGVhZTllNSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE4ZTVjMTE1MzYxMDI1ZjliMGIwZGVlZDgyMTIyYzY2MjdjN2YyMmFiNDRhM2QyOTQ4YTQ4NzNkZGVhZTllNSJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.04"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - ""
+    - "&6特殊效果："
+    - "&e田垄轻步 &7不会踩坏耕地"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&e田垄轻步 &7不会踩坏耕地"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&e田垄轻步 &7不会踩坏耕地"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.04"
+  - id: feather_step
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: parrot_spawn_egg unbreaking:1 hide_enchants
+  name: "&8田垄麻雀 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8田垄麻雀&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_field_sparrow
+  withdrawable: true

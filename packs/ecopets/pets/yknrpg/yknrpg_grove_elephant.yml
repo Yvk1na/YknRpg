@@ -1,0 +1,127 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (473408805a3d8c21df46f229c866b960efeaf21663c3b426ab40dd93e254a743)
+name: "&6森罗巨象"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDczNDA4ODA1YTNkOGMyMWRmNDZmMjI5Yzg2NmI5NjBlZmVhZjIxNjYzYzNiNDI2YWI0MGRkOTNlMjU0YTc0MyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDczNDA4ODA1YTNkOGMyMWRmNDZmMjI5Yzg2NmI5NjBlZmVhZjIxNjYzYzNiNDI2YWI0MGRkOTNlMjU0YTc0MyJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 3.5
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.04"
+  - id: "toughness_bonus"
+    value: "%level% * 0.27"
+  - id: "luck_bonus"
+    value: "%level% * 0.15"
+  - id: "perk_crop_double_chance"
+    value: "%level% * 0.12"
+  - id: "perk_farming_xp"
+    value: "%level% * 0.12"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&6【森罗丰壤】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+    - "&6【象群耕作】&7耕作技能经验 &a+%perk_farming_xp%%"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&6【森罗丰壤】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+    - "&6【象群耕作】&7耕作技能经验 &a+%perk_farming_xp%%"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&7+%toughness_bonus% 韧性"
+    - "&a+%luck_bonus% 幸运"
+    - "&6【森罗丰壤】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+    - "&6【象群耕作】&7耕作技能经验 &a+%perk_farming_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.04"
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.27"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.15"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.12"
+      on_items:
+        - wheat
+        - carrot
+        - potato
+        - beetroot
+        - nether_wart
+        - cocoa_beans
+        - melon_slice
+        - pumpkin
+    triggers:
+      - block_item_drop
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0012)"
+      skills:
+        - farming
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: ravager_spawn_egg unbreaking:1 hide_enchants
+  name: "&6森罗巨象 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6森罗巨象&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_grove_elephant
+  withdrawable: true

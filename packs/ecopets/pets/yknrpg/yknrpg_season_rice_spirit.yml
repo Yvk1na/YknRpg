@@ -1,0 +1,124 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (738b0b0f1f35c56b7d64e0e2b9661801f912f318fa9c8c1d83e917db4f2e6521)
+name: "&5四季稻灵"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM4YjBiMGYxZjM1YzU2YjdkNjRlMGUyYjk2NjE4MDFmOTEyZjMxOGZhOWM4YzFkODNlOTE3ZGI0ZjJlNjUyMSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM4YjBiMGYxZjM1YzU2YjdkNjRlMGUyYjk2NjE4MDFmOTEyZjMxOGZhOWM4YzFkODNlOTE3ZGI0ZjJlNjUyMSJ9fX0=
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 3
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.12"
+  - id: "regeneration_bonus"
+    value: "%level% * 0.12"
+  - id: "health_bonus"
+    value: "%level% * 0.024"
+  - id: "perk_crop_double_chance"
+    value: "%level% * 0.1"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+    - "&d【四时复耕】&7收获成熟作物后自动补种并消耗种子"
+    - "&d【丰年稻浪】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+    - "&d【四时复耕】&7收获成熟作物后自动补种并消耗种子"
+    - "&d【丰年稻浪】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&c+%health_bonus% 生命"
+    - "&d【四时复耕】&7收获成熟作物后自动补种并消耗种子"
+    - "&d【丰年稻浪】&7成熟作物双倍掉落概率 &a%perk_crop_double_chance%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.024"
+  - id: replant_crops
+    args:
+      consume_seeds: true
+      only_fully_grown: true
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.1"
+      on_items:
+        - wheat
+        - carrot
+        - potato
+        - beetroot
+        - nether_wart
+        - cocoa_beans
+        - melon_slice
+        - pumpkin
+    triggers:
+      - block_item_drop
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: allay_spawn_egg unbreaking:1 hide_enchants
+  name: "&5四季稻灵 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5四季稻灵&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_season_rice_spirit
+  withdrawable: true

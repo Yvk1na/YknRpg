@@ -22,6 +22,12 @@ level-placeholders:
     value: "%level% * 0.08"
   - id: "crit_damage_bonus"
     value: "%level% * 0.1"
+  - id: "perk_enchanting_xp"
+    value: "%level% * 0.18"
+  - id: "perk_lapis_save_chance"
+    value: "%level% * 0.18"
+  - id: "perk_xp_save_chance"
+    value: "%level% * 0.15"
 
 effects-description:
   1:
@@ -30,6 +36,9 @@ effects-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【星书启迪】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【星尘刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【九尾秘文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
     - ""
     - "&d神话宠物"
 
@@ -39,6 +48,9 @@ rewards-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【星书启迪】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【星尘刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【九尾秘文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
 
 level-up-messages:
   1:
@@ -46,6 +58,9 @@ level-up-messages:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&d【星书启迪】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【星尘刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【九尾秘文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
 
 level-up-effects: []
 
@@ -66,6 +81,17 @@ effects:
     args:
       stat: crit_damage
       amount: "%level% * 0.1"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0018)"
+      skills:
+        - enchanting
+  - id: dont_consume_lapis_chance
+    args:
+      chance: "%level% * 0.18"
+  - id: dont_consume_xp_chance
+    args:
+      chance: "%level% * 0.15"
 
 conditions: []
 activate-conditions: []

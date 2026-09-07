@@ -1,0 +1,76 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (c38796f62db5f93949ae26a2f7a3c5f797a31d2694bce4c48ee843ee85f7)
+name: "&a酒坊鹦鹉"
+description: "&7酿造药水可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM4Nzk2ZjYyZGI1ZjkzOTQ5YWUyNmEyZjdhM2M1Zjc5N2EzMWQyNjk0YmNlNGM0OGVlODQzZWU4NWY3In19fQ=="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM4Nzk2ZjYyZGI1ZjkzOTQ5YWUyNmEyZjdhM2M1Zjc5N2EzMWQyNjk0YmNlNGM0OGVlODQzZWU4NWY3In19fQ==
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: brew
+    multiplier: 3
+
+level-placeholders:
+  - id: "wisdom_bonus"
+    value: "%level% * 0.05"
+  - id: "regeneration_bonus"
+    value: "%level% * 0.035"
+  - id: "perk_brew_speed"
+    value: "%level% * 0.07"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&b+%wisdom_bonus% 智慧"
+    - "&d+%regeneration_bonus% 再生"
+    - ""
+    - "&6特殊效果："
+    - "&e酒坊火候 &7酿造时间 -&a%perk_brew_speed%%"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&d+%regeneration_bonus% 再生"
+    - "&e酒坊火候 &7酿造时间 -&a%perk_brew_speed%%"
+
+level-up-messages:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&d+%regeneration_bonus% 再生"
+    - "&e酒坊火候 &7酿造时间 -&a%perk_brew_speed%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.05"
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.035"
+  - id: brew_time_multiplier
+    args:
+      multiplier: "1 - (%level% * 0.0007)"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: parrot_spawn_egg unbreaking:1 hide_enchants
+  name: "&a酒坊鹦鹉 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a酒坊鹦鹉&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_brewery_parrot
+  withdrawable: true

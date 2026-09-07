@@ -26,15 +26,20 @@ effects-description:
     - "&7属性加成："
     - "&c+%health_bonus% 生命"
     - ""
+    - "&6特殊效果："
+    - "&e追猎收纳 &7掉落物与经验会直接进入背包"
+    - ""
     - "&8普通宠物"
 
 rewards-description:
   1:
     - "&c+%health_bonus% 生命"
+    - "&e追猎收纳 &7掉落物与经验会直接进入背包"
 
 level-up-messages:
   1:
     - "&c+%health_bonus% 生命"
+    - "&e追猎收纳 &7掉落物与经验会直接进入背包"
 
 level-up-effects: []
 
@@ -43,6 +48,9 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.01"
+  - id: telekinesis
+    args:
+      on_tamed_mob_kills: true
 
 conditions: []
 activate-conditions: []

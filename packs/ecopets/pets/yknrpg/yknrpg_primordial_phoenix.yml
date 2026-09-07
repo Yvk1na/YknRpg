@@ -26,6 +26,10 @@ level-placeholders:
     value: "%level% * 0.25"
   - id: "health_bonus"
     value: "%level% * 0.04"
+  - id: "perk_brew_speed"
+    value: "%level% * 0.15"
+  - id: "perk_potion_duration"
+    value: "%level% * 0.16"
 
 effects-description:
   1:
@@ -34,6 +38,9 @@ effects-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
+    - "&d【太初火候】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【不灭药性】&7药水持续时间 &a+%perk_potion_duration%%"
+    - "&d【始源炎炉】&7自动熔炼天然铁、金、铜矿石"
     - ""
     - "&d神话宠物"
 
@@ -43,6 +50,9 @@ rewards-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
+    - "&d【太初火候】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【不灭药性】&7药水持续时间 &a+%perk_potion_duration%%"
+    - "&d【始源炎炉】&7自动熔炼天然铁、金、铜矿石"
 
 level-up-messages:
   1:
@@ -50,6 +60,9 @@ level-up-messages:
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
+    - "&d【太初火候】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【不灭药性】&7药水持续时间 &a+%perk_potion_duration%%"
+    - "&d【始源炎炉】&7自动熔炼天然铁、金、铜矿石"
 
 level-up-effects: []
 
@@ -70,6 +83,26 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.04"
+  - id: brew_time_multiplier
+    args:
+      multiplier: "1 - (%level% * 0.0015)"
+  - id: potion_duration_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0016)"
+  - id: autosmelt
+    args:
+      drop_xp: true
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - copper_ore
+        - deepslate_copper_ore
 
 conditions: []
 activate-conditions: []

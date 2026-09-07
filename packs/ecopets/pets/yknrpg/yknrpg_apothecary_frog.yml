@@ -18,6 +18,8 @@ level-placeholders:
     value: "%level% * 0.07"
   - id: "wisdom_bonus"
     value: "%level% * 0.03"
+  - id: "perk_brew_speed"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -25,17 +27,22 @@ effects-description:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
     - ""
+    - "&6特殊效果："
+    - "&e药师手法 &7酿造时间 -&a%perk_brew_speed%%"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
+    - "&e药师手法 &7酿造时间 -&a%perk_brew_speed%%"
 
 level-up-messages:
   1:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
+    - "&e药师手法 &7酿造时间 -&a%perk_brew_speed%%"
 
 level-up-effects: []
 
@@ -48,6 +55,9 @@ effects:
     args:
       stat: wisdom
       amount: "%level% * 0.03"
+  - id: brew_time_multiplier
+    args:
+      multiplier: "1 - (%level% * 0.0005)"
 
 conditions: []
 activate-conditions: []

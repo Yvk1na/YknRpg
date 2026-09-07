@@ -32,6 +32,8 @@ level-placeholders:
     value: "%level% * 0.14"
   - id: "health_bonus"
     value: "%level% * 0.01"
+  - id: "perk_log_double"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -39,17 +41,22 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
     - ""
+    - "&6特殊效果："
+    - "&e苔林翻找 &7天然原木有 &a%perk_log_double%% &7概率双倍掉落"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
+    - "&e苔林翻找 &7天然原木有 &a%perk_log_double%% &7概率双倍掉落"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
+    - "&e苔林翻找 &7天然原木有 &a%perk_log_double%% &7概率双倍掉落"
 
 level-up-effects: []
 
@@ -62,6 +69,38 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.01"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.05"
+      on_items:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
 
 conditions: []
 activate-conditions: []

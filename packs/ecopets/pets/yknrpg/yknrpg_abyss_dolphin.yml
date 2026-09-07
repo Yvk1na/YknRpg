@@ -1,0 +1,105 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (132f71a7ffdc644c6d209180ba6e27c95f31f13fe180357156dbc3c0f4154e5e)
+name: "&6深渊海豚"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTMyZjcxYTdmZmRjNjQ0YzZkMjA5MTgwYmE2ZTI3Yzk1ZjMxZjEzZmUxODAzNTcxNTZkYmMzYzBmNDE1NGU1ZSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTMyZjcxYTdmZmRjNjQ0YzZkMjA5MTgwYmE2ZTI3Yzk1ZjMxZjEzZmUxODAzNTcxNTZkYmMzYzBmNDE1NGU1ZSJ9fX0=
+
+xp-formula: "(%level% * %level% * 22) + (%level% * 110)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 3.25
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.17"
+  - id: "speed_bonus"
+    value: "%level% * 0.08"
+  - id: "health_bonus"
+    value: "%level% * 0.04"
+  - id: "perk_double_fish_chance"
+    value: "%level% * 0.12"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.15"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&6【深渊鱼群】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
+    - "&6【海豚领航】&7收线速度 &a+%perk_reel_speed%%"
+    - ""
+    - "&6传说宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&6【深渊鱼群】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
+    - "&6【海豚领航】&7收线速度 &a+%perk_reel_speed%%"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&c+%health_bonus% 生命"
+    - "&6【深渊鱼群】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
+    - "&6【海豚领航】&7收线速度 &a+%perk_reel_speed%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.17"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.08"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.04"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.12"
+      on_items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
+    triggers:
+      - catch_fish
+    filters:
+      items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0015)"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: dolphin_spawn_egg unbreaking:1 hide_enchants
+  name: "&6深渊海豚 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &6深渊海豚&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_abyss_dolphin
+  withdrawable: true

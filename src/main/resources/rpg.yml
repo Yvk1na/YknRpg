@@ -1,7 +1,7 @@
 # YknRpg SkyBlock 引擎。当前内容按 MythicMobs 物品 ID 配置。
 # 物品键必须与 MythicMobs 物品 ID 完全一致。
 # 提升 content-revision 会在启动时备份并替换旧能力配置。
-content-revision: 7
+content-revision: 13
 schema-version: 1
 
 # 支持属性：damage、strength、crit-chance、crit-damage、attack-speed、health、
@@ -914,6 +914,1319 @@ items:
           - {type: PARTICLE, target: SELF, particle: WITCH, count: 60}
           - {type: SOUND, target: SELF, sound: 'minecraft:block.enchantment_table.use', pitch: 0.9}
 
+  # 第四批扩充武器：补齐普通、少见、稀有与传说档的类别覆盖。
+  YKI_OAKEN_HUNTER_BOW:
+    slot: MAIN_HAND
+    stats: {damage: 42, strength: 12, crit-chance: 5}
+    abilities:
+      steady_fletching:
+        name: 稳羽
+        trigger: BOW_SHOT
+        mana: 14
+        cooldown: 2.5
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 55, strength-scaling: 0.25, speed: 2.1, gravity: true, lifetime: 6, hit-particle: CRIT, hit-particle-count: 8}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 1.1}
+
+  YKI_MILITIA_CROSSBOW:
+    slot: MAIN_HAND
+    stats: {damage: 50, strength: 16, crit-chance: 8}
+    abilities:
+      armor_piercing_bolt:
+        name: 破甲钉
+        trigger: PROJECTILE_HIT
+        chance: 0.25
+        cooldown: 3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 30, strength-scaling: 0.2}
+          - {type: POTION, target: CURRENT, potion: WEAKNESS, duration: 2, amplifier: 0}
+          - {type: PARTICLE, target: CURRENT, particle: CRIT, count: 8}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.arrow.hit_player', pitch: 0.8}
+
+  YKI_STONEWARD_MAUL:
+    slot: MAIN_HAND
+    stats: {damage: 52, strength: 12, health: 25, defense: 18}
+    abilities:
+      stoneward_shock:
+        name: 垒石震
+        trigger: RIGHT_CLICK
+        mana: 18
+        cooldown: 9
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 4, amount: 55, strength-scaling: 0.25}
+          - {type: KNOCKBACK, target: NEARBY_ENEMIES, radius: 4, power: 0.9, vertical: 0.15}
+          - {type: ABSORPTION, target: SELF, amount: 50, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: POOF, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.stone.break', pitch: 0.7}
+
+  YKI_GLOOM_SICKLE:
+    slot: MAIN_HAND
+    stats: {damage: 48, strength: 14, crit-chance: 12, crit-damage: 15, speed: 4}
+    abilities:
+      dusk_reap:
+        name: 掠影
+        trigger: KILL
+        cooldown: 4
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: HEAL, target: SELF, amount: 40}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 10, duration: 3}
+          - {type: PARTICLE, target: SELF, particle: SMOKE, count: 12}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.phantom.flap', pitch: 1.5}
+
+  YKI_SPRINGWATER_CHARM:
+    slot: MAIN_HAND
+    stats: {damage: 12, health: 25, wisdom: 5, vitality: 4, mending: 6}
+    abilities:
+      clear_dew:
+        name: 清露
+        trigger: RIGHT_CLICK
+        mana: 20
+        cooldown: 8
+        effects:
+          # NEARBY_ALLIES includes the caster, so 25 + 40 yields the 65 self-heal described in Lore.
+          - {type: HEAL, target: SELF, amount: 25}
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 6, amount: 40}
+          - {type: PARTICLE, target: SELF, particle: SPLASH, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.amethyst_block.resonate', pitch: 1.6}
+
+  YKI_CINDER_APPRENTICE_STAFF:
+    slot: MAIN_HAND
+    stats: {damage: 18, wisdom: 6, ability-damage: 5}
+    abilities:
+      cinder_spark:
+        name: 火星
+        trigger: RIGHT_CLICK
+        mana: 22
+        cooldown: 3
+        target-range: 12
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 90, wisdom-scaling: 5.0}
+          - {type: PARTICLE, target: CURRENT, particle: FLAME, count: 14}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.blaze.shoot', pitch: 1.7}
+
+  YKI_WATCHMAN_HALBERD:
+    slot: MAIN_HAND
+    stats: {damage: 54, strength: 18, defense: 8}
+    abilities:
+      brace_line:
+        name: 拒马
+        trigger: RIGHT_CLICK
+        mana: 18
+        cooldown: 5
+        effects:
+          - {type: DAMAGE, target: RAY, range: 5, amount: 75, strength-scaling: 0.3}
+          - {type: KNOCKBACK, target: RAY, range: 5, power: 0.8, vertical: 0.12}
+          - {type: PARTICLE, target: SELF, particle: CRIT, count: 12}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.throw', pitch: 0.8}
+
+  YKI_TEMPEST_PIKE:
+    slot: MAIN_HAND
+    stats: {damage: 82, strength: 31, crit-chance: 10, speed: 6}
+    abilities:
+      tempest_lunge:
+        name: 逐风突
+        trigger: RIGHT_CLICK
+        mana: 32
+        cooldown: 5
+        effects:
+          - {type: DAMAGE, target: RAY, range: 7, amount: 130, strength-scaling: 0.45}
+          - {type: DASH, power: 0.8, vertical: 0.04}
+          - {type: PARTICLE, target: SELF, particle: CLOUD, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.throw', pitch: 1.2}
+
+  YKI_NIGHTSHADE_SICKLE:
+    slot: MAIN_HAND
+    stats: {damage: 76, strength: 25, crit-chance: 18, crit-damage: 30, attack-speed: 10, speed: 6}
+    abilities:
+      night_stride:
+        name: 夜行
+        trigger: KILL
+        cooldown: 4
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: HEAL, target: SELF, amount: 55}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 1.5, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 12, duration: 3}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.4}
+
+  YKI_EMBERWEAVE_STAFF:
+    slot: MAIN_HAND
+    stats: {damage: 28, wisdom: 9, ability-damage: 10}
+    abilities:
+      woven_flame_ring:
+        name: 焰环
+        trigger: RIGHT_CLICK
+        mana: 38
+        cooldown: 4.5
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 4, amount: 160, wisdom-scaling: 6.0}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 30}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.blaze.shoot', pitch: 1.3}
+
+  YKI_BLOOMSONG_TOME:
+    slot: MAIN_HAND
+    stats: {damage: 20, health: 45, wisdom: 9, vitality: 8, mending: 12}
+    abilities:
+      bloom_healing:
+        name: 花愈
+        trigger: RIGHT_CLICK
+        mana: 40
+        cooldown: 8
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 7, amount: 90, wisdom-scaling: 2.0}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 7, potion: REGENERATION, duration: 3, amplifier: 0}
+          - {type: PARTICLE, target: SELF, particle: HAPPY_VILLAGER, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.flowering_azalea.break', pitch: 1.4}
+
+  YKI_FROSTBOLT_CROSSBOW:
+    slot: MAIN_HAND
+    stats: {damage: 80, strength: 28, crit-chance: 12, crit-damage: 20}
+    abilities:
+      frost_bolt:
+        name: 霜钉
+        trigger: PROJECTILE_HIT
+        mana: 25
+        cooldown: 2
+        chance: 0.3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 75, strength-scaling: 0.25}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 2, amplifier: 0}
+          - {type: PARTICLE, target: CURRENT, particle: SNOWFLAKE, count: 16}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:block.glass.break', pitch: 1.4}
+
+  YKI_TIDEBREAKER_TRIDENT:
+    slot: MAIN_HAND
+    stats: {damage: 84, strength: 30, defense: 18, wisdom: 4}
+    abilities:
+      tide_break:
+        name: 断潮
+        trigger: RIGHT_CLICK
+        mana: 35
+        cooldown: 5
+        target-range: 14
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 145, strength-scaling: 0.45, wisdom-scaling: 3.0}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 2, amplifier: 1}
+          - {type: PARTICLE, target: CURRENT, particle: BUBBLE_POP, count: 22}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:item.trident.hit', pitch: 0.9}
+
+  YKI_RALLYING_BUGLE:
+    slot: MAIN_HAND
+    stats: {damage: 20, strength: 20, health: 40, defense: 20, vitality: 6}
+    abilities:
+      rallying_call:
+        name: 集阵号
+        trigger: RIGHT_CLICK
+        mana: 45
+        cooldown: 14
+        effects:
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 7, stat: STRENGTH, amount: 20, duration: 6}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 7, stat: SPEED, amount: 8, duration: 6}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 7, amount: 70, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: NOTE, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:event.raid.horn', pitch: 1.5}
+
+  YKI_COMET_LONGBOW:
+    slot: MAIN_HAND
+    stats: {damage: 125, strength: 60, crit-chance: 18, crit-damage: 40}
+    abilities:
+      comet_arrow:
+        name: 彗矢
+        trigger: BOW_SHOT
+        mana: 52
+        cooldown: 2
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 260, strength-scaling: 0.65, speed: 2.8, gravity: false, lifetime: 7, hit-particle: END_ROD, hit-particle-count: 20}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 1.6}
+
+  YKI_SKYLINE_GLAIVE:
+    slot: MAIN_HAND
+    stats: {damage: 128, strength: 65, crit-chance: 12, ferocity: 6, speed: 8}
+    abilities:
+      skyline_charge:
+        name: 凌空线
+        trigger: RIGHT_CLICK
+        mana: 55
+        cooldown: 4
+        effects:
+          - {type: DAMAGE, target: RAY, range: 9, amount: 240, strength-scaling: 0.6}
+          - {type: DASH, power: 1.0, vertical: 0.05}
+          - {type: PARTICLE, target: SELF, particle: SWEEP_ATTACK, count: 14}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.throw', pitch: 1.25}
+
+  YKI_SOULTHREAD_SCYTHE:
+    slot: MAIN_HAND
+    stats: {damage: 118, strength: 52, crit-chance: 22, crit-damage: 45, vitality: 6}
+    abilities:
+      soul_draw:
+        name: 摄魂
+        trigger: KILL
+        cooldown: 4
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: HEAL, target: SELF, amount: 80, vitality-scaling: 1.0}
+          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 10, duration: 4}
+          - {type: PARTICLE, target: SELF, particle: SOUL, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.vex.charge', pitch: 0.7}
+
+  YKI_RUNEBULWARK_HAMMER:
+    slot: MAIN_HAND
+    stats: {damage: 110, strength: 45, health: 80, defense: 65, vitality: 8}
+    abilities:
+      runic_bulwark:
+        name: 符垒
+        trigger: RIGHT_CLICK
+        mana: 60
+        cooldown: 11
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 5, amount: 170, strength-scaling: 0.4}
+          - {type: KNOCKBACK, target: NEARBY_ENEMIES, radius: 5, power: 1.15, vertical: 0.22}
+          - {type: ABSORPTION, target: SELF, amount: 120, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: DEFENSE, amount: 30, duration: 5}
+          - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 32}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.anvil.land', pitch: 0.75}
+
+  YKI_MOONWELL_CODEX:
+    slot: MAIN_HAND
+    stats: {damage: 28, health: 85, wisdom: 15, vitality: 15, mending: 20}
+    abilities:
+      moonwell:
+        name: 月泉
+        trigger: RIGHT_CLICK
+        mana: 65
+        cooldown: 9
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 8, amount: 160, wisdom-scaling: 2.5}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 8}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 8, potion: REGENERATION, duration: 5, amplifier: 0}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 32}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.amethyst_block.resonate', pitch: 1.2}
+
+  YKI_VOLTAIC_ARBALEST:
+    slot: MAIN_HAND
+    stats: {damage: 125, strength: 58, crit-chance: 15, crit-damage: 35, attack-speed: 12}
+    abilities:
+      concealed_thunder:
+        name: 伏雷
+        trigger: PROJECTILE_HIT
+        mana: 40
+        cooldown: 2.5
+        chance: 0.3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: LIGHTNING, target: CURRENT, amount: 150, strength-scaling: 0.4}
+          - {type: POTION, target: CURRENT, potion: WEAKNESS, duration: 2, amplifier: 0}
+          - {type: PARTICLE, target: CURRENT, particle: ELECTRIC_SPARK, count: 22}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.lightning_bolt.impact', pitch: 1.4}
+
+  YKI_CORALBOUND_TRIDENT:
+    slot: MAIN_HAND
+    stats: {damage: 122, strength: 52, defense: 35, wisdom: 8}
+    abilities:
+      coral_bind:
+        name: 缚潮
+        trigger: RIGHT_CLICK
+        mana: 58
+        cooldown: 5
+        target-range: 16
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 250, strength-scaling: 0.55, wisdom-scaling: 5.0}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 3, amplifier: 1}
+          - {type: POTION, target: CURRENT, potion: WEAKNESS, duration: 3, amplifier: 0}
+          - {type: PARTICLE, target: CURRENT, particle: NAUTILUS, count: 28}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:block.conduit.activate', pitch: 1.1}
+
+  YKI_SOLARWIND_LONGBOW:
+    slot: MAIN_HAND
+    stats: {damage: 255, strength: 150, crit-chance: 25, crit-damage: 75, attack-speed: 20}
+    abilities:
+      solarwind_arrow:
+        name: 曜风矢
+        trigger: BOW_SHOT
+        mana: 115
+        cooldown: 2.5
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 620, strength-scaling: 1.1, speed: 3.0, gravity: false, lifetime: 8, hit-particle: END_ROD, hit-particle-count: 30}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 15, duration: 3}
+          - {type: PARTICLE, target: SELF, particle: GLOW, count: 20}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 1.8}
+
+  YKI_STORMCORE_REPEATER:
+    slot: MAIN_HAND
+    stats: {damage: 250, strength: 145, crit-chance: 22, crit-damage: 70, attack-speed: 25, ferocity: 15}
+    abilities:
+      storm_core:
+        name: 雷核
+        trigger: PROJECTILE_HIT
+        mana: 85
+        cooldown: 2.5
+        chance: 0.35
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: LIGHTNING, target: CURRENT, amount: 350, strength-scaling: 0.75}
+          - {type: POTION, target: CURRENT, potion: WEAKNESS, duration: 2, amplifier: 1}
+          - {type: PARTICLE, target: CURRENT, particle: ELECTRIC_SPARK, count: 32}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.lightning_bolt.thunder', pitch: 1.3}
+
+  YKI_COLOSSUS_WARHAMMER:
+    slot: MAIN_HAND
+    stats: {damage: 220, strength: 120, health: 180, defense: 140, vitality: 20}
+    abilities:
+      colossus_wall:
+        name: 巨灵壁
+        trigger: RIGHT_CLICK
+        mana: 125
+        cooldown: 14
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 6, amount: 420, strength-scaling: 0.7}
+          - {type: KNOCKBACK, target: NEARBY_ENEMIES, radius: 6, power: 1.4, vertical: 0.28}
+          - {type: ABSORPTION, target: SELF, amount: 240, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: DEFENSE, amount: 60, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: EXPLOSION, count: 10}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.generic.explode', pitch: 0.65}
+
+  YKI_NEBULA_SCEPTER:
+    slot: MAIN_HAND
+    stats: {damage: 50, health: 80, wisdom: 28, ability-damage: 35}
+    abilities:
+      nebula_collapse:
+        name: 星云坍缩
+        trigger: RIGHT_CLICK
+        mana: 125
+        cooldown: 4
+        target-range: 20
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 620, wisdom-scaling: 13.0}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 3, amplifier: 2}
+          - {type: PARTICLE, target: CURRENT, particle: WITCH, count: 40}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:block.respawn_anchor.deplete', pitch: 0.75}
+
+  YKI_SERAPHIC_CHALICE:
+    slot: MAIN_HAND
+    stats: {damage: 30, health: 180, wisdom: 25, vitality: 32, mending: 38}
+    abilities:
+      seraphic_grace:
+        name: 圣杯恩典
+        trigger: RIGHT_CLICK
+        mana: 145
+        cooldown: 11
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 9, amount: 240, wisdom-scaling: 3.0, max-health-percent: 3}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 9}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 200, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: TOTEM_OF_UNDYING, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.totem.use', pitch: 1.35}
+
+  YKI_DRAGONBANNER_HORN:
+    slot: MAIN_HAND
+    stats: {damage: 40, strength: 75, health: 140, defense: 90, wisdom: 12, vitality: 20}
+    abilities:
+      dragon_banner_order:
+        name: 龙旌令
+        trigger: RIGHT_CLICK
+        mana: 135
+        cooldown: 18
+        effects:
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: STRENGTH, amount: 80, duration: 8}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: ATTACK_SPEED, amount: 20, duration: 8}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: FEROCITY, amount: 10, duration: 8}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 180, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 44}
+          - {type: SOUND, target: SELF, sound: 'minecraft:event.raid.horn', pitch: 0.9}
+
+  YKI_MIRAGE_DAGGERS:
+    slot: MAIN_HAND
+    stats: {damage: 245, strength: 135, crit-chance: 35, crit-damage: 90, attack-speed: 25, ferocity: 20, speed: 15}
+    abilities:
+      mirage_execution:
+        name: 蜃杀
+        trigger: RIGHT_CLICK
+        mana: 105
+        cooldown: 4
+        target-range: 12
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 520, strength-scaling: 1.0}
+          - {type: TELEPORT, distance: 6}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 1.5, amplifier: 0, particles: false}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 34}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.5}
+
+  # 第三批护甲：每个稀有度新增一套，补齐职业定位。
+  YKI_RECRUIT_VANGUARD_HELMET:
+    slot: HEAD
+    stats: {health: 25, defense: 12, damage: 2, strength: 3}
+  YKI_RECRUIT_VANGUARD_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 40, defense: 25, damage: 3, strength: 5}
+  YKI_RECRUIT_VANGUARD_LEGGINGS:
+    slot: LEGS
+    stats: {health: 35, defense: 20, damage: 3, strength: 5}
+  YKI_RECRUIT_VANGUARD_BOOTS:
+    slot: FEET
+    stats: {health: 20, defense: 10, damage: 2, strength: 3, speed: 2}
+
+  YKI_RUNE_ACOLYTE_HELMET:
+    slot: HEAD
+    stats: {health: 40, defense: 25, wisdom: 2, ability-damage: 2}
+  YKI_RUNE_ACOLYTE_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 65, defense: 40, wisdom: 3, ability-damage: 3}
+  YKI_RUNE_ACOLYTE_LEGGINGS:
+    slot: LEGS
+    stats: {health: 50, defense: 32, wisdom: 2, ability-damage: 2}
+  YKI_RUNE_ACOLYTE_BOOTS:
+    slot: FEET
+    stats: {health: 35, defense: 23, wisdom: 1, ability-damage: 1, speed: 2}
+
+  YKI_GRANITE_BULWARK_HELMET:
+    slot: HEAD
+    stats: {health: 70, defense: 55, vitality: 2}
+  YKI_GRANITE_BULWARK_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 110, defense: 85, vitality: 3}
+  YKI_GRANITE_BULWARK_LEGGINGS:
+    slot: LEGS
+    stats: {health: 90, defense: 70, vitality: 3}
+  YKI_GRANITE_BULWARK_BOOTS:
+    slot: FEET
+    stats: {health: 60, defense: 50, vitality: 2}
+
+  YKI_STORM_EYE_HELMET:
+    slot: HEAD
+    stats: {health: 75, defense: 45, damage: 14, strength: 16, crit-chance: 4, crit-damage: 10, speed: 4}
+  YKI_STORM_EYE_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 115, defense: 75, damage: 22, strength: 24, crit-chance: 6, crit-damage: 15, speed: 6}
+  YKI_STORM_EYE_LEGGINGS:
+    slot: LEGS
+    stats: {health: 95, defense: 60, damage: 20, strength: 22, crit-chance: 6, crit-damage: 15, speed: 6}
+  YKI_STORM_EYE_BOOTS:
+    slot: FEET
+    stats: {health: 65, defense: 40, damage: 14, strength: 18, crit-chance: 4, crit-damage: 10, speed: 4}
+
+  YKI_VOID_ORACLE_HELMET:
+    slot: HEAD
+    stats: {health: 105, defense: 65, wisdom: 10, ability-damage: 10}
+  YKI_VOID_ORACLE_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 155, defense: 100, wisdom: 15, ability-damage: 15}
+  YKI_VOID_ORACLE_LEGGINGS:
+    slot: LEGS
+    stats: {health: 130, defense: 85, wisdom: 13, ability-damage: 13}
+  YKI_VOID_ORACLE_BOOTS:
+    slot: FEET
+    stats: {health: 90, defense: 60, wisdom: 10, ability-damage: 10, speed: 4}
+
+  YKI_SKYHUNTER_HELMET:
+    slot: HEAD
+    stats: {health: 105, defense: 70, damage: 20, strength: 32, crit-chance: 5, crit-damage: 20, speed: 5}
+  YKI_SKYHUNTER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 155, defense: 110, damage: 30, strength: 48, crit-chance: 8, crit-damage: 30, speed: 7}
+  YKI_SKYHUNTER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 140, defense: 100, damage: 30, strength: 48, crit-chance: 7, crit-damage: 30, speed: 7}
+  YKI_SKYHUNTER_BOOTS:
+    slot: FEET
+    stats: {health: 100, defense: 70, damage: 20, strength: 32, crit-chance: 5, crit-damage: 20, speed: 5}
+
+  # 第四、第五套护甲：补齐每档五套。
+  YKI_MEADOW_MENDER_HELMET:
+    slot: HEAD
+    stats: {health: 30, defense: 12, wisdom: 1, mending: 2, vitality: 1}
+  YKI_MEADOW_MENDER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 48, defense: 24, wisdom: 2, mending: 3, vitality: 2}
+  YKI_MEADOW_MENDER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 40, defense: 20, wisdom: 1, mending: 3, vitality: 2}
+  YKI_MEADOW_MENDER_BOOTS:
+    slot: FEET
+    stats: {health: 26, defense: 12, wisdom: 1, mending: 2, vitality: 1, speed: 2}
+
+  YKI_FRONTIER_SCOUT_HELMET:
+    slot: HEAD
+    stats: {health: 25, defense: 10, damage: 2, strength: 3, crit-chance: 1, speed: 2}
+  YKI_FRONTIER_SCOUT_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 40, defense: 20, damage: 3, strength: 5, crit-chance: 2, speed: 2}
+  YKI_FRONTIER_SCOUT_LEGGINGS:
+    slot: LEGS
+    stats: {health: 34, defense: 16, damage: 3, strength: 5, crit-chance: 2, speed: 2}
+  YKI_FRONTIER_SCOUT_BOOTS:
+    slot: FEET
+    stats: {health: 22, defense: 9, damage: 2, strength: 3, crit-chance: 1, speed: 4}
+
+  YKI_COALFIRE_BRAWLER_HELMET:
+    slot: HEAD
+    stats: {health: 45, defense: 28, damage: 6, strength: 9, crit-damage: 5, attack-speed: 2}
+  YKI_COALFIRE_BRAWLER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 70, defense: 44, damage: 9, strength: 14, crit-damage: 8, attack-speed: 3}
+  YKI_COALFIRE_BRAWLER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 55, defense: 36, damage: 9, strength: 13, crit-damage: 7, attack-speed: 3}
+  YKI_COALFIRE_BRAWLER_BOOTS:
+    slot: FEET
+    stats: {health: 35, defense: 22, damage: 6, strength: 8, crit-damage: 5, attack-speed: 2, speed: 2}
+
+  YKI_DEEPCAVE_PROSPECTOR_HELMET:
+    slot: HEAD
+    stats: {health: 48, defense: 32, wisdom: 1, vitality: 1, speed: 2}
+  YKI_DEEPCAVE_PROSPECTOR_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 75, defense: 52, wisdom: 2, vitality: 2, speed: 2}
+  YKI_DEEPCAVE_PROSPECTOR_LEGGINGS:
+    slot: LEGS
+    stats: {health: 60, defense: 43, wisdom: 1, vitality: 2, speed: 2}
+  YKI_DEEPCAVE_PROSPECTOR_BOOTS:
+    slot: FEET
+    stats: {health: 38, defense: 28, wisdom: 1, vitality: 1, speed: 4}
+
+  YKI_FROSTWOOD_HUNTSMAN_HELMET:
+    slot: HEAD
+    stats: {health: 62, defense: 38, damage: 10, strength: 14, crit-chance: 3, crit-damage: 8, speed: 3}
+  YKI_FROSTWOOD_HUNTSMAN_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 96, defense: 62, damage: 16, strength: 22, crit-chance: 4, crit-damage: 12, speed: 4}
+  YKI_FROSTWOOD_HUNTSMAN_LEGGINGS:
+    slot: LEGS
+    stats: {health: 78, defense: 50, damage: 14, strength: 20, crit-chance: 4, crit-damage: 12, speed: 4}
+  YKI_FROSTWOOD_HUNTSMAN_BOOTS:
+    slot: FEET
+    stats: {health: 50, defense: 32, damage: 10, strength: 12, crit-chance: 3, crit-damage: 8, speed: 4}
+
+  YKI_RUNEGLASS_SAVANT_HELMET:
+    slot: HEAD
+    stats: {health: 60, defense: 38, wisdom: 5, ability-damage: 4}
+  YKI_RUNEGLASS_SAVANT_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 94, defense: 60, wisdom: 8, ability-damage: 6}
+  YKI_RUNEGLASS_SAVANT_LEGGINGS:
+    slot: LEGS
+    stats: {health: 76, defense: 49, wisdom: 7, ability-damage: 6}
+  YKI_RUNEGLASS_SAVANT_BOOTS:
+    slot: FEET
+    stats: {health: 48, defense: 31, wisdom: 4, ability-damage: 4, speed: 3}
+
+  YKI_DAWN_CHANTER_HELMET:
+    slot: HEAD
+    stats: {health: 92, defense: 60, wisdom: 8, mending: 6, vitality: 4}
+  YKI_DAWN_CHANTER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 145, defense: 95, wisdom: 12, mending: 9, vitality: 6}
+  YKI_DAWN_CHANTER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 118, defense: 80, wisdom: 10, mending: 8, vitality: 5}
+  YKI_DAWN_CHANTER_BOOTS:
+    slot: FEET
+    stats: {health: 76, defense: 50, wisdom: 6, mending: 5, vitality: 3, speed: 3}
+
+  YKI_RIFT_SCHOLAR_HELMET:
+    slot: HEAD
+    stats: {health: 82, defense: 50, wisdom: 10, ability-damage: 8, speed: 2}
+  YKI_RIFT_SCHOLAR_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 128, defense: 80, wisdom: 16, ability-damage: 12, speed: 2}
+  YKI_RIFT_SCHOLAR_LEGGINGS:
+    slot: LEGS
+    stats: {health: 106, defense: 65, wisdom: 14, ability-damage: 10, speed: 2}
+  YKI_RIFT_SCHOLAR_BOOTS:
+    slot: FEET
+    stats: {health: 70, defense: 45, wisdom: 10, ability-damage: 8, speed: 4}
+
+  YKI_PHOENIX_HIEROPHANT_HELMET:
+    slot: HEAD
+    stats: {health: 120, defense: 85, wisdom: 10, mending: 10, vitality: 7}
+  YKI_PHOENIX_HIEROPHANT_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 188, defense: 135, wisdom: 16, mending: 15, vitality: 10}
+  YKI_PHOENIX_HIEROPHANT_LEGGINGS:
+    slot: LEGS
+    stats: {health: 157, defense: 110, wisdom: 14, mending: 13, vitality: 9}
+  YKI_PHOENIX_HIEROPHANT_BOOTS:
+    slot: FEET
+    stats: {health: 105, defense: 75, wisdom: 10, mending: 8, vitality: 6, speed: 4}
+
+  YKI_TEMPEST_FALCONER_HELMET:
+    slot: HEAD
+    stats: {health: 105, defense: 70, damage: 18, strength: 25, crit-chance: 4, crit-damage: 15, attack-speed: 4, speed: 4}
+  YKI_TEMPEST_FALCONER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 162, defense: 112, damage: 28, strength: 38, crit-chance: 7, crit-damage: 25, attack-speed: 6, speed: 6}
+  YKI_TEMPEST_FALCONER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 136, defense: 92, damage: 25, strength: 34, crit-chance: 6, crit-damage: 20, attack-speed: 5, speed: 5}
+  YKI_TEMPEST_FALCONER_BOOTS:
+    slot: FEET
+    stats: {health: 91, defense: 61, damage: 17, strength: 23, crit-chance: 3, crit-damage: 15, attack-speed: 3, speed: 5}
+
+  YKI_SUNCROWN_DUELIST_HELMET:
+    slot: HEAD
+    stats: {health: 118, defense: 76, damage: 25, strength: 40, crit-chance: 5, crit-damage: 25, attack-speed: 5, ferocity: 4, speed: 3}
+  YKI_SUNCROWN_DUELIST_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 178, defense: 120, damage: 38, strength: 60, crit-chance: 8, crit-damage: 40, attack-speed: 8, ferocity: 6, speed: 4}
+  YKI_SUNCROWN_DUELIST_LEGGINGS:
+    slot: LEGS
+    stats: {health: 150, defense: 100, damage: 35, strength: 55, crit-chance: 7, crit-damage: 35, attack-speed: 7, ferocity: 5, speed: 4}
+  YKI_SUNCROWN_DUELIST_BOOTS:
+    slot: FEET
+    stats: {health: 102, defense: 70, damage: 22, strength: 35, crit-chance: 5, crit-damage: 20, attack-speed: 5, ferocity: 3, speed: 5}
+
+  YKI_REALMSEEKER_HELMET:
+    slot: HEAD
+    stats: {health: 130, defense: 90, wisdom: 8, vitality: 4, mending: 2, speed: 8}
+  YKI_REALMSEEKER_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 198, defense: 142, wisdom: 12, vitality: 6, mending: 3, speed: 10}
+  YKI_REALMSEEKER_LEGGINGS:
+    slot: LEGS
+    stats: {health: 166, defense: 120, wisdom: 10, vitality: 5, mending: 3, speed: 10}
+  YKI_REALMSEEKER_BOOTS:
+    slot: FEET
+    stats: {health: 112, defense: 80, wisdom: 8, vitality: 3, mending: 2, speed: 12}
+
+  # 骨龙首领职业兵装。
+  YKI_WINGBREAKER_GREATSWORD:
+    slot: MAIN_HAND
+    stats: {damage: 225, strength: 135, crit-chance: 18, crit-damage: 55, attack-speed: 10}
+    abilities:
+      wingbreaker_sweep:
+        name: 断翼横扫
+        trigger: RIGHT_CLICK
+        mana: 80
+        cooldown: 5
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 6, amount: 450, strength-scaling: 1.0}
+          - {type: KNOCKBACK, target: NEARBY_ENEMIES, radius: 6, power: 1.35, vertical: 0.25}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 20, duration: 4}
+          - {type: PARTICLE, target: SELF, particle: SWEEP_ATTACK, count: 32}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.player.attack.sweep', pitch: 0.75}
+
+  YKI_SKULLBARRAGE_LONGBOW:
+    slot: MAIN_HAND
+    stats: {damage: 210, strength: 115, crit-chance: 25, crit-damage: 60, attack-speed: 15}
+    abilities:
+      seeking_skull_arrow:
+        name: 追魂颅矢
+        trigger: BOW_SHOT
+        mana: 65
+        cooldown: 2
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 380, strength-scaling: 0.85, speed: 3.1, gravity: false, lifetime: 7, hit-particle: SOUL, hit-particle-count: 28}
+          - {type: STAT_BUFF, target: SELF, stat: CRIT_DAMAGE, amount: 30, duration: 4}
+          - {type: PARTICLE, target: SELF, particle: SOUL, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.skeleton.shoot', pitch: 0.7}
+
+  YKI_DRAGONSPINE_LANCE:
+    slot: MAIN_HAND
+    stats: {damage: 215, strength: 130, crit-chance: 18, crit-damage: 40, ferocity: 18, speed: 10}
+    abilities:
+      dragonspine_charge:
+        name: 脊骨突阵
+        trigger: RIGHT_CLICK
+        mana: 75
+        cooldown: 4.5
+        effects:
+          - {type: DAMAGE, target: RAY, range: 11, amount: 420, strength-scaling: 0.95}
+          - {type: KNOCKBACK, target: RAY, range: 11, power: 1.1, vertical: 0.18}
+          - {type: DASH, power: 1.35, vertical: 0.06}
+          - {type: PARTICLE, target: SELF, particle: CRIT, count: 28}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.throw', pitch: 0.8}
+
+  YKI_GRAVETALON_SICKLE:
+    slot: MAIN_HAND
+    stats: {damage: 205, strength: 110, crit-chance: 30, crit-damage: 75, attack-speed: 22, speed: 15}
+    abilities:
+      gravetalon_harvest:
+        name: 攫魂
+        trigger: MELEE_HIT
+        mana: 0
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        conditions: {behind-target: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 340, strength-scaling: 0.8}
+          - {type: POTION, target: CURRENT, potion: WITHER, duration: 3, amplifier: 0}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 20, duration: 3}
+          - {type: PARTICLE, target: CURRENT, particle: SOUL, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.player.attack.crit', pitch: 0.65}
+
+  YKI_MARROW_REQUIEM_CENSER:
+    slot: MAIN_HAND
+    stats: {damage: 30, health: 130, wisdom: 22, vitality: 24, mending: 32}
+    abilities:
+      return_of_the_dead:
+        name: 亡者回生
+        trigger: RIGHT_CLICK
+        mana: 90
+        cooldown: 10
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 8, amount: 180, wisdom-scaling: 2.8, max-health-percent: 3}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 8}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 8, amount: 160, cap: 20}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 8, potion: REGENERATION, duration: 4, amplifier: 0}
+          - {type: PARTICLE, target: SELF, particle: HEART, count: 42}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.totem.use', pitch: 0.8}
+
+  YKI_OSSUARY_BULWARK:
+    slot: MAIN_HAND
+    stats: {damage: 155, strength: 70, health: 180, defense: 125, vitality: 22}
+    abilities:
+      ossuary_array:
+        name: 骨狱阵列
+        trigger: RIGHT_CLICK
+        mana: 90
+        cooldown: 14
+        effects:
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 8, amount: 200, cap: 20}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 8, stat: DEFENSE, amount: 55, duration: 6}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 7, potion: SLOWNESS, duration: 4, amplifier: 2}
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 7, amount: 150, strength-scaling: 0.3}
+          - {type: PARTICLE, target: SELF, particle: SOUL, count: 40}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.bone_block.break', pitch: 0.65}
+
+  YKI_WRAITHFIRE_SCEPTER:
+    slot: MAIN_HAND
+    stats: {damage: 50, health: 70, wisdom: 24, ability-damage: 30}
+    abilities:
+      wraithfire_meteor:
+        name: 怨火流星
+        trigger: RIGHT_CLICK
+        mana: 100
+        cooldown: 6
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 7, amount: 480, wisdom-scaling: 13.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 7, potion: WITHER, duration: 3, amplifier: 1}
+          - {type: PARTICLE, target: SELF, particle: SOUL_FIRE_FLAME, count: 52}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.blaze.shoot', pitch: 0.65}
+
+  # 烬日冥卫·阿努赫首领职业兵装。
+  YKI_ENDSUN_EDICT_BLADE:
+    slot: MAIN_HAND
+    stats: {damage: 285, strength: 180, crit-chance: 22, crit-damage: 80, attack-speed: 12, ferocity: 12}
+    abilities:
+      blade_edict:
+        name: 敕令·禁刃
+        trigger: RIGHT_CLICK
+        mana: 125
+        cooldown: 6
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 6, amount: 520, strength-scaling: 1.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 6, potion: WEAKNESS, duration: 4, amplifier: 1}
+          - {type: STAT_BUFF, target: SELF, stat: CRIT_DAMAGE, amount: 50, duration: 5}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.player.attack.sweep', pitch: 0.75}
+
+  YKI_SUNFALL_REPEATER:
+    slot: MAIN_HAND
+    stats: {damage: 270, strength: 160, crit-chance: 28, crit-damage: 95, attack-speed: 20, speed: 8}
+    abilities:
+      falling_sunwheel:
+        name: 日轮坠落
+        trigger: BOW_SHOT
+        mana: 110
+        cooldown: 2.5
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 650, strength-scaling: 1.15, speed: 3.0, gravity: false, lifetime: 8, hit-particle: FLAME, hit-particle-count: 32}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 15, duration: 3}
+          - {type: PARTICLE, target: SELF, particle: GLOW, count: 20}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 1.8}
+
+  YKI_SOLAR_AEGIS_LANCE:
+    slot: MAIN_HAND
+    stats: {damage: 275, strength: 175, crit-chance: 18, crit-damage: 60, ferocity: 22, defense: 70, vitality: 10, speed: 10}
+    abilities:
+      solar_aegis_charge:
+        name: 耀盾贯行
+        trigger: RIGHT_CLICK
+        mana: 120
+        cooldown: 7
+        effects:
+          - {type: DAMAGE, target: RAY, range: 12, amount: 560, strength-scaling: 1.0}
+          - {type: KNOCKBACK, target: RAY, range: 12, power: 1.2, vertical: 0.2}
+          - {type: DASH, power: 1.3, vertical: 0.06}
+          - {type: ABSORPTION, target: SELF, amount: 220, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: DEFENSE, amount: 45, duration: 5}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 40}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.shield.block', pitch: 0.8}
+
+  YKI_SCYTHE_ECHO_SICKLE:
+    slot: MAIN_HAND
+    stats: {damage: 255, strength: 145, crit-chance: 38, crit-damage: 100, attack-speed: 25, ferocity: 18, speed: 18}
+    abilities:
+      soul_splitting_echo:
+        name: 镰影分魂
+        trigger: MELEE_HIT
+        mana: 0
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        conditions: {behind-target: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 480, strength-scaling: 1.0}
+          - {type: POTION, target: CURRENT, potion: WITHER, duration: 3, amplifier: 1}
+          - {type: PARTICLE, target: CURRENT, particle: SOUL, count: 32}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.player.attack.crit', pitch: 0.55}
+
+  YKI_SOUL_CROWN_CENSER:
+    slot: MAIN_HAND
+    stats: {damage: 35, health: 190, wisdom: 28, ability-damage: 10, vitality: 36, mending: 42}
+    abilities:
+      crown_requiem:
+        name: 冠冕安魂
+        trigger: RIGHT_CLICK
+        mana: 140
+        cooldown: 10
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 9, amount: 260, wisdom-scaling: 3.5, max-health-percent: 4}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 9}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 180, cap: 20}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 9, potion: REGENERATION, duration: 5, amplifier: 1}
+          - {type: PARTICLE, target: SELF, particle: TOTEM_OF_UNDYING, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.totem.use', pitch: 1.0}
+
+  YKI_HEARTFURNACE_WARHAMMER:
+    slot: MAIN_HAND
+    stats: {damage: 200, strength: 95, health: 260, defense: 200, vitality: 30, wisdom: 10}
+    abilities:
+      heartfurnace_bulwark:
+        name: 心炉壁垒
+        trigger: RIGHT_CLICK
+        mana: 135
+        cooldown: 14
+        effects:
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 280, cap: 20}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: DEFENSE, amount: 75, duration: 7}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: VITALITY, amount: 18, duration: 7}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 9, potion: WEAKNESS, duration: 4, amplifier: 1}
+          - {type: HEAL, target: SELF, amount: 120, vitality-scaling: 1.5}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 36}
+          - {type: PARTICLE, target: SELF, particle: SOUL, count: 28}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.anvil.land', pitch: 0.65}
+
+  YKI_BLACK_SUN_CODEX:
+    slot: MAIN_HAND
+    stats: {damage: 55, health: 110, wisdom: 32, ability-damage: 42, vitality: 12}
+    abilities:
+      black_sun_rite:
+        name: 黑日葬仪
+        trigger: RIGHT_CLICK
+        mana: 150
+        cooldown: 7
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 8, amount: 680, wisdom-scaling: 14.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 8, potion: WITHER, duration: 4, amplifier: 1}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 8, potion: SLOWNESS, duration: 4, amplifier: 1}
+          - {type: ABSORPTION, target: SELF, amount: 140, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 60}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 32}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.respawn_anchor.deplete', pitch: 0.6}
+
+  # 终焉之魔女·伊芙蕾雅首领职业兵装。
+  YKI_FATESEVER_HOLYBLADE:
+    slot: MAIN_HAND
+    stats: {damage: 360, strength: 240, crit-chance: 28, crit-damage: 100, attack-speed: 15, ferocity: 30, defense: 60, vitality: 20}
+    abilities:
+      fate_severing_verdict:
+        name: 断命裁决
+        trigger: RIGHT_CLICK
+        mana: 160
+        cooldown: 5
+        target-range: 14
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 880, strength-scaling: 1.35}
+          - {type: POTION, target: CURRENT, potion: WITHER, duration: 4, amplifier: 1}
+          - {type: ABSORPTION, target: SELF, amount: 200, cap: 20}
+          - {type: PARTICLE, target: CURRENT, particle: WITCH, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.wither.spawn', pitch: 1.3}
+
+  YKI_SEVENFOLD_END_BOW:
+    slot: MAIN_HAND
+    stats: {damage: 380, strength: 230, crit-chance: 32, crit-damage: 140, attack-speed: 20, ferocity: 25, speed: 15}
+    abilities:
+      sevenfold_end_arrow:
+        name: 七终魔矢
+        trigger: BOW_SHOT
+        mana: 145
+        cooldown: 2
+        effects:
+          - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 1050, strength-scaling: 1.7, speed: 3.4, gravity: false, lifetime: 8, hit-particle: REVERSE_PORTAL, hit-particle-count: 42}
+          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 35, duration: 7}
+          - {type: PARTICLE, target: SELF, particle: WITCH, count: 28}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 0.55}
+
+  YKI_HEAVEN_INVERSION_LANCE:
+    slot: MAIN_HAND
+    stats: {damage: 375, strength: 250, crit-chance: 28, crit-damage: 90, attack-speed: 10, ferocity: 45, speed: 22}
+    abilities:
+      heaven_inversion:
+        name: 天地倒悬
+        trigger: RIGHT_CLICK
+        mana: 165
+        cooldown: 4.5
+        target-range: 16
+        conditions: {target-required: true}
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 950, strength-scaling: 1.55}
+          - {type: KNOCKBACK, target: CURRENT, power: 0.45, vertical: 1.05}
+          - {type: DASH, power: 1.55, vertical: 0.08}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 4, amplifier: 3}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 30, duration: 4}
+          - {type: PARTICLE, target: CURRENT, particle: REVERSE_PORTAL, count: 52}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.thunder', pitch: 1.3}
+
+  YKI_WITCHBLINK_SCISSORS:
+    slot: MAIN_HAND
+    stats: {damage: 335, strength: 195, crit-chance: 45, crit-damage: 135, attack-speed: 35, ferocity: 35, speed: 30}
+    abilities:
+      blinking_verdict:
+        name: 闪烁裁决
+        trigger: RIGHT_CLICK
+        mana: 125
+        cooldown: 4
+        target-range: 14
+        conditions: {target-required: true}
+        effects:
+          - {type: TELEPORT, distance: 8}
+          - {type: DAMAGE, target: CURRENT, amount: 800, strength-scaling: 1.25}
+          - {type: POTION, target: CURRENT, potion: WITHER, duration: 3, amplifier: 2}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 2, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 35, duration: 4}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.45}
+
+  YKI_SOULPAWN_REQUIEM:
+    slot: MAIN_HAND
+    stats: {damage: 60, health: 270, wisdom: 42, ability-damage: 24, vitality: 50, mending: 60}
+    abilities:
+      soul_redemption:
+        name: 灵魂赎回
+        trigger: RIGHT_CLICK
+        mana: 190
+        cooldown: 11
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 10, amount: 340, wisdom-scaling: 4.5, max-health-percent: 5}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 10}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 300, wisdom-scaling: 1.2, cap: 20}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: VITALITY, amount: 30, duration: 8}
+          - {type: PARTICLE, target: SELF, particle: TOTEM_OF_UNDYING, count: 64}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.beacon.activate', pitch: 1.4}
+
+  YKI_WORLD_END_BULWARK:
+    slot: MAIN_HAND
+    stats: {damage: 80, strength: 100, health: 380, defense: 280, vitality: 45, wisdom: 16}
+    abilities:
+      black_sun_aegis:
+        name: 黑日护仪
+        trigger: RIGHT_CLICK
+        mana: 170
+        cooldown: 18
+        effects:
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 400, cap: 20}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: DEFENSE, amount: 120, duration: 8}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: VITALITY, amount: 30, duration: 8}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: WEAKNESS, duration: 5, amplifier: 2}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: SLOWNESS, duration: 5, amplifier: 1}
+          - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 72}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.shield.block', pitch: 0.55}
+
+  YKI_SILENT_CHANT_CODEX:
+    slot: MAIN_HAND
+    stats: {damage: 80, health: 180, wisdom: 45, ability-damage: 55, vitality: 18}
+    abilities:
+      threefold_silent_chant:
+        name: 三色无声咏唱
+        trigger: RIGHT_CLICK
+        mana: 195
+        cooldown: 8
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 9, amount: 850, wisdom-scaling: 17.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 9, potion: SLOWNESS, duration: 4, amplifier: 3}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 9, potion: WEAKNESS, duration: 4, amplifier: 3}
+          - {type: HEAL, target: SELF, amount: 140, wisdom-scaling: 2.0}
+          - {type: STAT_BUFF, target: SELF, stat: ABILITY_DAMAGE, amount: 25, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: WITCH, count: 72}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.enchantment_table.use', pitch: 0.75}
+
+  # 功能兵装：保持正常武器属性，技能侧重采集、探索、移动、自救与团队整备。
+  YKI_VEINSEEKER_MAUL:
+    slot: MAIN_HAND
+    stats: {damage: 46, strength: 14, defense: 8, speed: 3}
+    abilities:
+      vein_rhythm:
+        name: 矿脉节拍
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 15
+        cooldown: 30
+        effects:
+          - {type: POTION, target: SELF, potion: HASTE, duration: 20, amplifier: 0, particles: false}
+          - {type: PARTICLE, target: SELF, particle: WAX_OFF, count: 18}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.stone.hit', pitch: 0.8}
+
+  YKI_TRAILSCOUT_SHORTBLADE:
+    slot: MAIN_HAND
+    stats: {damage: 78, strength: 28, crit-chance: 8, speed: 8, wisdom: 3}
+    abilities:
+      trail_sight:
+        name: 远路标定
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 22
+        cooldown: 30
+        effects:
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 60, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 15, duration: 15}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 20}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.spyglass.use', pitch: 1.2}
+
+  YKI_CAMPWARD_SABER:
+    slot: MAIN_HAND
+    stats: {damage: 80, strength: 30, health: 35, defense: 18, wisdom: 4, speed: 5}
+    abilities:
+      campward_readiness:
+        name: 营火整备
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 28
+        cooldown: 30
+        effects:
+          - {type: CLEANSE, target: SELF}
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 60, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: FIRE_RESISTANCE, duration: 30, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: REGENERATION, duration: 5, amplifier: 0, particles: false}
+          - {type: PARTICLE, target: SELF, particle: CAMPFIRE_COSY_SMOKE, count: 20}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.campfire.crackle', pitch: 1.15}
+
+  YKI_TIDESEEKER_LANCE:
+    slot: MAIN_HAND
+    stats: {damage: 120, strength: 50, crit-chance: 12, defense: 20, wisdom: 7, speed: 10}
+    abilities:
+      tide_affinity:
+        name: 潮流亲和
+        trigger: TICK
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: POTION, target: SELF, potion: WATER_BREATHING, duration: 1.5, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: DOLPHINS_GRACE, duration: 1.5, amplifier: 0, particles: false}
+      treasure_tide:
+        name: 潮汐寻珍
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 40
+        cooldown: 45
+        effects:
+          - {type: POTION, target: SELF, potion: LUCK, duration: 60, amplifier: 1, particles: false}
+          - {type: PARTICLE, target: SELF, particle: NAUTILUS, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.return', pitch: 1.25}
+
+  YKI_RESCUE_BEACON_CROSSBOW:
+    slot: MAIN_HAND
+    stats: {damage: 122, strength: 52, crit-chance: 15, crit-damage: 25, wisdom: 8, speed: 8}
+    abilities:
+      evacuation_beacon:
+        name: 撤离信标
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 55
+        cooldown: 20
+        effects:
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 8}
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 8, amount: 70, wisdom-scaling: 1.0}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 8, potion: SLOW_FALLING, duration: 10, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 8, stat: SPEED, amount: 25, duration: 8}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 40}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.beacon.activate', pitch: 1.25}
+
+  YKI_TRUESIGHT_LONGBOW:
+    slot: MAIN_HAND
+    stats: {damage: 126, strength: 56, crit-chance: 20, crit-damage: 30, wisdom: 6, speed: 8}
+    abilities:
+      trail_revelation:
+        name: 明迹索敌
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 48
+        cooldown: 16
+        effects:
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 20, potion: GLOWING, duration: 12, amplifier: 0}
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 30, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 20, duration: 8}
+          - {type: PARTICLE, target: SELF, particle: GLOW, count: 30}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.spyglass.use', pitch: 1.25}
+
+  YKI_SKYHOOK_TWINBLADE:
+    slot: MAIN_HAND
+    stats: {damage: 175, strength: 92, crit-chance: 20, crit-damage: 45, attack-speed: 15, speed: 18, wisdom: 8}
+    abilities:
+      skyhook_pull:
+        name: 钩刃牵引
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 45
+        cooldown: 4
+        effects:
+          - {type: DASH, power: 1.7, vertical: 0.45}
+          - {type: POTION, target: SELF, potion: SLOW_FALLING, duration: 5, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 20, duration: 5}
+          - {type: PARTICLE, target: SELF, particle: CLOUD, count: 24}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.riptide_1', pitch: 1.25}
+
+  YKI_MARCHING_SANCTUARY_MAUL:
+    slot: MAIN_HAND
+    stats: {damage: 172, strength: 88, health: 120, defense: 70, wisdom: 14, vitality: 12}
+    abilities:
+      field_sanctuary:
+        name: 临时圣所
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 85
+        cooldown: 20
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 8, amount: 130, wisdom-scaling: 2.0}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 8}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 8, potion: REGENERATION, duration: 8, amplifier: 1}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 8, stat: DEFENSE, amount: 50, duration: 10}
+          - {type: PARTICLE, target: SELF, particle: HAPPY_VILLAGER, count: 40}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.beacon.power_select', pitch: 0.9}
+
+  YKI_RIFTGUIDE_DAGGER:
+    slot: MAIN_HAND
+    stats: {damage: 182, strength: 96, crit-chance: 25, crit-damage: 55, attack-speed: 18, speed: 16, wisdom: 10}
+    abilities:
+      riftway_escape:
+        name: 隙路脱身
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 65
+        cooldown: 9
+        effects:
+          - {type: TELEPORT, distance: 12}
+          - {type: CLEANSE, target: SELF}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 4, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: SLOW_FALLING, duration: 6, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 35, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 36}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.5}
+
+  YKI_EXPEDITION_WARHAMMER:
+    slot: MAIN_HAND
+    stats: {damage: 230, strength: 125, health: 140, defense: 90, wisdom: 18, vitality: 18, speed: 18}
+    abilities:
+      expedition_muster:
+        name: 整备号令
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 90
+        cooldown: 30
+        effects:
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 12}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 12, potion: HASTE, duration: 30, amplifier: 1, particles: false}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 12, potion: NIGHT_VISION, duration: 60, amplifier: 0, particles: false}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 12, potion: WATER_BREATHING, duration: 60, amplifier: 0, particles: false}
+          - {type: POTION, target: NEARBY_ALLIES, radius: 12, potion: FIRE_RESISTANCE, duration: 60, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 12, stat: SPEED, amount: 30, duration: 20}
+          - {type: PARTICLE, target: SELF, particle: NOTE, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.anvil.land', pitch: 1.1}
+
+  YKI_HOMECOMING_CHRONICLE:
+    slot: MAIN_HAND
+    stats: {damage: 90, health: 180, defense: 60, wisdom: 38, vitality: 20, mending: 22, speed: 15}
+    abilities:
+      emergency_rewind:
+        name: 紧急回序
+        trigger: DAMAGED
+        cooldown: 45
+        announce: false
+        cancel-interaction: false
+        conditions: {health-below-percent: 35}
+        effects:
+          - {type: HEAL, target: SELF, amount: 200, max-health-percent: 10}
+          - {type: CLEANSE, target: SELF}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 3, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: SLOW_FALLING, duration: 6, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 50, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.respawn_anchor.deplete', pitch: 1.2}
+
+  YKI_ASTRAL_WAYFARER_STAFF:
+    slot: MAIN_HAND
+    stats: {damage: 210, strength: 90, crit-chance: 15, wisdom: 55, ability-damage: 25, speed: 30}
+    abilities:
+      all_realm_calibration:
+        name: 万域校准
+        trigger: TICK
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: POTION, target: SELF, potion: HASTE, duration: 1.5, amplifier: 2, particles: false}
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 15, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: WATER_BREATHING, duration: 1.5, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: FIRE_RESISTANCE, duration: 1.5, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: DOLPHINS_GRACE, duration: 1.5, amplifier: 0, particles: false}
+      folded_wayfarer:
+        name: 折界远行
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 85
+        cooldown: 5
+        effects:
+          - {type: TELEPORT, distance: 20}
+          - {type: POTION, target: SELF, potion: SLOW_FALLING, duration: 6, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 50, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.35}
+
+  # 三首领主题护甲。
+  YKI_OSSUARY_DRAGOON_HELMET:
+    slot: HEAD
+    stats: {health: 95, defense: 70, damage: 12, strength: 16, crit-chance: 4, crit-damage: 10, ferocity: 3}
+  YKI_OSSUARY_DRAGOON_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 145, defense: 110, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3}
+  YKI_OSSUARY_DRAGOON_LEGGINGS:
+    slot: LEGS
+    stats: {health: 120, defense: 90, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3}
+  YKI_OSSUARY_DRAGOON_BOOTS:
+    slot: FEET
+    stats: {health: 80, defense: 60, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3, speed: 6}
+
+  YKI_ENDSUN_GUARD_HELMET:
+    slot: HEAD
+    stats: {health: 125, defense: 90, damage: 18, strength: 25, wisdom: 6, crit-chance: 3}
+  YKI_ENDSUN_GUARD_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 190, defense: 140, damage: 27, strength: 38, wisdom: 9, vitality: 4}
+  YKI_ENDSUN_GUARD_LEGGINGS:
+    slot: LEGS
+    stats: {health: 155, defense: 115, damage: 24, strength: 34, wisdom: 8}
+  YKI_ENDSUN_GUARD_BOOTS:
+    slot: FEET
+    stats: {health: 105, defense: 75, damage: 16, strength: 23, wisdom: 5, speed: 6}
+
+  YKI_ENDWITCH_REBEL_HELMET:
+    slot: HEAD
+    stats: {health: 135, defense: 90, damage: 16, strength: 22, crit-chance: 4, crit-damage: 16, wisdom: 9, ability-damage: 8, speed: 5}
+  YKI_ENDWITCH_REBEL_CHESTPLATE:
+    slot: CHEST
+    stats: {health: 205, defense: 145, damage: 25, strength: 36, crit-chance: 7, crit-damage: 25, wisdom: 14, ability-damage: 12, speed: 7}
+  YKI_ENDWITCH_REBEL_LEGGINGS:
+    slot: LEGS
+    stats: {health: 170, defense: 120, damage: 22, strength: 32, crit-chance: 6, crit-damage: 22, wisdom: 12, ability-damage: 10, speed: 7}
+  YKI_ENDWITCH_REBEL_BOOTS:
+    slot: FEET
+    stats: {health: 115, defense: 80, damage: 15, strength: 20, crit-chance: 3, crit-damage: 15, wisdom: 8, ability-damage: 7, speed: 9}
+
 # 套装包含 pieces、required-pieces、stats 与 abilities；满足部件数量后自动生效。
 sets:
   wayfarer:
@@ -1121,3 +2434,401 @@ sets:
           - {type: POTION, target: NEARBY_ENEMIES, radius: 9, potion: SLOWNESS, duration: 3, amplifier: 1}
           - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 64}
           - {type: SOUND, target: SELF, sound: BLOCK_BEACON_ACTIVATE, pitch: 1.2}
+
+  recruit_vanguard:
+    pieces: [YKI_RECRUIT_VANGUARD_HELMET, YKI_RECRUIT_VANGUARD_CHESTPLATE, YKI_RECRUIT_VANGUARD_LEGGINGS, YKI_RECRUIT_VANGUARD_BOOTS]
+    required-pieces: 4
+    stats: {strength: 8, attack-speed: 5}
+    abilities:
+      recruit_combo:
+        name: 新兵连击
+        trigger: MELEE_HIT
+        chance: 0.2
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 35, strength-scaling: 0.15}
+          - {type: PARTICLE, target: CURRENT, particle: SWEEP_ATTACK, count: 8}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.player.attack.sweep', pitch: 1.2}
+
+  rune_acolyte:
+    pieces: [YKI_RUNE_ACOLYTE_HELMET, YKI_RUNE_ACOLYTE_CHESTPLATE, YKI_RUNE_ACOLYTE_LEGGINGS, YKI_RUNE_ACOLYTE_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 4, mending: 8}
+    abilities:
+      resonant_rune:
+        name: 共鸣符阵
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 35
+        cooldown: 8
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 5, amount: 120, wisdom-scaling: 3.0}
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 5, amount: 60, wisdom-scaling: 1.0}
+          - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 28}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.enchantment_table.use', pitch: 1.5}
+
+  granite_bulwark:
+    pieces: [YKI_GRANITE_BULWARK_HELMET, YKI_GRANITE_BULWARK_CHESTPLATE, YKI_GRANITE_BULWARK_LEGGINGS, YKI_GRANITE_BULWARK_BOOTS]
+    required-pieces: 4
+    stats: {defense: 40, vitality: 5}
+    abilities:
+      granite_stance:
+        name: 磐岩架势
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 50
+        cooldown: 10
+        effects:
+          - {type: STAT_BUFF, target: SELF, stat: DEFENSE, amount: 100, duration: 6}
+          - {type: POTION, target: SELF, potion: RESISTANCE, duration: 5, amplifier: 0, particles: false}
+          - {type: PARTICLE, target: SELF, particle: ASH, count: 36}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.stone.place', pitch: 0.65}
+
+  storm_eye:
+    pieces: [YKI_STORM_EYE_HELMET, YKI_STORM_EYE_CHESTPLATE, YKI_STORM_EYE_LEGGINGS, YKI_STORM_EYE_BOOTS]
+    required-pieces: 4
+    abilities:
+      eagle_eye_lock:
+        name: 鹰眼锁定
+        trigger: PROJECTILE_HIT
+        chance: 0.25
+        cooldown: 4
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 200, strength-scaling: 0.55}
+          - {type: STAT_BUFF, target: SELF, stat: CRIT_DAMAGE, amount: 50, duration: 4}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 15, duration: 4}
+          - {type: PARTICLE, target: CURRENT, particle: ELECTRIC_SPARK, count: 26}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.lightning_bolt.impact', pitch: 1.7}
+
+  void_oracle:
+    pieces: [YKI_VOID_ORACLE_HELMET, YKI_VOID_ORACLE_CHESTPLATE, YKI_VOID_ORACLE_LEGGINGS, YKI_VOID_ORACLE_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 8, ability-damage: 10}
+    abilities:
+      void_collapse:
+        name: 虚空坍缩
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 130
+        cooldown: 7
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 7, amount: 650, wisdom-scaling: 12.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 7, potion: WITHER, duration: 4, amplifier: 1}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 58}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.respawn_anchor.deplete', pitch: 0.55}
+
+  skyhunter:
+    pieces: [YKI_SKYHUNTER_HELMET, YKI_SKYHUNTER_CHESTPLATE, YKI_SKYHUNTER_LEGGINGS, YKI_SKYHUNTER_BOOTS]
+    required-pieces: 4
+    abilities:
+      celestial_hunt:
+        name: 天猎时刻
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 150
+        cooldown: 20
+        effects:
+          - {type: STAT_BUFF, target: SELF, stat: STRENGTH, amount: 80, duration: 8}
+          - {type: STAT_BUFF, target: SELF, stat: CRIT_DAMAGE, amount: 100, duration: 8}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 25, duration: 8}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 30, duration: 8}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 64}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.thunder', pitch: 1.5}
+
+  meadow_mender:
+    pieces: [YKI_MEADOW_MENDER_HELMET, YKI_MEADOW_MENDER_CHESTPLATE, YKI_MEADOW_MENDER_LEGGINGS, YKI_MEADOW_MENDER_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 3, mending: 5}
+    abilities:
+      meadow_blessing:
+        name: 草露祝福
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 25
+        cooldown: 10
+        effects:
+          - {type: HEAL, target: SELF, amount: 55, wisdom-scaling: 1.2}
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 6, amount: 45, wisdom-scaling: 1.2}
+          - {type: PARTICLE, target: SELF, particle: HEART, count: 14}
+          - {type: SOUND, target: SELF, sound: ENTITY_EXPERIENCE_ORB_PICKUP, pitch: 1.35}
+
+  frontier_scout:
+    pieces: [YKI_FRONTIER_SCOUT_HELMET, YKI_FRONTIER_SCOUT_CHESTPLATE, YKI_FRONTIER_SCOUT_LEGGINGS, YKI_FRONTIER_SCOUT_BOOTS]
+    required-pieces: 4
+    stats: {crit-damage: 10}
+    abilities:
+      scout_mark:
+        name: 斥候标记
+        trigger: PROJECTILE_HIT
+        chance: 0.2
+        cooldown: 3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 40, strength-scaling: 0.15}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 10, duration: 3}
+          - {type: PARTICLE, target: CURRENT, particle: CRIT, count: 10}
+
+  coalfire_brawler:
+    pieces: [YKI_COALFIRE_BRAWLER_HELMET, YKI_COALFIRE_BRAWLER_CHESTPLATE, YKI_COALFIRE_BRAWLER_LEGGINGS, YKI_COALFIRE_BRAWLER_BOOTS]
+    required-pieces: 4
+    stats: {strength: 12, attack-speed: 8}
+    abilities:
+      furnace_combo:
+        name: 炉火连拳
+        trigger: MELEE_HIT
+        chance: 0.25
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 90, strength-scaling: 0.25}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 12, duration: 3}
+          - {type: PARTICLE, target: CURRENT, particle: FLAME, count: 16}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.player.attack.strong', pitch: 0.9}
+
+  deepcave_prospector:
+    pieces: [YKI_DEEPCAVE_PROSPECTOR_HELMET, YKI_DEEPCAVE_PROSPECTOR_CHESTPLATE, YKI_DEEPCAVE_PROSPECTOR_LEGGINGS, YKI_DEEPCAVE_PROSPECTOR_BOOTS]
+    required-pieces: 4
+    stats: {defense: 25, speed: 10}
+    abilities:
+      deep_work:
+        name: 深层作业
+        trigger: TICK
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: POTION, target: SELF, potion: HASTE, duration: 1.5, amplifier: 1, particles: false}
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 1.5, amplifier: 0, particles: false}
+
+  frostwood_huntsman:
+    pieces: [YKI_FROSTWOOD_HUNTSMAN_HELMET, YKI_FROSTWOOD_HUNTSMAN_CHESTPLATE, YKI_FROSTWOOD_HUNTSMAN_LEGGINGS, YKI_FROSTWOOD_HUNTSMAN_BOOTS]
+    required-pieces: 4
+    stats: {crit-damage: 25, attack-speed: 10}
+    abilities:
+      frost_trail_hunt:
+        name: 霜痕追猎
+        trigger: PROJECTILE_HIT
+        chance: 0.3
+        cooldown: 3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 150, strength-scaling: 0.4}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 2, amplifier: 1}
+          - {type: PARTICLE, target: CURRENT, particle: SNOWFLAKE, count: 22}
+          - {type: SOUND, target: CURRENT, sound: BLOCK_GLASS_BREAK, pitch: 1.35}
+
+  runeglass_savant:
+    pieces: [YKI_RUNEGLASS_SAVANT_HELMET, YKI_RUNEGLASS_SAVANT_CHESTPLATE, YKI_RUNEGLASS_SAVANT_LEGGINGS, YKI_RUNEGLASS_SAVANT_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 8, ability-damage: 8}
+    abilities:
+      refractive_mystic_ring:
+        name: 折光秘环
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 70
+        cooldown: 6
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 5, amount: 300, wisdom-scaling: 6.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 5, potion: WEAKNESS, duration: 3, amplifier: 0}
+          - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 34}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.amethyst_block.resonate', pitch: 1.25}
+
+  dawn_chanter:
+    pieces: [YKI_DAWN_CHANTER_HELMET, YKI_DAWN_CHANTER_CHESTPLATE, YKI_DAWN_CHANTER_LEGGINGS, YKI_DAWN_CHANTER_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 8, mending: 15, vitality: 10}
+    abilities:
+      dawn_praise:
+        name: 曦光礼赞
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 100
+        cooldown: 9
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 8, amount: 160, wisdom-scaling: 2.5, max-health-percent: 2}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 8}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 8, amount: 120, cap: 20}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 42}
+          - {type: SOUND, target: SELF, sound: BLOCK_BEACON_ACTIVATE, pitch: 1.55}
+
+  rift_scholar:
+    pieces: [YKI_RIFT_SCHOLAR_HELMET, YKI_RIFT_SCHOLAR_CHESTPLATE, YKI_RIFT_SCHOLAR_LEGGINGS, YKI_RIFT_SCHOLAR_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 12, ability-damage: 15}
+    abilities:
+      rift_pulse:
+        name: 裂界脉冲
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 110
+        cooldown: 6
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 7, amount: 520, wisdom-scaling: 10.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 7, potion: WEAKNESS, duration: 3, amplifier: 1}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 52}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.respawn_anchor.deplete', pitch: 0.8}
+
+  phoenix_hierophant:
+    pieces: [YKI_PHOENIX_HIEROPHANT_HELMET, YKI_PHOENIX_HIEROPHANT_CHESTPLATE, YKI_PHOENIX_HIEROPHANT_LEGGINGS, YKI_PHOENIX_HIEROPHANT_BOOTS]
+    required-pieces: 4
+    stats: {wisdom: 12, mending: 20, vitality: 12}
+    abilities:
+      rebirth_hymn:
+        name: 涅槃圣歌
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 145
+        cooldown: 10
+        effects:
+          - {type: HEAL, target: NEARBY_ALLIES, radius: 10, amount: 230, wisdom-scaling: 3.0, max-health-percent: 4}
+          - {type: CLEANSE, target: NEARBY_ALLIES, radius: 10}
+          - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 200, cap: 20}
+          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: DEFENSE, amount: 60, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 64}
+          - {type: SOUND, target: SELF, sound: ENTITY_BLAZE_AMBIENT, pitch: 1.45}
+
+  tempest_falconer:
+    pieces: [YKI_TEMPEST_FALCONER_HELMET, YKI_TEMPEST_FALCONER_CHESTPLATE, YKI_TEMPEST_FALCONER_LEGGINGS, YKI_TEMPEST_FALCONER_BOOTS]
+    required-pieces: 4
+    stats: {crit-damage: 40, attack-speed: 15}
+    abilities:
+      thunder_falcon_dive:
+        name: 雷隼俯冲
+        trigger: PROJECTILE_HIT
+        chance: 0.3
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: LIGHTNING, target: CURRENT, amount: 330, strength-scaling: 0.7}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 25, duration: 4}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 15, duration: 4}
+          - {type: PARTICLE, target: CURRENT, particle: ELECTRIC_SPARK, count: 32}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.lightning_bolt.impact', pitch: 1.45}
+
+  suncrown_duelist:
+    pieces: [YKI_SUNCROWN_DUELIST_HELMET, YKI_SUNCROWN_DUELIST_CHESTPLATE, YKI_SUNCROWN_DUELIST_LEGGINGS, YKI_SUNCROWN_DUELIST_BOOTS]
+    required-pieces: 4
+    stats: {strength: 50, crit-damage: 50, ferocity: 20}
+    abilities:
+      sunwheel_slash:
+        name: 日轮斩
+        trigger: MELEE_HIT
+        chance: 0.25
+        cooldown: 2.5
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 500, strength-scaling: 1.1}
+          - {type: HEAL, target: SELF, amount: 70}
+          - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 20, duration: 3}
+          - {type: PARTICLE, target: CURRENT, particle: SWEEP_ATTACK, count: 24}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:entity.player.attack.sweep', pitch: 0.75}
+
+  realmseeker:
+    pieces: [YKI_REALMSEEKER_HELMET, YKI_REALMSEEKER_CHESTPLATE, YKI_REALMSEEKER_LEGGINGS, YKI_REALMSEEKER_BOOTS]
+    required-pieces: 4
+    stats: {speed: 30, wisdom: 10, vitality: 10}
+    abilities:
+      all_realm_adaptation:
+        name: 万域适应
+        trigger: TICK
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: POTION, target: SELF, potion: HASTE, duration: 1.5, amplifier: 2, particles: false}
+          - {type: POTION, target: SELF, potion: NIGHT_VISION, duration: 1.5, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: WATER_BREATHING, duration: 1.5, amplifier: 0, particles: false}
+          - {type: POTION, target: SELF, potion: FIRE_RESISTANCE, duration: 1.5, amplifier: 0, particles: false}
+      realm_stride:
+        name: 界行步
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 80
+        cooldown: 6
+        effects:
+          - {type: DASH, power: 1.8, vertical: 0.12}
+          - {type: ABSORPTION, target: SELF, amount: 200, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 50, duration: 4}
+          - {type: PARTICLE, target: SELF, particle: END_ROD, count: 46}
+          - {type: SOUND, target: SELF, sound: ENTITY_ENDERMAN_TELEPORT, pitch: 1.4}
+
+  ossuary_dragoon:
+    pieces: [YKI_OSSUARY_DRAGOON_HELMET, YKI_OSSUARY_DRAGOON_CHESTPLATE, YKI_OSSUARY_DRAGOON_LEGGINGS, YKI_OSSUARY_DRAGOON_BOOTS]
+    required-pieces: 4
+    stats: {health: 60, defense: 50, strength: 20}
+    abilities:
+      ossuary_absorption:
+        name: 亡骨吸收
+        trigger: KILL
+        mana: 0
+        cooldown: 3
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: HEAL, target: SELF, amount: 70}
+          - {type: ABSORPTION, target: SELF, amount: 100, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: STRENGTH, amount: 25, duration: 5}
+          - {type: PARTICLE, target: SELF, particle: SOUL, count: 24}
+      bone_spike_retribution:
+        name: 骨刺反噬
+        trigger: DAMAGED
+        chance: 0.2
+        cooldown: 7
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: DAMAGE, target: CURRENT, amount: 200, strength-scaling: 0.4}
+          - {type: POTION, target: CURRENT, potion: SLOWNESS, duration: 2, amplifier: 1}
+          - {type: KNOCKBACK, target: CURRENT, power: 0.5, vertical: 0.35}
+          - {type: PARTICLE, target: CURRENT, particle: SOUL, count: 24}
+          - {type: SOUND, target: CURRENT, sound: 'minecraft:block.bone_block.break', pitch: 0.7}
+
+  endsun_guard:
+    pieces: [YKI_ENDSUN_GUARD_HELMET, YKI_ENDSUN_GUARD_CHESTPLATE, YKI_ENDSUN_GUARD_LEGGINGS, YKI_ENDSUN_GUARD_BOOTS]
+    required-pieces: 4
+    stats: {defense: 60, strength: 25, wisdom: 8}
+    abilities:
+      eclipse_gatekeeper:
+        name: 日蚀守门
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 130
+        cooldown: 10
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 7, amount: 520, strength-scaling: 0.7, wisdom-scaling: 8.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 7, potion: WITHER, duration: 3, amplifier: 1}
+          - {type: ABSORPTION, target: SELF, amount: 240, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: DEFENSE, amount: 60, duration: 6}
+          - {type: PARTICLE, target: SELF, particle: FLASH, count: 3}
+          - {type: PARTICLE, target: SELF, particle: FLAME, count: 56}
+          - {type: SOUND, target: SELF, sound: 'minecraft:item.shield.block', pitch: 0.65}
+
+  endwitch_rebel:
+    pieces: [YKI_ENDWITCH_REBEL_HELMET, YKI_ENDWITCH_REBEL_CHESTPLATE, YKI_ENDWITCH_REBEL_LEGGINGS, YKI_ENDWITCH_REBEL_BOOTS]
+    required-pieces: 4
+    stats: {crit-damage: 40, wisdom: 12, speed: 12}
+    abilities:
+      fate_reversing_blink:
+        name: 逆命闪烁
+        trigger: DAMAGED
+        chance: 0.25
+        cooldown: 6
+        announce: false
+        cancel-interaction: false
+        effects:
+          - {type: ABSORPTION, target: SELF, amount: 180, cap: 20}
+          - {type: POTION, target: SELF, potion: INVISIBILITY, duration: 1.5, amplifier: 0, particles: false}
+          - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 35, duration: 3}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 42}
+          - {type: SOUND, target: SELF, sound: 'minecraft:entity.enderman.teleport', pitch: 1.55}
+      sevenfold_fate_rebellion:
+        name: 七重逆命
+        trigger: SNEAK_RIGHT_CLICK
+        mana: 175
+        cooldown: 16
+        effects:
+          - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 8, amount: 780, strength-scaling: 0.8, wisdom-scaling: 12.0}
+          - {type: POTION, target: NEARBY_ENEMIES, radius: 8, potion: WEAKNESS, duration: 4, amplifier: 1}
+          - {type: ABSORPTION, target: SELF, amount: 240, cap: 20}
+          - {type: STAT_BUFF, target: SELF, stat: CRIT_DAMAGE, amount: 80, duration: 7}
+          - {type: STAT_BUFF, target: SELF, stat: ABILITY_DAMAGE, amount: 25, duration: 7}
+          - {type: PARTICLE, target: SELF, particle: WITCH, count: 72}
+          - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 48}
+          - {type: SOUND, target: SELF, sound: 'minecraft:block.end_portal.spawn', pitch: 1.25}

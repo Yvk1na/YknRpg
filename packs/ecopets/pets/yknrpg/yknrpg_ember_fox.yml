@@ -22,6 +22,8 @@ level-placeholders:
     value: "%level% * 0.14"
   - id: "crit_damage_bonus"
     value: "%level% * 0.04"
+  - id: "perk_food"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -29,17 +31,22 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&6+%crit_damage_bonus% 暴击伤害"
     - ""
+    - "&6特殊效果："
+    - "&e余烬暖胃 &7食物恢复效果 +&a%perk_food%%"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&c+%strength_bonus% 力量"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&e余烬暖胃 &7食物恢复效果 +&a%perk_food%%"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&e余烬暖胃 &7食物恢复效果 +&a%perk_food%%"
 
 level-up-effects: []
 
@@ -52,6 +59,9 @@ effects:
     args:
       stat: crit_damage
       amount: "%level% * 0.04"
+  - id: food_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0005)"
 
 conditions: []
 activate-conditions: []

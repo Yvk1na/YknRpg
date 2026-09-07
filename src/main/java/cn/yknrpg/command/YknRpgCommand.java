@@ -47,7 +47,11 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.message("messages.admin-usage"));
                 return true;
             }
-            plugin.gui().openCatalog(player, kind, 0);
+            if (kind == CatalogKind.PET) {
+                plugin.openPetCatalog(player);
+            } else {
+                plugin.gui().openCatalog(player, kind, 0);
+            }
             return true;
         }
         if (args[0].equalsIgnoreCase("reload")) {

@@ -1,0 +1,71 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (b7ea4c017e3456cf09a5c263f34d3cc5f41577b74d60f6f8196c60e07f8c5a96)
+name: "&8信使鸽"
+description: "&7疾跑探索世界可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjdlYTRjMDE3ZTM0NTZjZjA5YTVjMjYzZjM0ZDNjYzVmNDE1NzdiNzRkNjBmNmY4MTk2YzYwZTA3ZjhjNWE5NiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjdlYTRjMDE3ZTM0NTZjZjA5YTVjMjYzZjM0ZDNjYzVmNDE1NzdiNzRkNjBmNmY4MTk2YzYwZTA3ZjhjNWE5NiJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: move
+    multiplier: 0.5
+    conditions:
+      - id: is_sprinting
+
+level-placeholders:
+  - id: "speed_bonus"
+    value: "%level% * 0.03"
+  - id: "perk_agility_xp"
+    value: "%level% * 0.03"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&6特殊效果："
+    - "&e千里传书 &7敏捷技能经验 +&a%perk_agility_xp%%"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&e千里传书 &7敏捷技能经验 +&a%perk_agility_xp%%"
+
+level-up-messages:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&e千里传书 &7敏捷技能经验 +&a%perk_agility_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.03"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0003)"
+      skills:
+        - agility
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: parrot_spawn_egg unbreaking:1 hide_enchants
+  name: "&8信使鸽 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8信使鸽&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_messenger_pigeon
+  withdrawable: true

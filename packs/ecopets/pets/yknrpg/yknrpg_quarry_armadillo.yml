@@ -1,0 +1,98 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (c1eb6df4736ae24dd12a3d00f91e6e3aa7ade6bbefb0978afef2f0f92461018f)
+name: "&a采石犰狳"
+description: "&7挖掘天然矿石可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzFlYjZkZjQ3MzZhZTI0ZGQxMmEzZDAwZjkxZTZlM2FhN2FkZTZiYmVmYjA5NzhhZmVmMmYwZjkyNDYxMDE4ZiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzFlYjZkZjQ3MzZhZTI0ZGQxMmEzZDAwZjkxZTZlM2FhN2FkZTZiYmVmYjA5NzhhZmVmMmYwZjkyNDYxMDE4ZiJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.25
+    filters:
+      player_placed: false
+      blocks:
+        - coal_ore
+        - deepslate_coal_ore
+        - copper_ore
+        - deepslate_copper_ore
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - redstone_ore
+        - deepslate_redstone_ore
+        - lapis_ore
+        - deepslate_lapis_ore
+        - diamond_ore
+        - deepslate_diamond_ore
+        - emerald_ore
+        - deepslate_emerald_ore
+        - nether_quartz_ore
+        - nether_gold_ore
+        - ancient_debris
+
+level-placeholders:
+  - id: "toughness_bonus"
+    value: "%level% * 0.12"
+  - id: "health_bonus"
+    value: "%level% * 0.01"
+  - id: "perk_mining_speed"
+    value: "%level% * 0.07"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&6特殊效果："
+    - "&e采石铁爪 &7采矿速度 +&a%perk_mining_speed%%"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%health_bonus% 生命"
+    - "&e采石铁爪 &7采矿速度 +&a%perk_mining_speed%%"
+
+level-up-messages:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&c+%health_bonus% 生命"
+    - "&e采石铁爪 &7采矿速度 +&a%perk_mining_speed%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.01"
+  - id: mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0007)"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: armadillo_spawn_egg unbreaking:1 hide_enchants
+  name: "&a采石犰狳 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a采石犰狳&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_quarry_armadillo
+  withdrawable: true

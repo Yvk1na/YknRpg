@@ -24,6 +24,10 @@ level-placeholders:
     value: "%level% * 0.05"
   - id: "speed_bonus"
     value: "%level% * 0.04"
+  - id: "perk_reach"
+    value: "%level% * 0.0075"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.04"
 
 effects-description:
   1:
@@ -31,6 +35,8 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&d【夜行触须】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【影落无声】&7安全坠落距离 &a+%perk_safe_fall% 格"
     - ""
     - "&5史诗宠物"
 
@@ -39,12 +45,16 @@ rewards-description:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&d【夜行触须】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【影落无声】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&d【夜行触须】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【影落无声】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-effects: []
 
@@ -61,6 +71,12 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.04"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.0075"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.04"
 
 conditions: []
 activate-conditions: []

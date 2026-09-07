@@ -20,6 +20,10 @@ level-placeholders:
     value: "%level% * 0.26"
   - id: "strength_bonus"
     value: "%level% * 0.11"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.04"
+  - id: "perk_food_bonus"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -27,6 +31,8 @@ effects-description:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&c+%strength_bonus% 力量"
+    - "&d【雪坡步法】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【寒地胃口】&7食物回复效果 &a+%perk_food_bonus%%"
     - ""
     - "&5史诗宠物"
 
@@ -35,12 +41,16 @@ rewards-description:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&c+%strength_bonus% 力量"
+    - "&d【雪坡步法】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【寒地胃口】&7食物回复效果 &a+%perk_food_bonus%%"
 
 level-up-messages:
   1:
     - "&c+%health_bonus% 生命"
     - "&7+%toughness_bonus% 韧性"
     - "&c+%strength_bonus% 力量"
+    - "&d【雪坡步法】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【寒地胃口】&7食物回复效果 &a+%perk_food_bonus%%"
 
 level-up-effects: []
 
@@ -57,6 +67,12 @@ effects:
     args:
       stat: strength
       amount: "%level% * 0.11"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.04"
+  - id: food_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
 
 conditions: []
 activate-conditions: []

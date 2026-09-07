@@ -24,6 +24,10 @@ level-placeholders:
     value: "%level% * 0.04"
   - id: "regeneration_bonus"
     value: "%level% * 0.1"
+  - id: "perk_food_bonus"
+    value: "%level% * 0.12"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.14"
 
 effects-description:
   1:
@@ -31,6 +35,8 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
+    - "&6【日耀盛宴】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&6【狮王号令】&7宠物经验 &a+%perk_pet_xp%%"
     - ""
     - "&6传说宠物"
 
@@ -39,12 +45,16 @@ rewards-description:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
+    - "&6【日耀盛宴】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&6【狮王号令】&7宠物经验 &a+%perk_pet_xp%%"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&c+%health_bonus% 生命"
     - "&d+%regeneration_bonus% 再生"
+    - "&6【日耀盛宴】&7食物回复效果 &a+%perk_food_bonus%%"
+    - "&6【狮王号令】&7宠物经验 &a+%perk_pet_xp%%"
 
 level-up-effects: []
 
@@ -61,6 +71,12 @@ effects:
     args:
       stat: regeneration
       amount: "%level% * 0.1"
+  - id: food_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0012)"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0014)"
 
 conditions: []
 activate-conditions: []

@@ -20,6 +20,10 @@ level-placeholders:
     value: "%level% * 0.08"
   - id: "luck_bonus"
     value: "%level% * 0.1"
+  - id: "perk_lapis_save_chance"
+    value: "%level% * 0.14"
+  - id: "perk_xp_save_chance"
+    value: "%level% * 0.12"
 
 effects-description:
   1:
@@ -27,6 +31,8 @@ effects-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
     - "&a+%luck_bonus% 幸运"
+    - "&6【月辉刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&6【无瑕咒文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
     - ""
     - "&6传说宠物"
 
@@ -35,12 +41,16 @@ rewards-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
     - "&a+%luck_bonus% 幸运"
+    - "&6【月辉刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&6【无瑕咒文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
 
 level-up-messages:
   1:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
     - "&a+%luck_bonus% 幸运"
+    - "&6【月辉刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&6【无瑕咒文】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
 
 level-up-effects: []
 
@@ -57,6 +67,12 @@ effects:
     args:
       stat: luck
       amount: "%level% * 0.1"
+  - id: dont_consume_lapis_chance
+    args:
+      chance: "%level% * 0.14"
+  - id: dont_consume_xp_chance
+    args:
+      chance: "%level% * 0.12"
 
 conditions: []
 activate-conditions: []

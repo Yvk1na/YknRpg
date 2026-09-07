@@ -42,6 +42,8 @@ level-placeholders:
     value: "%level% * 0.05"
   - id: "speed_bonus"
     value: "%level% * 0.02"
+  - id: "perk_mining_speed"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -49,17 +51,22 @@ effects-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
     - ""
+    - "&6特殊效果："
+    - "&e回声探矿 &7采矿速度 +&a%perk_mining_speed%%"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
+    - "&e回声探矿 &7采矿速度 +&a%perk_mining_speed%%"
 
 level-up-messages:
   1:
     - "&b+%wisdom_bonus% 智慧"
     - "&f+%speed_bonus% 速度"
+    - "&e回声探矿 &7采矿速度 +&a%perk_mining_speed%%"
 
 level-up-effects: []
 
@@ -72,6 +79,9 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.02"
+  - id: mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0005)"
 
 conditions: []
 activate-conditions: []

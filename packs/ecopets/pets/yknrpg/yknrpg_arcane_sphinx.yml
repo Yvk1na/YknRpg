@@ -1,0 +1,110 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (cbba3f3ae5e3577e0ae37c302e8bf838d344359a7c7698c236687b74bc573a1a)
+name: "&d奥术狮身人面像"
+description: "&7附魔物品可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2JiYTNmM2FlNWUzNTc3ZTBhZTM3YzMwMmU4YmY4MzhkMzQ0MzU5YTdjNzY5OGMyMzY2ODdiNzRiYzU3M2ExYSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2JiYTNmM2FlNWUzNTc3ZTBhZTM3YzMwMmU4YmY4MzhkMzQ0MzU5YTdjNzY5OGMyMzY2ODdiNzRiYzU3M2ExYSJ9fX0=
+
+xp-formula: "(%level% * %level% * 28) + (%level% * 140)"
+max-level: 100
+
+xp-gain-methods:
+  - id: enchant_item
+    multiplier: 6
+
+level-placeholders:
+  - id: "wisdom_bonus"
+    value: "%level% * 0.15"
+  - id: "luck_bonus"
+    value: "%level% * 0.24"
+  - id: "regeneration_bonus"
+    value: "%level% * 0.18"
+  - id: "speed_bonus"
+    value: "%level% * 0.06"
+  - id: "perk_enchanting_xp"
+    value: "%level% * 0.15"
+  - id: "perk_lapis_save_chance"
+    value: "%level% * 0.15"
+  - id: "perk_xp_save_chance"
+    value: "%level% * 0.12"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&f+%speed_bonus% 速度"
+    - "&d【奥术问答】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【无耗刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【谜底回收】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
+    - ""
+    - "&d神话宠物"
+
+rewards-description:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&f+%speed_bonus% 速度"
+    - "&d【奥术问答】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【无耗刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【谜底回收】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
+
+level-up-messages:
+  1:
+    - "&b+%wisdom_bonus% 智慧"
+    - "&a+%luck_bonus% 幸运"
+    - "&d+%regeneration_bonus% 再生"
+    - "&f+%speed_bonus% 速度"
+    - "&d【奥术问答】&7附魔技能经验 &a+%perk_enchanting_xp%%"
+    - "&d【无耗刻印】&7附魔不消耗青金石概率 &a%perk_lapis_save_chance%%"
+    - "&d【谜底回收】&7附魔不消耗经验概率 &a%perk_xp_save_chance%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.15"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.24"
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: "%level% * 0.18"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.06"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0015)"
+      skills:
+        - enchanting
+  - id: dont_consume_lapis_chance
+    args:
+      chance: "%level% * 0.15"
+  - id: dont_consume_xp_chance
+    args:
+      chance: "%level% * 0.12"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: cat_spawn_egg unbreaking:1 hide_enchants
+  name: "&d奥术狮身人面像 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &d奥术狮身人面像&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_arcane_sphinx
+  withdrawable: true

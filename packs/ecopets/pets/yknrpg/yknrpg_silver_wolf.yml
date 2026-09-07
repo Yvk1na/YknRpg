@@ -22,6 +22,8 @@ level-placeholders:
     value: "%level% * 0.2"
   - id: "crit_chance_bonus"
     value: "%level% * 0.03"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -29,17 +31,22 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
     - ""
+    - "&6特殊效果："
+    - "&e狼群磨砺 &7宠物经验 +&a%perk_pet_xp%%"
+    - ""
     - "&9稀有宠物"
 
 rewards-description:
   1:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
+    - "&e狼群磨砺 &7宠物经验 +&a%perk_pet_xp%%"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&9+%crit_chance_bonus% 暴击率"
+    - "&e狼群磨砺 &7宠物经验 +&a%perk_pet_xp%%"
 
 level-up-effects: []
 
@@ -52,6 +59,9 @@ effects:
     args:
       stat: crit_chance
       amount: "%level% * 0.03"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
 
 conditions: []
 activate-conditions: []

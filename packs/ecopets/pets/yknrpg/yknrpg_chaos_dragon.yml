@@ -26,6 +26,12 @@ level-placeholders:
     value: "%level% * 0.06"
   - id: "wisdom_bonus"
     value: "%level% * 0.09"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.18"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.05"
+  - id: "perk_reach"
+    value: "%level% * 0.01"
 
 effects-description:
   1:
@@ -34,6 +40,9 @@ effects-description:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&b+%wisdom_bonus% 智慧"
+    - "&d【混沌孵化】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【裂空滑翔】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【裂界龙爪】&7方块触及距离 &a+%perk_reach% 格"
     - ""
     - "&d神话宠物"
 
@@ -43,6 +52,9 @@ rewards-description:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&b+%wisdom_bonus% 智慧"
+    - "&d【混沌孵化】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【裂空滑翔】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【裂界龙爪】&7方块触及距离 &a+%perk_reach% 格"
 
 level-up-messages:
   1:
@@ -50,6 +62,9 @@ level-up-messages:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&b+%wisdom_bonus% 智慧"
+    - "&d【混沌孵化】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【裂空滑翔】&7安全坠落距离 &a+%perk_safe_fall% 格"
+    - "&d【裂界龙爪】&7方块触及距离 &a+%perk_reach% 格"
 
 level-up-effects: []
 
@@ -70,6 +85,15 @@ effects:
     args:
       stat: wisdom
       amount: "%level% * 0.09"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0018)"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.05"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.01"
 
 conditions: []
 activate-conditions: []

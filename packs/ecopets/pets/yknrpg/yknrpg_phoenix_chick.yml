@@ -24,6 +24,8 @@ level-placeholders:
     value: "%level% * 0.07"
   - id: "health_bonus"
     value: "%level% * 0.02"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.1"
 
 effects-description:
   1:
@@ -31,6 +33,8 @@ effects-description:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%health_bonus% 生命"
+    - "&d【浴火成长】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【涅槃余烬】&7自动熔炼天然铁、金、铜矿石"
     - ""
     - "&5史诗宠物"
 
@@ -39,12 +43,16 @@ rewards-description:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%health_bonus% 生命"
+    - "&d【浴火成长】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【涅槃余烬】&7自动熔炼天然铁、金、铜矿石"
 
 level-up-messages:
   1:
     - "&d+%regeneration_bonus% 再生"
     - "&b+%wisdom_bonus% 智慧"
     - "&c+%health_bonus% 生命"
+    - "&d【浴火成长】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【涅槃余烬】&7自动熔炼天然铁、金、铜矿石"
 
 level-up-effects: []
 
@@ -61,6 +69,23 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.02"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.001)"
+  - id: autosmelt
+    args:
+      drop_xp: true
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - copper_ore
+        - deepslate_copper_ore
 
 conditions: []
 activate-conditions: []

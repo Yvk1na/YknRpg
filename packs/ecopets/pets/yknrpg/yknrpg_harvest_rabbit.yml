@@ -27,6 +27,8 @@ level-placeholders:
     value: "%level% * 0.07"
   - id: "speed_bonus"
     value: "%level% * 0.02"
+  - id: "perk_crop_double"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -34,17 +36,22 @@ effects-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - ""
+    - "&6特殊效果："
+    - "&e丰收馈赠 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
+    - ""
     - "&a少见的宠物"
 
 rewards-description:
   1:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&e丰收馈赠 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
 
 level-up-messages:
   1:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&e丰收馈赠 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
 
 level-up-effects: []
 
@@ -57,6 +64,32 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.02"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.05"
+      on_items:
+        - wheat
+        - carrot
+        - potato
+        - beetroot
+        - nether_wart
+        - cocoa_beans
+        - melon_slice
+        - pumpkin
+    triggers:
+      - block_item_drop
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
 
 conditions: []
 activate-conditions: []

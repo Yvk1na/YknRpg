@@ -1,0 +1,76 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (5f2879bd8b0bafdd71dbd3fc5850afc6c53da60d4252182cfc80737a00d72408)
+name: "&a珊瑚海豚"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWYyODc5YmQ4YjBiYWZkZDcxZGJkM2ZjNTg1MGFmYzZjNTNkYTYwZDQyNTIxODJjZmM4MDczN2EwMGQ3MjQwOCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWYyODc5YmQ4YjBiYWZkZDcxZGJkM2ZjNTg1MGFmYzZjNTNkYTYwZDQyNTIxODJjZmM4MDczN2EwMGQ3MjQwOCJ9fX0=
+
+xp-formula: "(%level% * %level% * 10) + (%level% * 50)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 2.25
+
+level-placeholders:
+  - id: "speed_bonus"
+    value: "%level% * 0.04"
+  - id: "luck_bonus"
+    value: "%level% * 0.035"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.07"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+    - ""
+    - "&6特殊效果："
+    - "&e珊瑚回声 &7收线速度 +&a%perk_reel_speed%%"
+    - ""
+    - "&a少见的宠物"
+
+rewards-description:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+    - "&e珊瑚回声 &7收线速度 +&a%perk_reel_speed%%"
+
+level-up-messages:
+  1:
+    - "&f+%speed_bonus% 速度"
+    - "&a+%luck_bonus% 幸运"
+    - "&e珊瑚回声 &7收线速度 +&a%perk_reel_speed%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.04"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.035"
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0007)"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: dolphin_spawn_egg unbreaking:1 hide_enchants
+  name: "&a珊瑚海豚 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &a珊瑚海豚&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_coral_dolphin
+  withdrawable: true

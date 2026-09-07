@@ -28,6 +28,12 @@ level-placeholders:
     value: "%level% * 0.08"
   - id: "toughness_bonus"
     value: "%level% * 0.24"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.16"
+  - id: "perk_reach"
+    value: "%level% * 0.01"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.05"
 
 effects-description:
   1:
@@ -36,6 +42,9 @@ effects-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【驯兽王权】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【鹰眼探取】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【狮鹫羽翼】&7安全坠落距离 &a+%perk_safe_fall% 格"
     - ""
     - "&d神话宠物"
 
@@ -45,6 +54,9 @@ rewards-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【驯兽王权】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【鹰眼探取】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【狮鹫羽翼】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-messages:
   1:
@@ -52,6 +64,9 @@ level-up-messages:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - "&7+%toughness_bonus% 韧性"
+    - "&d【驯兽王权】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&d【鹰眼探取】&7方块触及距离 &a+%perk_reach% 格"
+    - "&d【狮鹫羽翼】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-effects: []
 
@@ -72,6 +87,15 @@ effects:
     args:
       stat: toughness
       amount: "%level% * 0.24"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0016)"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.01"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.05"
 
 conditions: []
 activate-conditions: []

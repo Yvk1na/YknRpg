@@ -1,0 +1,76 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (a007a8b466f1ff565b3d8b5a93fff5948e0e7b25d5a03dc5881f0a36d8705876)
+name: "&9发条甲虫"
+description: "&7合成物品可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTAwN2E4YjQ2NmYxZmY1NjViM2Q4YjVhOTNmZmY1OTQ4ZTBlN2IyNWQ1YTAzZGM1ODgxZjBhMzZkODcwNTg3NiJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTAwN2E4YjQ2NmYxZmY1NjViM2Q4YjVhOTNmZmY1OTQ4ZTBlN2IyNWQ1YTAzZGM1ODgxZjBhMzZkODcwNTg3NiJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: craft
+    multiplier: 4
+
+level-placeholders:
+  - id: "toughness_bonus"
+    value: "%level% * 0.18"
+  - id: "wisdom_bonus"
+    value: "%level% * 0.048"
+  - id: "perk_block_reach"
+    value: "%level% * 0.005"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - ""
+    - "&6特殊效果："
+    - "&e伸缩触肢 &7方块触及距离 +&a%perk_block_reach% 格"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&e伸缩触肢 &7方块触及距离 +&a%perk_block_reach% 格"
+
+level-up-messages:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&b+%wisdom_bonus% 智慧"
+    - "&e伸缩触肢 &7方块触及距离 +&a%perk_block_reach% 格"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.18"
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: "%level% * 0.048"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.005"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: silverfish_spawn_egg unbreaking:1 hide_enchants
+  name: "&9发条甲虫 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9发条甲虫&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_clockwork_beetle
+  withdrawable: true

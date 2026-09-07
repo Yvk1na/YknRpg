@@ -1,0 +1,136 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：CSV / Minecraft-Heads.com (13cf8db84807c471d7c6922302261ac1b5a179f96d1191156ecf3e1b1d3ca)
+name: "&5树冠灵猴"
+description: "&7砍伐天然原木可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNjZjhkYjg0ODA3YzQ3MWQ3YzY5MjIzMDIyNjFhYzFiNWExNzlmOTZkMTE5MTE1NmVjZjNlMWIxZDNjYSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNjZjhkYjg0ODA3YzQ3MWQ3YzY5MjIzMDIyNjFhYzFiNWExNzlmOTZkMTE5MTE1NmVjZjNlMWIxZDNjYSJ9fX0=
+
+xp-formula: "(%level% * %level% * 17) + (%level% * 85)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 3
+    filters:
+      player_placed: false
+      blocks:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+
+level-placeholders:
+  - id: "strength_bonus"
+    value: "%level% * 0.2"
+  - id: "luck_bonus"
+    value: "%level% * 0.12"
+  - id: "speed_bonus"
+    value: "%level% * 0.06"
+  - id: "perk_log_double_chance"
+    value: "%level% * 0.1"
+  - id: "perk_foraging_xp"
+    value: "%level% * 0.09"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%strength_bonus% 力量"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【树冠丰收】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
+    - "&d【灵猴采枝】&7伐木技能经验 &a+%perk_foraging_xp%%"
+    - ""
+    - "&5史诗宠物"
+
+rewards-description:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【树冠丰收】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
+    - "&d【灵猴采枝】&7伐木技能经验 &a+%perk_foraging_xp%%"
+
+level-up-messages:
+  1:
+    - "&c+%strength_bonus% 力量"
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&d【树冠丰收】&7天然原木双倍掉落概率 &a%perk_log_double_chance%%"
+    - "&d【灵猴采枝】&7伐木技能经验 &a+%perk_foraging_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: "%level% * 0.2"
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.12"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.06"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.1"
+      on_items:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - oak_log
+        - spruce_log
+        - birch_log
+        - jungle_log
+        - acacia_log
+        - dark_oak_log
+        - mangrove_log
+        - cherry_log
+        - pale_oak_log
+        - crimson_stem
+        - warped_stem
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0009)"
+      skills:
+        - foraging
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: ocelot_spawn_egg unbreaking:1 hide_enchants
+  name: "&5树冠灵猴 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &5树冠灵猴&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_canopy_monkey
+  withdrawable: true

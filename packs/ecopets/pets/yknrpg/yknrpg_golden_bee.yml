@@ -29,6 +29,10 @@ level-placeholders:
     value: "%level% * 0.11"
   - id: "speed_bonus"
     value: "%level% * 0.04"
+  - id: "perk_farming_xp"
+    value: "%level% * 0.08"
+  - id: "perk_crop_double"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -36,17 +40,25 @@ effects-description:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
     - ""
+    - "&6特殊效果："
+    - "&e勤勉授粉 &7耕作经验 +&a%perk_farming_xp%%"
+    - "&e鎏金丰收 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
+    - ""
     - "&9稀有宠物"
 
 rewards-description:
   1:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&e勤勉授粉 &7耕作经验 +&a%perk_farming_xp%%"
+    - "&e鎏金丰收 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
 
 level-up-messages:
   1:
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&e勤勉授粉 &7耕作经验 +&a%perk_farming_xp%%"
+    - "&e鎏金丰收 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
 
 level-up-effects: []
 
@@ -59,6 +71,37 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.04"
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
+      skills:
+        - farming
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.08"
+      on_items:
+        - wheat
+        - carrot
+        - potato
+        - beetroot
+        - nether_wart
+        - cocoa_beans
+        - melon_slice
+        - pumpkin
+    triggers:
+      - block_item_drop
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
 
 conditions: []
 activate-conditions: []

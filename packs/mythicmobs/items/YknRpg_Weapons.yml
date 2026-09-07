@@ -885,3 +885,1224 @@ YKI_LAWWEAVER_CODEX:
     - '&d神话 法典'
   Options: {Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_OAKEN_HUNTER_BOW:
+  Id: BOW
+  Display: '&8栎木猎弓'
+  Group: YknRpg
+  Lore:
+    - '&7以硬木和兽筋制成的可靠猎弓。'
+    - ''
+    - '&7伤害：&c+42'
+    - '&7力量：&c+12'
+    - '&7暴击率：&9+5%'
+    - ''
+    - '&6技能：&e稳羽 &7[射箭]'
+    - '&7射出造成 55 基础技能伤害的箭矢。'
+    - '&7额外获得 25% 力量加成。'
+    - '&8魔力消耗：&314 &8| &8冷却：&a2.5秒'
+    - ''
+    - '&8普通 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MILITIA_CROSSBOW:
+  Id: CROSSBOW
+  Display: '&8民兵手弩'
+  Group: YknRpg
+  Lore:
+    - '&7便于训练和守城使用的轻型手弩。'
+    - ''
+    - '&7伤害：&c+50'
+    - '&7力量：&c+16'
+    - '&7暴击率：&9+8%'
+    - ''
+    - '&6被动：&e破甲钉 &7[投射物命中]'
+    - '&7命中有 25% 几率追加 30 基础技能伤害。'
+    - '&7额外获得 20% 力量加成，并施加虚弱 I 2 秒。'
+    - '&8被动冷却：&a3秒'
+    - ''
+    - '&8普通 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_STONEWARD_MAUL:
+  Id: MACE
+  Display: '&8石垒战锤'
+  Group: YknRpg
+  Lore:
+    - '&7厚重锤首能够震开敌人并稳固防线。'
+    - ''
+    - '&7伤害：&c+52 &8| &7力量：&c+12'
+    - '&7生命：&a+25 &8| &7防御：&a+18'
+    - ''
+    - '&6技能：&e垒石震 &7[右键]'
+    - '&7震伤并击退 4 格内敌人，造成 55 基础技能伤害。'
+    - '&7额外获得 25% 力量加成，并为自身赋予 50 护盾。'
+    - '&8魔力消耗：&318 &8| &8冷却：&a9秒'
+    - ''
+    - '&8普通 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_GLOOM_SICKLE:
+  Id: IRON_HOE
+  Display: '&8暮影短镰'
+  Group: YknRpg
+  Lore:
+    - '&7轻巧弯刃会借着猎物倒下的瞬间隐入暮色。'
+    - ''
+    - '&7伤害：&c+48 &8| &7力量：&c+14'
+    - '&7暴击率：&9+12% &8| &7暴击伤害：&9+15%'
+    - '&7速度：&f+4'
+    - ''
+    - '&6被动：&e掠影 &7[击杀]'
+    - '&7击杀后回复 40 生命，并提升 10 速度 3 秒。'
+    - '&8被动冷却：&a4秒'
+    - ''
+    - '&8普通 镰刀'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SPRINGWATER_CHARM:
+  Id: NAUTILUS_SHELL
+  Display: '&8清泉符'
+  Group: YknRpg
+  Lore:
+    - '&7泉水浸润过的护符，残留着温和的治愈气息。'
+    - ''
+    - '&7伤害：&c+12 &8| &7生命：&a+25'
+    - '&7智慧：&b+5 &8| &7活力：&a+4'
+    - '&7治疗增幅：&a+6'
+    - ''
+    - '&6技能：&e清露 &7[右键]'
+    - '&7回复自身 65 生命，并为 6 格内队友回复 40 生命。'
+    - '&8魔力消耗：&320 &8| &8冷却：&a8秒'
+    - ''
+    - '&8普通 法器'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CINDER_APPRENTICE_STAFF:
+  Id: BLAZE_ROD
+  Display: '&8烬火学徒杖'
+  Group: YknRpg
+  Lore:
+    - '&7法师学徒用来练习凝聚火星的短杖。'
+    - ''
+    - '&7伤害：&c+18'
+    - '&7智慧：&b+6'
+    - '&7技能伤害：&d+5%'
+    - ''
+    - '&6技能：&e火星 &7[右键]'
+    - '&7灼击 12 格内单体，造成 90 基础技能伤害。'
+    - '&7额外获得 500% 智慧加成。'
+    - '&8魔力消耗：&322 &8| &8冷却：&a3秒'
+    - ''
+    - '&8普通 法杖'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WATCHMAN_HALBERD:
+  Id: IRON_SPEAR
+  Display: '&8岗哨戟'
+  Group: YknRpg
+  Lore:
+    - '&7守卫据点时用于拒止来敌的长柄兵器。'
+    - ''
+    - '&7伤害：&c+54 &8| &7力量：&c+18'
+    - '&7防御：&a+8'
+    - ''
+    - '&6技能：&e拒马 &7[右键]'
+    - '&7攻击前方 5 格目标，造成 75 基础技能伤害并击退。'
+    - '&7额外获得 30% 力量加成。'
+    - '&8魔力消耗：&318 &8| &8冷却：&a5秒'
+    - ''
+    - '&8普通 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TEMPEST_PIKE:
+  Id: IRON_SPEAR
+  Display: '&a逐风战枪'
+  Group: YknRpg
+  Lore:
+    - '&7枪锋会顺着疾风牵引持有者突入战线。'
+    - ''
+    - '&7伤害：&c+82 &8| &7力量：&c+31'
+    - '&7暴击率：&9+10% &8| &7速度：&f+6'
+    - ''
+    - '&6技能：&e逐风突 &7[右键]'
+    - '&7突击前方 7 格，造成 130 基础技能伤害。'
+    - '&7额外获得 45% 力量加成，并向前冲刺。'
+    - '&8魔力消耗：&332 &8| &8冷却：&a5秒'
+    - ''
+    - '&a少见的 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NIGHTSHADE_SICKLE:
+  Id: GOLDEN_HOE
+  Display: '&a夜茄钩镰'
+  Group: YknRpg
+  Lore:
+    - '&7淬过夜茄汁液的钩镰会吞没持有者的踪迹。'
+    - ''
+    - '&7伤害：&c+76 &8| &7力量：&c+25'
+    - '&7暴击率：&9+18% &8| &7暴击伤害：&9+30%'
+    - '&7攻击速度：&e+10% &8| &7速度：&f+6'
+    - ''
+    - '&6被动：&e夜行 &7[击杀]'
+    - '&7击杀后回复 55 生命、隐身 1.5 秒，并提升 12 速度 3 秒。'
+    - '&8被动冷却：&a4秒'
+    - ''
+    - '&a少见的 镰刀'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_EMBERWEAVE_STAFF:
+  Id: BLAZE_ROD
+  Display: '&a织焰法杖'
+  Group: YknRpg
+  Lore:
+    - '&7将散乱火苗编织为环形术式的导魔法杖。'
+    - ''
+    - '&7伤害：&c+28'
+    - '&7智慧：&b+9'
+    - '&7技能伤害：&d+10%'
+    - ''
+    - '&6技能：&e焰环 &7[右键]'
+    - '&7灼击 4 格内敌人，造成 160 基础技能伤害。'
+    - '&7额外获得 600% 智慧加成。'
+    - '&8魔力消耗：&338 &8| &8冷却：&a4.5秒'
+    - ''
+    - '&a少见的 法杖'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BLOOMSONG_TOME:
+  Id: ENCHANTED_BOOK
+  Display: '&a花颂典籍'
+  Group: YknRpg
+  Lore:
+    - '&7书页上的花纹会回应伤者的呼吸缓缓绽放。'
+    - ''
+    - '&7伤害：&c+20 &8| &7生命：&a+45'
+    - '&7智慧：&b+9 &8| &7活力：&a+8'
+    - '&7治疗增幅：&a+12'
+    - ''
+    - '&6技能：&e花愈 &7[右键]'
+    - '&7为 7 格内玩家回复 90 生命，并赋予生命恢复 I 3 秒。'
+    - '&7治疗额外获得 200% 智慧加成。'
+    - '&8魔力消耗：&340 &8| &8冷却：&a8秒'
+    - ''
+    - '&a少见的 法典'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_FROSTBOLT_CROSSBOW:
+  Id: CROSSBOW
+  Display: '&a霜栓弩'
+  Group: YknRpg
+  Lore:
+    - '&7弩矢命中时会释放冻结在箭簇内的寒意。'
+    - ''
+    - '&7伤害：&c+80 &8| &7力量：&c+28'
+    - '&7暴击率：&9+12% &8| &7暴击伤害：&9+20%'
+    - ''
+    - '&6被动：&e霜钉 &7[投射物命中]'
+    - '&7命中有 30% 几率追加 75 基础技能伤害。'
+    - '&7额外获得 25% 力量加成，并施加缓慢 I 2 秒。'
+    - '&8魔力消耗：&325 &8| &8被动冷却：&a2秒'
+    - ''
+    - '&a少见的 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TIDEBREAKER_TRIDENT:
+  Id: TRIDENT
+  Display: '&a断潮三叉戟'
+  Group: YknRpg
+  Lore:
+    - '&7分流的戟尖能够截断奔涌水势与敌人的脚步。'
+    - ''
+    - '&7伤害：&c+84 &8| &7力量：&c+30'
+    - '&7防御：&a+18 &8| &7智慧：&b+4'
+    - ''
+    - '&6技能：&e断潮 &7[右键]'
+    - '&7重击 14 格内单体，造成 145 基础技能伤害并施加缓慢 II 2 秒。'
+    - '&7额外获得 45% 力量与 300% 智慧加成。'
+    - '&8魔力消耗：&335 &8| &8冷却：&a5秒'
+    - ''
+    - '&a少见的 三叉戟'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_RALLYING_BUGLE:
+  Id: GOAT_HORN
+  Display: '&a集阵号角'
+  Group: YknRpg
+  Lore:
+    - '&7短促号声能让散乱的队伍重新结成阵线。'
+    - ''
+    - '&7伤害：&c+20 &8| &7力量：&c+20'
+    - '&7生命：&a+40 &8| &7防御：&a+20'
+    - '&7活力：&a+6'
+    - ''
+    - '&6技能：&e集阵号 &7[右键]'
+    - '&7为 7 格内玩家提高 20 力量与 8 速度 6 秒。'
+    - '&7同时赋予 70 护盾。'
+    - '&8魔力消耗：&345 &8| &8冷却：&a14秒'
+    - ''
+    - '&a少见的 号角'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COMET_LONGBOW:
+  Id: BOW
+  Display: '&9彗尾长弓'
+  Group: YknRpg
+  Lore:
+    - '&7箭矢离弦后拖曳出的光尾如同掠过夜空的彗星。'
+    - ''
+    - '&7伤害：&c+125 &8| &7力量：&c+60'
+    - '&7暴击率：&9+18% &8| &7暴击伤害：&9+40%'
+    - ''
+    - '&6技能：&e彗矢 &7[射箭]'
+    - '&7射出无重力彗星箭，造成 260 基础技能伤害。'
+    - '&7额外获得 65% 力量加成。'
+    - '&8魔力消耗：&352 &8| &8冷却：&a2秒'
+    - ''
+    - '&9稀有 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SKYLINE_GLAIVE:
+  Id: DIAMOND_SPEAR
+  Display: '&9凌空战戟'
+  Group: YknRpg
+  Lore:
+    - '&7挥动时会在半空留下笔直而锐利的风痕。'
+    - ''
+    - '&7伤害：&c+128 &8| &7力量：&c+65'
+    - '&7暴击率：&9+12% &8| &7凶猛：&c+6'
+    - '&7速度：&f+8'
+    - ''
+    - '&6技能：&e凌空线 &7[右键]'
+    - '&7突击前方 9 格，造成 240 基础技能伤害。'
+    - '&7额外获得 60% 力量加成，并向前冲刺。'
+    - '&8魔力消耗：&355 &8| &8冷却：&a4秒'
+    - ''
+    - '&9稀有 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SOULTHREAD_SCYTHE:
+  Id: DIAMOND_HOE
+  Display: '&9缚魂镰'
+  Group: YknRpg
+  Lore:
+    - '&7透明魂丝会从倒下的敌人身上回流至镰柄。'
+    - ''
+    - '&7伤害：&c+118 &8| &7力量：&c+52'
+    - '&7暴击率：&9+22% &8| &7暴击伤害：&9+45%'
+    - '&7活力：&a+6'
+    - ''
+    - '&6被动：&e摄魂 &7[击杀]'
+    - '&7击杀后回复 80 生命并提升 10 凶猛 4 秒。'
+    - '&7治疗额外获得 100% 活力加成。'
+    - '&8被动冷却：&a4秒'
+    - ''
+    - '&9稀有 镰刀'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_RUNEBULWARK_HAMMER:
+  Id: MACE
+  Display: '&9符垒重锤'
+  Group: YknRpg
+  Lore:
+    - '&7锤面上的层叠符文能把冲击转化为防护屏障。'
+    - ''
+    - '&7伤害：&c+110 &8| &7力量：&c+45'
+    - '&7生命：&a+80 &8| &7防御：&a+65'
+    - '&7活力：&a+8'
+    - ''
+    - '&6技能：&e符垒 &7[右键]'
+    - '&7震伤并击退 5 格内敌人，造成 170 基础技能伤害。'
+    - '&7额外获得 40% 力量加成；自身获得 120 护盾与 30 防御 5 秒。'
+    - '&8魔力消耗：&360 &8| &8冷却：&a11秒'
+    - ''
+    - '&9稀有 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MOONWELL_CODEX:
+  Id: ENCHANTED_BOOK
+  Display: '&9月泉法典'
+  Group: YknRpg
+  Lore:
+    - '&7翻动银色书页时，清澈月华会洗去伤痛与污秽。'
+    - ''
+    - '&7伤害：&c+28 &8| &7生命：&a+85'
+    - '&7智慧：&b+15 &8| &7活力：&a+15'
+    - '&7治疗增幅：&a+20'
+    - ''
+    - '&6技能：&e月泉 &7[右键]'
+    - '&7为 8 格内玩家回复 160 生命、净化负面效果。'
+    - '&7治疗额外获得 250% 智慧加成，并赋予生命恢复 I 5 秒。'
+    - '&8魔力消耗：&365 &8| &8冷却：&a9秒'
+    - ''
+    - '&9稀有 法典'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_VOLTAIC_ARBALEST:
+  Id: CROSSBOW
+  Display: '&9伏流重弩'
+  Group: YknRpg
+  Lore:
+    - '&7弩身储存的伏流会追随箭矢落点劈落。'
+    - ''
+    - '&7伤害：&c+125 &8| &7力量：&c+58'
+    - '&7暴击率：&9+15% &8| &7暴击伤害：&9+35%'
+    - '&7攻击速度：&e+12%'
+    - ''
+    - '&6被动：&e伏雷 &7[投射物命中]'
+    - '&7命中有 30% 几率降雷，造成 150 基础技能伤害。'
+    - '&7额外获得 40% 力量加成，并施加虚弱 I 2 秒。'
+    - '&8魔力消耗：&340 &8| &8被动冷却：&a2.5秒'
+    - ''
+    - '&9稀有 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CORALBOUND_TRIDENT:
+  Id: TRIDENT
+  Display: '&9珊瑚缚潮戟'
+  Group: YknRpg
+  Lore:
+    - '&7活性珊瑚会在命中后缠住目标的行动与力量。'
+    - ''
+    - '&7伤害：&c+122 &8| &7力量：&c+52'
+    - '&7防御：&a+35 &8| &7智慧：&b+8'
+    - ''
+    - '&6技能：&e缚潮 &7[右键]'
+    - '&7重击 16 格内单体，造成 250 基础技能伤害。'
+    - '&7额外获得 55% 力量与 500% 智慧加成。'
+    - '&7施加缓慢 II 与虚弱 I 3 秒。'
+    - '&8魔力消耗：&358 &8| &8冷却：&a5秒'
+    - ''
+    - '&9稀有 三叉戟'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SOLARWIND_LONGBOW:
+  Id: BOW
+  Display: '&6曜风长弓'
+  Group: YknRpg
+  Lore:
+    - '&7弓弦牵引的金色气流会让箭矢化作一道日光。'
+    - ''
+    - '&7伤害：&c+255 &8| &7力量：&c+150'
+    - '&7暴击率：&9+25% &8| &7暴击伤害：&9+75%'
+    - '&7攻击速度：&e+20%'
+    - ''
+    - '&6技能：&e曜风矢 &7[射箭]'
+    - '&7射出无重力曜风箭，造成 620 基础技能伤害。'
+    - '&7额外获得 110% 力量加成，并提升 15 速度 3 秒。'
+    - '&8魔力消耗：&3115 &8| &8冷却：&a2.5秒'
+    - ''
+    - '&6传说 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_STORMCORE_REPEATER:
+  Id: CROSSBOW
+  Display: '&6风暴核连弩'
+  Group: YknRpg
+  Lore:
+    - '&7风暴核心会沿着每一支弩矢寻找新的放电出口。'
+    - ''
+    - '&7伤害：&c+250 &8| &7力量：&c+145'
+    - '&7暴击率：&9+22% &8| &7暴击伤害：&9+70%'
+    - '&7攻击速度：&e+25% &8| &7凶猛：&c+15'
+    - ''
+    - '&6被动：&e雷核 &7[投射物命中]'
+    - '&7命中有 35% 几率降雷，造成 350 基础技能伤害。'
+    - '&7额外获得 75% 力量加成，并施加虚弱 II 2 秒。'
+    - '&8魔力消耗：&385 &8| &8被动冷却：&a2.5秒'
+    - ''
+    - '&6传说 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_COLOSSUS_WARHAMMER:
+  Id: MACE
+  Display: '&6巨灵城锤'
+  Group: YknRpg
+  Lore:
+    - '&7如同城墙基石般沉重，落锤时大地也会参与守御。'
+    - ''
+    - '&7伤害：&c+220 &8| &7力量：&c+120'
+    - '&7生命：&a+180 &8| &7防御：&a+140'
+    - '&7活力：&a+20'
+    - ''
+    - '&6技能：&e巨灵壁 &7[右键]'
+    - '&7震伤并击退 6 格内敌人，造成 420 基础技能伤害。'
+    - '&7额外获得 70% 力量加成；自身获得 240 护盾与 60 防御 6 秒。'
+    - '&8魔力消耗：&3125 &8| &8冷却：&a14秒'
+    - ''
+    - '&6传说 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_NEBULA_SCEPTER:
+  Id: BLAZE_ROD
+  Display: '&6星云权杖'
+  Group: YknRpg
+  Lore:
+    - '&7权杖顶端的微缩星云会将目标拖入迟缓的坍缩。'
+    - ''
+    - '&7伤害：&c+50 &8| &7生命：&a+80'
+    - '&7智慧：&b+28 &8| &7技能伤害：&d+35%'
+    - ''
+    - '&6技能：&e星云坍缩 &7[右键]'
+    - '&7重创 20 格内单体，造成 620 基础技能伤害。'
+    - '&7额外获得 1300% 智慧加成，并施加缓慢 III 3 秒。'
+    - '&8魔力消耗：&3125 &8| &8冷却：&a4秒'
+    - ''
+    - '&6传说 法杖'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SERAPHIC_CHALICE:
+  Id: TOTEM_OF_UNDYING
+  Display: '&6炽天圣杯'
+  Group: YknRpg
+  Lore:
+    - '&7杯中永不干涸的辉光会回应每一道濒危的生命气息。'
+    - ''
+    - '&7伤害：&c+30 &8| &7生命：&a+180'
+    - '&7智慧：&b+25 &8| &7活力：&a+32'
+    - '&7治疗增幅：&a+38'
+    - ''
+    - '&6技能：&e圣杯恩典 &7[右键]'
+    - '&7为 9 格内玩家回复 240 生命与 3% 最大生命，并净化负面效果。'
+    - '&7治疗额外获得 300% 智慧加成，同时赋予 200 护盾。'
+    - '&8魔力消耗：&3145 &8| &8冷却：&a11秒'
+    - ''
+    - '&6传说 法器'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_DRAGONBANNER_HORN:
+  Id: GOAT_HORN
+  Display: '&6龙旌号角'
+  Group: YknRpg
+  Lore:
+    - '&7号声掠过龙纹战旗时，会把古龙的战意传给整支队伍。'
+    - ''
+    - '&7伤害：&c+40 &8| &7力量：&c+75'
+    - '&7生命：&a+140 &8| &7防御：&a+90'
+    - '&7智慧：&b+12 &8| &7活力：&a+20'
+    - ''
+    - '&6技能：&e龙旌令 &7[右键]'
+    - '&7为 9 格内玩家提高 80 力量、20% 攻速与 10 凶猛 8 秒。'
+    - '&7同时赋予 180 护盾。'
+    - '&8魔力消耗：&3135 &8| &8冷却：&a18秒'
+    - ''
+    - '&6传说 号角'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MIRAGE_DAGGERS:
+  Id: NETHERITE_SWORD
+  Display: '&6蜃影双匕'
+  Group: YknRpg
+  Lore:
+    - '&7双刃划出的虚影总会比真正的杀招先一步抵达。'
+    - ''
+    - '&7伤害：&c+245 &8| &7力量：&c+135'
+    - '&7暴击率：&9+35% &8| &7暴击伤害：&9+90%'
+    - '&7攻击速度：&e+25% &8| &7凶猛：&c+20 &8| &7速度：&f+15'
+    - ''
+    - '&6技能：&e蜃杀 &7[右键]'
+    - '&7袭击 12 格内单体，造成 520 基础技能伤害。'
+    - '&7额外获得 100% 力量加成，跃迁后隐身 1.5 秒。'
+    - '&8魔力消耗：&3105 &8| &8冷却：&a4秒'
+    - ''
+    - '&6传说 短刃'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 骨龙主题史诗职业兵装。
+YKI_WINGBREAKER_GREATSWORD:
+  Id: NETHERITE_SWORD
+  Display: '&5断翼斩龙剑'
+  Group: YknRpg
+  Lore:
+    - '&7断裂翼骨与龙牙重铸成刃，每次挥动都像骨龙贴地横扫。'
+    - ''
+    - '&7伤害：&c+225 &8| &7力量：&c+135'
+    - '&7暴击率：&9+18% &8| &7暴击伤害：&9+55%'
+    - '&7攻击速度：&e+10%'
+    - ''
+    - '&6技能：&e断翼横扫 &7[右键]'
+    - '&7横扫并击退 6 格内敌人，造成 450 基础技能伤害。'
+    - '&7额外获得 100% 力量加成，并提高 20% 攻速 4 秒。'
+    - '&8魔力消耗：&380 &8| &8冷却：&a5秒'
+    - ''
+    - '&5史诗 剑'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SKULLBARRAGE_LONGBOW:
+  Id: BOW
+  Display: '&5追魂颅骨弓'
+  Group: YknRpg
+  Lore:
+    - '&7弓臂封存骨龙魂息，让颅矢沿射出时锁定的方向疾驰。'
+    - ''
+    - '&7伤害：&c+210 &8| &7力量：&c+115'
+    - '&7暴击率：&9+25% &8| &7暴击伤害：&9+60%'
+    - '&7攻击速度：&e+15%'
+    - ''
+    - '&6技能：&e追魂颅矢 &7[射箭]'
+    - '&7射出无重力箭矢，造成 380 基础技能伤害和 85% 力量加成。'
+    - '&7同时提高自身 30% 暴击伤害 4 秒。'
+    - '&8魔力消耗：&365 &8| &8冷却：&a2秒'
+    - ''
+    - '&5史诗 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_DRAGONSPINE_LANCE:
+  Id: DIAMOND_SPEAR
+  Display: '&5骸龙脊枪'
+  Group: YknRpg
+  Lore:
+    - '&7整段翼脊被锻成枪锋，仍记得巨龙贴近地面的冲锋。'
+    - ''
+    - '&7伤害：&c+215 &8| &7力量：&c+130'
+    - '&7暴击率：&9+18% &8| &7暴击伤害：&9+40%'
+    - '&7凶猛：&c+18 &8| &7速度：&f+10'
+    - ''
+    - '&6技能：&e脊骨突阵 &7[右键]'
+    - '&7贯刺 11 格内单体，造成 420 基础技能伤害和 95% 力量加成。'
+    - '&7击退目标并向前冲刺。'
+    - '&8魔力消耗：&375 &8| &8冷却：&a4.5秒'
+    - ''
+    - '&5史诗 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_GRAVETALON_SICKLE:
+  Id: NETHERITE_HOE
+  Display: '&5攫魂龙爪'
+  Group: YknRpg
+  Lore:
+    - '&7骨龙趾爪被磨成弯刃，专从死角扯出猎物的魂魄。'
+    - ''
+    - '&7伤害：&c+205 &8| &7力量：&c+110'
+    - '&7暴击率：&9+30% &8| &7暴击伤害：&9+75%'
+    - '&7攻击速度：&e+22% &8| &7速度：&f+15'
+    - ''
+    - '&6被动：&e攫魂 &7[背后近战命中]'
+    - '&7追加 340 基础技能伤害和 80% 力量加成，并施加凋零 I 3 秒。'
+    - '&7同时提高自身 20 速度 3 秒。'
+    - '&8被动冷却：&a2.5秒'
+    - ''
+    - '&5史诗 镰刀'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MARROW_REQUIEM_CENSER:
+  Id: DECORATED_POT
+  Display: '&5髓火安魂炉'
+  Group: YknRpg
+  Lore:
+    - '&7炉中髓火逆转死之统治者的仪式，把余温还给生者。'
+    - ''
+    - '&7伤害：&c+30 &8| &7生命：&a+130'
+    - '&7智慧：&b+22 &8| &7活力：&a+24'
+    - '&7治疗增幅：&a+32'
+    - ''
+    - '&6技能：&e亡者回生 &7[右键]'
+    - '&7为 8 格内盟友回复 180 生命与 3% 最大生命，并净化负面效果。'
+    - '&7治疗额外获得 280% 智慧加成，同时赋予 160 护盾与再生 I 4 秒。'
+    - '&8魔力消耗：&390 &8| &8冷却：&a10秒'
+    - ''
+    - '&5史诗 法器'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_OSSUARY_BULWARK:
+  Id: MACE
+  Display: '&5骨狱壁垒'
+  Group: YknRpg
+  Lore:
+    - '&7万片骸骨随锤首转动，所到之处便筑起移动的骨狱。'
+    - ''
+    - '&7伤害：&c+155 &8| &7力量：&c+70'
+    - '&7生命：&a+180 &8| &7防御：&a+125'
+    - '&7活力：&a+22'
+    - ''
+    - '&6技能：&e骨狱阵列 &7[右键]'
+    - '&7为 8 格内盟友赋予 200 护盾，并提高 55 防御 6 秒。'
+    - '&7对 7 格内敌人造成 150 基础技能伤害和 30% 力量加成，并施加缓慢 III 4 秒。'
+    - '&8魔力消耗：&390 &8| &8冷却：&a14秒'
+    - ''
+    - '&5史诗 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WRAITHFIRE_SCEPTER:
+  Id: BLAZE_ROD
+  Display: '&5怨火龙息杖'
+  Group: YknRpg
+  Lore:
+    - '&7骨龙三段怨念在杖端燃成幽蓝龙息，坠地便吞没生机。'
+    - ''
+    - '&7伤害：&c+50 &8| &7生命：&a+70'
+    - '&7智慧：&b+24 &8| &7技能伤害：&d+30%'
+    - ''
+    - '&6技能：&e怨火流星 &7[右键]'
+    - '&7轰击 7 格内敌人，造成 480 基础技能伤害。'
+    - '&7额外获得 1300% 智慧加成，并施加凋零 II 3 秒。'
+    - '&8魔力消耗：&3100 &8| &8冷却：&a6秒'
+    - ''
+    - '&5史诗 法杖'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 烬日冥卫·阿努赫主题传说职业兵装。
+YKI_ENDSUN_EDICT_BLADE:
+  Id: NETHERITE_SWORD
+  Display: '&6烬日敕令剑'
+  Group: YknRpg
+  Lore:
+    - '&7阿努赫的古律被逐字刻入剑身，出鞘便以虚弱敕令削弱敌人攻势。'
+    - ''
+    - '&7伤害：&c+285 &8| &7力量：&c+180'
+    - '&7暴击率：&9+22% &8| &7暴击伤害：&9+80%'
+    - '&7攻击速度：&e+12% &8| &7凶猛：&c+12'
+    - ''
+    - '&6技能：&e敕令·禁刃 &7[右键]'
+    - '&7斩击 6 格内敌人，造成 520 基础技能伤害和 100% 力量加成。'
+    - '&7施加虚弱 II 4 秒，并提高自身 50% 暴击伤害 5 秒。'
+    - '&8魔力消耗：&3125 &8| &8冷却：&a6秒'
+    - ''
+    - '&6传说 剑'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SUNFALL_REPEATER:
+  Id: CROSSBOW
+  Display: '&6日轮坠落连弩'
+  Group: YknRpg
+  Lore:
+    - '&7弦响即是日落，炽热的弩矢会把最后一道余晖钉入敌躯。'
+    - ''
+    - '&7伤害：&c+270 &8| &7力量：&c+160'
+    - '&7暴击率：&9+28% &8| &7暴击伤害：&9+95%'
+    - '&7攻击速度：&e+20% &8| &7速度：&f+8'
+    - ''
+    - '&6技能：&e日轮坠落 &7[射箭]'
+    - '&7射出无重力箭矢，造成 650 基础技能伤害和 115% 力量加成。'
+    - '&7同时提高自身 15 速度 3 秒。'
+    - '&8魔力消耗：&3110 &8| &8冷却：&a2.5秒'
+    - ''
+    - '&6传说 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SOLAR_AEGIS_LANCE:
+  Id: NETHERITE_SPEAR
+  Display: '&6耀阳圣盾枪'
+  Group: YknRpg
+  Lore:
+    - '&7盾面承接烈日，枪尖则从耀光中刺出，守势与破招同为一式。'
+    - ''
+    - '&7伤害：&c+275 &8| &7力量：&c+175'
+    - '&7暴击率：&9+18% &8| &7暴击伤害：&9+60%'
+    - '&7凶猛：&c+22 &8| &7防御：&a+70'
+    - '&7活力：&a+10 &8| &7速度：&f+10'
+    - ''
+    - '&6技能：&e耀盾贯行 &7[右键]'
+    - '&7贯刺 12 格内单体，造成 560 基础技能伤害和 100% 力量加成。'
+    - '&7击退目标并向前冲刺；自身获得 220 护盾与 45 防御 5 秒。'
+    - '&8魔力消耗：&3120 &8| &8冷却：&a7秒'
+    - ''
+    - '&6传说 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SCYTHE_ECHO_SICKLE:
+  Id: NETHERITE_HOE
+  Display: '&6镰影分魂镰'
+  Group: YknRpg
+  Lore:
+    - '&7每道镰光都会拖出第二重影子，从背后将魂魄一分为二。'
+    - ''
+    - '&7伤害：&c+255 &8| &7力量：&c+145'
+    - '&7暴击率：&9+38% &8| &7暴击伤害：&9+100%'
+    - '&7攻击速度：&e+25% &8| &7凶猛：&c+18 &8| &7速度：&f+18'
+    - ''
+    - '&6被动：&e镰影分魂 &7[背后近战命中]'
+    - '&7追加 480 基础技能伤害和 100% 力量加成，并施加凋零 II 3 秒。'
+    - '&8被动冷却：&a2.5秒'
+    - ''
+    - '&6传说 镰刀'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SOUL_CROWN_CENSER:
+  Id: DECORATED_POT
+  Display: '&6亡魂冠冕香炉'
+  Group: YknRpg
+  Lore:
+    - '&7亡魂将最后一缕余烬投入冠冕，只为换回同伴的一次呼吸。'
+    - ''
+    - '&7伤害：&c+35 &8| &7生命：&a+190'
+    - '&7智慧：&b+28 &8| &7技能伤害：&d+10%'
+    - '&7活力：&a+36 &8| &7治疗增幅：&a+42'
+    - ''
+    - '&6技能：&e冠冕安魂 &7[右键]'
+    - '&7为 9 格内盟友回复 260 生命与 4% 最大生命，并净化负面效果。'
+    - '&7治疗额外获得 350% 智慧加成，同时赋予 180 护盾与再生 II 5 秒。'
+    - '&8魔力消耗：&3140 &8| &8冷却：&a10秒'
+    - ''
+    - '&6传说 法器'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_HEARTFURNACE_WARHAMMER:
+  Id: MACE
+  Display: '&6心炉壁垒战锤'
+  Group: YknRpg
+  Lore:
+    - '&7胸前心炉把每一道创伤熔成新壁垒，再将热量分给整支队伍。'
+    - ''
+    - '&7伤害：&c+200 &8| &7力量：&c+95'
+    - '&7生命：&a+260 &8| &7防御：&a+200'
+    - '&7活力：&a+30 &8| &7智慧：&b+10'
+    - ''
+    - '&6技能：&e心炉壁垒 &7[右键]'
+    - '&7为 9 格内盟友赋予 280 护盾，并提高 75 防御与 18 活力 7 秒。'
+    - '&7令附近敌人陷入虚弱 II 4 秒；自身回复 120 生命和 150% 活力加成。'
+    - '&8魔力消耗：&3135 &8| &8冷却：&a14秒'
+    - ''
+    - '&6传说 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_BLACK_SUN_CODEX:
+  Id: ENCHANTED_BOOK
+  Display: '&6黑日葬仪法典'
+  Group: YknRpg
+  Lore:
+    - '&7书页封存着不断收缩的黑日，翻动一次便令四周黯淡一分。'
+    - ''
+    - '&7伤害：&c+55 &8| &7生命：&a+110'
+    - '&7智慧：&b+32 &8| &7技能伤害：&d+42%'
+    - '&7活力：&a+12'
+    - ''
+    - '&6技能：&e黑日葬仪 &7[右键]'
+    - '&7轰击 8 格内敌人，造成 680 基础技能伤害和 1400% 智慧加成。'
+    - '&7施加凋零 II 与缓慢 II 4 秒；自身获得 140 护盾。'
+    - '&8魔力消耗：&3150 &8| &8冷却：&a7秒'
+    - ''
+    - '&6传说 法典'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 终焉之魔女·伊芙蕾雅主题神话职业兵装。
+YKI_FATESEVER_HOLYBLADE:
+  Id: NETHERITE_SWORD
+  Display: '&d断命裁剑'
+  Group: YknRpg
+  Lore:
+    - '&7剑锋不会切开血肉，而是先斩断目标尚未来得及兑现的命线。'
+    - ''
+    - '&7伤害：&c+360 &8| &7力量：&c+240'
+    - '&7暴击率：&9+28% &8| &7暴击伤害：&9+100%'
+    - '&7攻击速度：&e+15% &8| &7凶猛：&c+30'
+    - '&7防御：&a+60 &8| &7活力：&a+20'
+    - ''
+    - '&6技能：&e断命裁决 &7[右键]'
+    - '&7裁决 14 格内单体，造成 880 基础技能伤害和 135% 力量加成。'
+    - '&7施加凋零 II 4 秒；自身获得 200 护盾。'
+    - '&8魔力消耗：&3160 &8| &8冷却：&a5秒'
+    - ''
+    - '&d神话 剑'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SEVENFOLD_END_BOW:
+  Id: BOW
+  Display: '&d七终魔矢弓'
+  Group: YknRpg
+  Lore:
+    - '&7七重终焉汇于一枚魔矢，预判敌人即将抵达之处。'
+    - ''
+    - '&7伤害：&c+380 &8| &7力量：&c+230'
+    - '&7暴击率：&9+32% &8| &7暴击伤害：&9+140%'
+    - '&7攻击速度：&e+20% &8| &7凶猛：&c+25 &8| &7速度：&f+15'
+    - ''
+    - '&6技能：&e七终魔矢 &7[射箭]'
+    - '&7射出无重力箭矢，造成 1050 基础技能伤害和 170% 力量加成。'
+    - '&7同时提高自身 35 凶猛 7 秒。'
+    - '&8魔力消耗：&3145 &8| &8冷却：&a2秒'
+    - ''
+    - '&d神话 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_HEAVEN_INVERSION_LANCE:
+  Id: NETHERITE_SPEAR
+  Display: '&d逆天长枪'
+  Group: YknRpg
+  Lore:
+    - '&7枪锋刺出时天地短暂倒悬，失去立足点的敌人只能坠向枪尖。'
+    - ''
+    - '&7伤害：&c+375 &8| &7力量：&c+250'
+    - '&7暴击率：&9+28% &8| &7暴击伤害：&9+90%'
+    - '&7攻击速度：&e+10% &8| &7凶猛：&c+45 &8| &7速度：&f+22'
+    - ''
+    - '&6技能：&e天地倒悬 &7[右键]'
+    - '&7贯刺 16 格内单体，造成 950 基础技能伤害和 155% 力量加成。'
+    - '&7纵向击飞目标并向前冲刺，施加缓慢 IV 4 秒；自身提高 30 速度 4 秒。'
+    - '&8魔力消耗：&3165 &8| &8冷却：&a4.5秒'
+    - ''
+    - '&d神话 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WITCHBLINK_SCISSORS:
+  Id: SHEARS
+  Display: '&d魔女裁决双剪'
+  Group: YknRpg
+  Lore:
+    - '&7两道剪刃随魔女闪烁至目标身旁，从相反方向同时闭合。'
+    - ''
+    - '&7伤害：&c+335 &8| &7力量：&c+195'
+    - '&7暴击率：&9+45% &8| &7暴击伤害：&9+135%'
+    - '&7攻击速度：&e+35% &8| &7凶猛：&c+35 &8| &7速度：&f+30'
+    - ''
+    - '&6技能：&e闪烁裁决 &7[右键]'
+    - '&7跃迁后裁决 14 格内单体，造成 800 基础技能伤害和 125% 力量加成。'
+    - '&7施加凋零 III 3 秒；自身隐身 2 秒并提高 35 速度 4 秒。'
+    - '&8魔力消耗：&3125 &8| &8冷却：&a4秒'
+    - ''
+    - '&d神话 双刃'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SOULPAWN_REQUIEM:
+  Id: ENCHANTED_BOOK
+  Display: '&d魂晶挽歌'
+  Group: YknRpg
+  Lore:
+    - '&7挽歌击碎灵魂晶体，将其中封存的生命完整赎回给同伴。'
+    - ''
+    - '&7伤害：&c+60 &8| &7生命：&a+270'
+    - '&7智慧：&b+42 &8| &7技能伤害：&d+24%'
+    - '&7活力：&a+50 &8| &7治疗增幅：&a+60'
+    - ''
+    - '&6技能：&e灵魂赎回 &7[右键]'
+    - '&7为 10 格内盟友回复 340 生命与 5% 最大生命，并净化负面效果。'
+    - '&7治疗额外获得 450% 智慧加成，并赋予 300 基础护盾与 120% 智慧加成。'
+    - '&7同时提高 30 活力，持续 8 秒。'
+    - '&8魔力消耗：&3190 &8| &8冷却：&a11秒'
+    - ''
+    - '&d神话 法器'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_WORLD_END_BULWARK:
+  Id: SHIELD
+  Display: '&d世界终焉壁垒'
+  Group: YknRpg
+  Lore:
+    - '&7盾面重演黑日护仪，将降临的终焉暂时阻隔在众人之外。'
+    - ''
+    - '&7伤害：&c+80 &8| &7力量：&c+100'
+    - '&7生命：&a+380 &8| &7防御：&a+280'
+    - '&7活力：&a+45 &8| &7智慧：&b+16'
+    - ''
+    - '&6技能：&e黑日护仪 &7[右键]'
+    - '&7为 10 格内盟友赋予 400 护盾，并提高 120 防御与 30 活力 8 秒。'
+    - '&7令附近敌人陷入虚弱 III 与缓慢 II 5 秒。'
+    - '&8魔力消耗：&3170 &8| &8冷却：&a18秒'
+    - ''
+    - '&d神话 盾牌'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_SILENT_CHANT_CODEX:
+  Id: ENCHANTED_BOOK
+  Display: '&d无声咏唱法典'
+  Group: YknRpg
+  Lore:
+    - '&7赤、绿、青三枚无声符文被压入同一页，让毁灭与复苏同时应答。'
+    - ''
+    - '&7伤害：&c+80 &8| &7生命：&a+180'
+    - '&7智慧：&b+45 &8| &7技能伤害：&d+55%'
+    - '&7活力：&a+18'
+    - ''
+    - '&6技能：&e三色无声咏唱 &7[右键]'
+    - '&7轰击 9 格内敌人，造成 850 基础技能伤害和 1700% 智慧加成。'
+    - '&7施加缓慢 IV 与虚弱 IV 4 秒；自身回复 140 生命和 200% 智慧加成。'
+    - '&7同时提高自身 25% 技能伤害 6 秒。'
+    - '&8魔力消耗：&3195 &8| &8冷却：&a8秒'
+    - ''
+    - '&d神话 法典'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 功能兵装：保持正常武器属性，技能侧重采集、探索、移动、自救与团队整备。
+# 普通
+YKI_VEINSEEKER_MAUL:
+  Id: MACE
+  Display: '&8测脉战锤'
+  Group: YknRpg
+  Lore:
+    - '&7用战锤敲击岩层，回声会标出更易开采的矿脉。'
+    - ''
+    - '&7伤害：&c+46 &8| &7力量：&c+14'
+    - '&7防御：&a+8 &8| &7速度：&f+3'
+    - ''
+    - '&6技能：&e矿脉节拍 &7[潜行右键]'
+    - '&7获得急迫 I，持续 20 秒。'
+    - '&8魔力消耗：&315 &8| &8冷却：&a30秒'
+    - ''
+    - '&8普通 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 少见
+YKI_TRAILSCOUT_SHORTBLADE:
+  Id: IRON_SWORD
+  Display: '&a寻路者短刃'
+  Group: YknRpg
+  Lore:
+    - '&7天玻璃嵌入刃脊，使它能够辨认黑暗中的道路。'
+    - ''
+    - '&7伤害：&c+78 &8| &7力量：&c+28'
+    - '&7暴击率：&9+8% &8| &7速度：&f+8'
+    - '&7智慧：&b+3'
+    - ''
+    - '&6技能：&e远路标定 &7[潜行右键]'
+    - '&7获得夜视 60 秒，并提高 15 速度 15 秒。'
+    - '&8魔力消耗：&322 &8| &8冷却：&a30秒'
+    - ''
+    - '&a少见的 短刃'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_CAMPWARD_SABER:
+  Id: IRON_SWORD
+  Display: '&a营火守望剑'
+  Group: YknRpg
+  Lore:
+    - '&7剑脊封存一簇不熄营火，供长途跋涉者随时整备。'
+    - ''
+    - '&7伤害：&c+80 &8| &7力量：&c+30'
+    - '&7生命：&a+35 &8| &7防御：&a+18'
+    - '&7智慧：&b+4 &8| &7速度：&f+5'
+    - ''
+    - '&6技能：&e营火整备 &7[潜行右键]'
+    - '&7净化自身，获得 60 秒夜视、30 秒抗火与短暂生命恢复。'
+    - '&8魔力消耗：&328 &8| &8冷却：&a30秒'
+    - ''
+    - '&a少见的 剑'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 稀有
+YKI_TIDESEEKER_LANCE:
+  Id: TRIDENT
+  Display: '&9潮痕寻珍枪'
+  Group: YknRpg
+  Lore:
+    - '&7枪尖会追随暗流，指向被海水掩藏的遗物。'
+    - ''
+    - '&7伤害：&c+120 &8| &7力量：&c+50'
+    - '&7暴击率：&9+12% &8| &7防御：&a+20'
+    - '&7智慧：&b+7 &8| &7速度：&f+10'
+    - ''
+    - '&6被动：&e潮流亲和'
+    - '&7手持时持续获得水下呼吸与海豚的恩惠。'
+    - ''
+    - '&6技能：&e潮汐寻珍 &7[潜行右键]'
+    - '&7获得幸运 II，持续 60 秒。'
+    - '&8魔力消耗：&340 &8| &8冷却：&a45秒'
+    - ''
+    - '&9稀有 长枪'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_RESCUE_BEACON_CROSSBOW:
+  Id: CROSSBOW
+  Display: '&9救援信标弩'
+  Group: YknRpg
+  Lore:
+    - '&7弩臂内藏的信标会为陷入险境的远征队指出撤离路线。'
+    - ''
+    - '&7伤害：&c+122 &8| &7力量：&c+52'
+    - '&7暴击率：&9+15% &8| &7暴击伤害：&9+25%'
+    - '&7智慧：&b+8 &8| &7速度：&f+8'
+    - ''
+    - '&6技能：&e撤离信标 &7[潜行右键]'
+    - '&7净化并治疗 8 格内玩家，赋予缓降并提高 25 速度。'
+    - '&8魔力消耗：&355 &8| &8冷却：&a20秒'
+    - ''
+    - '&9稀有 弩'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_TRUESIGHT_LONGBOW:
+  Id: BOW
+  Display: '&9明迹长弓'
+  Group: YknRpg
+  Lore:
+    - '&7透光弓臂会勾勒出潜伏者留下的行动轨迹。'
+    - ''
+    - '&7伤害：&c+126 &8| &7力量：&c+56'
+    - '&7暴击率：&9+20% &8| &7暴击伤害：&9+30%'
+    - '&7智慧：&b+6 &8| &7速度：&f+8'
+    - ''
+    - '&6技能：&e明迹索敌 &7[潜行右键]'
+    - '&7令 20 格内可攻击生物显形 12 秒，自身获得夜视与短暂提速。'
+    - '&8魔力消耗：&348 &8| &8冷却：&a16秒'
+    - ''
+    - '&9稀有 弓'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 史诗
+YKI_SKYHOOK_TWINBLADE:
+  Id: DIAMOND_SWORD
+  Display: '&5攀云钩刃'
+  Group: YknRpg
+  Lore:
+    - '&7双刃勾住风暴留下的轨迹，将持有者拉向高处。'
+    - ''
+    - '&7伤害：&c+175 &8| &7力量：&c+92'
+    - '&7暴击率：&9+20% &8| &7暴击伤害：&9+45%'
+    - '&7攻击速度：&e+15% &8| &7速度：&f+18'
+    - '&7智慧：&b+8'
+    - ''
+    - '&6技能：&e钩刃牵引 &7[潜行右键]'
+    - '&7向视线方向跃进，并获得 5 秒缓降与短暂提速。'
+    - '&8魔力消耗：&345 &8| &8冷却：&a4秒'
+    - ''
+    - '&5史诗 双刃'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_MARCHING_SANCTUARY_MAUL:
+  Id: MACE
+  Display: '&5行军圣所战锤'
+  Group: YknRpg
+  Lore:
+    - '&7锤首落地之处，便会成为远征队短暂休整的圣所。'
+    - ''
+    - '&7伤害：&c+172 &8| &7力量：&c+88'
+    - '&7生命：&a+120 &8| &7防御：&a+70'
+    - '&7智慧：&b+14 &8| &7活力：&a+12'
+    - ''
+    - '&6技能：&e临时圣所 &7[潜行右键]'
+    - '&7治疗并净化 8 格内玩家，赋予生命恢复 II 与 50 防御。'
+    - '&8魔力消耗：&385 &8| &8冷却：&a20秒'
+    - ''
+    - '&5史诗 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_RIFTGUIDE_DAGGER:
+  Id: NETHERITE_SWORD
+  Display: '&5隙路引航短刃'
+  Group: YknRpg
+  Lore:
+    - '&7刃尖划开的狭缝，只容得下一名旅者迅速通过。'
+    - ''
+    - '&7伤害：&c+182 &8| &7力量：&c+96'
+    - '&7暴击率：&9+25% &8| &7暴击伤害：&9+55%'
+    - '&7攻击速度：&e+18% &8| &7速度：&f+16'
+    - '&7智慧：&b+10'
+    - ''
+    - '&6技能：&e隙路脱身 &7[潜行右键]'
+    - '&7沿视线跃迁至最远 12 格内可通行位置，并净化自身。'
+    - '&7随后隐身 4 秒，获得缓降与短暂提速。'
+    - '&8魔力消耗：&365 &8| &8冷却：&a9秒'
+    - ''
+    - '&5史诗 短刃'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 传说
+YKI_EXPEDITION_WARHAMMER:
+  Id: MACE
+  Display: '&6万域远征战锤'
+  Group: YknRpg
+  Lore:
+    - '&7锤鸣传遍队伍，使附近远征者迅速适应前方的一切险境。'
+    - ''
+    - '&7伤害：&c+230 &8| &7力量：&c+125'
+    - '&7生命：&a+140 &8| &7防御：&a+90'
+    - '&7智慧：&b+18 &8| &7活力：&a+18 &8| &7速度：&f+18'
+    - ''
+    - '&6技能：&e整备号令 &7[潜行右键]'
+    - '&7净化 12 格内玩家，并赋予急迫 II、夜视、'
+    - '&7水下呼吸与抗火，同时短暂提高 30 速度。'
+    - '&8魔力消耗：&390 &8| &8冷却：&a30秒'
+    - ''
+    - '&6传说 战锤'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+YKI_HOMECOMING_CHRONICLE:
+  Id: ENCHANTED_BOOK
+  Display: '&6归航时序法典'
+  Group: YknRpg
+  Lore:
+    - '&7书页预留了一段未被书写的时间，只为带持有者脱离绝境。'
+    - ''
+    - '&7伤害：&c+90 &8| &7生命：&a+180'
+    - '&7防御：&a+60 &8| &7智慧：&b+38'
+    - '&7活力：&a+20 &8| &7治疗增幅：&a+22 &8| &7速度：&f+15'
+    - ''
+    - '&6被动：&e紧急回序'
+    - '&7手持时生命低于 35% 并受到实体伤害，将治疗并净化自身。'
+    - '&7随后隐身 3 秒，获得缓降与 50 速度。'
+    - '&8冷却：&a45秒'
+    - ''
+    - '&6传说 法典'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
+
+# 神话
+YKI_ASTRAL_WAYFARER_STAFF:
+  Id: BREEZE_ROD
+  Display: '&d星海引路法杖'
+  Group: YknRpg
+  Lore:
+    - '&7杖芯读取世界缝隙，为远行者校准环境与道路。'
+    - ''
+    - '&7伤害：&c+210 &8| &7力量：&c+90'
+    - '&7暴击率：&9+15% &8| &7智慧：&b+55'
+    - '&7技能伤害：&d+25% &8| &7速度：&f+30'
+    - ''
+    - '&6被动：&e万域校准'
+    - '&7手持时持续获得急迫 III、夜视、水下呼吸、'
+    - '&7抗火与海豚的恩惠。'
+    - ''
+    - '&6技能：&e折界远行 &7[潜行右键]'
+    - '&7沿视线跃迁至最远 20 格内可通行位置，并获得缓降与提速。'
+    - '&8魔力消耗：&385 &8| &8冷却：&a5秒'
+    - ''
+    - '&d神话 法杖'
+  Options: {Unbreakable: true, Glint: true}
+  Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]

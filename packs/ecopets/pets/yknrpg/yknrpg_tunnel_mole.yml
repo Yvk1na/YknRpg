@@ -40,21 +40,28 @@ xp-gain-methods:
 level-placeholders:
   - id: "toughness_bonus"
     value: "%level% * 0.08"
+  - id: "perk_mining_speed"
+    value: "%level% * 0.03"
 
 effects-description:
   1:
     - "&7属性加成："
     - "&7+%toughness_bonus% 韧性"
     - ""
+    - "&6特殊效果："
+    - "&e掘进本能 &7采矿速度 +&a%perk_mining_speed%%"
+    - ""
     - "&8普通宠物"
 
 rewards-description:
   1:
     - "&7+%toughness_bonus% 韧性"
+    - "&e掘进本能 &7采矿速度 +&a%perk_mining_speed%%"
 
 level-up-messages:
   1:
     - "&7+%toughness_bonus% 韧性"
+    - "&e掘进本能 &7采矿速度 +&a%perk_mining_speed%%"
 
 level-up-effects: []
 
@@ -63,6 +70,9 @@ effects:
     args:
       stat: toughness
       amount: "%level% * 0.08"
+  - id: mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0003)"
 
 conditions: []
 activate-conditions: []

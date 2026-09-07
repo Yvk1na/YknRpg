@@ -24,6 +24,10 @@ level-placeholders:
     value: "%level% * 0.1"
   - id: "crit_damage_bonus"
     value: "%level% * 0.11"
+  - id: "perk_pet_xp"
+    value: "%level% * 0.14"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.045"
 
 effects-description:
   1:
@@ -31,6 +35,8 @@ effects-description:
     - "&c+%strength_bonus% 力量"
     - "&b+%wisdom_bonus% 智慧"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&6【星轨引航】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&6【云端降落】&7安全坠落距离 &a+%perk_safe_fall% 格"
     - ""
     - "&6传说宠物"
 
@@ -39,12 +45,16 @@ rewards-description:
     - "&c+%strength_bonus% 力量"
     - "&b+%wisdom_bonus% 智慧"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&6【星轨引航】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&6【云端降落】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-messages:
   1:
     - "&c+%strength_bonus% 力量"
     - "&b+%wisdom_bonus% 智慧"
     - "&6+%crit_damage_bonus% 暴击伤害"
+    - "&6【星轨引航】&7宠物经验 &a+%perk_pet_xp%%"
+    - "&6【云端降落】&7安全坠落距离 &a+%perk_safe_fall% 格"
 
 level-up-effects: []
 
@@ -61,6 +71,12 @@ effects:
     args:
       stat: crit_damage
       amount: "%level% * 0.11"
+  - id: pet_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0014)"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.045"
 
 conditions: []
 activate-conditions: []

@@ -40,6 +40,8 @@ level-placeholders:
     value: "%level% * 0.18"
   - id: "health_bonus"
     value: "%level% * 0.02"
+  - id: "perk_mining_speed"
+    value: "%level% * 0.08"
 
 effects-description:
   1:
@@ -47,17 +49,25 @@ effects-description:
     - "&7+%toughness_bonus% 韧性"
     - "&c+%health_bonus% 生命"
     - ""
+    - "&6特殊效果："
+    - "&e晶脉共鸣 &7采矿速度 +&a%perk_mining_speed%%"
+    - "&e熔晶核心 &7自动熔炼天然铁、金、铜矿石"
+    - ""
     - "&9稀有宠物"
 
 rewards-description:
   1:
     - "&7+%toughness_bonus% 韧性"
     - "&c+%health_bonus% 生命"
+    - "&e晶脉共鸣 &7采矿速度 +&a%perk_mining_speed%%"
+    - "&e熔晶核心 &7自动熔炼天然铁、金、铜矿石"
 
 level-up-messages:
   1:
     - "&7+%toughness_bonus% 韧性"
     - "&c+%health_bonus% 生命"
+    - "&e晶脉共鸣 &7采矿速度 +&a%perk_mining_speed%%"
+    - "&e熔晶核心 &7自动熔炼天然铁、金、铜矿石"
 
 level-up-effects: []
 
@@ -70,6 +80,23 @@ effects:
     args:
       stat: health
       amount: "%level% * 0.02"
+  - id: mining_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
+  - id: autosmelt
+    args:
+      drop_xp: true
+    triggers:
+      - block_item_drop
+    filters:
+      player_placed: false
+      blocks:
+        - iron_ore
+        - deepslate_iron_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - copper_ore
+        - deepslate_copper_ore
 
 conditions: []
 activate-conditions: []

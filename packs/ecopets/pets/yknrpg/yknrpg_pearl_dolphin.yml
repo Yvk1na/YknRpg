@@ -1,0 +1,98 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (e54624fe0e0b20f6fe67a068ebc2f588f69fd442b555368cd4b66f4aaba63175)
+name: "&9珍珠海豚"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU0NjI0ZmUwZTBiMjBmNmZlNjdhMDY4ZWJjMmY1ODhmNjlmZDQ0MmI1NTUzNjhjZDRiNjZmNGFhYmE2MzE3NSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU0NjI0ZmUwZTBiMjBmNmZlNjdhMDY4ZWJjMmY1ODhmNjlmZDQ0MmI1NTUzNjhjZDRiNjZmNGFhYmE2MzE3NSJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 2.5
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.11"
+  - id: "speed_bonus"
+    value: "%level% * 0.036"
+  - id: "perk_double_fish"
+    value: "%level% * 0.06"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.08"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - ""
+    - "&6特殊效果："
+    - "&e珍珠鱼潮 &7指定鱼类有 &a%perk_double_fish%% &7概率双倍钓获"
+    - "&e逐浪收线 &7收线速度 +&a%perk_reel_speed%%"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&e珍珠鱼潮 &7指定鱼类有 &a%perk_double_fish%% &7概率双倍钓获"
+    - "&e逐浪收线 &7收线速度 +&a%perk_reel_speed%%"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&f+%speed_bonus% 速度"
+    - "&e珍珠鱼潮 &7指定鱼类有 &a%perk_double_fish%% &7概率双倍钓获"
+    - "&e逐浪收线 &7收线速度 +&a%perk_reel_speed%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.11"
+  - id: add_stat
+    args:
+      stat: speed
+      amount: "%level% * 0.036"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.06"
+      on_items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
+    triggers:
+      - catch_fish
+    filters:
+      items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0008)"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: dolphin_spawn_egg unbreaking:1 hide_enchants
+  name: "&9珍珠海豚 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9珍珠海豚&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_pearl_dolphin
+  withdrawable: true

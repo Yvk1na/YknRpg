@@ -24,6 +24,8 @@ level-placeholders:
     value: "%level% * 0.06"
   - id: "speed_bonus"
     value: "%level% * 0.05"
+  - id: "perk_reach"
+    value: "%level% * 0.01"
 
 effects-description:
   1:
@@ -31,6 +33,8 @@ effects-description:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&6【虚空触手】&7方块触及距离 &a+%perk_reach% 格"
+    - "&6【末影收纳】&7方块掉落物直接进入背包"
     - ""
     - "&6传说宠物"
 
@@ -39,12 +43,16 @@ rewards-description:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&6【虚空触手】&7方块触及距离 &a+%perk_reach% 格"
+    - "&6【末影收纳】&7方块掉落物直接进入背包"
 
 level-up-messages:
   1:
     - "&6+%crit_damage_bonus% 暴击伤害"
     - "&9+%crit_chance_bonus% 暴击率"
     - "&f+%speed_bonus% 速度"
+    - "&6【虚空触手】&7方块触及距离 &a+%perk_reach% 格"
+    - "&6【末影收纳】&7方块掉落物直接进入背包"
 
 level-up-effects: []
 
@@ -61,6 +69,10 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.05"
+  - id: block_reach
+    args:
+      reach: "%level% * 0.01"
+  - id: telekinesis
 
 conditions: []
 activate-conditions: []

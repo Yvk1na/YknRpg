@@ -8,6 +8,7 @@ import cn.yknrpg.integration.MythicItems;
 import cn.yknrpg.integration.ProtocolLibInputBridge;
 import cn.yknrpg.item.CustomItemFactory;
 import cn.yknrpg.item.MaterialUseGuard;
+import cn.yknrpg.model.ItemDefinition.CatalogKind;
 import cn.yknrpg.recipe.RecipeRegistrar;
 import cn.yknrpg.registry.ItemRegistry;
 import cn.yknrpg.rpg.RpgEngine;
@@ -16,12 +17,16 @@ import cn.yknrpg.util.Text;
 import net.kyori.adventure.text.Component;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.AtomicMoveNotSupportedException;
 import java.nio.file.Files;
@@ -32,9 +37,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 public final class YknRpgPlugin extends JavaPlugin {
     private static final String LEGACY_DATA_DIRECTORY = "YknItems";
+    private static final long PET_CATALOG_RETRY_PERIOD_TICKS = 20L;
+    private static final int PET_CATALOG_MAX_RETRY_ATTEMPTS = 120;
 
     private ItemRegistry registry;
     private CustomItemFactory itemFactory;
@@ -42,9 +50,13 @@ public final class YknRpgPlugin extends JavaPlugin {
     private EquipmentGui gui;
     private RpgRegistry rpgRegistry;
     private RpgEngine rpgEngine;
+    private EcoPetsItems ecoPetsItems;
+    private BukkitTask petCatalogRetryTask;
+    private int petCatalogRetryAttempts;
     private ProtocolLibInputBridge protocolLibInputBridge;
     private YamlConfiguration bundledConfigDefaults;
     private final Set<String> warnedMissingMessages = new HashSet<>();
+    private final Set<UUID> pendingPetCatalogViewers = new HashSet<>();
 
     @Override
     public void onEnable() {
@@ -61,7 +73,7 @@ public final class YknRpgPlugin extends JavaPlugin {
         syncVersionedResource("rpg.yml", "content-revision");
 
         MythicItems mythicItems = new MythicItems(this);
-        EcoPetsItems ecoPetsItems = new EcoPetsItems(this);
+        ecoPetsItems = new EcoPetsItems(this);
         registry = new ItemRegistry(this, mythicItems, ecoPetsItems);
         registry.reload();
         rpgRegistry = new RpgRegistry(this, mythicItems);
@@ -73,6 +85,7 @@ public final class YknRpgPlugin extends JavaPlugin {
         rpgEngine = new RpgEngine(this, rpgRegistry, new AuraSkillsMana());
 
         getServer().getPluginManager().registerEvents(gui, this);
+        getServer().getPluginManager().registerEvents(ecoPetsItems, this);
         getServer().getPluginManager().registerEvents(new MaterialUseGuard(itemFactory), this);
         getServer().getPluginManager().registerEvents(rpgEngine, this);
         rpgEngine.start();
@@ -86,6 +99,9 @@ public final class YknRpgPlugin extends JavaPlugin {
         command.setExecutor(handler);
         command.setTabCompleter(handler);
 
+        bindEcoPetsReloadListener();
+        schedulePetCatalogRetry();
+
         getLogger().info("已载入 " + registry.items().size() + " 个目录物品与 "
                 + recipes.recipeCount() + " 个配方。");
         getLogger().info("SkyBlock 引擎已启用：" + rpgRegistry.itemCount() + " 个能力物品，"
@@ -98,12 +114,15 @@ public final class YknRpgPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        cancelPetCatalogRetry();
+        pendingPetCatalogViewers.clear();
         if (protocolLibInputBridge != null) protocolLibInputBridge.stop();
         if (rpgEngine != null) rpgEngine.stop();
         if (recipes != null) recipes.unregister();
     }
 
     public void reloadAll() {
+        cancelPetCatalogRetry();
         if (rpgEngine != null) rpgEngine.stop();
         reloadConfig();
         mergeBundledConfigDefaults();
@@ -111,6 +130,11 @@ public final class YknRpgPlugin extends JavaPlugin {
         rpgRegistry.reload();
         recipes.reload();
         rpgEngine.start();
+        if (hasPetCatalog()) {
+            openPendingPetCatalogs();
+        } else {
+            schedulePetCatalogRetry();
+        }
         getLogger().info("配置已重载：" + registry.items().size() + " 个物品，" + recipes.recipeCount() + " 个配方。");
     }
 
@@ -149,6 +173,108 @@ public final class YknRpgPlugin extends JavaPlugin {
 
     public EquipmentGui gui() {
         return gui;
+    }
+
+    public void openPetCatalog(Player player) {
+        if (refreshPetCatalog(false)) {
+            gui.openCatalog(player, CatalogKind.PET, 0);
+            return;
+        }
+        if (pendingPetCatalogViewers.add(player.getUniqueId())) {
+            player.sendMessage(message("messages.pet-catalog-loading"));
+        }
+        schedulePetCatalogRetry();
+    }
+
+    private void bindEcoPetsReloadListener() {
+        Plugin ecoPets = getServer().getPluginManager().getPlugin("EcoPets");
+        if (ecoPets == null) return;
+        try {
+            var onReload = ecoPets.getClass().getMethod("onReload", Runnable.class);
+            Runnable callback = this::queueEcoPetsCatalogRefresh;
+            onReload.invoke(ecoPets, callback);
+            getLogger().info("已绑定 EcoPets 配置重载完成事件，宠物图鉴将自动同步。");
+        } catch (InvocationTargetException exception) {
+            Throwable cause = exception.getTargetException();
+            getLogger().warning("无法绑定 EcoPets 配置重载事件，将使用定时重试："
+                    + cause.getClass().getSimpleName() + ": " + cause.getMessage());
+        } catch (ReflectiveOperationException | LinkageError | RuntimeException exception) {
+            getLogger().warning("无法绑定 EcoPets 配置重载事件，将使用定时重试："
+                    + exception.getClass().getSimpleName() + ": " + exception.getMessage());
+        }
+    }
+
+    private boolean refreshPetCatalog(boolean force) {
+        if (registry == null || recipes == null || ecoPetsItems == null) return false;
+        if (!force && hasPetCatalog()) {
+            cancelPetCatalogRetry();
+            return true;
+        }
+        if (ecoPetsItems.connect() != EcoPetsItems.ConnectionState.READY) return false;
+        registry.reload();
+        recipes.reload();
+        int count = registry.items(CatalogKind.PET).size();
+        if (count == 0) return false;
+        cancelPetCatalogRetry();
+        getLogger().info("EcoPets 宠物图鉴已自动同步 " + count + " 个宠物蛋。");
+        return true;
+    }
+
+    private boolean hasPetCatalog() {
+        return registry != null && !registry.items(CatalogKind.PET).isEmpty();
+    }
+
+    private void schedulePetCatalogRetry() {
+        if (!isEnabled() || hasPetCatalog() || petCatalogRetryTask != null) return;
+        petCatalogRetryAttempts = 0;
+        petCatalogRetryTask = getServer().getScheduler().runTaskTimer(
+                this, this::retryPetCatalog, PET_CATALOG_RETRY_PERIOD_TICKS, PET_CATALOG_RETRY_PERIOD_TICKS);
+    }
+
+    private void cancelPetCatalogRetry() {
+        if (petCatalogRetryTask != null) petCatalogRetryTask.cancel();
+        petCatalogRetryTask = null;
+        petCatalogRetryAttempts = 0;
+    }
+
+    private void openPendingPetCatalogs() {
+        if (!hasPetCatalog() || pendingPetCatalogViewers.isEmpty()) return;
+        Set<UUID> viewers = Set.copyOf(pendingPetCatalogViewers);
+        pendingPetCatalogViewers.clear();
+        for (UUID viewerId : viewers) {
+            Player player = getServer().getPlayer(viewerId);
+            if (player != null && player.isOnline() && player.hasPermission("yknrpg.admin")) {
+                gui.openCatalog(player, CatalogKind.PET, 0);
+            }
+        }
+    }
+
+    private void retryPetCatalog() {
+        petCatalogRetryAttempts++;
+        if (refreshPetCatalog(false)) {
+            openPendingPetCatalogs();
+            return;
+        }
+        if (petCatalogRetryAttempts < PET_CATALOG_MAX_RETRY_ATTEMPTS) return;
+        cancelPetCatalogRetry();
+        getLogger().warning("等待 EcoPets 完成宠物注册已超时；宠物图鉴将在下次 EcoPets reload 后重试。");
+        for (UUID viewerId : Set.copyOf(pendingPetCatalogViewers)) {
+            Player player = getServer().getPlayer(viewerId);
+            if (player != null && player.isOnline()) {
+                player.sendMessage(message("messages.pet-catalog-unavailable"));
+            }
+        }
+        pendingPetCatalogViewers.clear();
+    }
+
+    private void queueEcoPetsCatalogRefresh() {
+        if (!isEnabled()) return;
+        getServer().getScheduler().runTask(this, this::refreshPetCatalogAfterReload);
+    }
+
+    private void refreshPetCatalogAfterReload() {
+        if (!isEnabled()) return;
+        if (refreshPetCatalog(true)) openPendingPetCatalogs();
     }
 
     private void migrateLegacyDataFolder() {

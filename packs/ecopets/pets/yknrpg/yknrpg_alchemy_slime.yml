@@ -20,6 +20,10 @@ level-placeholders:
     value: "%level% * 0.1"
   - id: "luck_bonus"
     value: "%level% * 0.06"
+  - id: "perk_brew_speed"
+    value: "%level% * 0.1"
+  - id: "perk_potion_duration"
+    value: "%level% * 0.1"
 
 effects-description:
   1:
@@ -27,6 +31,8 @@ effects-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【活性催化】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【凝胶封存】&7药水持续时间 &a+%perk_potion_duration%%"
     - ""
     - "&5史诗宠物"
 
@@ -35,12 +41,16 @@ rewards-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【活性催化】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【凝胶封存】&7药水持续时间 &a+%perk_potion_duration%%"
 
 level-up-messages:
   1:
     - "&b+%wisdom_bonus% 智慧"
     - "&d+%regeneration_bonus% 再生"
     - "&a+%luck_bonus% 幸运"
+    - "&d【活性催化】&7酿造速度 &a+%perk_brew_speed%%"
+    - "&d【凝胶封存】&7药水持续时间 &a+%perk_potion_duration%%"
 
 level-up-effects: []
 
@@ -57,6 +67,12 @@ effects:
     args:
       stat: luck
       amount: "%level% * 0.06"
+  - id: brew_time_multiplier
+    args:
+      multiplier: "1 - (%level% * 0.001)"
+  - id: potion_duration_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.001)"
 
 conditions: []
 activate-conditions: []

@@ -1,0 +1,67 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (987035f5352334c2cba6ac4c65c2b9059739d6d0e839c1dd98d75d2e77957847)
+name: "&8清泉蝌蚪"
+description: "&7成功钓起鱼获可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg3MDM1ZjUzNTIzMzRjMmNiYTZhYzRjNjVjMmI5MDU5NzM5ZDZkMGU4MzljMWRkOThkNzVkMmU3Nzk1Nzg0NyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg3MDM1ZjUzNTIzMzRjMmNiYTZhYzRjNjVjMmI5MDU5NzM5ZDZkMGU4MzljMWRkOThkNzVkMmU3Nzk1Nzg0NyJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: catch_fish
+    multiplier: 1.75
+
+level-placeholders:
+  - id: "health_bonus"
+    value: "%level% * 0.01"
+  - id: "perk_oxygen"
+    value: "%level% * 0.01"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&6特殊效果："
+    - "&e清泉气囊 &7水下氧气 +&a%perk_oxygen%"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&e清泉气囊 &7水下氧气 +&a%perk_oxygen%"
+
+level-up-messages:
+  1:
+    - "&c+%health_bonus% 生命"
+    - "&e清泉气囊 &7水下氧气 +&a%perk_oxygen%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.01"
+  - id: oxygen_bonus
+    args:
+      amount: "%level% * 0.01"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: tadpole_spawn_egg unbreaking:1 hide_enchants
+  name: "&8清泉蝌蚪 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8清泉蝌蚪&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_spring_tadpole
+  withdrawable: true

@@ -2,9 +2,18 @@ package cn.yknrpg.integration;
 
 import cn.yknrpg.YknRpgPlugin;
 import org.bukkit.Material;
+import org.bukkit.block.BlockFace;
+import org.bukkit.event.Event;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -14,11 +23,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.logging.Level;
 
 /** Runtime bridge for EcoPets without coupling the build to one EcoPets release. */
-public final class EcoPetsItems {
+public final class EcoPetsItems implements Listener {
     private static final String PLUGIN_NAME = "EcoPets";
     private static final String CATALOG_PREFIX = "ecopets:";
+    private static final long REDEEM_WARNING_INTERVAL_MILLIS = 30_000L;
 
     private final YknRpgPlugin plugin;
     private Map<String, String> petIds = Map.of();
@@ -28,25 +39,20 @@ public final class EcoPetsItems {
     private Method getSpawnEgg;
     private Method getPetEgg;
     private Method getPetId;
+    private Object spawnEggHandler;
+    private Method handleSpawnEgg;
     private boolean warnedUnavailable;
+    private long lastRedeemFailureWarningMillis;
 
     public EcoPetsItems(YknRpgPlugin plugin) {
         this.plugin = plugin;
     }
 
-    public void connect() {
-        petIds = Map.of();
-        names = Map.of();
-        catalogIdsByPetId = Map.of();
-        getPetById = null;
-        getSpawnEgg = null;
-        getPetEgg = null;
-        getPetId = null;
-
+    public ConnectionState connect() {
         Plugin ecoPets = plugin.getServer().getPluginManager().getPlugin(PLUGIN_NAME);
         if (ecoPets == null || !ecoPets.isEnabled()) {
             warnUnavailable("未检测到已启用的 EcoPets；宠物蛋图鉴将为空。");
-            return;
+            return ConnectionState.UNAVAILABLE;
         }
 
         try {
@@ -60,6 +66,11 @@ public final class EcoPetsItems {
             Method petName = petClass.getMethod("getName");
             Method spawnEgg = petClass.getMethod("getSpawnEgg");
             Method identifyEgg = petFunctions.getMethod("getPetEgg", ItemStack.class);
+            Class<?> spawnEggHandlerClass = Class.forName(
+                    "com.willfp.ecopets.pets.SpawnEggHandler", true, loader);
+            Field spawnEggHandlerInstance = spawnEggHandlerClass.getField("INSTANCE");
+            Object eggHandler = spawnEggHandlerInstance.get(null);
+            Method redeemEgg = spawnEggHandlerClass.getMethod("handle", PlayerInteractEvent.class);
 
             Object configuredPets = values.invoke(null);
             if (!(configuredPets instanceof Iterable<?> iterable)) {
@@ -84,6 +95,7 @@ public final class EcoPetsItems {
                 if (egg == null || egg.getType() == Material.AIR) continue;
                 loaded.add(new PetEntry(id, catalogId(id), String.valueOf(petName.invoke(pet))));
             }
+            if (loaded.isEmpty()) return ConnectionState.NOT_READY;
             loaded.sort(Comparator.comparing(entry -> entry.petId().toLowerCase(Locale.ROOT)));
 
             Map<String, String> loadedPetIds = new LinkedHashMap<>();
@@ -104,9 +116,13 @@ public final class EcoPetsItems {
             getSpawnEgg = spawnEgg;
             getPetEgg = identifyEgg;
             getPetId = petId;
+            spawnEggHandler = eggHandler;
+            handleSpawnEgg = redeemEgg;
             warnedUnavailable = false;
+            return ConnectionState.READY;
         } catch (ReflectiveOperationException | LinkageError | RuntimeException exception) {
             warnUnavailable("EcoPets 宠物蛋接口连接失败，宠物蛋图鉴将为空：" + exception.getMessage());
+            return ConnectionState.FAILED;
         }
     }
 
@@ -159,6 +175,57 @@ public final class EcoPetsItems {
         }
     }
 
+    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = false)
+    public void onPetEggUse(PlayerInteractEvent event) {
+        if (event.getAction() != Action.RIGHT_CLICK_AIR
+                && event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
+        if (event.getHand() != EquipmentSlot.HAND
+                && event.getHand() != EquipmentSlot.OFF_HAND) return;
+        if (!isPetEgg(event.getItem()) || spawnEggHandler == null || handleSpawnEgg == null) return;
+
+        event.setCancelled(true);
+        event.setUseInteractedBlock(Event.Result.DENY);
+        event.setUseItemInHand(Event.Result.DENY);
+
+        PlayerInteractEvent redeemEvent = event.getAction() == Action.RIGHT_CLICK_BLOCK
+                ? event
+                : new PlayerInteractEvent(
+                        event.getPlayer(),
+                        Action.RIGHT_CLICK_BLOCK,
+                        event.getItem(),
+                        null,
+                        BlockFace.SELF,
+                        event.getHand()
+                );
+        try {
+            handleSpawnEgg.invoke(spawnEggHandler, redeemEvent);
+        } catch (ReflectiveOperationException | RuntimeException exception) {
+            warnRedeemFailure(exception);
+        }
+    }
+
+    private boolean isPetEgg(ItemStack stack) {
+        if (stack == null || stack.getType() == Material.AIR || getPetEgg == null) return false;
+        try {
+            return getPetEgg.invoke(null, stack) != null;
+        } catch (ReflectiveOperationException | RuntimeException exception) {
+            return false;
+        }
+    }
+
+    private void warnRedeemFailure(Exception exception) {
+        long now = System.currentTimeMillis();
+        if (lastRedeemFailureWarningMillis != 0L
+                && now - lastRedeemFailureWarningMillis < REDEEM_WARNING_INTERVAL_MILLIS) return;
+        lastRedeemFailureWarningMillis = now;
+        Throwable cause = exception instanceof InvocationTargetException invocation
+                ? invocation.getTargetException()
+                : exception;
+        plugin.getLogger().log(Level.WARNING,
+                "调用 EcoPets 宠物蛋孵化处理器失败；为避免复制未自动重试或返还，"
+                        + "请检查玩家的 /pets 与手中物品。", cause);
+    }
+
     private void warnUnavailable(String message) {
         if (!warnedUnavailable) plugin.getLogger().warning(message);
         warnedUnavailable = true;
@@ -166,6 +233,13 @@ public final class EcoPetsItems {
 
     private static String catalogId(String petId) {
         return CATALOG_PREFIX + petId;
+    }
+
+    public enum ConnectionState {
+        READY,
+        NOT_READY,
+        UNAVAILABLE,
+        FAILED
     }
 
     private record PetEntry(String petId, String catalogId, String name) {

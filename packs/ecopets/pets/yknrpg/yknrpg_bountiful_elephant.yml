@@ -1,0 +1,120 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (f2b2bf07e0e351507115affb42eb2b6d34202c3a461cd9e9782af93e175ddda5)
+name: "&9丰饶幼象"
+description: "&7收获成熟作物可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJiMmJmMDdlMGUzNTE1MDcxMTVhZmZiNDJlYjJiNmQzNDIwMmMzYTQ2MWNkOWU5NzgyYWY5M2UxNzVkZGRhNSJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJiMmJmMDdlMGUzNTE1MDcxMTVhZmZiNDJlYjJiNmQzNDIwMmMzYTQ2MWNkOWU5NzgyYWY5M2UxNzVkZGRhNSJ9fX0=
+
+xp-formula: "(%level% * %level% * 13) + (%level% * 65)"
+max-level: 100
+
+xp-gain-methods:
+  - id: mine_block
+    value: 2.5
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+
+level-placeholders:
+  - id: "luck_bonus"
+    value: "%level% * 0.11"
+  - id: "health_bonus"
+    value: "%level% * 0.018"
+  - id: "perk_crop_double"
+    value: "%level% * 0.06"
+  - id: "perk_farming_xp"
+    value: "%level% * 0.07"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&a+%luck_bonus% 幸运"
+    - "&c+%health_bonus% 生命"
+    - ""
+    - "&6特殊效果："
+    - "&e丰饶祝福 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
+    - "&e沃土传承 &7耕作技能经验 +&a%perk_farming_xp%%"
+    - ""
+    - "&9稀有宠物"
+
+rewards-description:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&c+%health_bonus% 生命"
+    - "&e丰饶祝福 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
+    - "&e沃土传承 &7耕作技能经验 +&a%perk_farming_xp%%"
+
+level-up-messages:
+  1:
+    - "&a+%luck_bonus% 幸运"
+    - "&c+%health_bonus% 生命"
+    - "&e丰饶祝福 &7成熟作物有 &a%perk_crop_double%% &7概率双倍掉落"
+    - "&e沃土传承 &7耕作技能经验 +&a%perk_farming_xp%%"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: "%level% * 0.11"
+  - id: add_stat
+    args:
+      stat: health
+      amount: "%level% * 0.018"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.06"
+      on_items:
+        - wheat
+        - carrot
+        - potato
+        - beetroot
+        - nether_wart
+        - cocoa_beans
+        - melon_slice
+        - pumpkin
+    triggers:
+      - block_item_drop
+    filters:
+      fully_grown: true
+      blocks:
+        - wheat
+        - carrots
+        - potatoes
+        - beetroots
+        - nether_wart
+        - cocoa
+        - melon
+        - pumpkin
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.0007)"
+      skills:
+        - farming
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: sniffer_spawn_egg unbreaking:1 hide_enchants
+  name: "&9丰饶幼象 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &9丰饶幼象&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_bountiful_elephant
+  withdrawable: true

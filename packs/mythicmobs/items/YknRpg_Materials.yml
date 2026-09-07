@@ -369,3 +369,714 @@ YKI_CASTER_CREST:
     - '&5史诗'
   Enchantments: [DURABILITY:1]
   Hide: [ENCHANTS]
+
+YKI_SUNDRIED_HIDE:
+  Id: RABBIT_HIDE
+  Display: '&8晒制兽皮'
+  Group: YknRpg
+  Lore:
+    - '&7经日晒与盐鞣处理的轻韧兽皮。'
+    - '&7用于制作入门护具与猎手系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DEEPSTONE_CHUNK:
+  Id: DEEPSLATE
+  Display: '&8深层岩块'
+  Group: YknRpg
+  Lore:
+    - '&7从地底压力层凿出的致密岩块。'
+    - '&7用于制作耐冲击护具与岩系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_MISTWOOD_SAP:
+  Id: HONEY_BOTTLE
+  Display: '&8雾林树液'
+  Group: YknRpg
+  Lore:
+    - '&7清晨从雾林古木中采集的温润树液。'
+    - '&7用于制作恢复道具与灵木系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TIDAL_SALT:
+  Id: SUGAR
+  Display: '&8潮汐盐晶'
+  Group: YknRpg
+  Lore:
+    - '&7潮水退去后留下的纯净导魔盐晶。'
+    - '&7用于制作净化道具与海洋系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_BONEWEAVE_THREAD:
+  Id: BONE
+  Display: '&8骨织线'
+  Group: YknRpg
+  Lore:
+    - '&7以骨粉和蛛丝绞成的坚韧细线。'
+    - '&7用于制作弓弦、束带与轻甲锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_EMBER_DUST:
+  Id: GUNPOWDER
+  Display: '&8余烬粉尘'
+  Group: YknRpg
+  Lore:
+    - '&7熄灭炉火中筛出的高温活性粉尘。'
+    - '&7用于制作燃烧道具与熔火系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_WINDWORN_FEATHER:
+  Id: FEATHER
+  Display: '&8风蚀羽'
+  Group: YknRpg
+  Lore:
+    - '&7长年经受高空罡风磨砺的羽毛。'
+    - '&7用于制作远程道具与风暴系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_GRAVE_MOSS:
+  Id: MOSS_CARPET
+  Display: '&8墓地苔絮'
+  Group: YknRpg
+  Lore:
+    - '&7吸收微弱灵息后生长的灰绿苔絮。'
+    - '&7用于制作药剂辅料与魂系锻材。'
+    - ''
+    - '&8普通'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_HUNTERS_LEATHER:
+  Id: LEATHER
+  Display: '&a猎手硬革'
+  Group: YknRpg
+  Lore:
+    - '&7以树脂反复封护的耐磨猎装皮革。'
+    - '&7用于制作少见轻甲与兽猎系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_GRANITE_PLATE:
+  Id: POLISHED_DEEPSLATE
+  Display: '&a花岗甲片'
+  Group: YknRpg
+  Lore:
+    - '&7将深层岩料压制成形的层叠甲片。'
+    - '&7用于制作重型护具与岩卫系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SPIRITWOOD_CORE:
+  Id: STRIPPED_OAK_LOG
+  Display: '&a灵木芯材'
+  Group: YknRpg
+  Lore:
+    - '&7用活性树脂封存生机的雾林木芯。'
+    - '&7用于制作法器骨架与森愈系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_BRINE_PEARL:
+  Id: PRISMARINE_CRYSTALS
+  Display: '&a浓盐珍珠'
+  Group: YknRpg
+  Lore:
+    - '&7由潮盐与海晶长期凝聚成的珍珠。'
+    - '&7用于制作水下装备与潮汐系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_RIBBON_SINEW:
+  Id: STRING
+  Display: '&a韧骨弦'
+  Group: YknRpg
+  Lore:
+    - '&7用骨织线和树脂强化的高张力弦材。'
+    - '&7用于制作弓弩、机关与幽影系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CINDERVAULT_COAL:
+  Id: CHARCOAL
+  Display: '&a烬藏煤核'
+  Group: YknRpg
+  Lore:
+    - '&7将余烬热量封入煤晶形成的炽热核心。'
+    - '&7用于制作炉具、火器与熔火系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SKYGLASS_PLUME:
+  Id: PHANTOM_MEMBRANE
+  Display: '&a天镜羽翎'
+  Group: YknRpg
+  Lore:
+    - '&7覆有透明晶膜、能感知气流的羽翎。'
+    - '&7用于制作滑翔装备与风暴系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SOULSOIL_PULP:
+  Id: SOUL_SOIL
+  Display: '&a魂土浆'
+  Group: YknRpg
+  Lore:
+    - '&7墓地苔絮与魂土调成的导灵浆料。'
+    - '&7用于制作仪式道具与冥魂系锻材。'
+    - ''
+    - '&a少见的'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PREDATOR_FANG:
+  Id: GOAT_HORN
+  Display: '&9掠食獠牙'
+  Group: YknRpg
+  Lore:
+    - '&7刻入猎手誓言、仍残留威压的巨牙。'
+    - '&7用于制作稀有近战装备与猎手锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SEISMIC_GEODE:
+  Id: POINTED_DRIPSTONE
+  Display: '&9震界晶洞'
+  Group: YknRpg
+  Lore:
+    - '&7内部会随地脉震动共鸣的岩层结晶。'
+    - '&7用于制作稀有重甲与地震系锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DREAMWOOD_HEART:
+  Id: ECHO_SHARD
+  Display: '&9梦林木心'
+  Group: YknRpg
+  Lore:
+    - '&7会映出林地旧梦的灵木生命核心。'
+    - '&7用于制作稀有法器与森愈系锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SIREN_TEAR:
+  Id: GHAST_TEAR
+  Display: '&9海妖之泪'
+  Group: YknRpg
+  Lore:
+    - '&7在深海歌声中凝固的湛蓝泪晶。'
+    - '&7用于制作稀有水系法器与潮汐锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SPECTRAL_LIGAMENT:
+  Id: LEAD
+  Display: '&9幽灵腱索'
+  Group: YknRpg
+  Lore:
+    - '&7介于实体与幻影之间的强韧腱索。'
+    - '&7用于制作稀有弓弦与幽影系锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_VOLCANIC_GLASS:
+  Id: BLACK_STAINED_GLASS
+  Display: '&9火山璃'
+  Group: YknRpg
+  Lore:
+    - '&7在极热与骤冷间形成的漆黑导能玻璃。'
+    - '&7用于制作稀有火器与熔火系锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TEMPEST_PINION:
+  Id: BREEZE_ROD
+  Display: '&9风暴翼骨'
+  Group: YknRpg
+  Lore:
+    - '&7缠绕雷风、能够自行悬浮的翼骨。'
+    - '&7用于制作稀有远程装备与风暴锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_GRAVEBLOOM:
+  Id: WITHER_ROSE
+  Display: '&9冥土花'
+  Group: YknRpg
+  Lore:
+    - '&7以魂土为根、在亡者余念中盛放的花。'
+    - '&7用于制作稀有仪式道具与冥魂锻材。'
+    - ''
+    - '&9稀有'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PRIMORDIAL_CATALYST:
+  Id: HEAVY_CORE
+  Display: '&5太初催化核'
+  Group: YknRpg
+  Lore:
+    - '&7令八种自然锻材产生法则共鸣的重核。'
+    - '&7用于职业进阶、史诗护甲与高阶炼成。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SOLAR_MANE:
+  Id: BLAZE_ROD
+  Display: '&6日冕鬃焰'
+  Group: YknRpg
+  Lore:
+    - '&7如雄狮鬃毛般延展的恒燃太阳火。'
+    - '&7用于制作传说圣光装备与日冕锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TITAN_BASALT:
+  Id: GILDED_BLACKSTONE
+  Display: '&6泰坦玄武岩'
+  Group: YknRpg
+  Lore:
+    - '&7被远古巨人踏实、几乎无法破坏的玄武岩。'
+    - '&7用于制作传说堡垒装备与泰坦锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ELDER_SAP:
+  Id: ENCHANTED_GOLDEN_APPLE
+  Display: '&6远古灵髓'
+  Group: YknRpg
+  Lore:
+    - '&7世界诞生前便在古木中流淌的生命灵髓。'
+    - '&7用于制作传说治疗装备与生命锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ABYSSAL_NACRE:
+  Id: NAUTILUS_SHELL
+  Display: '&6渊海珠母'
+  Group: YknRpg
+  Lore:
+    - '&7深海巨贝内层凝成的虹彩法力珠母。'
+    - '&7用于制作传说潮汐装备与海渊锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_MOONSHADOW_FIBER:
+  Id: SCULK
+  Display: '&6月影纤维'
+  Group: YknRpg
+  Lore:
+    - '&7只在月蚀时显形的无声灵能纤维。'
+    - '&7用于制作传说轻甲与月影锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_HELLFORGE_PRISM:
+  Id: FIRE_CHARGE
+  Display: '&6狱炉晶棱'
+  Group: YknRpg
+  Lore:
+    - '&7从狱火熔炉中取出的多面炽能晶棱。'
+    - '&7用于制作传说火器与狱炉锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_STORMFEATHER_CROWN:
+  Id: OMINOUS_BOTTLE
+  Display: '&6风暴羽冠'
+  Group: YknRpg
+  Lore:
+    - '&7由雷云领主的翼羽交织成的风暴冠饰。'
+    - '&7用于制作传说远程装备与天穹锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DEATHBLOOM_STIGMA:
+  Id: WITHER_SKELETON_SKULL
+  Display: '&6冥花烙印'
+  Group: YknRpg
+  Lore:
+    - '&7冥土花凋谢后留在灵魂上的不灭烙印。'
+    - '&7用于制作传说诅咒装备与冥魂锻材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DAWNSTAR_RELIC:
+  Id: NETHER_STAR
+  Display: '&d晨星圣遗物'
+  Group: YknRpg
+  Lore:
+    - '&7封存第一缕晨光、永不黯淡的古老圣物。'
+    - '&7用于制作神话圣装与终局强化道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_WORLDSPINE_FRAGMENT:
+  Id: HEAVY_CORE
+  Display: '&d世界脊片'
+  Group: YknRpg
+  Lore:
+    - '&7从维系大陆的世界脊柱上剥落的碎片。'
+    - '&7用于制作神话重甲与空间稳定道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_LIFESONG_GRAIL:
+  Id: DECORATED_POT
+  Display: '&d生命颂杯'
+  Group: YknRpg
+  Lore:
+    - '&7杯中回荡万物心跳、灵髓永不枯竭。'
+    - '&7用于制作神话治疗装备与复苏道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SEA_KINGS_CROWN:
+  Id: TURTLE_HELMET
+  Display: '&d海王冠冕'
+  Group: YknRpg
+  Lore:
+    - '&7能够号令深海潮流与巨兽的失落王冠。'
+    - '&7用于制作神话潮汐装备与海域法器。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ECLIPSE_VEIL:
+  Id: BLACK_BANNER
+  Display: '&d日蚀帷幕'
+  Group: YknRpg
+  Lore:
+    - '&7将光与影一同遮蔽的无形法则帷幕。'
+    - '&7用于制作神话潜行装备与虚空道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_CREATION_CRUCIBLE:
+  Id: RESPAWN_ANCHOR
+  Display: '&d创生熔炉'
+  Group: YknRpg
+  Lore:
+    - '&7能够熔炼元素并重组物质法则的原初炉心。'
+    - '&7用于制作神话火器与终局炼成道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_HEAVENS_COMPASS:
+  Id: RECOVERY_COMPASS
+  Display: '&d苍穹罗盘'
+  Group: YknRpg
+  Lore:
+    - '&7指针始终指向风暴之上隐秘天域的罗盘。'
+    - '&7用于制作神话机动装备与寻界道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_LAST_RITES_SEAL:
+  Id: END_CRYSTAL
+  Display: '&d终焉圣印'
+  Group: YknRpg
+  Lore:
+    - '&7记录万物终点、可封闭法则裂隙的圣印。'
+    - '&7用于制作神话魂系装备与终局仪式道具。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+# 骨龙首领材料（史诗）。
+YKI_BONE_DRAGON_FANG:
+  Id: BONE
+  Display: '&5骨龙獠牙'
+  Group: YknRpg
+  Lore:
+    - '&7骨龙头骨的主獠牙，仍能撕开灵魂。'
+    - '&7用于锻造骨龙主题兵装的核心素材。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_OSSUARY_CARAPACE:
+  Id: BONE_BLOCK
+  Display: '&5万骨甲壳'
+  Group: YknRpg
+  Lore:
+    - '&7肋骨在三次蜕变中熔合而成的甲壳。'
+    - '&7用于制作重甲与壁垒类兵装。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SOULFIRE_MARROW:
+  Id: ECHO_SHARD
+  Display: '&5魂火骨髓'
+  Group: YknRpg
+  Lore:
+    - '&7骨髓内凝住了永不熄灭的幽蓝魂火。'
+    - '&7用于制作治疗与术式类兵装。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SHATTERED_WINGBONE:
+  Id: BREEZE_ROD
+  Display: '&5碎裂翼骨'
+  Group: YknRpg
+  Lore:
+    - '&7骨龙坠地时断裂，仍残留着飞行惯性。'
+    - '&7用于制作弓枪与机动类兵装。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_DEATH_RULER_CROWN:
+  Id: SKELETON_SKULL
+  Display: '&5死之统治者冠骨'
+  Group: YknRpg
+  Lore:
+    - '&7维系亡者回血仪式的统治者冠骨。'
+    - '&7用于制作安魂与召唤类兵装。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_WRAITHFIRE_DRAGONHEART:
+  Id: HEART_OF_THE_SEA
+  Display: '&5怨火龙心'
+  Group: YknRpg
+  Lore:
+    - '&7三个生命阶段的怨念在崩解前凝聚成形。'
+    - '&7用于完成骨龙主题兵装的终阶锻造。'
+    - ''
+    - '&5史诗'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+# 阿努赫首领材料（传说）。
+YKI_SOLAR_AEGIS_FRAGMENT:
+  Id: GOLD_NUGGET
+  Display: '&6耀阳圣盾残片'
+  Group: YknRpg
+  Lore:
+    - '&7被冥镰击碎后仍拒绝熄灭的一角日光。'
+    - '&7用于制作耀阳圣盾类兵装。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_JUDGEMENT_AMETHYST:
+  Id: AMETHYST_SHARD
+  Display: '&6审判紫晶'
+  Group: YknRpg
+  Lore:
+    - '&7记录着被审判者直视烈日瞬间的恐惧。'
+    - '&7用于制作审判术式类兵装。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_TWIN_ECLIPSE_ESSENCE:
+  Id: ECHO_SHARD
+  Display: '&6双生蚀魂'
+  Group: YknRpg
+  Lore:
+    - '&7烈日之躯与冥夜之影交叠后留下的魂质。'
+    - '&7用于制作双生蚀影类兵装。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_PHARAOH_EDICT_TABLET:
+  Id: CHISELED_RED_SANDSTONE
+  Display: '&6法老敕令碑'
+  Group: YknRpg
+  Lore:
+    - '&7武器、脚步、目光与同伴皆受古律约束。'
+    - '&7用于制作法老敕令类兵装。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_ENDSUN_HEARTFURNACE:
+  Id: NETHER_STAR
+  Display: '&6烬日心炉'
+  Group: YknRpg
+  Lore:
+    - '&7以亡魂为薪，将创伤、火焰与意志重锻为力量。'
+    - '&7用于制作冥卫主题兵装的核心素材。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_BLACK_SUN_CINDER:
+  Id: FIRE_CHARGE
+  Display: '&6黑日余烬'
+  Group: YknRpg
+  Lore:
+    - '&7黑日葬仪中唯一没有被光吞没的余烬。'
+    - '&7用于制作阿努赫终局术式类兵装。'
+    - ''
+    - '&6传说'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+# 伊芙蕾雅首领材料（神话）；顺序同时定义终阶材料拓扑。
+YKI_WITCHMARK_SHARD:
+  Id: ECHO_SHARD
+  Display: '&d魔女蚀痕碎片'
+  Group: YknRpg
+  Lore:
+    - '&7第三道蚀痕爆裂后从目标灵魂上剥落。'
+    - '&7用于制作终焉主题兵装。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_END_CRYSTAL_HEART:
+  Id: END_CRYSTAL
+  Display: '&d终焉晶核'
+  Group: YknRpg
+  Lore:
+    - '&7由命运凝视催生，并随终焉刻度持续脉动。'
+    - '&7用于制作终焉术式的核心兵装。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_FUNERAL_PETAL:
+  Id: WITHER_ROSE
+  Display: '&d葬仪魔花瓣'
+  Group: YknRpg
+  Lore:
+    - '&7抽取生命后依旧不曾凋零的葬花花瓣。'
+    - '&7用于制作魂系与治疗类兵装。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SILENT_RUNE_ASH:
+  Id: CYAN_DYE
+  Display: '&d无声符灰'
+  Group: YknRpg
+  Lore:
+    - '&7赤、绿、青三色符文熄灭后留下的残灰。'
+    - '&7用于制作无声咏唱类兵装。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_SEVERED_FATE_THREAD:
+  Id: STRING
+  Display: '&d断命丝'
+  Group: YknRpg
+  Lore:
+    - '&7禁忌交换与厄运连线被斩断后留下的因果线。'
+    - '&7用于制作命运裁决类兵装。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]
+
+YKI_BLACK_SUN_CORE:
+  Id: RESPAWN_ANCHOR
+  Display: '&d黑日心核'
+  Group: YknRpg
+  Lore:
+    - '&7世界终焉护盾破碎后凝成的一轮微型黑日。'
+    - '&7用于完成伊芙蕾雅主题兵装的终阶锻造。'
+    - ''
+    - '&d神话'
+  Enchantments: [DURABILITY:1]
+  Hide: [ENCHANTS]

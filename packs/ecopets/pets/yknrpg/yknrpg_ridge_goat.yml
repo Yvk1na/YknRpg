@@ -1,0 +1,67 @@
+# YknRpg EcoPets 宠物配置
+# 头颅纹理来源：Minecraft-Heads.com (a662336d8ae092407e58f7cc80d20f20e7650357a454ce16e3307619a0110648)
+name: "&8崖径山羊"
+description: "&7跳跃探索世界可提升等级"
+
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY2MjMzNmQ4YWUwOTI0MDdlNThmN2NjODBkMjBmMjBlNzY1MDM1N2E0NTRjZTE2ZTMzMDc2MTlhMDExMDY0OCJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY2MjMzNmQ4YWUwOTI0MDdlNThmN2NjODBkMjBmMjBlNzY1MDM1N2E0NTRjZTE2ZTMzMDc2MTlhMDExMDY0OCJ9fX0=
+
+xp-formula: "(%level% * %level% * 8) + (%level% * 40)"
+max-level: 100
+
+xp-gain-methods:
+  - id: jump
+    value: 0.5
+
+level-placeholders:
+  - id: "toughness_bonus"
+    value: "%level% * 0.08"
+  - id: "perk_safe_fall"
+    value: "%level% * 0.02"
+
+effects-description:
+  1:
+    - "&7属性加成："
+    - "&7+%toughness_bonus% 韧性"
+    - ""
+    - "&6特殊效果："
+    - "&e崖径落足 &7安全坠落距离 +&a%perk_safe_fall% 格"
+    - ""
+    - "&8普通宠物"
+
+rewards-description:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&e崖径落足 &7安全坠落距离 +&a%perk_safe_fall% 格"
+
+level-up-messages:
+  1:
+    - "&7+%toughness_bonus% 韧性"
+    - "&e崖径落足 &7安全坠落距离 +&a%perk_safe_fall% 格"
+
+level-up-effects: []
+
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: "%level% * 0.08"
+  - id: safe_fall_distance
+    args:
+      distance: "%level% * 0.02"
+
+conditions: []
+activate-conditions: []
+
+spawn-egg:
+  enabled: true
+  item: goat_spawn_egg unbreaking:1 hide_enchants
+  name: "&8崖径山羊 &f宠物蛋"
+  lore:
+    - ""
+    - "&7放置到地面以解锁 &8崖径山羊&7。"
+    - "&7收回后保留当前等级与经验。"
+  craftable: false
+  recipe: []
+  recipe-permission: ecopets.craft.yknrpg_ridge_goat
+  withdrawable: true

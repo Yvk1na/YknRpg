@@ -20,6 +20,10 @@ level-placeholders:
     value: "%level% * 0.1"
   - id: "speed_bonus"
     value: "%level% * 0.04"
+  - id: "perk_reel_speed"
+    value: "%level% * 0.1"
+  - id: "perk_double_fish_chance"
+    value: "%level% * 0.1"
 
 effects-description:
   1:
@@ -27,6 +31,8 @@ effects-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&d【深海引线】&7收线速度 &a+%perk_reel_speed%%"
+    - "&d【丰饶鱼潮】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
     - ""
     - "&5史诗宠物"
 
@@ -35,12 +41,16 @@ rewards-description:
     - "&b+%wisdom_bonus% 智慧"
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&d【深海引线】&7收线速度 &a+%perk_reel_speed%%"
+    - "&d【丰饶鱼潮】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
 
 level-up-messages:
   1:
     - "&b+%wisdom_bonus% 智慧"
     - "&a+%luck_bonus% 幸运"
     - "&f+%speed_bonus% 速度"
+    - "&d【深海引线】&7收线速度 &a+%perk_reel_speed%%"
+    - "&d【丰饶鱼潮】&7鱼类双倍钓获概率 &a%perk_double_fish_chance%%"
 
 level-up-effects: []
 
@@ -57,6 +67,26 @@ effects:
     args:
       stat: speed
       amount: "%level% * 0.04"
+  - id: reel_speed_multiplier
+    args:
+      multiplier: "1 + (%level% * 0.001)"
+  - id: multiply_drops
+    args:
+      multiplier: 2
+      chance: "%level% * 0.1"
+      on_items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
+    triggers:
+      - catch_fish
+    filters:
+      items:
+        - cod
+        - salmon
+        - pufferfish
+        - tropical_fish
 
 conditions: []
 activate-conditions: []

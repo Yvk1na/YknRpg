@@ -88,7 +88,27 @@ Write-Step 'Building and packaging YknRpg'
 Push-Location $projectRoot
 try {
     & $wrapper '--no-daemon' 'clean' 'build'
-    if ($LASTEXITCODE -ne 0) { throw "Gradle build failed with exit code $LASTEXITCODE." }
+    $gradleExitCode = $LASTEXITCODE
+    if ($gradleExitCode -ne 0) {
+        $buildRoot = Join-Path $projectRoot 'build'
+        $distributionsDirectory = Join-Path $buildRoot 'distributions'
+        $remainingBuildEntries = @(
+            if (Test-Path -LiteralPath $buildRoot -PathType Container) {
+                Get-ChildItem -LiteralPath $buildRoot -Force -Recurse
+            }
+        )
+        $onlyLockedEmptyDistributions =
+            $remainingBuildEntries.Count -eq 1 -and
+            $remainingBuildEntries[0].PSIsContainer -and
+            $remainingBuildEntries[0].FullName -eq $distributionsDirectory -and
+            @(Get-ChildItem -LiteralPath $distributionsDirectory -Force).Count -eq 0
+        if ($onlyLockedEmptyDistributions) {
+            Write-Warning 'Gradle clean left only an empty, Windows-locked build\distributions directory; continuing from the otherwise clean build tree.'
+            & $wrapper '--no-daemon' 'build'
+            $gradleExitCode = $LASTEXITCODE
+        }
+    }
+    if ($gradleExitCode -ne 0) { throw "Gradle build failed with exit code $gradleExitCode." }
 }
 finally { Pop-Location }
 
@@ -182,15 +202,20 @@ $requiredMythicEntries = @(
 foreach ($required in $requiredMythicEntries) {
     if ($mythicEntries -notcontains $required) { throw "MythicMobs pack is missing $required" }
 }
+$materialYaml = Read-ZipText $mythicMobsPack 'items/YknRpg_Materials.yml'
 $weaponYaml = Read-ZipText $mythicMobsPack 'items/YknRpg_Weapons.yml'
 $armorYaml = Read-ZipText $mythicMobsPack 'items/YknRpg_Armor.yml'
 $mythicYaml = @(
-    Read-ZipText $mythicMobsPack 'items/YknRpg_Materials.yml'
+    $materialYaml
     $weaponYaml
     $armorYaml
 ) -join "`n"
 $mythicItemCount = ([regex]::Matches($mythicYaml, '(?m)^YKI_[A-Z0-9_]+:\s*$')).Count
-if ($mythicItemCount -ne 123) { throw "Expected 123 MythicMobs items; found $mythicItemCount." }
+$materialIds = @([regex]::Matches($materialYaml, '(?m)^(?<id>YKI_[A-Z0-9_]+):\s*$') | ForEach-Object {
+    $_.Groups['id'].Value
+})
+if ($materialIds.Count -ne 90) { throw "Expected 90 materials; found $($materialIds.Count)." }
+if ($mythicItemCount -ne 327) { throw "Expected 327 MythicMobs items; found $mythicItemCount." }
 
 $rarityLabels = @{
     COMMON = '&8' + [regex]::Unescape('\u666e\u901a')
@@ -213,8 +238,78 @@ foreach ($metadataMatch in $catalogMetadataMatches) {
         Rarity = $metadataMatch.Groups['rarity'].Value
     }
 }
-if ($catalogMetadata.Count -ne 123) {
-    throw "Expected 123 catalog metadata entries in the plugin JAR; found $($catalogMetadata.Count)."
+if ($catalogMetadata.Count -ne 327) {
+    throw "Expected 327 catalog metadata entries in the plugin JAR; found $($catalogMetadata.Count)."
+}
+$expectedRarityCounts = @{
+    ITEM = @{ COMMON = 12; UNCOMMON = 12; RARE = 12; EPIC = 18; LEGENDARY = 18; MYTHIC = 18 }
+    WEAPON = @{ COMMON = 13; UNCOMMON = 14; RARE = 15; EPIC = 22; LEGENDARY = 21; MYTHIC = 20 }
+    ARMOR = @{ COMMON = 20; UNCOMMON = 20; RARE = 20; EPIC = 24; LEGENDARY = 24; MYTHIC = 24 }
+}
+foreach ($kind in $expectedRarityCounts.Keys) {
+    foreach ($rarity in $rarityLabels.Keys) {
+        $count = @($catalogMetadata.Values | Where-Object {
+            $_.Kind -eq $kind -and $_.Rarity -eq $rarity
+        }).Count
+        $expectedCount = $expectedRarityCounts[$kind][$rarity]
+        if ($count -ne $expectedCount) {
+            throw "$kind rarity $rarity must contain exactly $expectedCount items; found $count."
+        }
+    }
+}
+
+$catalogOrderMatch = [regex]::Match(
+    $equipmentYaml,
+    '(?ms)^catalog-order:[ \t]*\r?\n(?<body>.*?)(?=^[A-Za-z][A-Za-z0-9-]*:|\z)'
+)
+if (-not $catalogOrderMatch.Success) { throw 'equipment.yml is missing catalog-order.' }
+$catalogOrder = @([regex]::Matches(
+    $catalogOrderMatch.Groups['body'].Value,
+    '(?m)^  - (?<id>YKI_[A-Z0-9_]+)[ \t]*\r?$'
+) | ForEach-Object { $_.Groups['id'].Value })
+if ($catalogOrder.Count -ne 327) {
+    throw "Expected 327 catalog-order entries; found $($catalogOrder.Count)."
+}
+$catalogIndexes = @{}
+for ($index = 0; $index -lt $catalogOrder.Count; $index++) {
+    $itemId = $catalogOrder[$index]
+    if ($catalogIndexes.ContainsKey($itemId)) { throw "catalog-order contains duplicate item $itemId." }
+    $catalogIndexes[$itemId] = $index
+}
+$defaultRecipesMatch = [regex]::Match(
+    $equipmentYaml,
+    '(?ms)^default-recipes:[ \t]*\r?\n(?<body>.*?)(?=^[A-Za-z][A-Za-z0-9-]*:|\z)'
+)
+if (-not $defaultRecipesMatch.Success) { throw 'equipment.yml is missing default-recipes.' }
+$materialIdSet = @{}
+foreach ($materialId in $materialIds) { $materialIdSet[$materialId] = $true }
+$referencedMaterialIds = @{}
+foreach ($recipeMatch in [regex]::Matches(
+    $defaultRecipesMatch.Groups['body'].Value,
+    '(?m)^  (?<owner>YKI_[A-Z0-9_]+):[ \t]*\[(?<ingredients>[^\r\n]*)\][ \t]*\r?$'
+)) {
+    $ownerId = $recipeMatch.Groups['owner'].Value
+    if (-not $catalogIndexes.ContainsKey($ownerId)) { throw "Recipe owner $ownerId is missing from catalog-order." }
+    foreach ($referenceMatch in [regex]::Matches(
+        $recipeMatch.Groups['ingredients'].Value,
+        '@(?<id>YKI_[A-Z0-9_]+)'
+    )) {
+        $dependencyId = $referenceMatch.Groups['id'].Value
+        if (-not $materialIdSet.ContainsKey($dependencyId)) { continue }
+        if (-not $catalogIndexes.ContainsKey($dependencyId)) {
+            throw "Material dependency $dependencyId is missing from catalog-order."
+        }
+        if ($catalogIndexes[$dependencyId] -ge $catalogIndexes[$ownerId]) {
+            throw "Recipe $ownerId must reference material $dependencyId only after that material in catalog-order."
+        }
+        $referencedMaterialIds[$dependencyId] = $true
+    }
+}
+$unreferencedMaterialIds = @($materialIds | Where-Object {
+    -not $referencedMaterialIds.ContainsKey($_)
+} | Sort-Object)
+if ($unreferencedMaterialIds.Count -gt 0) {
+    throw "Every material must be referenced with @ by at least one later default recipe; missing: $($unreferencedMaterialIds -join ', ')."
 }
 
 $categorySword = [regex]::Unescape('\u5251')
@@ -230,6 +325,9 @@ $categoryHorn = [regex]::Unescape('\u53f7\u89d2')
 $categoryTrident = [regex]::Unescape('\u4e09\u53c9\u621f')
 $categoryCrossbow = [regex]::Unescape('\u5f29')
 $categoryStandard = [regex]::Unescape('\u6218\u65d7')
+$categoryDagger = [regex]::Unescape('\u77ed\u5203')
+$categoryTwinBlade = [regex]::Unescape('\u53cc\u5203')
+$categoryShield = [regex]::Unescape('\u76fe\u724c')
 $weaponCategories = @{
     YKI_RECRUIT_BLADE = $categorySword
     YKI_BASTION_GREATSWORD = $categorySword
@@ -275,11 +373,73 @@ $weaponCategories = @{
     YKI_LEVIATHAN_TRIDENT = $categoryTrident
     YKI_THUNDERHEAD_REPEATER = $categoryCrossbow
     YKI_CITADEL_STANDARD = $categoryStandard
+    YKI_OAKEN_HUNTER_BOW = $categoryBow
+    YKI_MILITIA_CROSSBOW = $categoryCrossbow
+    YKI_STONEWARD_MAUL = $categoryMaul
+    YKI_GLOOM_SICKLE = $categoryScythe
+    YKI_SPRINGWATER_CHARM = $categoryArtifact
+    YKI_CINDER_APPRENTICE_STAFF = $categoryWand
+    YKI_WATCHMAN_HALBERD = $categorySpear
+    YKI_TEMPEST_PIKE = $categorySpear
+    YKI_NIGHTSHADE_SICKLE = $categoryScythe
+    YKI_EMBERWEAVE_STAFF = $categoryWand
+    YKI_BLOOMSONG_TOME = $categoryCodex
+    YKI_FROSTBOLT_CROSSBOW = $categoryCrossbow
+    YKI_TIDEBREAKER_TRIDENT = $categoryTrident
+    YKI_RALLYING_BUGLE = $categoryHorn
+    YKI_COMET_LONGBOW = $categoryBow
+    YKI_SKYLINE_GLAIVE = $categorySpear
+    YKI_SOULTHREAD_SCYTHE = $categoryScythe
+    YKI_RUNEBULWARK_HAMMER = $categoryMaul
+    YKI_MOONWELL_CODEX = $categoryCodex
+    YKI_VOLTAIC_ARBALEST = $categoryCrossbow
+    YKI_CORALBOUND_TRIDENT = $categoryTrident
+    YKI_SOLARWIND_LONGBOW = $categoryBow
+    YKI_STORMCORE_REPEATER = $categoryCrossbow
+    YKI_COLOSSUS_WARHAMMER = $categoryMaul
+    YKI_NEBULA_SCEPTER = $categoryWand
+    YKI_SERAPHIC_CHALICE = $categoryArtifact
+    YKI_DRAGONBANNER_HORN = $categoryHorn
+    YKI_MIRAGE_DAGGERS = $categoryDagger
+    YKI_WINGBREAKER_GREATSWORD = $categorySword
+    YKI_SKULLBARRAGE_LONGBOW = $categoryBow
+    YKI_DRAGONSPINE_LANCE = $categorySpear
+    YKI_GRAVETALON_SICKLE = $categoryScythe
+    YKI_MARROW_REQUIEM_CENSER = $categoryArtifact
+    YKI_OSSUARY_BULWARK = $categoryMaul
+    YKI_WRAITHFIRE_SCEPTER = $categoryWand
+    YKI_ENDSUN_EDICT_BLADE = $categorySword
+    YKI_SUNFALL_REPEATER = $categoryCrossbow
+    YKI_SOLAR_AEGIS_LANCE = $categorySpear
+    YKI_SCYTHE_ECHO_SICKLE = $categoryScythe
+    YKI_SOUL_CROWN_CENSER = $categoryArtifact
+    YKI_HEARTFURNACE_WARHAMMER = $categoryMaul
+    YKI_BLACK_SUN_CODEX = $categoryCodex
+    YKI_FATESEVER_HOLYBLADE = $categorySword
+    YKI_SEVENFOLD_END_BOW = $categoryBow
+    YKI_HEAVEN_INVERSION_LANCE = $categorySpear
+    YKI_WITCHBLINK_SCISSORS = $categoryTwinBlade
+    YKI_SOULPAWN_REQUIEM = $categoryArtifact
+    YKI_WORLD_END_BULWARK = $categoryShield
+    YKI_SILENT_CHANT_CODEX = $categoryCodex
+    YKI_VEINSEEKER_MAUL = $categoryMaul
+    YKI_TRAILSCOUT_SHORTBLADE = $categoryDagger
+    YKI_CAMPWARD_SABER = $categorySword
+    YKI_TIDESEEKER_LANCE = $categorySpear
+    YKI_RESCUE_BEACON_CROSSBOW = $categoryCrossbow
+    YKI_TRUESIGHT_LONGBOW = $categoryBow
+    YKI_SKYHOOK_TWINBLADE = $categoryTwinBlade
+    YKI_MARCHING_SANCTUARY_MAUL = $categoryMaul
+    YKI_RIFTGUIDE_DAGGER = $categoryDagger
+    YKI_EXPEDITION_WARHAMMER = $categoryMaul
+    YKI_HOMECOMING_CHRONICLE = $categoryCodex
+    YKI_ASTRAL_WAYFARER_STAFF = $categoryWand
 }
 $allowedWeaponCategories = @(
     $categorySword, $categoryWand, $categoryBow, $categorySpear, $categoryCodex,
     $categoryMaul, $categoryGun, $categoryScythe, $categoryArtifact, $categoryHorn,
-    $categoryTrident, $categoryCrossbow, $categoryStandard
+    $categoryTrident, $categoryCrossbow, $categoryStandard, $categoryDagger,
+    $categoryTwinBlade, $categoryShield
 )
 $usedWeaponCategories = @($weaponCategories.Values | Sort-Object -Unique)
 $weaponCategoryDifference = @(Compare-Object `
@@ -289,15 +449,15 @@ if ($weaponCategoryDifference.Count -ne 0) {
     throw 'The weapon category mapping does not use exactly the required category set.'
 }
 $weaponTails = Get-MythicLoreTails $weaponYaml 'YknRpg_Weapons.yml'
-if ($weaponTails.Count -ne 44 -or $weaponCategories.Count -ne 44) {
-    throw "Expected exactly 44 weapon category tails and mappings; found $($weaponTails.Count) tails and $($weaponCategories.Count) mappings."
+if ($weaponTails.Count -ne 105 -or $weaponCategories.Count -ne 105) {
+    throw "Expected exactly 105 weapon category tails and mappings; found $($weaponTails.Count) tails and $($weaponCategories.Count) mappings."
 }
 $weaponCategoryLineCount = ([regex]::Matches(
     $weaponYaml,
     "(?m)^    - '(?:$((@($rarityLabels.Values) | ForEach-Object { [regex]::Escape($_) }) -join '|')) (?:$((@($allowedWeaponCategories) | ForEach-Object { [regex]::Escape($_) }) -join '|'))'[ \t]*\r?$"
 )).Count
-if ($weaponCategoryLineCount -ne 44) {
-    throw "Expected exactly 44 formatted weapon category lines; found $weaponCategoryLineCount."
+if ($weaponCategoryLineCount -ne 105) {
+    throw "Expected exactly 105 formatted weapon category lines; found $weaponCategoryLineCount."
 }
 foreach ($itemId in $weaponCategories.Keys) {
     if (-not $weaponTails.ContainsKey($itemId)) { throw "Weapon pack is missing category tail for $itemId." }
@@ -331,15 +491,62 @@ $armorSlotCategories = @{
 }
 $armorTails = Get-MythicLoreTails $armorYaml 'YknRpg_Armor.yml'
 $armorMetadataIds = @($catalogMetadata.Keys | Where-Object { $catalogMetadata[$_].Kind -eq 'ARMOR' })
-if ($armorTails.Count -ne 48 -or $armorMetadataIds.Count -ne 48) {
-    throw "Expected exactly 48 armor category tails and metadata entries; found $($armorTails.Count) tails and $($armorMetadataIds.Count) metadata entries."
+$armorSetPrefixes = @(
+    'YKI_WAYFARER',
+    'YKI_IRON_SENTINEL',
+    'YKI_TIDECALLER',
+    'YKI_NIGHTSTALKER',
+    'YKI_WYRM_GUARD',
+    'YKI_COSMIC_SAGE',
+    'YKI_COPPER_TINKER',
+    'YKI_BRAMBLE_RANGER',
+    'YKI_PHANTOM_DUELIST',
+    'YKI_MOLTEN_BERSERKER',
+    'YKI_ABYSS_WARDEN',
+    'YKI_CHRONOWARDEN',
+    'YKI_RECRUIT_VANGUARD',
+    'YKI_RUNE_ACOLYTE',
+    'YKI_GRANITE_BULWARK',
+    'YKI_STORM_EYE',
+    'YKI_VOID_ORACLE',
+    'YKI_SKYHUNTER',
+    'YKI_MEADOW_MENDER',
+    'YKI_FRONTIER_SCOUT',
+    'YKI_COALFIRE_BRAWLER',
+    'YKI_DEEPCAVE_PROSPECTOR',
+    'YKI_FROSTWOOD_HUNTSMAN',
+    'YKI_RUNEGLASS_SAVANT',
+    'YKI_DAWN_CHANTER',
+    'YKI_RIFT_SCHOLAR',
+    'YKI_PHOENIX_HIEROPHANT',
+    'YKI_TEMPEST_FALCONER',
+    'YKI_SUNCROWN_DUELIST',
+    'YKI_REALMSEEKER',
+    'YKI_OSSUARY_DRAGOON',
+    'YKI_ENDSUN_GUARD',
+    'YKI_ENDWITCH_REBEL'
+)
+$armorPieceSuffixes = @('_HELMET', '_CHESTPLATE', '_LEGGINGS', '_BOOTS')
+$expectedArmorIds = @(
+    foreach ($prefix in $armorSetPrefixes) {
+        foreach ($suffix in $armorPieceSuffixes) { $prefix + $suffix }
+    }
+)
+if ($armorTails.Count -ne 132 -or $armorMetadataIds.Count -ne 132) {
+    throw "Expected exactly 132 armor category tails and metadata entries; found $($armorTails.Count) tails and $($armorMetadataIds.Count) metadata entries."
+}
+$armorIdDifference = @(Compare-Object `
+    -ReferenceObject @($expectedArmorIds | Sort-Object) `
+    -DifferenceObject @($armorMetadataIds | Sort-Object))
+if ($armorIdDifference.Count -ne 0) {
+    throw 'Armor metadata must exactly cover all four pieces of the 33 required set prefixes.'
 }
 $armorCategoryLineCount = ([regex]::Matches(
     $armorYaml,
     "(?m)^    - '(?:$((@($rarityLabels.Values) | ForEach-Object { [regex]::Escape($_) }) -join '|')) (?:$((@($armorSlotCategories.Values) | ForEach-Object { [regex]::Escape($_) }) -join '|'))'[ \t]*\r?$"
 )).Count
-if ($armorCategoryLineCount -ne 48) {
-    throw "Expected exactly 48 formatted armor category lines; found $armorCategoryLineCount."
+if ($armorCategoryLineCount -ne 132) {
+    throw "Expected exactly 132 formatted armor category lines; found $armorCategoryLineCount."
 }
 $armorCategoryCounts = @{}
 foreach ($category in $armorSlotCategories.Values) { $armorCategoryCounts[$category] = 0 }
@@ -356,19 +563,19 @@ foreach ($itemId in $armorMetadataIds) {
     $armorCategoryCounts[$category]++
 }
 foreach ($category in $armorSlotCategories.Values) {
-    if ($armorCategoryCounts[$category] -ne 12) {
-        throw "Armor category $category must contain exactly 12 items; found $($armorCategoryCounts[$category])."
+    if ($armorCategoryCounts[$category] -ne 33) {
+        throw "Armor category $category must contain exactly 33 items; found $($armorCategoryCounts[$category])."
     }
 }
 
 $ecoPetEntries = @(Get-ZipEntries $ecoPetsPack | Where-Object { -not $_.EndsWith('/') })
 $expectedEcoPetEntries = @(Get-ChildItem -LiteralPath (Join-Path $projectRoot 'packs\ecopets\pets\yknrpg') `
     -Filter '*.yml' -File | Sort-Object Name | ForEach-Object { "pets/yknrpg/$($_.Name)" })
-if ($expectedEcoPetEntries.Count -ne 36) {
-    throw "Expected 36 EcoPets source files; found $($expectedEcoPetEntries.Count)."
+if ($expectedEcoPetEntries.Count -ne 72) {
+    throw "Expected 72 EcoPets source files; found $($expectedEcoPetEntries.Count)."
 }
-if ($ecoPetEntries.Count -ne 36 -or @($ecoPetEntries | Sort-Object -Unique).Count -ne 36) {
-    throw "Expected exactly 36 unique EcoPets files in the pack; found $($ecoPetEntries.Count)."
+if ($ecoPetEntries.Count -ne 72 -or @($ecoPetEntries | Sort-Object -Unique).Count -ne 72) {
+    throw "Expected exactly 72 unique EcoPets files in the pack; found $($ecoPetEntries.Count)."
 }
 if ($ecoPetEntries | Where-Object { $_ -notmatch '^pets/yknrpg/[a-z0-9_]+\.yml$' }) {
     throw 'EcoPets pack may contain only lower-case pets/yknrpg/*.yml files.'
@@ -382,9 +589,9 @@ if ($ecoPetEntryDifference.Count -gt 0) {
 $catalogCount = ([regex]::Matches($equipmentYaml, '(?m)^  - YKI_[A-Z0-9_]+\s*$')).Count
 $metadataCount = ([regex]::Matches($equipmentYaml, '(?m)^  YKI_[A-Z0-9_]+:\s*\{kind:')).Count
 $defaultRecipeCount = ([regex]::Matches($equipmentYaml, '(?m)^  YKI_[A-Z0-9_]+:\s*\[')).Count
-if ($catalogCount -ne 123) { throw "Expected 123 catalog items; found $catalogCount." }
-if ($metadataCount -ne 123) { throw "Expected 123 catalog metadata entries; found $metadataCount." }
-if ($defaultRecipeCount -ne 123) { throw "Expected 123 default recipes; found $defaultRecipeCount." }
+if ($catalogCount -ne 327) { throw "Expected 327 catalog items; found $catalogCount." }
+if ($metadataCount -ne 327) { throw "Expected 327 catalog metadata entries; found $metadataCount." }
+if ($defaultRecipeCount -ne 327) { throw "Expected 327 default recipes; found $defaultRecipeCount." }
 
 Write-Host "Plugin: $($pluginJar.FullName)" -ForegroundColor Green
 Write-Host "Plugin SHA256: $(Get-Sha256 $pluginJar.FullName)"
@@ -410,5 +617,6 @@ if ([string]::IsNullOrWhiteSpace($ServerRoot)) {
     -CraftEnginePack $craftEnginePack `
     -MythicMobsPack $mythicMobsPack `
     -EcoPetsPack $ecoPetsPack `
-    -Version $version
+    -Version $version `
+    -ExpectedMythicItemCount $mythicItemCount
 if ($LASTEXITCODE -ne 0) { throw "Deployment failed with exit code $LASTEXITCODE." }
