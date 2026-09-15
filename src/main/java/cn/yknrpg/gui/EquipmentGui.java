@@ -33,6 +33,7 @@ public final class EquipmentGui implements Listener {
     private static final int ITEMS_PER_PAGE = 45;
     private static final int ARMOR_ITEMS_PER_PAGE = 44;
     private static final int PREVIOUS_SLOT = 45;
+    private static final int FISHING_BACK_SLOT = 46;
     private static final int PAGE_SLOT = 48;
     private static final int CLOSE_SLOT = 49;
     private static final int NEXT_SLOT = 53;
@@ -62,8 +63,11 @@ public final class EquipmentGui implements Listener {
     }
 
     public void openCatalog(Player player, CatalogKind kind, int requestedPage) {
+        if (!checkPermission(player)) return;
+        if (kind.isFishing() && !plugin.refreshFishingCatalog(player)) return;
         List<ItemDefinition> definitions = registry.items(kind);
-        int itemsPerPage = kind == CatalogKind.ARMOR ? ARMOR_ITEMS_PER_PAGE : ITEMS_PER_PAGE;
+        int itemsPerPage = kind == CatalogKind.ARMOR || kind == CatalogKind.FISHING_ARMOR
+                ? ARMOR_ITEMS_PER_PAGE : ITEMS_PER_PAGE;
         int pageCount = Math.max(1, (definitions.size() + itemsPerPage - 1) / itemsPerPage);
         int page = Math.max(0, Math.min(requestedPage, pageCount - 1));
         CatalogHolder holder = new CatalogHolder(kind, page);
@@ -85,9 +89,22 @@ public final class EquipmentGui implements Listener {
             inventory.setItem(slot, catalogDisplay(definition));
         }
         if (page > 0) inventory.setItem(PREVIOUS_SLOT, button(Material.ARROW, "gui.previous-page"));
+        if (kind.isFishing()) inventory.setItem(FISHING_BACK_SLOT, button(Material.ARROW, "gui.fishing-back"));
         inventory.setItem(PAGE_SLOT, pageIndicator(page + 1, pageCount));
         inventory.setItem(CLOSE_SLOT, button(Material.BARRIER, "gui.close"));
         if (page + 1 < pageCount) inventory.setItem(NEXT_SLOT, button(Material.ARROW, "gui.next-page"));
+        player.openInventory(inventory);
+    }
+
+    public void openFishingMenu(Player player) {
+        if (!checkPermission(player) || !plugin.refreshFishingCatalog(player)) return;
+        FishingMenuHolder holder = new FishingMenuHolder();
+        Inventory inventory = Bukkit.createInventory(holder, 27, plugin.message("gui.fishing-title"));
+        holder.inventory = inventory;
+        fill(inventory);
+        inventory.setItem(11, button(Material.COD, "gui.fishing-buttons.catch"));
+        inventory.setItem(13, button(Material.FISHING_ROD, "gui.fishing-buttons.rod"));
+        inventory.setItem(15, button(Material.LEATHER_CHESTPLATE, "gui.fishing-buttons.armor"));
         player.openInventory(inventory);
     }
 
@@ -123,15 +140,36 @@ public final class EquipmentGui implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onClick(InventoryClickEvent event) {
         InventoryHolder topHolder = event.getView().getTopInventory().getHolder(false);
-        if (!(topHolder instanceof CatalogHolder) && !(topHolder instanceof RecipeHolder)) return;
+        if (!(topHolder instanceof CatalogHolder) && !(topHolder instanceof RecipeHolder)
+                && !(topHolder instanceof FishingMenuHolder)) return;
         if (!(event.getWhoClicked() instanceof Player player)) return;
+        if (!checkPermission(player)) {
+            event.setCancelled(true);
+            return;
+        }
         int slot = event.getRawSlot();
+
+        if (topHolder instanceof FishingMenuHolder) {
+            event.setCancelled(true);
+            CatalogKind kind = switch (slot) {
+                case 11 -> CatalogKind.FISHING_CATCH;
+                case 13 -> CatalogKind.FISHING_ROD;
+                case 15 -> CatalogKind.FISHING_ARMOR;
+                default -> null;
+            };
+            if (kind != null) openCatalog(player, kind, 0);
+            return;
+        }
 
         if (topHolder instanceof CatalogHolder catalog) {
             event.setCancelled(true);
             if (slot < 0 || slot >= event.getView().getTopInventory().getSize()) return;
             if (slot == CLOSE_SLOT) {
                 player.closeInventory();
+                return;
+            }
+            if (slot == FISHING_BACK_SLOT && catalog.kind.isFishing()) {
+                openFishingMenu(player);
                 return;
             }
             if (slot == PREVIOUS_SLOT && catalog.page > 0) {
@@ -144,6 +182,7 @@ public final class EquipmentGui implements Listener {
             }
             String itemId = catalog.items.get(slot);
             if (itemId == null) return;
+            if (catalog.kind.isFishing() && !checkFishingItem(player, itemId)) return;
             if (event.isRightClick()) {
                 openRecipe(player, itemId, catalog.kind, catalog.page);
             } else if (event.isLeftClick()) {
@@ -153,6 +192,10 @@ public final class EquipmentGui implements Listener {
         }
 
         RecipeHolder recipe = (RecipeHolder) topHolder;
+        if (recipe.returnKind.isFishing() && !checkFishingItem(player, recipe.itemId)) {
+            event.setCancelled(true);
+            return;
+        }
         int topSize = event.getView().getTopInventory().getSize();
         if (slot < 0) return;
         if (slot >= topSize) {
@@ -196,12 +239,32 @@ public final class EquipmentGui implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onDrag(InventoryDragEvent event) {
         InventoryHolder holder = event.getView().getTopInventory().getHolder(false);
-        if (holder instanceof CatalogHolder) {
+        if (!(holder instanceof CatalogHolder) && !(holder instanceof RecipeHolder)
+                && !(holder instanceof FishingMenuHolder)) return;
+        if (event.getWhoClicked() instanceof Player player && !checkPermission(player)) {
+            event.setCancelled(true);
+            return;
+        }
+        if (holder instanceof CatalogHolder || holder instanceof FishingMenuHolder) {
             event.setCancelled(true);
         } else if (holder instanceof RecipeHolder) {
             int topSize = event.getView().getTopInventory().getSize();
             if (event.getRawSlots().stream().anyMatch(slot -> slot < topSize)) event.setCancelled(true);
         }
+    }
+
+    private boolean checkPermission(Player player) {
+        if (player.hasPermission("yknrpg.admin")) return true;
+        player.closeInventory();
+        player.sendMessage(plugin.message("messages.no-permission"));
+        return false;
+    }
+
+    private boolean checkFishingItem(Player player, String itemId) {
+        if (registry.item(itemId).isPresent()) return true;
+        player.closeInventory();
+        player.sendMessage(plugin.message("messages.fishing-unavailable"));
+        return false;
     }
 
     private void saveRecipe(Player player, RecipeHolder holder, Inventory inventory) {
@@ -282,6 +345,9 @@ public final class EquipmentGui implements Listener {
             case WEAPON -> "gui.catalog-titles.weapon";
             case ARMOR -> "gui.catalog-titles.armor";
             case PET -> "gui.catalog-titles.pets";
+            case FISHING_CATCH -> "gui.catalog-titles.fishing-catch";
+            case FISHING_ROD -> "gui.catalog-titles.fishing-rod";
+            case FISHING_ARMOR -> "gui.catalog-titles.fishing-armor";
             case OTHER -> "gui.catalog-titles.other";
         };
     }
@@ -328,6 +394,15 @@ public final class EquipmentGui implements Listener {
         private void bind(Inventory inventory) {
             this.inventory = inventory;
         }
+
+        @Override
+        public Inventory getInventory() {
+            return inventory;
+        }
+    }
+
+    private static final class FishingMenuHolder implements InventoryHolder {
+        private Inventory inventory;
 
         @Override
         public Inventory getInventory() {

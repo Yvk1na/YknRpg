@@ -36,6 +36,10 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.message("messages.player-only"));
                 return true;
             }
+            if (args.length >= 2 && args[1].equalsIgnoreCase("fishing")) {
+                plugin.gui().openFishingMenu(player);
+                return true;
+            }
             CatalogKind kind = args.length < 2 ? CatalogKind.ITEM : switch (args[1].toLowerCase(Locale.ROOT)) {
                 case "items", "item" -> CatalogKind.ITEM;
                 case "weapon", "weapons" -> CatalogKind.WEAPON;
@@ -75,7 +79,7 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
         }
         if (args.length == 2 && args[0].equalsIgnoreCase("admin")) {
             String prefix = args[1].toLowerCase(Locale.ROOT);
-            return List.of("items", "weapon", "armor", "pets").stream()
+            return List.of("items", "weapon", "armor", "pets", "fishing").stream()
                     .filter(value -> value.startsWith(prefix)).toList();
         }
         return List.of();

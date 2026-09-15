@@ -3,6 +3,7 @@ package cn.yknrpg.registry;
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.integration.EcoPetsItems;
 import cn.yknrpg.integration.MythicItems;
+import cn.yknrpg.integration.YknFishItems;
 import cn.yknrpg.model.IngredientSpec;
 import cn.yknrpg.model.ItemDefinition;
 import cn.yknrpg.model.ItemDefinition.CatalogKind;
@@ -28,14 +29,17 @@ public final class ItemRegistry {
     private final YknRpgPlugin plugin;
     private final MythicItems mythicItems;
     private final EcoPetsItems ecoPetsItems;
+    private final YknFishItems fishingItems;
     private final LinkedHashMap<String, ItemDefinition> items = new LinkedHashMap<>();
     private final LinkedHashMap<String, List<IngredientSpec>> baseRecipes = new LinkedHashMap<>();
     private final LinkedHashMap<String, List<IngredientSpec>> recipeOverrides = new LinkedHashMap<>();
 
-    public ItemRegistry(YknRpgPlugin plugin, MythicItems mythicItems, EcoPetsItems ecoPetsItems) {
+    public ItemRegistry(YknRpgPlugin plugin, MythicItems mythicItems, EcoPetsItems ecoPetsItems,
+                        YknFishItems fishingItems) {
         this.plugin = plugin;
         this.mythicItems = mythicItems;
         this.ecoPetsItems = ecoPetsItems;
+        this.fishingItems = fishingItems;
     }
 
     public void reload() {
@@ -86,12 +90,14 @@ public final class ItemRegistry {
             items.put(itemId, definition);
             baseRecipes.put(itemId, recipe);
         }
-        loaded.sort(Comparator.comparingInt((ItemDefinition item) -> item.kind().sortRank())
-                .thenComparingInt(item -> item.rarity().sortRank())
-                .thenComparingInt(ItemDefinition::catalogOrder)
-                .thenComparing(ItemDefinition::id));
         items.clear();
         loaded.forEach(item -> items.put(item.id(), item));
+        try {
+            refreshFishing();
+        } catch (RuntimeException exception) {
+            plugin.getLogger().warning("YknFish 目录暂不可用：" + exception.getMessage());
+            sortItems();
+        }
         loadRecipeOverrides();
         plugin.getLogger().info("目录已读取 " + orderedIds.size() + " 个 MythicMobs 物品与 "
                 + ecoPetsItems.itemIds().size() + " 个 EcoPets 宠物蛋。");
@@ -107,6 +113,29 @@ public final class ItemRegistry {
 
     public Optional<ItemDefinition> item(String id) {
         return Optional.ofNullable(items.get(id));
+    }
+
+    public void refreshFishing() {
+        List<ItemDefinition> fishing = fishingItems.load();
+        List<String> previous = items.values().stream().filter(item -> item.kind().isFishing())
+                .map(ItemDefinition::id).toList();
+        previous.forEach(items::remove);
+        previous.forEach(baseRecipes::remove);
+        for (ItemDefinition item : fishing) {
+            baseRecipes.put(item.id(), item.recipe());
+            items.put(item.id(), item.withRecipe(recipeOverrides.getOrDefault(item.id(), item.recipe())));
+        }
+        sortItems();
+    }
+
+    private void sortItems() {
+        List<ItemDefinition> sorted = items.values().stream()
+                .sorted(Comparator.comparingInt((ItemDefinition item) -> item.kind().sortRank())
+                        .thenComparingInt(item -> item.rarity().sortRank())
+                        .thenComparingInt(ItemDefinition::catalogOrder)
+                        .thenComparing(ItemDefinition::id)).toList();
+        items.clear();
+        sorted.forEach(item -> items.put(item.id(), item));
     }
 
     public void updateRecipe(String itemId, List<IngredientSpec> recipe) {
@@ -177,15 +206,12 @@ public final class ItemRegistry {
         ConfigurationSection root = config.getConfigurationSection("recipes");
         if (root == null) return;
         for (String itemId : root.getKeys(false)) {
-            ItemDefinition definition = items.get(itemId);
-            if (definition == null) {
-                plugin.getLogger().warning("recipes.yml 忽略未知目录物品：" + itemId);
-                continue;
-            }
             try {
                 List<IngredientSpec> recipe = parseRecipe(root.getStringList(itemId));
+                // 依赖尚未启用时仍保留覆盖，避免保存其它配方时丢失钓鱼/宠物配方。
                 recipeOverrides.put(itemId, recipe);
-                items.put(itemId, definition.withRecipe(recipe));
+                ItemDefinition definition = items.get(itemId);
+                if (definition != null) items.put(itemId, definition.withRecipe(recipe));
             } catch (RuntimeException exception) {
                 plugin.getLogger().warning("recipes.yml 配方无效（" + itemId + "）：" + exception.getMessage());
             }

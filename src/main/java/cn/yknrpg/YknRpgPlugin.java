@@ -6,6 +6,7 @@ import cn.yknrpg.integration.AuraSkillsMana;
 import cn.yknrpg.integration.EcoPetsItems;
 import cn.yknrpg.integration.MythicItems;
 import cn.yknrpg.integration.ProtocolLibInputBridge;
+import cn.yknrpg.integration.YknFishItems;
 import cn.yknrpg.item.CustomItemFactory;
 import cn.yknrpg.item.MaterialUseGuard;
 import cn.yknrpg.model.ItemDefinition.CatalogKind;
@@ -18,6 +19,10 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.server.PluginDisableEvent;
+import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
@@ -39,7 +44,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-public final class YknRpgPlugin extends JavaPlugin {
+public final class YknRpgPlugin extends JavaPlugin implements Listener {
     private static final String LEGACY_DATA_DIRECTORY = "YknItems";
     private static final long PET_CATALOG_RETRY_PERIOD_TICKS = 20L;
     private static final int PET_CATALOG_MAX_RETRY_ATTEMPTS = 120;
@@ -51,6 +56,7 @@ public final class YknRpgPlugin extends JavaPlugin {
     private RpgRegistry rpgRegistry;
     private RpgEngine rpgEngine;
     private EcoPetsItems ecoPetsItems;
+    private YknFishItems fishingItems;
     private BukkitTask petCatalogRetryTask;
     private int petCatalogRetryAttempts;
     private ProtocolLibInputBridge protocolLibInputBridge;
@@ -74,17 +80,19 @@ public final class YknRpgPlugin extends JavaPlugin {
 
         MythicItems mythicItems = new MythicItems(this);
         ecoPetsItems = new EcoPetsItems(this);
-        registry = new ItemRegistry(this, mythicItems, ecoPetsItems);
+        fishingItems = new YknFishItems(mythicItems);
+        registry = new ItemRegistry(this, mythicItems, ecoPetsItems, fishingItems);
         registry.reload();
         rpgRegistry = new RpgRegistry(this, mythicItems);
         rpgRegistry.reload();
         itemFactory = new CustomItemFactory(this, registry, mythicItems, ecoPetsItems);
-        recipes = new RecipeRegistrar(this, registry, itemFactory);
+        recipes = new RecipeRegistrar(this, registry, itemFactory, fishingItems);
         recipes.reload();
         gui = new EquipmentGui(this, registry, itemFactory);
         rpgEngine = new RpgEngine(this, rpgRegistry, new AuraSkillsMana());
 
         getServer().getPluginManager().registerEvents(gui, this);
+        getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(ecoPetsItems, this);
         getServer().getPluginManager().registerEvents(new MaterialUseGuard(itemFactory), this);
         getServer().getPluginManager().registerEvents(rpgEngine, this);
@@ -101,6 +109,7 @@ public final class YknRpgPlugin extends JavaPlugin {
 
         bindEcoPetsReloadListener();
         schedulePetCatalogRetry();
+        queueFishingCatalogRefresh();
 
         getLogger().info("已载入 " + registry.items().size() + " 个目录物品与 "
                 + recipes.recipeCount() + " 个配方。");
@@ -173,6 +182,49 @@ public final class YknRpgPlugin extends JavaPlugin {
 
     public EquipmentGui gui() {
         return gui;
+    }
+
+    public boolean refreshFishingCatalog(Player player) {
+        try {
+            if (fishingItems.available()) {
+                // 浏览、翻页与返回只读目录，不能触发服务端配方/玩家进度重载。
+                if (!hasFishingCatalog()) registry.refreshFishing();
+                if (hasFishingCatalog()) return true;
+            }
+        } catch (RuntimeException exception) {
+            getLogger().warning("钓鱼图鉴同步失败：" + exception.getMessage());
+        }
+        player.sendMessage(message("messages.fishing-unavailable"));
+        return false;
+    }
+
+    private boolean hasFishingCatalog() {
+        return registry.items().stream().anyMatch(item -> item.kind().isFishing());
+    }
+
+    @EventHandler
+    public void onFishingPluginEnable(PluginEnableEvent event) {
+        if (event.getPlugin().getName().equalsIgnoreCase("YknFish")) queueFishingCatalogRefresh();
+    }
+
+    @EventHandler
+    public void onFishingPluginDisable(PluginDisableEvent event) {
+        if (!event.getPlugin().getName().equalsIgnoreCase("YknFish")) return;
+        fishingItems.forgetRecipes();
+        queueFishingCatalogRefresh();
+    }
+
+    private void queueFishingCatalogRefresh() {
+        if (!isEnabled()) return;
+        getServer().getScheduler().runTask(this, () -> {
+            if (!isEnabled()) return;
+            try {
+                registry.refreshFishing();
+                recipes.reload();
+            } catch (RuntimeException exception) {
+                getLogger().warning("钓鱼图鉴同步失败：" + exception.getMessage());
+            }
+        });
     }
 
     public void openPetCatalog(Player player) {
@@ -400,7 +452,9 @@ public final class YknRpgPlugin extends JavaPlugin {
                 "messages.admin-usage", "&e用法：/yknrpg admin <items|weapon|armor> 或 /yknrpg reload"
         );
         for (Map.Entry<String, String> entry : previousUsageDefaults.entrySet()) {
-            if (!entry.getValue().equals(persisted.getString(entry.getKey()))) continue;
+            String current = persisted.getString(entry.getKey());
+            if (!entry.getValue().equals(current)
+                    && !entry.getValue().replace("armor>", "armor|pets>").equals(current)) continue;
             persisted.set(entry.getKey(), bundledConfigDefaults.get(entry.getKey()));
             added++;
         }

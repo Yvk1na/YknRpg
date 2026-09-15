@@ -19,7 +19,8 @@ public record ItemDefinition(String id, ItemSource source, List<IngredientSpec> 
     }
 
     public enum CatalogKind {
-        ITEM(0), WEAPON(1), ARMOR(2), PET(3), OTHER(4);
+        ITEM(0), WEAPON(1), ARMOR(2), PET(3),
+        FISHING_CATCH(4), FISHING_ROD(5), FISHING_ARMOR(6), OTHER(7);
 
         private final int sortRank;
 
@@ -29,6 +30,10 @@ public record ItemDefinition(String id, ItemSource source, List<IngredientSpec> 
 
         public int sortRank() {
             return sortRank;
+        }
+
+        public boolean isFishing() {
+            return this == FISHING_CATCH || this == FISHING_ROD || this == FISHING_ARMOR;
         }
 
         public static CatalogKind parse(String value) {

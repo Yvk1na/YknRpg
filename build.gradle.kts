@@ -23,6 +23,7 @@ dependencies {
     compileOnly("dev.aurelium:auraskills-api-bukkit:2.3.12")
     compileOnly("net.dmulloy2:ProtocolLib:5.4.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
+    testImplementation("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.13.4")
 }
 

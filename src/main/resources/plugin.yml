@@ -11,7 +11,7 @@ provides: [YknItems]
 commands:
   yknrpg:
     description: 打开 YknRpg 管理界面或重载配置
-    usage: /yknrpg admin <items|weapon|armor|pets> 或 /yknrpg reload
+    usage: /yknrpg admin <items|weapon|armor|pets|fishing> 或 /yknrpg reload
     aliases: [yknitems]
 permissions:
   yknrpg.admin:
