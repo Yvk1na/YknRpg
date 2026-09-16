@@ -2,6 +2,7 @@ package cn.yknrpg;
 
 import cn.yknrpg.command.YknRpgCommand;
 import cn.yknrpg.gui.EquipmentGui;
+import cn.yknrpg.gui.ItemEditGui;
 import cn.yknrpg.integration.AuraSkillsMana;
 import cn.yknrpg.integration.EcoPetsItems;
 import cn.yknrpg.integration.MythicItems;
@@ -53,6 +54,7 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
     private CustomItemFactory itemFactory;
     private RecipeRegistrar recipes;
     private EquipmentGui gui;
+    private ItemEditGui itemEditGui;
     private RpgRegistry rpgRegistry;
     private RpgEngine rpgEngine;
     private EcoPetsItems ecoPetsItems;
@@ -89,9 +91,11 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         recipes = new RecipeRegistrar(this, registry, itemFactory, fishingItems);
         recipes.reload();
         gui = new EquipmentGui(this, registry, itemFactory);
+        itemEditGui = new ItemEditGui(this, rpgRegistry);
         rpgEngine = new RpgEngine(this, rpgRegistry, new AuraSkillsMana());
 
         getServer().getPluginManager().registerEvents(gui, this);
+        getServer().getPluginManager().registerEvents(itemEditGui, this);
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(ecoPetsItems, this);
         getServer().getPluginManager().registerEvents(new MaterialUseGuard(itemFactory), this);
@@ -123,6 +127,7 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
+        if (itemEditGui != null) itemEditGui.closeAll();
         cancelPetCatalogRetry();
         pendingPetCatalogViewers.clear();
         if (protocolLibInputBridge != null) protocolLibInputBridge.stop();
@@ -131,6 +136,7 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
     }
 
     public void reloadAll() {
+        if (itemEditGui != null) itemEditGui.closeAll();
         cancelPetCatalogRetry();
         if (rpgEngine != null) rpgEngine.stop();
         reloadConfig();
@@ -182,6 +188,10 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
 
     public EquipmentGui gui() {
         return gui;
+    }
+
+    public ItemEditGui itemEditGui() {
+        return itemEditGui;
     }
 
     public boolean refreshFishingCatalog(Player player) {
@@ -454,7 +464,8 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         for (Map.Entry<String, String> entry : previousUsageDefaults.entrySet()) {
             String current = persisted.getString(entry.getKey());
             if (!entry.getValue().equals(current)
-                    && !entry.getValue().replace("armor>", "armor|pets>").equals(current)) continue;
+                    && !entry.getValue().replace("armor>", "armor|pets>").equals(current)
+                    && !entry.getValue().replace("armor>", "armor|pets|fishing>").equals(current)) continue;
             persisted.set(entry.getKey(), bundledConfigDefaults.get(entry.getKey()));
             added++;
         }

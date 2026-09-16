@@ -31,6 +31,11 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage(plugin.message("messages.no-permission"));
             return true;
         }
+        if (args[0].equalsIgnoreCase("edit")) {
+            if (sender instanceof Player player) plugin.itemEditGui().open(player);
+            else sender.sendMessage(plugin.message("messages.player-only"));
+            return true;
+        }
         if (args[0].equalsIgnoreCase("admin")) {
             if (!(sender instanceof Player player)) {
                 sender.sendMessage(plugin.message("messages.player-only"));
@@ -75,7 +80,7 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
         if (!sender.hasPermission("yknrpg.admin")) return List.of();
         if (args.length == 1) {
             String prefix = args[0].toLowerCase(Locale.ROOT);
-            return List.of("admin", "reload").stream().filter(value -> value.startsWith(prefix)).toList();
+            return List.of("admin", "edit", "reload").stream().filter(value -> value.startsWith(prefix)).toList();
         }
         if (args.length == 2 && args[0].equalsIgnoreCase("admin")) {
             String prefix = args[1].toLowerCase(Locale.ROOT);

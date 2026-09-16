@@ -11,11 +11,11 @@ provides: [YknItems]
 commands:
   yknrpg:
     description: 打开 YknRpg 管理界面或重载配置
-    usage: /yknrpg admin <items|weapon|armor|pets|fishing> 或 /yknrpg reload
+    usage: /yknrpg admin <items|weapon|armor|pets|fishing>、/yknrpg edit 或 /yknrpg reload
     aliases: [yknitems]
 permissions:
   yknrpg.admin:
-    description: 允许打开管理员物品图鉴与重载 YknRpg
+    description: 允许打开管理员物品图鉴、编辑单件物品属性与重载 YknRpg
     default: op
   yknitems.admin:
     description: 旧版 YknItems 管理权限兼容节点

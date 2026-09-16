@@ -789,10 +789,8 @@ public final class RpgEngine implements Listener {
         double scale = plugin.getConfig().getDouble("rpg.health.value-scale", 0.05);
         for (LivingEntity target : targets) {
             double amount = raw * scale + maximumHealth(target) * effect.number("max-health-percent", 0.0) / 100.0;
-            if (target instanceof Player targetPlayer) {
+            if (target instanceof Player) {
                 amount *= 1.0 + Math.max(0.0, context.stats().get(Stat.MENDING)) / 100.0;
-                amount *= 1.0 + Math.max(0.0,
-                        effectiveProfile(targetPlayer).stats().get(Stat.VITALITY)) / 100.0;
             }
             EntityRegainHealthEvent regain = new EntityRegainHealthEvent(
                     target, Math.max(0.0, amount), EntityRegainHealthEvent.RegainReason.CUSTOM);
@@ -1190,6 +1188,7 @@ public final class RpgEngine implements Listener {
         } catch (IllegalArgumentException exception) {
             throw new IllegalArgumentException("未知临时属性：" + effect.text("stat", ""));
         }
+        if (stat == Stat.VITALITY || stat == Stat.FEROCITY) return false;
         double amount = effect.number("amount", 0.0);
         long expires = System.currentTimeMillis() + (long) (Math.max(0.05,
                 effect.number("duration", 5.0)) * 1000.0);
@@ -1260,10 +1259,7 @@ public final class RpgEngine implements Listener {
             victim.getWorld().spawnParticle(Particle.CRIT,
                     victim.getLocation().add(0, victim.getHeight() * 0.5, 0), 8, 0.3, 0.3, 0.3, 0.1);
         }
-        double ferocity = Math.max(0.0, stats.get(Stat.FEROCITY));
-        int extraHits = (int) (ferocity / 100.0);
-        if (ThreadLocalRandom.current().nextDouble(100.0) < ferocity % 100.0) extraHits++;
-        event.setDamage(Math.max(0.0, amount * (1 + extraHits)));
+        event.setDamage(Math.max(0.0, amount));
     }
 
     private double scaledDamage(Effect effect, Stats stats) {
@@ -1278,8 +1274,7 @@ public final class RpgEngine implements Listener {
         return effect.number("amount", effect.number("base", effect.number("damage", 0.0)))
                 + stats.get(Stat.STRENGTH) * effect.number("strength-scaling", 0.0)
                 + stats.get(Stat.WISDOM) * effect.number("wisdom-scaling",
-                effect.number("intelligence-scaling", 0.0))
-                + stats.get(Stat.VITALITY) * effect.number("vitality-scaling", 0.0);
+                effect.number("intelligence-scaling", 0.0));
     }
 
     private void dealSkillDamage(Player caster, LivingEntity target, double amount) {

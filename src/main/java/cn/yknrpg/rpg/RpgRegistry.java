@@ -2,6 +2,8 @@ package cn.yknrpg.rpg;
 
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.integration.MythicItems;
+import cn.yknrpg.item.ItemStatOverrides;
+import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -126,32 +128,64 @@ public final class RpgRegistry {
         return sets.size();
     }
 
+    public Stats itemStats(ItemStack stack) {
+        ItemPower definition = mythicItems.itemId(stack).map(RpgRegistry::normalizeItemId)
+                .map(items::get).orElse(null);
+        return itemStats(stack, definition);
+    }
+
+    private Stats itemStats(ItemStack stack, ItemPower definition) {
+        EnumMap<Stat, Double> values = new EnumMap<>(Stat.class);
+        if (definition != null) values.putAll(definition.stats().values());
+        values.putAll(ItemStatOverrides.read(stack));
+        return new Stats(values);
+    }
+
     boolean isMainHandItem(ItemStack stack) {
         return mainHandItemId(stack) != null;
     }
 
     String mainHandItemId(ItemStack stack) {
         Optional<String> itemId = mythicItems.itemId(stack);
-        if (itemId.isEmpty()) return null;
-        String normalizedId = normalizeItemId(itemId.get());
-        ItemPower definition = items.get(normalizedId);
-        return definition != null && definition.slot().matches(Slot.MAIN_HAND)
-                ? normalizedId : null;
+        ItemPower definition = itemId.map(RpgRegistry::normalizeItemId).map(items::get).orElse(null);
+        if (definition != null) {
+            return definition.slot().matches(Slot.MAIN_HAND) ? normalizeItemId(itemId.orElseThrow()) : null;
+        }
+        return ItemStatOverrides.hasOverrides(stack) && materialSlot(stack.getType()) == Slot.MAIN_HAND
+                ? "edited:" + stack.getType().name() : null;
     }
 
     private void collect(MutableProfile result, ItemStack stack, Slot actualSlot, boolean armorPiece) {
         Optional<String> itemId = mythicItems.itemId(stack);
-        if (itemId.isEmpty()) return;
-        mythicItems.migrateWisdomLore(stack, itemId.get());
-        String normalizedId = normalizeItemId(itemId.get());
-        result.equippedIds.add(normalizedId);
-        if (armorPiece) result.armorIds.add(normalizedId);
-        ItemPower definition = items.get(normalizedId);
-        if (definition == null || !definition.slot().matches(actualSlot)) return;
-        result.stats.add(definition.stats());
-        for (Ability ability : definition.abilities()) {
-            result.abilities.add(new AbilitySource("item:" + definition.itemId(), ability));
+        ItemPower definition = null;
+        if (itemId.isPresent()) {
+            // The old template migration must not overwrite instance-edited wisdom or neighboring stats.
+            if (!ItemStatOverrides.hasOverrides(stack)) mythicItems.migrateWisdomLore(stack, itemId.get());
+            String normalizedId = normalizeItemId(itemId.get());
+            result.equippedIds.add(normalizedId);
+            if (armorPiece) result.armorIds.add(normalizedId);
+            definition = items.get(normalizedId);
         }
+        ItemStatOverrides.stripRetiredLore(stack);
+        if (definition != null) {
+            if (!definition.slot().matches(actualSlot)) return;
+            result.stats.add(itemStats(stack, definition));
+            for (Ability ability : definition.abilities()) {
+                result.abilities.add(new AbilitySource("item:" + definition.itemId(), ability));
+            }
+        } else if (ItemStatOverrides.hasOverrides(stack) && materialSlot(stack.getType()) == actualSlot) {
+            result.stats.add(itemStats(stack, null));
+        }
+    }
+
+    private static Slot materialSlot(Material material) {
+        String name = material.name();
+        if (name.endsWith("_HELMET") || name.endsWith("_HEAD") || name.endsWith("_SKULL")
+                || material == Material.CARVED_PUMPKIN) return Slot.HEAD;
+        if (name.endsWith("_CHESTPLATE") || material == Material.ELYTRA) return Slot.CHEST;
+        if (name.endsWith("_LEGGINGS")) return Slot.LEGS;
+        if (name.endsWith("_BOOTS")) return Slot.FEET;
+        return Slot.MAIN_HAND;
     }
 
     private Stats parseStats(ConfigurationSection section) {
@@ -159,6 +193,7 @@ public final class RpgRegistry {
         if (section == null) return stats.freeze();
         for (String key : section.getKeys(false)) {
             Stat stat = Stat.parse(key);
+            if (stat == Stat.VITALITY || stat == Stat.FEROCITY) continue;
             stats.values.merge(stat, section.getDouble(key), Double::sum);
         }
         return stats.freeze();

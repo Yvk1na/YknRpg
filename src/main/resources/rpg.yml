@@ -1,11 +1,11 @@
 # YknRpg SkyBlock 引擎。当前内容按 MythicMobs 物品 ID 配置。
 # 物品键必须与 MythicMobs 物品 ID 完全一致。
 # 提升 content-revision 会在启动时备份并替换旧能力配置。
-content-revision: 13
+content-revision: 14
 schema-version: 1
 
 # 支持属性：damage、strength、crit-chance、crit-damage、attack-speed、health、
-# defense、wisdom、ability-damage、ferocity、vitality、mending、speed。
+# defense、wisdom、ability-damage、mending、speed。
 # 支持槽位：ANY、MAIN_HAND、OFF_HAND、HEAD、CHEST、LEGS、FEET。
 # 支持触发：RIGHT_CLICK、SNEAK_RIGHT_CLICK、BOW_SHOT、MELEE_HIT、
 # PROJECTILE_HIT、KILL、DAMAGED、TICK。
@@ -138,7 +138,7 @@ items:
 
   YKI_DRAGONSTORM_SPEAR:
     slot: MAIN_HAND
-    stats: {damage: 250, strength: 150, crit-chance: 10, ferocity: 20}
+    stats: {damage: 250, strength: 150, crit-chance: 10}
     abilities:
       dragon_thunder:
         name: 龙霆领域
@@ -153,7 +153,7 @@ items:
 
   YKI_ASTRAL_GRIMOIRE:
     slot: MAIN_HAND
-    stats: {damage: 30, wisdom: 26, ability-damage: 30, vitality: 20}
+    stats: {damage: 30, wisdom: 26, ability-damage: 30}
     abilities:
       astral_resonance:
         name: 星辉共鸣
@@ -169,7 +169,7 @@ items:
 
   YKI_CELESTIAL_VERDICT:
     slot: MAIN_HAND
-    stats: {damage: 330, strength: 220, crit-chance: 20, crit-damage: 80, wisdom: 20, ferocity: 35}
+    stats: {damage: 330, strength: 220, crit-chance: 20, crit-damage: 80, wisdom: 20}
     abilities:
       celestial_arrival:
         name: 天穹降临
@@ -186,7 +186,7 @@ items:
 
   YKI_GENESIS_LONGBOW:
     slot: MAIN_HAND
-    stats: {damage: 300, strength: 180, crit-chance: 30, crit-damage: 100, attack-speed: 30, ferocity: 25}
+    stats: {damage: 300, strength: 180, crit-chance: 30, crit-damage: 100, attack-speed: 30}
     abilities:
       genesis_arrow:
         name: 创世星矢
@@ -195,7 +195,6 @@ items:
         cooldown: 2
         effects:
           - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 900, strength-scaling: 1.5, speed: 3.0, gravity: false, lifetime: 8, hit-particle: END_ROD, hit-particle-count: 32}
-          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 30, duration: 5}
           - {type: PARTICLE, target: SELF, particle: END_ROD, count: 24}
           - {type: SOUND, target: SELF, sound: ENTITY_ARROW_SHOOT, pitch: 1.8}
 
@@ -282,7 +281,7 @@ items:
 
   YKI_VERDANT_CENSER:
     slot: MAIN_HAND
-    stats: {damage: 35, health: 60, wisdom: 12, vitality: 12, mending: 16}
+    stats: {damage: 35, health: 60, wisdom: 12, mending: 16}
     abilities:
       breath_of_spring:
         name: 春息
@@ -298,7 +297,7 @@ items:
 
   YKI_INFERNO_CHAINBLADE:
     slot: MAIN_HAND
-    stats: {damage: 195, strength: 115, crit-damage: 45, ferocity: 12}
+    stats: {damage: 195, strength: 115, crit-damage: 45}
     abilities:
       infernal_cycle:
         name: 焚狱轮斩
@@ -314,7 +313,7 @@ items:
 
   YKI_WARSONG_HORN:
     slot: MAIN_HAND
-    stats: {damage: 35, strength: 55, wisdom: 8, vitality: 12}
+    stats: {damage: 35, strength: 55, wisdom: 8}
     abilities:
       breaking_chorus:
         name: 破阵战歌
@@ -331,7 +330,7 @@ items:
 
   YKI_PHOENIX_SABER:
     slot: MAIN_HAND
-    stats: {damage: 260, strength: 160, crit-chance: 20, crit-damage: 60, vitality: 15}
+    stats: {damage: 260, strength: 160, crit-chance: 20, crit-damage: 60}
     abilities:
       wildfire:
         name: 燎原
@@ -340,7 +339,7 @@ items:
         cooldown: 5
         effects:
           - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 6, amount: 500, strength-scaling: 0.9}
-          - {type: HEAL, target: SELF, amount: 100, vitality-scaling: 2.0}
+          - {type: HEAL, target: SELF, amount: 100}
           - {type: PARTICLE, target: SELF, particle: FLAME, count: 64}
           - {type: SOUND, target: SELF, sound: ENTITY_BLAZE_SHOOT, pitch: 1.25}
       ember_guard:
@@ -360,7 +359,7 @@ items:
 
   YKI_LEVIATHAN_TRIDENT:
     slot: MAIN_HAND
-    stats: {damage: 245, strength: 140, defense: 65, wisdom: 8, vitality: 10}
+    stats: {damage: 245, strength: 140, defense: 65, wisdom: 8}
     abilities:
       abyssal_prison:
         name: 深海囚牢
@@ -379,7 +378,7 @@ items:
 
   YKI_CHRONOSPLITTER:
     slot: MAIN_HAND
-    stats: {damage: 320, strength: 210, wisdom: 10, crit-chance: 25, crit-damage: 85, attack-speed: 20, ferocity: 30, speed: 15}
+    stats: {damage: 320, strength: 210, wisdom: 10, crit-chance: 25, crit-damage: 85, attack-speed: 20, speed: 15}
     abilities:
       time_rift:
         name: 时停裂界
@@ -390,14 +389,13 @@ items:
           - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 8, amount: 650, strength-scaling: 1.0, wisdom-scaling: 7.0}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 8, potion: SLOWNESS, duration: 4, amplifier: 2}
           - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 15, duration: 4}
-          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 10, duration: 4}
           - {type: STAT_BUFF, target: SELF, stat: SPEED, amount: 20, duration: 4}
           - {type: PARTICLE, target: SELF, particle: REVERSE_PORTAL, count: 72}
           - {type: SOUND, target: SELF, sound: BLOCK_END_PORTAL_SPAWN, pitch: 1.5}
 
   YKI_WORLDROOT_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 55, health: 160, wisdom: 26, ability-damage: 30, vitality: 30, mending: 30}
+    stats: {damage: 55, health: 160, wisdom: 26, ability-damage: 30, mending: 30}
     abilities:
       renewal_of_all:
         name: 万物复苏
@@ -447,7 +445,7 @@ items:
 
   YKI_PHANTOM_TWINBLADE:
     slot: MAIN_HAND
-    stats: {damage: 115, strength: 55, crit-chance: 18, crit-damage: 35, attack-speed: 15, ferocity: 8, speed: 5}
+    stats: {damage: 115, strength: 55, crit-chance: 18, crit-damage: 35, attack-speed: 15, speed: 5}
     abilities:
       phantom_cross:
         name: 幻影交错
@@ -478,7 +476,7 @@ items:
 
   YKI_ECLIPSE_SCYTHE:
     slot: MAIN_HAND
-    stats: {damage: 235, strength: 145, crit-chance: 18, crit-damage: 65, ferocity: 15, vitality: 10}
+    stats: {damage: 235, strength: 145, crit-chance: 18, crit-damage: 65}
     abilities:
       eclipse_reap:
         name: 月蚀收割
@@ -488,7 +486,7 @@ items:
         effects:
           - {type: DAMAGE, target: NEARBY_ENEMIES, radius: 6, amount: 470, strength-scaling: 0.9}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 6, potion: WITHER, duration: 3, amplifier: 1}
-          - {type: HEAL, target: SELF, amount: 90, vitality-scaling: 1.5}
+          - {type: HEAL, target: SELF, amount: 90}
           - {type: PARTICLE, target: SELF, particle: SOUL, count: 48}
           - {type: SOUND, target: SELF, sound: ENTITY_WITHER_SPAWN, pitch: 1.6}
 
@@ -561,29 +559,29 @@ items:
 
   YKI_WYRM_GUARD_HELMET:
     slot: HEAD
-    stats: {health: 110, defense: 80, damage: 20, strength: 30, vitality: 5}
+    stats: {health: 110, defense: 80, damage: 20, strength: 30}
   YKI_WYRM_GUARD_CHESTPLATE:
     slot: CHEST
-    stats: {health: 170, defense: 130, damage: 20, strength: 30, vitality: 5}
+    stats: {health: 170, defense: 130, damage: 20, strength: 30}
   YKI_WYRM_GUARD_LEGGINGS:
     slot: LEGS
-    stats: {health: 140, defense: 105, damage: 20, strength: 30, vitality: 5}
+    stats: {health: 140, defense: 105, damage: 20, strength: 30}
   YKI_WYRM_GUARD_BOOTS:
     slot: FEET
-    stats: {health: 100, defense: 85, damage: 20, strength: 30, vitality: 5}
+    stats: {health: 100, defense: 85, damage: 20, strength: 30}
 
   YKI_COSMIC_SAGE_HELMET:
     slot: HEAD
-    stats: {health: 100, defense: 65, wisdom: 15, ability-damage: 15, vitality: 7.5, mending: 5, speed: 5}
+    stats: {health: 100, defense: 65, wisdom: 15, ability-damage: 15, mending: 5, speed: 5}
   YKI_COSMIC_SAGE_CHESTPLATE:
     slot: CHEST
-    stats: {health: 145, defense: 95, wisdom: 15, ability-damage: 15, vitality: 7.5, mending: 5, speed: 5}
+    stats: {health: 145, defense: 95, wisdom: 15, ability-damage: 15, mending: 5, speed: 5}
   YKI_COSMIC_SAGE_LEGGINGS:
     slot: LEGS
-    stats: {health: 120, defense: 80, wisdom: 15, ability-damage: 15, vitality: 7.5, mending: 5, speed: 5}
+    stats: {health: 120, defense: 80, wisdom: 15, ability-damage: 15, mending: 5, speed: 5}
   YKI_COSMIC_SAGE_BOOTS:
     slot: FEET
-    stats: {health: 85, defense: 60, wisdom: 15, ability-damage: 15, vitality: 7.5, mending: 5, speed: 5}
+    stats: {health: 85, defense: 60, wisdom: 15, ability-damage: 15, mending: 5, speed: 5}
 
   YKI_COPPER_TINKER_HELMET:
     slot: HEAD
@@ -626,42 +624,42 @@ items:
 
   YKI_MOLTEN_BERSERKER_HELMET:
     slot: HEAD
-    stats: {health: 80, defense: 55, damage: 12, strength: 15, ferocity: 4, vitality: 3.75}
+    stats: {health: 80, defense: 55, damage: 12, strength: 15}
   YKI_MOLTEN_BERSERKER_CHESTPLATE:
     slot: CHEST
-    stats: {health: 125, defense: 90, damage: 12, strength: 15, ferocity: 4, vitality: 3.75}
+    stats: {health: 125, defense: 90, damage: 12, strength: 15}
   YKI_MOLTEN_BERSERKER_LEGGINGS:
     slot: LEGS
-    stats: {health: 105, defense: 75, damage: 12, strength: 15, ferocity: 4, vitality: 3.75}
+    stats: {health: 105, defense: 75, damage: 12, strength: 15}
   YKI_MOLTEN_BERSERKER_BOOTS:
     slot: FEET
-    stats: {health: 70, defense: 50, damage: 12, strength: 15, ferocity: 4, vitality: 3.75}
+    stats: {health: 70, defense: 50, damage: 12, strength: 15}
 
   YKI_ABYSS_WARDEN_HELMET:
     slot: HEAD
-    stats: {health: 125, defense: 100, damage: 10, strength: 15, wisdom: 4, vitality: 4}
+    stats: {health: 125, defense: 100, damage: 10, strength: 15, wisdom: 4}
   YKI_ABYSS_WARDEN_CHESTPLATE:
     slot: CHEST
-    stats: {health: 185, defense: 160, damage: 10, strength: 15, wisdom: 4, vitality: 4}
+    stats: {health: 185, defense: 160, damage: 10, strength: 15, wisdom: 4}
   YKI_ABYSS_WARDEN_LEGGINGS:
     slot: LEGS
-    stats: {health: 155, defense: 130, damage: 10, strength: 15, wisdom: 4, vitality: 4}
+    stats: {health: 155, defense: 130, damage: 10, strength: 15, wisdom: 4}
   YKI_ABYSS_WARDEN_BOOTS:
     slot: FEET
-    stats: {health: 105, defense: 90, damage: 10, strength: 15, wisdom: 4, vitality: 4}
+    stats: {health: 105, defense: 90, damage: 10, strength: 15, wisdom: 4}
 
   YKI_CHRONOWARDEN_HELMET:
     slot: HEAD
-    stats: {health: 140, defense: 110, damage: 5, strength: 10, wisdom: 4, vitality: 5, mending: 5}
+    stats: {health: 140, defense: 110, damage: 5, strength: 10, wisdom: 4, mending: 5}
   YKI_CHRONOWARDEN_CHESTPLATE:
     slot: CHEST
-    stats: {health: 210, defense: 170, damage: 5, strength: 10, wisdom: 4, vitality: 5, mending: 5}
+    stats: {health: 210, defense: 170, damage: 5, strength: 10, wisdom: 4, mending: 5}
   YKI_CHRONOWARDEN_LEGGINGS:
     slot: LEGS
-    stats: {health: 175, defense: 140, damage: 5, strength: 10, wisdom: 4, vitality: 5, mending: 5}
+    stats: {health: 175, defense: 140, damage: 5, strength: 10, wisdom: 4, mending: 5}
   YKI_CHRONOWARDEN_BOOTS:
     slot: FEET
-    stats: {health: 120, defense: 100, damage: 5, strength: 10, wisdom: 4, vitality: 5, mending: 5}
+    stats: {health: 120, defense: 100, damage: 5, strength: 10, wisdom: 4, mending: 5}
 
   # YknClass 职业主题兵装：每个职业各一件史诗进阶武器与神话终阶武器。
   YKI_SUNFORGED_BLADE:
@@ -699,7 +697,7 @@ items:
 
   YKI_WARPATH_PIKE:
     slot: MAIN_HAND
-    stats: {damage: 205, strength: 120, crit-chance: 15, ferocity: 15, speed: 8}
+    stats: {damage: 205, strength: 120, crit-chance: 15, speed: 8}
     abilities:
       warpath_charge:
         name: 贯阵冲锋
@@ -733,7 +731,7 @@ items:
 
   YKI_REQUIEM_BELL:
     slot: MAIN_HAND
-    stats: {damage: 25, health: 100, wisdom: 18, vitality: 20, mending: 28}
+    stats: {damage: 25, health: 100, wisdom: 18, mending: 28}
     abilities:
       requiem_chime:
         name: 复魄祷言
@@ -749,7 +747,7 @@ items:
 
   YKI_OATHKEEPER_MAUL:
     slot: MAIN_HAND
-    stats: {damage: 150, strength: 65, health: 140, defense: 100, vitality: 20}
+    stats: {damage: 150, strength: 65, health: 140, defense: 100}
     abilities:
       oathkeeper_aegis:
         name: 守誓壁垒
@@ -780,7 +778,7 @@ items:
 
   YKI_SOVEREIGN_HOLYBLADE:
     slot: MAIN_HAND
-    stats: {damage: 310, strength: 205, crit-chance: 24, crit-damage: 80, defense: 70, vitality: 20}
+    stats: {damage: 310, strength: 205, crit-chance: 24, crit-damage: 80, defense: 70}
     abilities:
       sovereign_judgment:
         name: 圣剑使·裁决
@@ -791,7 +789,7 @@ items:
         conditions: {target-required: true}
         effects:
           - {type: DAMAGE, target: CURRENT, amount: 700, strength-scaling: 1.15}
-          - {type: HEAL, target: SELF, amount: 120, vitality-scaling: 2.0}
+          - {type: HEAL, target: SELF, amount: 120}
           - {type: ABSORPTION, target: SELF, amount: 180, cap: 20}
           - {type: PARTICLE, target: CURRENT, particle: END_ROD, count: 48}
           - {type: SOUND, target: SELF, sound: 'minecraft:item.trident.thunder', pitch: 1.2}
@@ -815,7 +813,7 @@ items:
 
   YKI_HEAVENPIERCER_LANCE:
     slot: MAIN_HAND
-    stats: {damage: 340, strength: 225, crit-chance: 25, crit-damage: 70, ferocity: 35, speed: 18}
+    stats: {damage: 340, strength: 225, crit-chance: 25, crit-damage: 70, speed: 18}
     abilities:
       heavenpiercer_charge:
         name: 破阵子·贯穹
@@ -834,7 +832,7 @@ items:
 
   YKI_NAMELESS_REAPER:
     slot: MAIN_HAND
-    stats: {damage: 300, strength: 180, crit-chance: 40, crit-damage: 110, attack-speed: 25, ferocity: 25, speed: 20}
+    stats: {damage: 300, strength: 180, crit-chance: 40, crit-damage: 110, attack-speed: 25, speed: 20}
     abilities:
       nameless_backstab:
         name: 影中刃
@@ -865,7 +863,7 @@ items:
 
   YKI_SOULRECALL_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 45, health: 220, wisdom: 34, ability-damage: 20, vitality: 40, mending: 50}
+    stats: {damage: 45, health: 220, wisdom: 34, ability-damage: 20, mending: 50}
     abilities:
       soulrecall_covenant:
         name: 追魂圣域
@@ -882,7 +880,7 @@ items:
 
   YKI_CITADEL_STANDARD:
     slot: MAIN_HAND
-    stats: {damage: 45, strength: 80, health: 300, defense: 220, vitality: 35, wisdom: 12}
+    stats: {damage: 45, strength: 80, health: 300, defense: 220, wisdom: 12}
     abilities:
       citadel_decree:
         name: 千钧军令
@@ -892,7 +890,6 @@ items:
         effects:
           - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 320, cap: 20}
           - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: DEFENSE, amount: 90, duration: 8}
-          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: VITALITY, amount: 25, duration: 8}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: SLOWNESS, duration: 4, amplifier: 1}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: WEAKNESS, duration: 4, amplifier: 1}
           - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 64}
@@ -900,7 +897,7 @@ items:
 
   YKI_LAWWEAVER_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 65, health: 150, wisdom: 36, ability-damage: 45, vitality: 15}
+    stats: {damage: 65, health: 150, wisdom: 36, ability-damage: 45}
     abilities:
       lawweaver_sentence:
         name: 万法禁域
@@ -979,7 +976,7 @@ items:
 
   YKI_SPRINGWATER_CHARM:
     slot: MAIN_HAND
-    stats: {damage: 12, health: 25, wisdom: 5, vitality: 4, mending: 6}
+    stats: {damage: 12, health: 25, wisdom: 5, mending: 6}
     abilities:
       clear_dew:
         name: 清露
@@ -1072,7 +1069,7 @@ items:
 
   YKI_BLOOMSONG_TOME:
     slot: MAIN_HAND
-    stats: {damage: 20, health: 45, wisdom: 9, vitality: 8, mending: 12}
+    stats: {damage: 20, health: 45, wisdom: 9, mending: 12}
     abilities:
       bloom_healing:
         name: 花愈
@@ -1122,7 +1119,7 @@ items:
 
   YKI_RALLYING_BUGLE:
     slot: MAIN_HAND
-    stats: {damage: 20, strength: 20, health: 40, defense: 20, vitality: 6}
+    stats: {damage: 20, strength: 20, health: 40, defense: 20}
     abilities:
       rallying_call:
         name: 集阵号
@@ -1151,7 +1148,7 @@ items:
 
   YKI_SKYLINE_GLAIVE:
     slot: MAIN_HAND
-    stats: {damage: 128, strength: 65, crit-chance: 12, ferocity: 6, speed: 8}
+    stats: {damage: 128, strength: 65, crit-chance: 12, speed: 8}
     abilities:
       skyline_charge:
         name: 凌空线
@@ -1166,7 +1163,7 @@ items:
 
   YKI_SOULTHREAD_SCYTHE:
     slot: MAIN_HAND
-    stats: {damage: 118, strength: 52, crit-chance: 22, crit-damage: 45, vitality: 6}
+    stats: {damage: 118, strength: 52, crit-chance: 22, crit-damage: 45}
     abilities:
       soul_draw:
         name: 摄魂
@@ -1175,14 +1172,13 @@ items:
         announce: false
         cancel-interaction: false
         effects:
-          - {type: HEAL, target: SELF, amount: 80, vitality-scaling: 1.0}
-          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 10, duration: 4}
+          - {type: HEAL, target: SELF, amount: 80}
           - {type: PARTICLE, target: SELF, particle: SOUL, count: 24}
           - {type: SOUND, target: SELF, sound: 'minecraft:entity.vex.charge', pitch: 0.7}
 
   YKI_RUNEBULWARK_HAMMER:
     slot: MAIN_HAND
-    stats: {damage: 110, strength: 45, health: 80, defense: 65, vitality: 8}
+    stats: {damage: 110, strength: 45, health: 80, defense: 65}
     abilities:
       runic_bulwark:
         name: 符垒
@@ -1199,7 +1195,7 @@ items:
 
   YKI_MOONWELL_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 28, health: 85, wisdom: 15, vitality: 15, mending: 20}
+    stats: {damage: 28, health: 85, wisdom: 15, mending: 20}
     abilities:
       moonwell:
         name: 月泉
@@ -1266,7 +1262,7 @@ items:
 
   YKI_STORMCORE_REPEATER:
     slot: MAIN_HAND
-    stats: {damage: 250, strength: 145, crit-chance: 22, crit-damage: 70, attack-speed: 25, ferocity: 15}
+    stats: {damage: 250, strength: 145, crit-chance: 22, crit-damage: 70, attack-speed: 25}
     abilities:
       storm_core:
         name: 雷核
@@ -1284,7 +1280,7 @@ items:
 
   YKI_COLOSSUS_WARHAMMER:
     slot: MAIN_HAND
-    stats: {damage: 220, strength: 120, health: 180, defense: 140, vitality: 20}
+    stats: {damage: 220, strength: 120, health: 180, defense: 140}
     abilities:
       colossus_wall:
         name: 巨灵壁
@@ -1318,7 +1314,7 @@ items:
 
   YKI_SERAPHIC_CHALICE:
     slot: MAIN_HAND
-    stats: {damage: 30, health: 180, wisdom: 25, vitality: 32, mending: 38}
+    stats: {damage: 30, health: 180, wisdom: 25, mending: 38}
     abilities:
       seraphic_grace:
         name: 圣杯恩典
@@ -1334,7 +1330,7 @@ items:
 
   YKI_DRAGONBANNER_HORN:
     slot: MAIN_HAND
-    stats: {damage: 40, strength: 75, health: 140, defense: 90, wisdom: 12, vitality: 20}
+    stats: {damage: 40, strength: 75, health: 140, defense: 90, wisdom: 12}
     abilities:
       dragon_banner_order:
         name: 龙旌令
@@ -1344,14 +1340,13 @@ items:
         effects:
           - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: STRENGTH, amount: 80, duration: 8}
           - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: ATTACK_SPEED, amount: 20, duration: 8}
-          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: FEROCITY, amount: 10, duration: 8}
           - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 180, cap: 20}
           - {type: PARTICLE, target: SELF, particle: FLAME, count: 44}
           - {type: SOUND, target: SELF, sound: 'minecraft:event.raid.horn', pitch: 0.9}
 
   YKI_MIRAGE_DAGGERS:
     slot: MAIN_HAND
-    stats: {damage: 245, strength: 135, crit-chance: 35, crit-damage: 90, attack-speed: 25, ferocity: 20, speed: 15}
+    stats: {damage: 245, strength: 135, crit-chance: 35, crit-damage: 90, attack-speed: 25, speed: 15}
     abilities:
       mirage_execution:
         name: 蜃杀
@@ -1396,16 +1391,16 @@ items:
 
   YKI_GRANITE_BULWARK_HELMET:
     slot: HEAD
-    stats: {health: 70, defense: 55, vitality: 2}
+    stats: {health: 70, defense: 55}
   YKI_GRANITE_BULWARK_CHESTPLATE:
     slot: CHEST
-    stats: {health: 110, defense: 85, vitality: 3}
+    stats: {health: 110, defense: 85}
   YKI_GRANITE_BULWARK_LEGGINGS:
     slot: LEGS
-    stats: {health: 90, defense: 70, vitality: 3}
+    stats: {health: 90, defense: 70}
   YKI_GRANITE_BULWARK_BOOTS:
     slot: FEET
-    stats: {health: 60, defense: 50, vitality: 2}
+    stats: {health: 60, defense: 50}
 
   YKI_STORM_EYE_HELMET:
     slot: HEAD
@@ -1449,16 +1444,16 @@ items:
   # 第四、第五套护甲：补齐每档五套。
   YKI_MEADOW_MENDER_HELMET:
     slot: HEAD
-    stats: {health: 30, defense: 12, wisdom: 1, mending: 2, vitality: 1}
+    stats: {health: 30, defense: 12, wisdom: 1, mending: 2}
   YKI_MEADOW_MENDER_CHESTPLATE:
     slot: CHEST
-    stats: {health: 48, defense: 24, wisdom: 2, mending: 3, vitality: 2}
+    stats: {health: 48, defense: 24, wisdom: 2, mending: 3}
   YKI_MEADOW_MENDER_LEGGINGS:
     slot: LEGS
-    stats: {health: 40, defense: 20, wisdom: 1, mending: 3, vitality: 2}
+    stats: {health: 40, defense: 20, wisdom: 1, mending: 3}
   YKI_MEADOW_MENDER_BOOTS:
     slot: FEET
-    stats: {health: 26, defense: 12, wisdom: 1, mending: 2, vitality: 1, speed: 2}
+    stats: {health: 26, defense: 12, wisdom: 1, mending: 2, speed: 2}
 
   YKI_FRONTIER_SCOUT_HELMET:
     slot: HEAD
@@ -1488,16 +1483,16 @@ items:
 
   YKI_DEEPCAVE_PROSPECTOR_HELMET:
     slot: HEAD
-    stats: {health: 48, defense: 32, wisdom: 1, vitality: 1, speed: 2}
+    stats: {health: 48, defense: 32, wisdom: 1, speed: 2}
   YKI_DEEPCAVE_PROSPECTOR_CHESTPLATE:
     slot: CHEST
-    stats: {health: 75, defense: 52, wisdom: 2, vitality: 2, speed: 2}
+    stats: {health: 75, defense: 52, wisdom: 2, speed: 2}
   YKI_DEEPCAVE_PROSPECTOR_LEGGINGS:
     slot: LEGS
-    stats: {health: 60, defense: 43, wisdom: 1, vitality: 2, speed: 2}
+    stats: {health: 60, defense: 43, wisdom: 1, speed: 2}
   YKI_DEEPCAVE_PROSPECTOR_BOOTS:
     slot: FEET
-    stats: {health: 38, defense: 28, wisdom: 1, vitality: 1, speed: 4}
+    stats: {health: 38, defense: 28, wisdom: 1, speed: 4}
 
   YKI_FROSTWOOD_HUNTSMAN_HELMET:
     slot: HEAD
@@ -1527,16 +1522,16 @@ items:
 
   YKI_DAWN_CHANTER_HELMET:
     slot: HEAD
-    stats: {health: 92, defense: 60, wisdom: 8, mending: 6, vitality: 4}
+    stats: {health: 92, defense: 60, wisdom: 8, mending: 6}
   YKI_DAWN_CHANTER_CHESTPLATE:
     slot: CHEST
-    stats: {health: 145, defense: 95, wisdom: 12, mending: 9, vitality: 6}
+    stats: {health: 145, defense: 95, wisdom: 12, mending: 9}
   YKI_DAWN_CHANTER_LEGGINGS:
     slot: LEGS
-    stats: {health: 118, defense: 80, wisdom: 10, mending: 8, vitality: 5}
+    stats: {health: 118, defense: 80, wisdom: 10, mending: 8}
   YKI_DAWN_CHANTER_BOOTS:
     slot: FEET
-    stats: {health: 76, defense: 50, wisdom: 6, mending: 5, vitality: 3, speed: 3}
+    stats: {health: 76, defense: 50, wisdom: 6, mending: 5, speed: 3}
 
   YKI_RIFT_SCHOLAR_HELMET:
     slot: HEAD
@@ -1553,16 +1548,16 @@ items:
 
   YKI_PHOENIX_HIEROPHANT_HELMET:
     slot: HEAD
-    stats: {health: 120, defense: 85, wisdom: 10, mending: 10, vitality: 7}
+    stats: {health: 120, defense: 85, wisdom: 10, mending: 10}
   YKI_PHOENIX_HIEROPHANT_CHESTPLATE:
     slot: CHEST
-    stats: {health: 188, defense: 135, wisdom: 16, mending: 15, vitality: 10}
+    stats: {health: 188, defense: 135, wisdom: 16, mending: 15}
   YKI_PHOENIX_HIEROPHANT_LEGGINGS:
     slot: LEGS
-    stats: {health: 157, defense: 110, wisdom: 14, mending: 13, vitality: 9}
+    stats: {health: 157, defense: 110, wisdom: 14, mending: 13}
   YKI_PHOENIX_HIEROPHANT_BOOTS:
     slot: FEET
-    stats: {health: 105, defense: 75, wisdom: 10, mending: 8, vitality: 6, speed: 4}
+    stats: {health: 105, defense: 75, wisdom: 10, mending: 8, speed: 4}
 
   YKI_TEMPEST_FALCONER_HELMET:
     slot: HEAD
@@ -1579,29 +1574,29 @@ items:
 
   YKI_SUNCROWN_DUELIST_HELMET:
     slot: HEAD
-    stats: {health: 118, defense: 76, damage: 25, strength: 40, crit-chance: 5, crit-damage: 25, attack-speed: 5, ferocity: 4, speed: 3}
+    stats: {health: 118, defense: 76, damage: 25, strength: 40, crit-chance: 5, crit-damage: 25, attack-speed: 5, speed: 3}
   YKI_SUNCROWN_DUELIST_CHESTPLATE:
     slot: CHEST
-    stats: {health: 178, defense: 120, damage: 38, strength: 60, crit-chance: 8, crit-damage: 40, attack-speed: 8, ferocity: 6, speed: 4}
+    stats: {health: 178, defense: 120, damage: 38, strength: 60, crit-chance: 8, crit-damage: 40, attack-speed: 8, speed: 4}
   YKI_SUNCROWN_DUELIST_LEGGINGS:
     slot: LEGS
-    stats: {health: 150, defense: 100, damage: 35, strength: 55, crit-chance: 7, crit-damage: 35, attack-speed: 7, ferocity: 5, speed: 4}
+    stats: {health: 150, defense: 100, damage: 35, strength: 55, crit-chance: 7, crit-damage: 35, attack-speed: 7, speed: 4}
   YKI_SUNCROWN_DUELIST_BOOTS:
     slot: FEET
-    stats: {health: 102, defense: 70, damage: 22, strength: 35, crit-chance: 5, crit-damage: 20, attack-speed: 5, ferocity: 3, speed: 5}
+    stats: {health: 102, defense: 70, damage: 22, strength: 35, crit-chance: 5, crit-damage: 20, attack-speed: 5, speed: 5}
 
   YKI_REALMSEEKER_HELMET:
     slot: HEAD
-    stats: {health: 130, defense: 90, wisdom: 8, vitality: 4, mending: 2, speed: 8}
+    stats: {health: 130, defense: 90, wisdom: 8, mending: 2, speed: 8}
   YKI_REALMSEEKER_CHESTPLATE:
     slot: CHEST
-    stats: {health: 198, defense: 142, wisdom: 12, vitality: 6, mending: 3, speed: 10}
+    stats: {health: 198, defense: 142, wisdom: 12, mending: 3, speed: 10}
   YKI_REALMSEEKER_LEGGINGS:
     slot: LEGS
-    stats: {health: 166, defense: 120, wisdom: 10, vitality: 5, mending: 3, speed: 10}
+    stats: {health: 166, defense: 120, wisdom: 10, mending: 3, speed: 10}
   YKI_REALMSEEKER_BOOTS:
     slot: FEET
-    stats: {health: 112, defense: 80, wisdom: 8, vitality: 3, mending: 2, speed: 12}
+    stats: {health: 112, defense: 80, wisdom: 8, mending: 2, speed: 12}
 
   # 骨龙首领职业兵装。
   YKI_WINGBREAKER_GREATSWORD:
@@ -1637,7 +1632,7 @@ items:
 
   YKI_DRAGONSPINE_LANCE:
     slot: MAIN_HAND
-    stats: {damage: 215, strength: 130, crit-chance: 18, crit-damage: 40, ferocity: 18, speed: 10}
+    stats: {damage: 215, strength: 130, crit-chance: 18, crit-damage: 40, speed: 10}
     abilities:
       dragonspine_charge:
         name: 脊骨突阵
@@ -1672,7 +1667,7 @@ items:
 
   YKI_MARROW_REQUIEM_CENSER:
     slot: MAIN_HAND
-    stats: {damage: 30, health: 130, wisdom: 22, vitality: 24, mending: 32}
+    stats: {damage: 30, health: 130, wisdom: 22, mending: 32}
     abilities:
       return_of_the_dead:
         name: 亡者回生
@@ -1689,7 +1684,7 @@ items:
 
   YKI_OSSUARY_BULWARK:
     slot: MAIN_HAND
-    stats: {damage: 155, strength: 70, health: 180, defense: 125, vitality: 22}
+    stats: {damage: 155, strength: 70, health: 180, defense: 125}
     abilities:
       ossuary_array:
         name: 骨狱阵列
@@ -1722,7 +1717,7 @@ items:
   # 烬日冥卫·阿努赫首领职业兵装。
   YKI_ENDSUN_EDICT_BLADE:
     slot: MAIN_HAND
-    stats: {damage: 285, strength: 180, crit-chance: 22, crit-damage: 80, attack-speed: 12, ferocity: 12}
+    stats: {damage: 285, strength: 180, crit-chance: 22, crit-damage: 80, attack-speed: 12}
     abilities:
       blade_edict:
         name: 敕令·禁刃
@@ -1753,7 +1748,7 @@ items:
 
   YKI_SOLAR_AEGIS_LANCE:
     slot: MAIN_HAND
-    stats: {damage: 275, strength: 175, crit-chance: 18, crit-damage: 60, ferocity: 22, defense: 70, vitality: 10, speed: 10}
+    stats: {damage: 275, strength: 175, crit-chance: 18, crit-damage: 60, defense: 70, speed: 10}
     abilities:
       solar_aegis_charge:
         name: 耀盾贯行
@@ -1771,7 +1766,7 @@ items:
 
   YKI_SCYTHE_ECHO_SICKLE:
     slot: MAIN_HAND
-    stats: {damage: 255, strength: 145, crit-chance: 38, crit-damage: 100, attack-speed: 25, ferocity: 18, speed: 18}
+    stats: {damage: 255, strength: 145, crit-chance: 38, crit-damage: 100, attack-speed: 25, speed: 18}
     abilities:
       soul_splitting_echo:
         name: 镰影分魂
@@ -1789,7 +1784,7 @@ items:
 
   YKI_SOUL_CROWN_CENSER:
     slot: MAIN_HAND
-    stats: {damage: 35, health: 190, wisdom: 28, ability-damage: 10, vitality: 36, mending: 42}
+    stats: {damage: 35, health: 190, wisdom: 28, ability-damage: 10, mending: 42}
     abilities:
       crown_requiem:
         name: 冠冕安魂
@@ -1806,7 +1801,7 @@ items:
 
   YKI_HEARTFURNACE_WARHAMMER:
     slot: MAIN_HAND
-    stats: {damage: 200, strength: 95, health: 260, defense: 200, vitality: 30, wisdom: 10}
+    stats: {damage: 200, strength: 95, health: 260, defense: 200, wisdom: 10}
     abilities:
       heartfurnace_bulwark:
         name: 心炉壁垒
@@ -1816,16 +1811,15 @@ items:
         effects:
           - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 9, amount: 280, cap: 20}
           - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: DEFENSE, amount: 75, duration: 7}
-          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 9, stat: VITALITY, amount: 18, duration: 7}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 9, potion: WEAKNESS, duration: 4, amplifier: 1}
-          - {type: HEAL, target: SELF, amount: 120, vitality-scaling: 1.5}
+          - {type: HEAL, target: SELF, amount: 120}
           - {type: PARTICLE, target: SELF, particle: FLAME, count: 36}
           - {type: PARTICLE, target: SELF, particle: SOUL, count: 28}
           - {type: SOUND, target: SELF, sound: 'minecraft:block.anvil.land', pitch: 0.65}
 
   YKI_BLACK_SUN_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 55, health: 110, wisdom: 32, ability-damage: 42, vitality: 12}
+    stats: {damage: 55, health: 110, wisdom: 32, ability-damage: 42}
     abilities:
       black_sun_rite:
         name: 黑日葬仪
@@ -1844,7 +1838,7 @@ items:
   # 终焉之魔女·伊芙蕾雅首领职业兵装。
   YKI_FATESEVER_HOLYBLADE:
     slot: MAIN_HAND
-    stats: {damage: 360, strength: 240, crit-chance: 28, crit-damage: 100, attack-speed: 15, ferocity: 30, defense: 60, vitality: 20}
+    stats: {damage: 360, strength: 240, crit-chance: 28, crit-damage: 100, attack-speed: 15, defense: 60}
     abilities:
       fate_severing_verdict:
         name: 断命裁决
@@ -1862,7 +1856,7 @@ items:
 
   YKI_SEVENFOLD_END_BOW:
     slot: MAIN_HAND
-    stats: {damage: 380, strength: 230, crit-chance: 32, crit-damage: 140, attack-speed: 20, ferocity: 25, speed: 15}
+    stats: {damage: 380, strength: 230, crit-chance: 32, crit-damage: 140, attack-speed: 20, speed: 15}
     abilities:
       sevenfold_end_arrow:
         name: 七终魔矢
@@ -1871,13 +1865,12 @@ items:
         cooldown: 2
         effects:
           - {type: PROJECTILE, reuse-trigger: true, projectile: ARROW, damage: 1050, strength-scaling: 1.7, speed: 3.4, gravity: false, lifetime: 8, hit-particle: REVERSE_PORTAL, hit-particle-count: 42}
-          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 35, duration: 7}
           - {type: PARTICLE, target: SELF, particle: WITCH, count: 28}
           - {type: SOUND, target: SELF, sound: 'minecraft:entity.arrow.shoot', pitch: 0.55}
 
   YKI_HEAVEN_INVERSION_LANCE:
     slot: MAIN_HAND
-    stats: {damage: 375, strength: 250, crit-chance: 28, crit-damage: 90, attack-speed: 10, ferocity: 45, speed: 22}
+    stats: {damage: 375, strength: 250, crit-chance: 28, crit-damage: 90, attack-speed: 10, speed: 22}
     abilities:
       heaven_inversion:
         name: 天地倒悬
@@ -1897,7 +1890,7 @@ items:
 
   YKI_WITCHBLINK_SCISSORS:
     slot: MAIN_HAND
-    stats: {damage: 335, strength: 195, crit-chance: 45, crit-damage: 135, attack-speed: 35, ferocity: 35, speed: 30}
+    stats: {damage: 335, strength: 195, crit-chance: 45, crit-damage: 135, attack-speed: 35, speed: 30}
     abilities:
       blinking_verdict:
         name: 闪烁裁决
@@ -1917,7 +1910,7 @@ items:
 
   YKI_SOULPAWN_REQUIEM:
     slot: MAIN_HAND
-    stats: {damage: 60, health: 270, wisdom: 42, ability-damage: 24, vitality: 50, mending: 60}
+    stats: {damage: 60, health: 270, wisdom: 42, ability-damage: 24, mending: 60}
     abilities:
       soul_redemption:
         name: 灵魂赎回
@@ -1928,13 +1921,12 @@ items:
           - {type: HEAL, target: NEARBY_ALLIES, radius: 10, amount: 340, wisdom-scaling: 4.5, max-health-percent: 5}
           - {type: CLEANSE, target: NEARBY_ALLIES, radius: 10}
           - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 300, wisdom-scaling: 1.2, cap: 20}
-          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: VITALITY, amount: 30, duration: 8}
           - {type: PARTICLE, target: SELF, particle: TOTEM_OF_UNDYING, count: 64}
           - {type: SOUND, target: SELF, sound: 'minecraft:block.beacon.activate', pitch: 1.4}
 
   YKI_WORLD_END_BULWARK:
     slot: MAIN_HAND
-    stats: {damage: 80, strength: 100, health: 380, defense: 280, vitality: 45, wisdom: 16}
+    stats: {damage: 80, strength: 100, health: 380, defense: 280, wisdom: 16}
     abilities:
       black_sun_aegis:
         name: 黑日护仪
@@ -1944,7 +1936,6 @@ items:
         effects:
           - {type: ABSORPTION, target: NEARBY_ALLIES, radius: 10, amount: 400, cap: 20}
           - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: DEFENSE, amount: 120, duration: 8}
-          - {type: STAT_BUFF, target: NEARBY_ALLIES, radius: 10, stat: VITALITY, amount: 30, duration: 8}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: WEAKNESS, duration: 5, amplifier: 2}
           - {type: POTION, target: NEARBY_ENEMIES, radius: 10, potion: SLOWNESS, duration: 5, amplifier: 1}
           - {type: PARTICLE, target: SELF, particle: ENCHANT, count: 72}
@@ -1952,7 +1943,7 @@ items:
 
   YKI_SILENT_CHANT_CODEX:
     slot: MAIN_HAND
-    stats: {damage: 80, health: 180, wisdom: 45, ability-damage: 55, vitality: 18}
+    stats: {damage: 80, health: 180, wisdom: 45, ability-damage: 55}
     abilities:
       threefold_silent_chant:
         name: 三色无声咏唱
@@ -2088,7 +2079,7 @@ items:
 
   YKI_MARCHING_SANCTUARY_MAUL:
     slot: MAIN_HAND
-    stats: {damage: 172, strength: 88, health: 120, defense: 70, wisdom: 14, vitality: 12}
+    stats: {damage: 172, strength: 88, health: 120, defense: 70, wisdom: 14}
     abilities:
       field_sanctuary:
         name: 临时圣所
@@ -2123,7 +2114,7 @@ items:
 
   YKI_EXPEDITION_WARHAMMER:
     slot: MAIN_HAND
-    stats: {damage: 230, strength: 125, health: 140, defense: 90, wisdom: 18, vitality: 18, speed: 18}
+    stats: {damage: 230, strength: 125, health: 140, defense: 90, wisdom: 18, speed: 18}
     abilities:
       expedition_muster:
         name: 整备号令
@@ -2142,7 +2133,7 @@ items:
 
   YKI_HOMECOMING_CHRONICLE:
     slot: MAIN_HAND
-    stats: {damage: 90, health: 180, defense: 60, wisdom: 38, vitality: 20, mending: 22, speed: 15}
+    stats: {damage: 90, health: 180, defense: 60, wisdom: 38, mending: 22, speed: 15}
     abilities:
       emergency_rewind:
         name: 紧急回序
@@ -2190,23 +2181,23 @@ items:
   # 三首领主题护甲。
   YKI_OSSUARY_DRAGOON_HELMET:
     slot: HEAD
-    stats: {health: 95, defense: 70, damage: 12, strength: 16, crit-chance: 4, crit-damage: 10, ferocity: 3}
+    stats: {health: 95, defense: 70, damage: 12, strength: 16, crit-chance: 4, crit-damage: 10}
   YKI_OSSUARY_DRAGOON_CHESTPLATE:
     slot: CHEST
-    stats: {health: 145, defense: 110, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3}
+    stats: {health: 145, defense: 110, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10}
   YKI_OSSUARY_DRAGOON_LEGGINGS:
     slot: LEGS
-    stats: {health: 120, defense: 90, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3}
+    stats: {health: 120, defense: 90, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10}
   YKI_OSSUARY_DRAGOON_BOOTS:
     slot: FEET
-    stats: {health: 80, defense: 60, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, ferocity: 3, speed: 6}
+    stats: {health: 80, defense: 60, damage: 12, strength: 16, crit-chance: 2, crit-damage: 10, speed: 6}
 
   YKI_ENDSUN_GUARD_HELMET:
     slot: HEAD
     stats: {health: 125, defense: 90, damage: 18, strength: 25, wisdom: 6, crit-chance: 3}
   YKI_ENDSUN_GUARD_CHESTPLATE:
     slot: CHEST
-    stats: {health: 190, defense: 140, damage: 27, strength: 38, wisdom: 9, vitality: 4}
+    stats: {health: 190, defense: 140, damage: 27, strength: 38, wisdom: 9}
   YKI_ENDSUN_GUARD_LEGGINGS:
     slot: LEGS
     stats: {health: 155, defense: 115, damage: 24, strength: 34, wisdom: 8}
@@ -2392,7 +2383,6 @@ sets:
         effects:
           - {type: ABSORPTION, target: SELF, amount: 160, cap: 20}
           - {type: STAT_BUFF, target: SELF, stat: STRENGTH, amount: 60, duration: 6}
-          - {type: STAT_BUFF, target: SELF, stat: FEROCITY, amount: 20, duration: 6}
           - {type: STAT_BUFF, target: SELF, stat: ATTACK_SPEED, amount: 15, duration: 6}
           - {type: POTION, target: SELF, potion: FIRE_RESISTANCE, duration: 6, amplifier: 0, particles: false}
           - {type: PARTICLE, target: SELF, particle: FLAME, count: 40}
@@ -2471,7 +2461,7 @@ sets:
   granite_bulwark:
     pieces: [YKI_GRANITE_BULWARK_HELMET, YKI_GRANITE_BULWARK_CHESTPLATE, YKI_GRANITE_BULWARK_LEGGINGS, YKI_GRANITE_BULWARK_BOOTS]
     required-pieces: 4
-    stats: {defense: 40, vitality: 5}
+    stats: {defense: 40}
     abilities:
       granite_stance:
         name: 磐岩架势
@@ -2637,7 +2627,7 @@ sets:
   dawn_chanter:
     pieces: [YKI_DAWN_CHANTER_HELMET, YKI_DAWN_CHANTER_CHESTPLATE, YKI_DAWN_CHANTER_LEGGINGS, YKI_DAWN_CHANTER_BOOTS]
     required-pieces: 4
-    stats: {wisdom: 8, mending: 15, vitality: 10}
+    stats: {wisdom: 8, mending: 15}
     abilities:
       dawn_praise:
         name: 曦光礼赞
@@ -2670,7 +2660,7 @@ sets:
   phoenix_hierophant:
     pieces: [YKI_PHOENIX_HIEROPHANT_HELMET, YKI_PHOENIX_HIEROPHANT_CHESTPLATE, YKI_PHOENIX_HIEROPHANT_LEGGINGS, YKI_PHOENIX_HIEROPHANT_BOOTS]
     required-pieces: 4
-    stats: {wisdom: 12, mending: 20, vitality: 12}
+    stats: {wisdom: 12, mending: 20}
     abilities:
       rebirth_hymn:
         name: 涅槃圣歌
@@ -2707,7 +2697,7 @@ sets:
   suncrown_duelist:
     pieces: [YKI_SUNCROWN_DUELIST_HELMET, YKI_SUNCROWN_DUELIST_CHESTPLATE, YKI_SUNCROWN_DUELIST_LEGGINGS, YKI_SUNCROWN_DUELIST_BOOTS]
     required-pieces: 4
-    stats: {strength: 50, crit-damage: 50, ferocity: 20}
+    stats: {strength: 50, crit-damage: 50}
     abilities:
       sunwheel_slash:
         name: 日轮斩
@@ -2726,7 +2716,7 @@ sets:
   realmseeker:
     pieces: [YKI_REALMSEEKER_HELMET, YKI_REALMSEEKER_CHESTPLATE, YKI_REALMSEEKER_LEGGINGS, YKI_REALMSEEKER_BOOTS]
     required-pieces: 4
-    stats: {speed: 30, wisdom: 10, vitality: 10}
+    stats: {speed: 30, wisdom: 10}
     abilities:
       all_realm_adaptation:
         name: 万域适应

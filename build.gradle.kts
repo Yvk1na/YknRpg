@@ -1133,6 +1133,13 @@ val validateYaml by tasks.registering {
     )
     inputs.files(yamlFiles)
     doLast {
+        val retiredStats = Regex("(?i)\\b(vitality(?:-scaling)?|ferocity)\\b|活力|凶猛")
+        for (content in listOf("src/main/resources/rpg.yml",
+                "packs/mythicmobs/items/YknRpg_Weapons.yml", "packs/mythicmobs/items/YknRpg_Armor.yml")) {
+            if (retiredStats.containsMatchIn(file(content).readText(Charsets.UTF_8))) {
+                throw GradleException("$content 不得重新加入已移除的活力或凶猛属性/效果/Lore")
+            }
+        }
         val urls = (yamlValidator.files + validationLibraries.get().files)
             .map { it.toURI().toURL() }
             .toTypedArray()
