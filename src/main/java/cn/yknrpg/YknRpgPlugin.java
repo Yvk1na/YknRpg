@@ -3,11 +3,13 @@ package cn.yknrpg;
 import cn.yknrpg.command.YknRpgCommand;
 import cn.yknrpg.gui.EquipmentGui;
 import cn.yknrpg.gui.ItemEditGui;
+import cn.yknrpg.gui.MonsterDropGui;
 import cn.yknrpg.integration.AuraSkillsMana;
 import cn.yknrpg.integration.EcoPetsItems;
 import cn.yknrpg.integration.MythicItems;
+import cn.yknrpg.integration.MythicProfessionItems;
+import cn.yknrpg.integration.MonsterDropManager;
 import cn.yknrpg.integration.ProtocolLibInputBridge;
-import cn.yknrpg.integration.YknFishItems;
 import cn.yknrpg.item.CustomItemFactory;
 import cn.yknrpg.item.MaterialUseGuard;
 import cn.yknrpg.model.ItemDefinition.CatalogKind;
@@ -49,16 +51,23 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
     private static final String LEGACY_DATA_DIRECTORY = "YknItems";
     private static final long PET_CATALOG_RETRY_PERIOD_TICKS = 20L;
     private static final int PET_CATALOG_MAX_RETRY_ATTEMPTS = 120;
+    private static final int MINING_CATALOG_MAX_RETRY_ATTEMPTS = 300;
 
     private ItemRegistry registry;
     private CustomItemFactory itemFactory;
     private RecipeRegistrar recipes;
     private EquipmentGui gui;
     private ItemEditGui itemEditGui;
+    private MonsterDropManager monsterDropManager;
+    private MonsterDropGui monsterDropGui;
     private RpgRegistry rpgRegistry;
     private RpgEngine rpgEngine;
     private EcoPetsItems ecoPetsItems;
-    private YknFishItems fishingItems;
+    private MythicProfessionItems fishingItems;
+    private MythicProfessionItems miningItems;
+    private BukkitTask miningCatalogRetryTask;
+    private int miningCatalogRetryAttempts;
+    private boolean miningCatalogReady;
     private BukkitTask petCatalogRetryTask;
     private int petCatalogRetryAttempts;
     private ProtocolLibInputBridge protocolLibInputBridge;
@@ -82,20 +91,26 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
 
         MythicItems mythicItems = new MythicItems(this);
         ecoPetsItems = new EcoPetsItems(this);
-        fishingItems = new YknFishItems(mythicItems);
-        registry = new ItemRegistry(this, mythicItems, ecoPetsItems, fishingItems);
+        fishingItems = MythicProfessionItems.fishing(mythicItems);
+        miningItems = MythicProfessionItems.mining(mythicItems);
+        registry = new ItemRegistry(this, mythicItems, ecoPetsItems, fishingItems, miningItems);
         registry.reload();
         rpgRegistry = new RpgRegistry(this, mythicItems);
         rpgRegistry.reload();
+        monsterDropManager = new MonsterDropManager(this);
+        monsterDropManager.reload();
         itemFactory = new CustomItemFactory(this, registry, mythicItems, ecoPetsItems);
-        recipes = new RecipeRegistrar(this, registry, itemFactory, fishingItems);
+        recipes = new RecipeRegistrar(this, registry, itemFactory, fishingItems, miningItems);
         recipes.reload();
         gui = new EquipmentGui(this, registry, itemFactory);
         itemEditGui = new ItemEditGui(this, rpgRegistry);
+        monsterDropGui = new MonsterDropGui(this, monsterDropManager);
         rpgEngine = new RpgEngine(this, rpgRegistry, new AuraSkillsMana());
 
         getServer().getPluginManager().registerEvents(gui, this);
         getServer().getPluginManager().registerEvents(itemEditGui, this);
+        getServer().getPluginManager().registerEvents(monsterDropManager, this);
+        getServer().getPluginManager().registerEvents(monsterDropGui, this);
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(ecoPetsItems, this);
         getServer().getPluginManager().registerEvents(new MaterialUseGuard(itemFactory), this);
@@ -114,6 +129,7 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         bindEcoPetsReloadListener();
         schedulePetCatalogRetry();
         queueFishingCatalogRefresh();
+        queueMiningCatalogRefresh();
 
         getLogger().info("已载入 " + registry.items().size() + " 个目录物品与 "
                 + recipes.recipeCount() + " 个配方。");
@@ -128,7 +144,10 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         if (itemEditGui != null) itemEditGui.closeAll();
+        if (monsterDropGui != null) monsterDropGui.closeAll();
+        if (monsterDropManager != null) monsterDropManager.closeAll();
         cancelPetCatalogRetry();
+        cancelMiningCatalogRetry();
         pendingPetCatalogViewers.clear();
         if (protocolLibInputBridge != null) protocolLibInputBridge.stop();
         if (rpgEngine != null) rpgEngine.stop();
@@ -143,7 +162,9 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         mergeBundledConfigDefaults();
         registry.reload();
         rpgRegistry.reload();
+        if (monsterDropManager != null) monsterDropManager.reload();
         recipes.reload();
+        queueMiningCatalogRefresh();
         rpgEngine.start();
         if (hasPetCatalog()) {
             openPendingPetCatalogs();
@@ -194,6 +215,14 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         return itemEditGui;
     }
 
+    public MonsterDropManager monsterDropManager() {
+        return monsterDropManager;
+    }
+
+    public MonsterDropGui monsterDropGui() {
+        return monsterDropGui;
+    }
+
     public boolean refreshFishingCatalog(Player player) {
         try {
             if (fishingItems.available()) {
@@ -212,16 +241,45 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         return registry.items().stream().anyMatch(item -> item.kind().isFishing());
     }
 
-    @EventHandler
-    public void onFishingPluginEnable(PluginEnableEvent event) {
-        if (event.getPlugin().getName().equalsIgnoreCase("YknFish")) queueFishingCatalogRefresh();
+    public boolean refreshMiningCatalog(Player player) {
+        try {
+            if (miningItems.available()) {
+                if (!miningItems.ready() || !miningCatalogReady) {
+                    if (miningCatalogRetryTask == null) queueMiningCatalogRefresh();
+                    player.sendMessage(message("messages.mining-loading"));
+                    return false;
+                }
+                // 与钓鱼图鉴一致，浏览只读取缓存，不重新注册配方。
+                if (!hasMiningCatalog()) registry.refreshMining();
+                if (hasMiningCatalog()) return true;
+            }
+        } catch (RuntimeException exception) {
+            getLogger().warning("挖矿图鉴同步失败：" + exception.getMessage());
+        }
+        player.sendMessage(message("messages.mining-unavailable"));
+        return false;
+    }
+
+    private boolean hasMiningCatalog() {
+        return registry.items().stream().anyMatch(item -> item.kind().isMining());
     }
 
     @EventHandler
-    public void onFishingPluginDisable(PluginDisableEvent event) {
-        if (!event.getPlugin().getName().equalsIgnoreCase("YknFish")) return;
-        fishingItems.forgetRecipes();
-        queueFishingCatalogRefresh();
+    public void onProfessionPluginEnable(PluginEnableEvent event) {
+        if (event.getPlugin().getName().equalsIgnoreCase("YknFish")) queueFishingCatalogRefresh();
+        if (event.getPlugin().getName().equalsIgnoreCase("YknMining")) queueMiningCatalogRefresh();
+    }
+
+    @EventHandler
+    public void onProfessionPluginDisable(PluginDisableEvent event) {
+        if (event.getPlugin().getName().equalsIgnoreCase("YknFish")) {
+            fishingItems.forgetRecipes();
+            queueFishingCatalogRefresh();
+        }
+        if (event.getPlugin().getName().equalsIgnoreCase("YknMining")) {
+            miningItems.forgetRecipes();
+            queueMiningCatalogRefresh();
+        }
     }
 
     private void queueFishingCatalogRefresh() {
@@ -235,6 +293,44 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
                 getLogger().warning("钓鱼图鉴同步失败：" + exception.getMessage());
             }
         });
+    }
+
+    private void queueMiningCatalogRefresh() {
+        cancelMiningCatalogRetry();
+        miningCatalogReady = false;
+        if (!isEnabled()) return;
+        // YknMining 在 CraftEngine 异步检查后才注册配方；插件启用事件不代表目录已经就绪。
+        miningCatalogRetryTask = getServer().getScheduler().runTaskTimer(
+                this, this::retryMiningCatalog, 1L, 20L);
+    }
+
+    private void cancelMiningCatalogRetry() {
+        if (miningCatalogRetryTask != null) miningCatalogRetryTask.cancel();
+        miningCatalogRetryTask = null;
+        miningCatalogRetryAttempts = 0;
+    }
+
+    private void retryMiningCatalog() {
+        if (!isEnabled()) {
+            cancelMiningCatalogRetry();
+            return;
+        }
+        try {
+            if (!miningItems.available() || miningItems.ready()) {
+                registry.refreshMining();
+                recipes.reload();
+                miningCatalogReady = miningItems.available();
+                cancelMiningCatalogRetry();
+                return;
+            }
+        } catch (RuntimeException exception) {
+            cancelMiningCatalogRetry();
+            getLogger().warning("挖矿图鉴同步失败：" + exception.getMessage());
+            return;
+        }
+        if (++miningCatalogRetryAttempts < MINING_CATALOG_MAX_RETRY_ATTEMPTS) return;
+        cancelMiningCatalogRetry();
+        getLogger().warning("等待 YknMining 初始化已超时；再次打开挖矿管理时将重试。");
     }
 
     public void openPetCatalog(Player player) {
@@ -465,7 +561,9 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
             String current = persisted.getString(entry.getKey());
             if (!entry.getValue().equals(current)
                     && !entry.getValue().replace("armor>", "armor|pets>").equals(current)
-                    && !entry.getValue().replace("armor>", "armor|pets|fishing>").equals(current)) continue;
+                    && !entry.getValue().replace("armor>", "armor|pets|fishing>").equals(current)
+                    && !"&e用法：/yknrpg admin <items|weapon|armor|pets|fishing>、/yknrpg edit 或 /yknrpg reload"
+                    .equals(current)) continue;
             persisted.set(entry.getKey(), bundledConfigDefaults.get(entry.getKey()));
             added++;
         }

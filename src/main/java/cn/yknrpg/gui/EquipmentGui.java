@@ -33,7 +33,7 @@ public final class EquipmentGui implements Listener {
     private static final int ITEMS_PER_PAGE = 45;
     private static final int ARMOR_ITEMS_PER_PAGE = 44;
     private static final int PREVIOUS_SLOT = 45;
-    private static final int FISHING_BACK_SLOT = 46;
+    private static final int PROFESSION_BACK_SLOT = 46;
     private static final int PAGE_SLOT = 48;
     private static final int CLOSE_SLOT = 49;
     private static final int NEXT_SLOT = 53;
@@ -65,9 +65,9 @@ public final class EquipmentGui implements Listener {
     public void openCatalog(Player player, CatalogKind kind, int requestedPage) {
         if (!checkPermission(player)) return;
         if (kind.isFishing() && !plugin.refreshFishingCatalog(player)) return;
+        if (kind.isMining() && !plugin.refreshMiningCatalog(player)) return;
         List<ItemDefinition> definitions = registry.items(kind);
-        int itemsPerPage = kind == CatalogKind.ARMOR || kind == CatalogKind.FISHING_ARMOR
-                ? ARMOR_ITEMS_PER_PAGE : ITEMS_PER_PAGE;
+        int itemsPerPage = itemsPerPage(kind);
         int pageCount = Math.max(1, (definitions.size() + itemsPerPage - 1) / itemsPerPage);
         int page = Math.max(0, Math.min(requestedPage, pageCount - 1));
         CatalogHolder holder = new CatalogHolder(kind, page);
@@ -89,7 +89,8 @@ public final class EquipmentGui implements Listener {
             inventory.setItem(slot, catalogDisplay(definition));
         }
         if (page > 0) inventory.setItem(PREVIOUS_SLOT, button(Material.ARROW, "gui.previous-page"));
-        if (kind.isFishing()) inventory.setItem(FISHING_BACK_SLOT, button(Material.ARROW, "gui.fishing-back"));
+        if (kind.isProfession()) inventory.setItem(PROFESSION_BACK_SLOT,
+                button(Material.ARROW, kind.isMining() ? "gui.mining-back" : "gui.fishing-back"));
         inventory.setItem(PAGE_SLOT, pageIndicator(page + 1, pageCount));
         inventory.setItem(CLOSE_SLOT, button(Material.BARRIER, "gui.close"));
         if (page + 1 < pageCount) inventory.setItem(NEXT_SLOT, button(Material.ARROW, "gui.next-page"));
@@ -97,14 +98,26 @@ public final class EquipmentGui implements Listener {
     }
 
     public void openFishingMenu(Player player) {
-        if (!checkPermission(player) || !plugin.refreshFishingCatalog(player)) return;
-        FishingMenuHolder holder = new FishingMenuHolder();
-        Inventory inventory = Bukkit.createInventory(holder, 27, plugin.message("gui.fishing-title"));
+        openProfessionMenu(player, false);
+    }
+
+    public void openMiningMenu(Player player) {
+        openProfessionMenu(player, true);
+    }
+
+    private void openProfessionMenu(Player player, boolean mining) {
+        if (!checkPermission(player)) return;
+        if (!(mining ? plugin.refreshMiningCatalog(player) : plugin.refreshFishingCatalog(player))) return;
+        ProfessionMenuHolder holder = new ProfessionMenuHolder(mining);
+        String prefix = mining ? "gui.mining" : "gui.fishing";
+        Inventory inventory = Bukkit.createInventory(holder, 27, plugin.message(prefix + "-title"));
         holder.inventory = inventory;
         fill(inventory);
-        inventory.setItem(11, button(Material.COD, "gui.fishing-buttons.catch"));
-        inventory.setItem(13, button(Material.FISHING_ROD, "gui.fishing-buttons.rod"));
-        inventory.setItem(15, button(Material.LEATHER_CHESTPLATE, "gui.fishing-buttons.armor"));
+        inventory.setItem(11, button(mining ? Material.RAW_IRON : Material.COD,
+                prefix + "-buttons." + (mining ? "items" : "catch")));
+        inventory.setItem(13, button(mining ? Material.DIAMOND_PICKAXE : Material.FISHING_ROD,
+                prefix + "-buttons." + (mining ? "pickaxe" : "rod")));
+        inventory.setItem(15, button(Material.LEATHER_CHESTPLATE, prefix + "-buttons.armor"));
         player.openInventory(inventory);
     }
 
@@ -141,7 +154,7 @@ public final class EquipmentGui implements Listener {
     public void onClick(InventoryClickEvent event) {
         InventoryHolder topHolder = event.getView().getTopInventory().getHolder(false);
         if (!(topHolder instanceof CatalogHolder) && !(topHolder instanceof RecipeHolder)
-                && !(topHolder instanceof FishingMenuHolder)) return;
+                && !(topHolder instanceof ProfessionMenuHolder)) return;
         if (!(event.getWhoClicked() instanceof Player player)) return;
         if (!checkPermission(player)) {
             event.setCancelled(true);
@@ -149,14 +162,9 @@ public final class EquipmentGui implements Listener {
         }
         int slot = event.getRawSlot();
 
-        if (topHolder instanceof FishingMenuHolder) {
+        if (topHolder instanceof ProfessionMenuHolder menu) {
             event.setCancelled(true);
-            CatalogKind kind = switch (slot) {
-                case 11 -> CatalogKind.FISHING_CATCH;
-                case 13 -> CatalogKind.FISHING_ROD;
-                case 15 -> CatalogKind.FISHING_ARMOR;
-                default -> null;
-            };
+            CatalogKind kind = professionKind(menu.mining, slot);
             if (kind != null) openCatalog(player, kind, 0);
             return;
         }
@@ -168,8 +176,8 @@ public final class EquipmentGui implements Listener {
                 player.closeInventory();
                 return;
             }
-            if (slot == FISHING_BACK_SLOT && catalog.kind.isFishing()) {
-                openFishingMenu(player);
+            if (slot == PROFESSION_BACK_SLOT && catalog.kind.isProfession()) {
+                openProfessionMenu(player, catalog.kind.isMining());
                 return;
             }
             if (slot == PREVIOUS_SLOT && catalog.page > 0) {
@@ -182,7 +190,7 @@ public final class EquipmentGui implements Listener {
             }
             String itemId = catalog.items.get(slot);
             if (itemId == null) return;
-            if (catalog.kind.isFishing() && !checkFishingItem(player, itemId)) return;
+            if (catalog.kind.isProfession() && !checkProfessionItem(player, itemId, catalog.kind)) return;
             if (event.isRightClick()) {
                 openRecipe(player, itemId, catalog.kind, catalog.page);
             } else if (event.isLeftClick()) {
@@ -192,7 +200,7 @@ public final class EquipmentGui implements Listener {
         }
 
         RecipeHolder recipe = (RecipeHolder) topHolder;
-        if (recipe.returnKind.isFishing() && !checkFishingItem(player, recipe.itemId)) {
+        if (recipe.returnKind.isProfession() && !checkProfessionItem(player, recipe.itemId, recipe.returnKind)) {
             event.setCancelled(true);
             return;
         }
@@ -240,12 +248,12 @@ public final class EquipmentGui implements Listener {
     public void onDrag(InventoryDragEvent event) {
         InventoryHolder holder = event.getView().getTopInventory().getHolder(false);
         if (!(holder instanceof CatalogHolder) && !(holder instanceof RecipeHolder)
-                && !(holder instanceof FishingMenuHolder)) return;
+                && !(holder instanceof ProfessionMenuHolder)) return;
         if (event.getWhoClicked() instanceof Player player && !checkPermission(player)) {
             event.setCancelled(true);
             return;
         }
-        if (holder instanceof CatalogHolder || holder instanceof FishingMenuHolder) {
+        if (holder instanceof CatalogHolder || holder instanceof ProfessionMenuHolder) {
             event.setCancelled(true);
         } else if (holder instanceof RecipeHolder) {
             int topSize = event.getView().getTopInventory().getSize();
@@ -260,10 +268,15 @@ public final class EquipmentGui implements Listener {
         return false;
     }
 
-    private boolean checkFishingItem(Player player, String itemId) {
-        if (registry.item(itemId).isPresent()) return true;
+    private boolean checkProfessionItem(Player player, String itemId, CatalogKind kind) {
+        boolean available = kind.isMining() ? plugin.refreshMiningCatalog(player) : plugin.refreshFishingCatalog(player);
+        if (!available) {
+            player.closeInventory();
+            return false;
+        }
+        if (registry.item(itemId).filter(item -> item.kind() == kind).isPresent()) return true;
         player.closeInventory();
-        player.sendMessage(plugin.message("messages.fishing-unavailable"));
+        player.sendMessage(plugin.message(kind.isMining() ? "messages.mining-unavailable" : "messages.fishing-unavailable"));
         return false;
     }
 
@@ -339,7 +352,21 @@ public final class EquipmentGui implements Listener {
         return stack;
     }
 
-    private String catalogTitlePath(CatalogKind kind) {
+    static int itemsPerPage(CatalogKind kind) {
+        return kind == CatalogKind.ARMOR || kind == CatalogKind.FISHING_ARMOR || kind == CatalogKind.MINING_ARMOR
+                ? ARMOR_ITEMS_PER_PAGE : ITEMS_PER_PAGE;
+    }
+
+    static CatalogKind professionKind(boolean mining, int slot) {
+        return switch (slot) {
+            case 11 -> mining ? CatalogKind.MINING_ITEM : CatalogKind.FISHING_CATCH;
+            case 13 -> mining ? CatalogKind.MINING_PICKAXE : CatalogKind.FISHING_ROD;
+            case 15 -> mining ? CatalogKind.MINING_ARMOR : CatalogKind.FISHING_ARMOR;
+            default -> null;
+        };
+    }
+
+    static String catalogTitlePath(CatalogKind kind) {
         return switch (kind) {
             case ITEM -> "gui.catalog-titles.items";
             case WEAPON -> "gui.catalog-titles.weapon";
@@ -348,6 +375,9 @@ public final class EquipmentGui implements Listener {
             case FISHING_CATCH -> "gui.catalog-titles.fishing-catch";
             case FISHING_ROD -> "gui.catalog-titles.fishing-rod";
             case FISHING_ARMOR -> "gui.catalog-titles.fishing-armor";
+            case MINING_ITEM -> "gui.catalog-titles.mining-items";
+            case MINING_PICKAXE -> "gui.catalog-titles.mining-pickaxe";
+            case MINING_ARMOR -> "gui.catalog-titles.mining-armor";
             case OTHER -> "gui.catalog-titles.other";
         };
     }
@@ -401,8 +431,13 @@ public final class EquipmentGui implements Listener {
         }
     }
 
-    private static final class FishingMenuHolder implements InventoryHolder {
+    private static final class ProfessionMenuHolder implements InventoryHolder {
+        private final boolean mining;
         private Inventory inventory;
+
+        private ProfessionMenuHolder(boolean mining) {
+            this.mining = mining;
+        }
 
         @Override
         public Inventory getInventory() {

@@ -2,7 +2,7 @@ package cn.yknrpg.recipe;
 
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.integration.MythicItems;
-import cn.yknrpg.integration.YknFishItems;
+import cn.yknrpg.integration.MythicProfessionItems;
 import cn.yknrpg.item.CustomItemFactory;
 import cn.yknrpg.model.IngredientSpec;
 import cn.yknrpg.model.ItemDefinition;
@@ -10,6 +10,7 @@ import cn.yknrpg.model.ItemDefinition.CatalogKind;
 import cn.yknrpg.model.ItemDefinition.ItemSource;
 import cn.yknrpg.model.ItemDefinition.Rarity;
 import cn.yknrpg.registry.ItemRegistry;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Keyed;
 import org.bukkit.Material;
@@ -21,21 +22,27 @@ import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Proxy;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Supplier;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,13 +52,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class RecipeRegistrarReloadTest {
     @Test
-    void cachedMenuAndUnchangedRecipesDoNotMutateTheServerRecipeBook() throws ReflectiveOperationException {
+    void cachedMenuAndUnchangedRecipesDoNotMutateTheServerRecipeBook(@TempDir Path directory) throws ReflectiveOperationException {
         Map<NamespacedKey, Recipe> serverRecipes = new LinkedHashMap<>();
         List<String> mutations = new ArrayList<>();
         AtomicInteger recipeScans = new AtomicInteger();
+        Set<String> enabledPlugins = new HashSet<>(Set.of("YknFish", "YknMining"));
+        AtomicBoolean miningReady = new AtomicBoolean(true);
+        ReadyMiningPlugin miningPlugin = (ReadyMiningPlugin) Proxy.newProxyInstance(getClass().getClassLoader(),
+                new Class<?>[]{ReadyMiningPlugin.class}, (proxy, method, args) -> {
+                    if (method.getName().equals("isIslandReady")) return miningReady.get();
+                    throw new AssertionError(method.getName());
+                });
         PluginManager manager = (PluginManager) Proxy.newProxyInstance(getClass().getClassLoader(),
                 new Class<?>[]{PluginManager.class}, (proxy, method, args) -> {
-                    if (method.getName().equals("isPluginEnabled")) return true;
+                    if (method.getName().equals("isPluginEnabled")) return enabledPlugins.contains(args[0]);
+                    if (method.getName().equals("getPlugin") && args[0].equals("YknMining")) return miningPlugin;
                     throw new AssertionError(method.getName());
                 });
         Server server = (Server) Proxy.newProxyInstance(getClass().getClassLoader(),
@@ -106,8 +121,10 @@ class RecipeRegistrarReloadTest {
             YknRpgPlugin plugin = (YknRpgPlugin) unsafe.allocateInstance(YknRpgPlugin.class);
             field(JavaPlugin.class, "pluginMeta").set(plugin,
                     new PluginDescriptionFile("YknRpg", "test", YknRpgPlugin.class.getName()));
+            field(JavaPlugin.class, "dataFolder").set(plugin, directory.toFile());
             MythicItems mythic = new MythicItems(plugin);
-            field(MythicItems.class, "itemManager").set(mythic, new MythicStub());
+            MythicStub mythicStub = new MythicStub();
+            field(MythicItems.class, "itemManager").set(mythic, mythicStub);
             field(MythicItems.class, "getItem").set(mythic, MythicStub.class.getMethod("getItem", String.class));
             field(MythicItems.class, "adaptItemStack").set(mythic,
                     MythicStub.class.getMethod("adapt", ItemStack.class));
@@ -115,10 +132,11 @@ class RecipeRegistrarReloadTest {
                     MythicStub.class.getMethod("isMythicItem", ItemStack.class));
             field(MythicItems.class, "getMythicTypeFromItem").set(mythic,
                     MythicStub.class.getMethod("getMythicTypeFromItem", ItemStack.class));
-            YknFishItems fishing = new YknFishItems(mythic);
-            ItemRegistry registry = new ItemRegistry(plugin, mythic, null, fishing);
+            MythicProfessionItems fishing = MythicProfessionItems.fishing(mythic);
+            MythicProfessionItems mining = MythicProfessionItems.mining(mythic);
+            ItemRegistry registry = new ItemRegistry(plugin, mythic, null, fishing, mining);
             CustomItemFactory factory = new CustomItemFactory(plugin, registry, mythic, null);
-            RecipeRegistrar registrar = new RecipeRegistrar(plugin, registry, factory, fishing);
+            RecipeRegistrar registrar = new RecipeRegistrar(plugin, registry, factory, fishing, mining);
             @SuppressWarnings("unchecked")
             Map<String, ItemDefinition> items = (Map<String, ItemDefinition>) field(ItemRegistry.class, "items").get(registry);
             @SuppressWarnings("unchecked")
@@ -156,8 +174,62 @@ class RecipeRegistrarReloadTest {
             assertEquals(List.of("remove:yknrpg:craft_fish", "add:yknfish:fish"), mutations);
             assertSame(nativeRecipe, serverRecipes.get(nativeKey));
 
+            NamespacedKey miningKey = new NamespacedKey("yknmining", "material");
+            ShapelessRecipe miningRecipe = new ShapelessRecipe(miningKey, new TestStack("MINING"))
+                    .addIngredient(new RecipeChoice.ExactChoice(new TestStack("MATERIAL_A")));
+            NamespacedKey unrelatedKey = new NamespacedKey("anotherplugin", "same_result");
+            ShapelessRecipe unrelatedRecipe = new ShapelessRecipe(unrelatedKey, new TestStack("MINING"))
+                    .addIngredient(new RecipeChoice.ExactChoice(new TestStack("MATERIAL_A")));
+            serverRecipes.put(miningKey, miningRecipe);
+            serverRecipes.put(unrelatedKey, unrelatedRecipe);
+            items.put("MINING", new ItemDefinition("MINING", ItemSource.MYTHIC_MOBS, original,
+                    CatalogKind.MINING_ITEM, Rarity.RARE, 0));
+            @SuppressWarnings("unchecked")
+            Map<String, List<IngredientSpec>> baseRecipes =
+                    (Map<String, List<IngredientSpec>>) field(ItemRegistry.class, "baseRecipes").get(registry);
+            baseRecipes.put("MINING", original);
+            mutations.clear();
+            registrar.reload();
+            assertEquals(List.of(), mutations, "Unmodified mining items keep their provider's native recipes");
+            assertSame(miningRecipe, serverRecipes.get(miningKey));
+
+            registry.updateRecipe("MINING", recipe("MATERIAL_B"));
+            registrar.reload();
+            assertEquals(List.of("add:yknrpg:craft_mining", "remove:yknmining:material"), mutations);
+            assertSame(nativeRecipe, serverRecipes.get(nativeKey), "Mining overrides must not suppress fishing recipes");
+            assertSame(unrelatedRecipe, serverRecipes.get(unrelatedKey), "Only the provider's namespace is managed");
+            mutations.clear();
+            registrar.reload();
+            assertEquals(List.of(), mutations, "Unchanged mining overrides must perform zero recipe mutations");
+
+            registry.resetRecipe("MINING");
+            registrar.reload();
+            assertEquals(List.of("remove:yknrpg:craft_mining", "add:yknmining:material"), mutations);
+            assertSame(miningRecipe, serverRecipes.get(miningKey));
+
+            mutations.clear();
+            registry.updateRecipe("MINING", Collections.nCopies(9, IngredientSpec.empty()));
+            registrar.reload();
+            assertEquals(List.of("remove:yknmining:material"), mutations, "Saving an empty mining recipe disables native crafting");
+            mutations.clear();
+            registrar.reload();
+            assertEquals(List.of(), mutations);
+            ShapelessRecipe updatedMiningRecipe = new ShapelessRecipe(miningKey, new TestStack("MINING"))
+                    .addIngredient(new RecipeChoice.ExactChoice(new TestStack("MATERIAL_B")));
+            serverRecipes.put(miningKey, updatedMiningRecipe);
+            registrar.reload();
+            assertEquals(List.of("remove:yknmining:material"), mutations,
+                    "A provider's late registration must not bypass a saved disabled recipe");
+            mutations.clear();
+            registry.resetRecipe("MINING");
+            registrar.reload();
+            assertEquals(List.of("add:yknmining:material"), mutations);
+            assertSame(updatedMiningRecipe, serverRecipes.get(miningKey), "Reset restores the most recently registered native recipe");
+
             field(YknRpgPlugin.class, "registry").set(plugin, registry);
             field(YknRpgPlugin.class, "fishingItems").set(plugin, fishing);
+            field(YknRpgPlugin.class, "miningItems").set(plugin, mining);
+            field(YknRpgPlugin.class, "miningCatalogReady").set(plugin, true);
             // recipes and MythicItems#getItemNames deliberately remain null: a full reload is forbidden here.
             AtomicInteger messages = new AtomicInteger();
             Player player = (Player) Proxy.newProxyInstance(getClass().getClassLoader(),
@@ -167,10 +239,53 @@ class RecipeRegistrarReloadTest {
                     });
             mutations.clear();
             recipeScans.set(0);
-            for (int index = 0; index < 5; index++) assertTrue(plugin.refreshFishingCatalog(player));
+            for (int index = 0; index < 5; index++) {
+                assertTrue(plugin.refreshFishingCatalog(player));
+                assertTrue(plugin.refreshMiningCatalog(player));
+            }
             assertEquals(List.of(), mutations);
             assertEquals(0, recipeScans.get());
             assertEquals(0, messages.get());
+
+            miningReady.set(false);
+            assertFalse(mining.ready());
+            assertEquals(List.of(), mining.load());
+            mining.suppressRecipes(Set.of("MINING"));
+            assertEquals(0, recipeScans.get(), "Unready mining providers must not scan incomplete native recipes");
+            assertEquals(List.of(), mutations);
+            miningReady.set(true);
+            field(MythicItems.class, "getItemNames").set(mythic, MythicStub.class.getMethod("getItemNames"));
+            mythicStub.ids = List.of("MINING", "MINING_NEW", "FISH", "TEST_5");
+            registry.refreshMining();
+            assertEquals(List.of("MINING", "MINING_NEW"), registry.items(CatalogKind.MINING_ITEM)
+                    .stream().map(ItemDefinition::id).toList());
+            assertEquals(Rarity.RARE, registry.item("MINING").orElseThrow().rarity());
+            assertEquals(IngredientSpec.custom("MATERIAL_B"), registry.item("MINING").orElseThrow().recipe().getFirst());
+            assertEquals(1, registry.items(CatalogKind.FISHING_CATCH).size());
+            assertEquals(327, registry.items(CatalogKind.ITEM).size());
+            registry.updateRecipe("MINING", recipe("MATERIAL_C"));
+            registrar.reload();
+            mining.forgetRecipes();
+            enabledPlugins.remove("YknMining");
+            registry.refreshMining();
+            assertTrue(registry.items().stream().noneMatch(item -> item.kind().isMining()));
+            assertTrue(registry.hasRecipeOverride("MINING"), "Provider unavailability must not erase stored overrides");
+            assertEquals(1, registry.items(CatalogKind.FISHING_CATCH).size());
+            assertEquals(327, registry.items(CatalogKind.ITEM).size());
+            mutations.clear();
+            registrar.reload();
+            assertEquals(List.of("remove:yknrpg:craft_mining"), mutations);
+            enabledPlugins.add("YknMining");
+            mining.restoreRecipes();
+            assertFalse(serverRecipes.containsKey(miningKey), "A disabled provider's forgotten recipe must not be resurrected");
+            serverRecipes.put(miningKey, updatedMiningRecipe);
+            registry.refreshMining();
+            assertEquals(recipe("MATERIAL_C"), registry.item("MINING").orElseThrow().recipe());
+            registrar.reload();
+            registry.resetRecipe("MINING");
+            assertEquals(IngredientSpec.custom("MATERIAL_B"), registry.item("MINING").orElseThrow().recipe().getFirst());
+            registrar.reload();
+            assertSame(updatedMiningRecipe, serverRecipes.get(miningKey));
         } finally {
             serverField.set(null, previousServer);
             blockTypeField.set(Material.STONE, previousBlockType);
@@ -213,14 +328,21 @@ class RecipeRegistrarReloadTest {
     }
 
     public static class MythicStub {
+        private List<String> ids = List.of();
+        public List<String> getItemNames() { return ids; }
         public Optional<MythicItemStub> getItem(String id) { return Optional.of(new MythicItemStub(id)); }
         public static ItemStack adapt(ItemStack stack) { return stack; }
         public boolean isMythicItem(ItemStack stack) { return stack instanceof TestStack; }
         public String getMythicTypeFromItem(ItemStack stack) { return ((TestStack) stack).id; }
     }
 
+    public interface ReadyMiningPlugin extends Plugin {
+        boolean isIslandReady();
+    }
+
     public record MythicItemStub(String id) {
         public ItemStack generateItemStack(int amount) { return new TestStack(id); }
+        public String getGroup() { return id.startsWith("MINING") ? "YknMining" : id.equals("FISH") ? "YknFish" : "YknRpg"; }
     }
 
     private static final class TestStack extends ItemStack {
@@ -232,6 +354,7 @@ class RecipeRegistrarReloadTest {
         @Override public void setAmount(int amount) { this.amount = amount; }
         @Override public boolean isEmpty() { return false; }
         @Override public boolean hasItemMeta() { return false; }
+        @Override public List<Component> lore() { return List.of(Component.text("稀有")); }
         @Override public ItemStack clone() { TestStack copy = new TestStack(id); copy.amount = amount; return copy; }
         @Override public boolean isSimilar(ItemStack other) { return other instanceof TestStack stack && id.equals(stack.id); }
         @Override public boolean equals(Object other) { return other instanceof ItemStack stack && isSimilar(stack) && amount == stack.getAmount(); }

@@ -2,7 +2,7 @@ package cn.yknrpg.recipe;
 
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.item.CustomItemFactory;
-import cn.yknrpg.integration.YknFishItems;
+import cn.yknrpg.integration.MythicProfessionItems;
 import cn.yknrpg.model.IngredientSpec;
 import cn.yknrpg.model.ItemDefinition;
 import cn.yknrpg.registry.ItemRegistry;
@@ -26,31 +26,33 @@ public final class RecipeRegistrar {
     private final YknRpgPlugin plugin;
     private final ItemRegistry registry;
     private final CustomItemFactory factory;
-    private final YknFishItems fishingItems;
+    private final MythicProfessionItems fishingItems;
+    private final MythicProfessionItems miningItems;
     private final List<NamespacedKey> keys = new ArrayList<>();
 
     public RecipeRegistrar(YknRpgPlugin plugin, ItemRegistry registry, CustomItemFactory factory,
-                           YknFishItems fishingItems) {
+                           MythicProfessionItems fishingItems, MythicProfessionItems miningItems) {
         this.plugin = plugin;
         this.registry = registry;
         this.factory = factory;
         this.fishingItems = fishingItems;
+        this.miningItems = miningItems;
     }
 
     public void reload() {
         // 先生成候选，再改服务端：无效配方不能破坏上一份仍可用的配方。
         Map<ItemDefinition, ShapedRecipe> desired = new LinkedHashMap<>();
         Set<NamespacedKey> desiredKeys = new HashSet<>();
-        Set<String> replacedFishing = new HashSet<>();
+        Set<String> replacedProfessionItems = new HashSet<>();
         for (ItemDefinition definition : registry.items()) {
-            if (definition.kind().isFishing() && !registry.hasRecipeOverride(definition.id())) continue;
+            if (definition.kind().isProfession() && !registry.hasRecipeOverride(definition.id())) continue;
             if (definition.recipe().size() != 9) continue;
             ShapedRecipe recipe = createRecipe(definition);
             if (recipe != null) {
                 desired.put(definition, recipe);
                 desiredKeys.add(recipe.getKey());
-            } else if (definition.kind().isFishing()) {
-                replacedFishing.add(definition.id()); // 明确保存空配方，禁用原生合成。
+            } else if (definition.kind().isProfession()) {
+                replacedProfessionItems.add(definition.id()); // 明确保存空配方，禁用原生合成。
             }
         }
         for (NamespacedKey key : List.copyOf(keys)) {
@@ -71,9 +73,10 @@ public final class RecipeRegistrar {
                 }
             }
             if (!keys.contains(recipe.getKey())) keys.add(recipe.getKey());
-            if (entry.getKey().kind().isFishing()) replacedFishing.add(entry.getKey().id());
+            if (entry.getKey().kind().isProfession()) replacedProfessionItems.add(entry.getKey().id());
         }
-        fishingItems.suppressRecipes(replacedFishing);
+        fishingItems.suppressRecipes(replacedProfessionItems);
+        miningItems.suppressRecipes(replacedProfessionItems);
     }
 
     public int recipeCount() {
@@ -84,6 +87,7 @@ public final class RecipeRegistrar {
         for (NamespacedKey key : keys) Bukkit.removeRecipe(key);
         keys.clear();
         fishingItems.restoreRecipes();
+        miningItems.restoreRecipes();
     }
 
     static boolean sameRecipe(Recipe current, ShapedRecipe desired) {

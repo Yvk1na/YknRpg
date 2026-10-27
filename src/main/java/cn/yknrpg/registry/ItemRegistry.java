@@ -3,7 +3,7 @@ package cn.yknrpg.registry;
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.integration.EcoPetsItems;
 import cn.yknrpg.integration.MythicItems;
-import cn.yknrpg.integration.YknFishItems;
+import cn.yknrpg.integration.MythicProfessionItems;
 import cn.yknrpg.model.IngredientSpec;
 import cn.yknrpg.model.ItemDefinition;
 import cn.yknrpg.model.ItemDefinition.CatalogKind;
@@ -24,22 +24,25 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 
 public final class ItemRegistry {
     private final YknRpgPlugin plugin;
     private final MythicItems mythicItems;
     private final EcoPetsItems ecoPetsItems;
-    private final YknFishItems fishingItems;
+    private final MythicProfessionItems fishingItems;
+    private final MythicProfessionItems miningItems;
     private final LinkedHashMap<String, ItemDefinition> items = new LinkedHashMap<>();
     private final LinkedHashMap<String, List<IngredientSpec>> baseRecipes = new LinkedHashMap<>();
     private final LinkedHashMap<String, List<IngredientSpec>> recipeOverrides = new LinkedHashMap<>();
 
     public ItemRegistry(YknRpgPlugin plugin, MythicItems mythicItems, EcoPetsItems ecoPetsItems,
-                        YknFishItems fishingItems) {
+                        MythicProfessionItems fishingItems, MythicProfessionItems miningItems) {
         this.plugin = plugin;
         this.mythicItems = mythicItems;
         this.ecoPetsItems = ecoPetsItems;
         this.fishingItems = fishingItems;
+        this.miningItems = miningItems;
     }
 
     public void reload() {
@@ -96,8 +99,13 @@ public final class ItemRegistry {
             refreshFishing();
         } catch (RuntimeException exception) {
             plugin.getLogger().warning("YknFish 目录暂不可用：" + exception.getMessage());
-            sortItems();
         }
+        try {
+            refreshMining();
+        } catch (RuntimeException exception) {
+            plugin.getLogger().warning("YknMining 目录暂不可用：" + exception.getMessage());
+        }
+        sortItems();
         loadRecipeOverrides();
         plugin.getLogger().info("目录已读取 " + orderedIds.size() + " 个 MythicMobs 物品与 "
                 + ecoPetsItems.itemIds().size() + " 个 EcoPets 宠物蛋。");
@@ -116,12 +124,20 @@ public final class ItemRegistry {
     }
 
     public void refreshFishing() {
-        List<ItemDefinition> fishing = fishingItems.load();
-        List<String> previous = items.values().stream().filter(item -> item.kind().isFishing())
+        refreshProfession(fishingItems, CatalogKind::isFishing);
+    }
+
+    public void refreshMining() {
+        refreshProfession(miningItems, CatalogKind::isMining);
+    }
+
+    private void refreshProfession(MythicProfessionItems provider, Predicate<CatalogKind> category) {
+        List<ItemDefinition> loaded = provider.load();
+        List<String> previous = items.values().stream().filter(item -> category.test(item.kind()))
                 .map(ItemDefinition::id).toList();
         previous.forEach(items::remove);
         previous.forEach(baseRecipes::remove);
-        for (ItemDefinition item : fishing) {
+        for (ItemDefinition item : loaded) {
             baseRecipes.put(item.id(), item.recipe());
             items.put(item.id(), item.withRecipe(recipeOverrides.getOrDefault(item.id(), item.recipe())));
         }
@@ -208,7 +224,7 @@ public final class ItemRegistry {
         for (String itemId : root.getKeys(false)) {
             try {
                 List<IngredientSpec> recipe = parseRecipe(root.getStringList(itemId));
-                // 依赖尚未启用时仍保留覆盖，避免保存其它配方时丢失钓鱼/宠物配方。
+                // 依赖尚未启用时仍保留覆盖，避免保存其它配方时丢失生活职业/宠物配方。
                 recipeOverrides.put(itemId, recipe);
                 ItemDefinition definition = items.get(itemId);
                 if (definition != null) items.put(itemId, definition.withRecipe(recipe));

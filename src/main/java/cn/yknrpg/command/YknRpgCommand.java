@@ -27,6 +27,15 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage(plugin.message("messages.admin-usage"));
             return true;
         }
+        if (args[0].equalsIgnoreCase("monsters")) {
+            if (!sender.hasPermission("yknrpg.admin.monsters") && !sender.hasPermission("yknrpg.admin")) {
+                sender.sendMessage(plugin.message("messages.no-permission"));
+                return true;
+            }
+            if (sender instanceof Player player) plugin.monsterDropGui().openMonsters(player, 0);
+            else sender.sendMessage(plugin.message("messages.player-only"));
+            return true;
+        }
         if (!sender.hasPermission("yknrpg.admin")) {
             sender.sendMessage(plugin.message("messages.no-permission"));
             return true;
@@ -43,6 +52,10 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
             }
             if (args.length >= 2 && args[1].equalsIgnoreCase("fishing")) {
                 plugin.gui().openFishingMenu(player);
+                return true;
+            }
+            if (args.length >= 2 && args[1].equalsIgnoreCase("mining")) {
+                plugin.gui().openMiningMenu(player);
                 return true;
             }
             CatalogKind kind = args.length < 2 ? CatalogKind.ITEM : switch (args[1].toLowerCase(Locale.ROOT)) {
@@ -77,14 +90,16 @@ public final class YknRpgCommand implements CommandExecutor, TabCompleter {
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command,
                                                  @NotNull String alias, @NotNull String[] args) {
-        if (!sender.hasPermission("yknrpg.admin")) return List.of();
+        boolean admin = sender.hasPermission("yknrpg.admin");
+        if (!admin) return List.of();
         if (args.length == 1) {
             String prefix = args[0].toLowerCase(Locale.ROOT);
-            return List.of("admin", "edit", "reload").stream().filter(value -> value.startsWith(prefix)).toList();
+            return List.of("admin", "edit", "monsters", "reload").stream()
+                    .filter(value -> value.startsWith(prefix)).toList();
         }
-        if (args.length == 2 && args[0].equalsIgnoreCase("admin")) {
+        if (admin && args.length == 2 && args[0].equalsIgnoreCase("admin")) {
             String prefix = args[1].toLowerCase(Locale.ROOT);
-            return List.of("items", "weapon", "armor", "pets", "fishing").stream()
+            return List.of("items", "weapon", "armor", "pets", "fishing", "mining").stream()
                     .filter(value -> value.startsWith(prefix)).toList();
         }
         return List.of();
