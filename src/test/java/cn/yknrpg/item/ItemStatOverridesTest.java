@@ -45,6 +45,7 @@ class ItemStatOverridesTest {
         var active =
                 new java.util.concurrent.atomic.AtomicReference<cn.yknrpg.api.ForgeBonusProvider>();
         var disabled = new java.util.concurrent.atomic.AtomicBoolean();
+        var phaseTwo = new java.util.concurrent.atomic.AtomicBoolean();
         var provider =
                 new cn.yknrpg.api.ForgeBonusProvider() {
                     public double multiplier(ItemStack stack, String stat) {
@@ -57,6 +58,16 @@ class ItemStatOverridesTest {
 
                     public List<Component> loreLines(ItemStack stack) {
                         return List.of(Text.component("&6锻造 +7"), Text.component("&b祝福 2/5"));
+                    }
+
+                    public double flat(ItemStack stack, String stat) {
+                        return phaseTwo.get()
+                                ? (stat.equals("damage") ? 3 : stat.equals("crit_chance") ? 2 : 0)
+                                : 0;
+                    }
+
+                    public Component decorateName(ItemStack stack, Component baseName) {
+                        return phaseTwo.get() ? baseName.append(Text.component("&6 +7")) : baseName;
                     }
                 };
         var services =
@@ -115,6 +126,9 @@ class ItemStatOverridesTest {
                     constructor.newInstance(
                             "YKI_TEST", RpgRegistry.Slot.MAIN_HAND, stats, List.of(ability)));
             TestStack stack = new TestStack(Material.DIAMOND_SWORD);
+            Component originalName =
+                    Text.component("&d原有武器名").clickEvent(ClickEvent.suggestCommand("/name"));
+            stack.meta.name = originalName;
             stack.meta.data.put(new NamespacedKey("mythicmobs", "type"), "YKI_TEST");
             Component description =
                     Component.text("技能说明").clickEvent(ClickEvent.suggestCommand("/retained"));
@@ -161,6 +175,10 @@ class ItemStatOverridesTest {
                         item.meta.lore,
                         "Unforged equipment keeps its exact styles and component tree");
                 assertFalse(item.meta.data.containsKey(new NamespacedKey("yknrpg", "forge_lore")));
+                assertSame(
+                        originalName,
+                        item.meta.name,
+                        "Unforged names keep the exact component tree");
             }
             assertEquals(writesBefore, stack.metaWrites, "Collect must not write unforged lore");
             slots.keySet().removeIf(slot -> !slot.equals("getItemInMainHand"));
@@ -212,6 +230,36 @@ class ItemStatOverridesTest {
                     1,
                     stack.meta.lore.stream().map(PLAIN::serialize).filter("锻造 +7"::equals).count());
             assertTrue(stack.meta.lore.stream().map(PLAIN::serialize).anyMatch("另一个插件的说明"::equals));
+            phaseTwo.set(true);
+            assertEquals(
+                    103,
+                    registry.itemStats(stack).get(Stat.DAMAGE),
+                    "flat is added after multiplication");
+            assertEquals(
+                    2,
+                    registry.itemStats(stack).get(Stat.CRIT_CHANCE),
+                    "flat can add a missing base stat");
+            registry.rewriteForgeLore(stack);
+            assertEquals("原有武器名 +7", PLAIN.serialize(stack.meta.name));
+            assertEquals(originalName, ForgeSupport.baseName(stack));
+            var decorated = stack.meta.name;
+            var withFlat = List.copyOf(stack.meta.lore);
+            registry.rewriteForgeLore(stack);
+            assertEquals(decorated, stack.meta.name);
+            assertEquals(withFlat, stack.meta.lore);
+            assertEquals(
+                    1,
+                    stack.meta.lore.stream()
+                            .map(PLAIN::serialize)
+                            .filter("暴击率：+2% (+2%)"::equals)
+                            .count());
+            active.set(null);
+            registry.rewriteForgeLore(stack);
+            assertEquals(originalName, stack.meta.name);
+            assertFalse(
+                    stack.meta.lore.stream()
+                            .map(PLAIN::serialize)
+                            .anyMatch(line -> line.contains("暴击率")));
         } finally {
             serverField.set(null, oldServer);
             blockType.set(Material.DIAMOND_SWORD, originalType);
@@ -589,6 +637,13 @@ class ItemStatOverridesTest {
 
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) {
+            if (method.getName().equals("displayName")) {
+                if (args == null || args.length == 0) {
+                    return name;
+                }
+                name = (Component) args[0];
+                return null;
+            }
             if (method.getName().equals("lore")) {
                 if (args == null || args.length == 0) {
                     return lore;

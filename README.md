@@ -41,6 +41,8 @@
 
 ## 内容分工
 
+YknRpg 1.2.2 的锻造扩展由 Bukkit 服务 `ForgeBonusProvider` 提供。`flat(ItemStack, statId)` 默认为 0，属性按「基础值 × multiplier + flat」计算，支持为原本没有该属性的武器追加固定值；`decorateName(ItemStack, baseName)` 默认返回原名，保持旧实现兼容。显示刷新入口为 `ForgeSupport.rewrite`，首次装饰时保存完整基础名组件，后续始终以基础名调用，`ForgeItemAccess.weapon` 也返回基础名，防止面板重复后缀。服务移除时恢复基础名；未锻造物品的名称与 Lore 完全不写回。自动测试覆盖固定值顺序、缺失属性、名称/Lore 幂等及未锻造外观保留。
+
 - MythicMobs：物品材质、名称、Lore 和基础物品数据。
 - AuraSkills：玩家当前魔力、魔力上限、恢复和持久化。
 - EcoPets、eco 与 libreforge：宠物解锁、升级、展示、特殊效果，以及 AuraSkills 宠物属性修饰器。

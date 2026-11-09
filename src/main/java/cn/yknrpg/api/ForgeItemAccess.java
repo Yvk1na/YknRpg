@@ -58,7 +58,7 @@ public final class ForgeItemAccess {
                                 new Attribute(
                                         "health", "生命值", false, base.get(RpgRegistry.Stat.HEALTH)));
                     }
-                    var name = stack.getItemMeta().displayName();
+                    var name = cn.yknrpg.item.ForgeSupport.baseName(stack);
                     return new Weapon(
                             d.id(),
                             name == null

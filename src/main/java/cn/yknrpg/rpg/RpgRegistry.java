@@ -140,7 +140,7 @@ public final class RpgRegistry {
         var base = baseItemStats(stack, definition);
         var provider = ForgeSupport.provider();
         EnumMap<Stat, Double> values = new EnumMap<>(Stat.class);
-        base.values().forEach((stat, value) -> values.put(stat, value * ForgeSupport.multiplier(provider, stack, stat)));
+        values.putAll(ForgeSupport.values(base.values(), provider, stack));
         return new Stats(values);
     }
 
