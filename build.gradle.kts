@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "cn.yknrpg"
-version = "1.2"
+version = "1.2.1"
 
 repositories {
     mavenCentral()
@@ -1678,6 +1678,9 @@ val obfuscateJar by tasks.registering(JavaExec::class) {
             "Exceptions,InnerClasses,Signature,*Annotation*,EnclosingMethod,Record,NestHost,NestMembers,PermittedSubclasses",
             "-keep",
             "public class cn.yknrpg.YknRpgPlugin { public <init>(); public void onEnable(); public void onDisable(); }",
+            "-keep", "public class cn.yknrpg.api.** { public *; }",
+            "-keep", "public interface cn.yknrpg.api.** { *; }",
+            "-keepclassmembers", "class cn.yknrpg.YknRpgPlugin { public cn.yknrpg.api.ForgeItemAccess forgeItems(); }",
             "-keepclassmembers",
             "class * { public protected *; }",
             "-keepclassmembers",

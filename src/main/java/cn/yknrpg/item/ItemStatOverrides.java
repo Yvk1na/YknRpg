@@ -27,7 +27,7 @@ public final class ItemStatOverrides {
     private static final Pattern INPUT = Pattern.compile("\\+?(?:\\d+(?:\\.\\d*)?|\\.\\d+)\\s*%?");
     private static final Pattern ATTRIBUTE = Pattern.compile(
             "\\s*(伤害|力量|暴击率|暴击伤害|智慧|智力|防御|攻击速度|技能伤害|治疗增幅|速度|生命|生命值|活力|凶猛)"
-                    + "\\s*[:：]\\s*[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)\\s*%?\\s*");
+                    + "\\s*[:：]\\s*[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)\\s*%?(?:\\s*\\(\\+[^)]*\\))?\\s*");
     private static final Pattern SEPARATOR = Pattern.compile("[|｜]");
     private static final PlainTextComponentSerializer PLAIN = PlainTextComponentSerializer.plainText();
 
@@ -190,7 +190,7 @@ public final class ItemStatOverrides {
     }
 
     /** Keep styles and events on unaffected parts, including separately colored numbers. */
-    private static Component slice(Component component, int start, int end) {
+    static Component slice(Component component, int start, int end) {
         String plain = PLAIN.serialize(component);
         if (start == 0 && end == plain.length()) return component;
         if (!(component instanceof TextComponent text)) {

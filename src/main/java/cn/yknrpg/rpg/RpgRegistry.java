@@ -3,6 +3,7 @@ package cn.yknrpg.rpg;
 import cn.yknrpg.YknRpgPlugin;
 import cn.yknrpg.integration.MythicItems;
 import cn.yknrpg.item.ItemStatOverrides;
+import cn.yknrpg.item.ForgeSupport;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -135,6 +136,25 @@ public final class RpgRegistry {
     }
 
     private Stats itemStats(ItemStack stack, ItemPower definition) {
+        if (ForgeSupport.disabled(stack)) return new Stats(new EnumMap<Stat, Double>(Stat.class));
+        var base = baseItemStats(stack, definition);
+        var provider = ForgeSupport.provider();
+        EnumMap<Stat, Double> values = new EnumMap<>(Stat.class);
+        base.values().forEach((stat, value) -> values.put(stat, value * ForgeSupport.multiplier(provider, stack, stat)));
+        return new Stats(values);
+    }
+
+    public Stats baseItemStats(ItemStack stack) {
+        return baseItemStats(stack, mythicItems.itemId(stack).map(RpgRegistry::normalizeItemId).map(items::get).orElse(null));
+    }
+
+    public void rewriteForgeLore(ItemStack stack) {
+        if (ForgeSupport.needsRewrite(stack)) {
+            ForgeSupport.rewrite(stack, baseItemStats(stack).values());
+        }
+    }
+
+    private Stats baseItemStats(ItemStack stack, ItemPower definition) {
         EnumMap<Stat, Double> values = new EnumMap<>(Stat.class);
         if (definition != null) values.putAll(definition.stats().values());
         values.putAll(ItemStatOverrides.read(stack));
@@ -146,6 +166,7 @@ public final class RpgRegistry {
     }
 
     String mainHandItemId(ItemStack stack) {
+        if (ForgeSupport.disabled(stack)) return null;
         Optional<String> itemId = mythicItems.itemId(stack);
         ItemPower definition = itemId.map(RpgRegistry::normalizeItemId).map(items::get).orElse(null);
         if (definition != null) {
@@ -167,11 +188,15 @@ public final class RpgRegistry {
             definition = items.get(normalizedId);
         }
         ItemStatOverrides.stripRetiredLore(stack);
+        if (ForgeSupport.needsRewrite(stack)) {
+            ForgeSupport.rewrite(stack, baseItemStats(stack, definition).values());
+        }
+        if (ForgeSupport.disabled(stack)) return;
         if (definition != null) {
             if (!definition.slot().matches(actualSlot)) return;
             result.stats.add(itemStats(stack, definition));
             for (Ability ability : definition.abilities()) {
-                result.abilities.add(new AbilitySource("item:" + definition.itemId(), ability));
+                result.abilities.add(new AbilitySource("item:" + definition.itemId(), ability, stack));
             }
         } else if (ItemStatOverrides.hasOverrides(stack) && materialSlot(stack.getType()) == actualSlot) {
             result.stats.add(itemStats(stack, null));
@@ -390,7 +415,8 @@ public final class RpgRegistry {
             List<Effect> effects
     ) {}
 
-    public record AbilitySource(String owner, Ability ability) {
+    public record AbilitySource(String owner, Ability ability, ItemStack item) {
+        public AbilitySource(String owner, Ability ability) { this(owner, ability, null); }
         public String key() {
             return owner + ":" + ability.id();
         }

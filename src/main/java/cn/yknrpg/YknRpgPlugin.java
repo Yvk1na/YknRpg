@@ -199,6 +199,10 @@ public final class YknRpgPlugin extends JavaPlugin implements Listener {
         return registry;
     }
 
+    public cn.yknrpg.api.ForgeItemAccess forgeItems() {
+        return new cn.yknrpg.api.ForgeItemAccess(this, rpgRegistry);
+    }
+
     public CustomItemFactory itemFactory() {
         return itemFactory;
     }

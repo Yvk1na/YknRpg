@@ -638,6 +638,7 @@ public final class RpgEngine implements Listener {
     private boolean activateAbility(AbilitySource source, Player player, LivingEntity initialTarget,
                                     Profile profile, boolean feedback, Projectile triggerProjectile,
                                     Double healthPercentOverride) {
+        if (cn.yknrpg.item.ForgeSupport.disabled(source.item())) return false;
         Ability ability = source.ability();
         Stats stats = profile.stats();
         if (ability.sneaking() != null && ability.sneaking() != player.isSneaking()) {
