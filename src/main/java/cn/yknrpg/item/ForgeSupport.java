@@ -108,15 +108,18 @@ public final class ForgeSupport {
                                 .filter(s -> s.stat() == stat)
                                 .findFirst()
                                 .orElse(null);
-                if (!base.containsKey(stat) && added != 0 && editable != null) {
+                String label =
+                        editable != null ? editable.label() : stat == Stat.HEALTH ? "生命值" : null;
+                boolean percent = editable != null && editable.percent();
+                if (!base.containsKey(stat) && added != 0 && label != null) {
                     extra.add(
                             Text.component(
                                     "&7"
-                                            + editable.label()
+                                            + label
                                             + "：&f+"
-                                            + format(added, editable.percent())
+                                            + format(added, percent)
                                             + " &8(+"
-                                            + format(added, editable.percent())
+                                            + format(added, percent)
                                             + ")"));
                 }
             }

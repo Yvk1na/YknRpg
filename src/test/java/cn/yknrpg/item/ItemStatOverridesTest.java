@@ -38,6 +38,241 @@ class ItemStatOverridesTest {
             PlainTextComponentSerializer.plainText();
 
     @Test
+    void forgeApiRecognizesAll132CatalogArmorsAndKeepsTheWeaponApiCompatible() throws Exception {
+        var blockType = field(Material.class, "blockType");
+        var previous = blockType.get(Material.DIAMOND_SWORD);
+        blockType.set(Material.DIAMOND_SWORD, (Supplier<?>) () -> null);
+        try {
+            var mythic = new MythicItems(null);
+            var pets = new cn.yknrpg.integration.EcoPetsItems(null);
+            var catalog = new cn.yknrpg.registry.ItemRegistry(null, mythic, pets, null, null);
+            @SuppressWarnings("unchecked")
+            var definitions =
+                    (Map<String, cn.yknrpg.model.ItemDefinition>)
+                            field(catalog.getClass(), "items").get(catalog);
+            var config = new YamlConfiguration();
+            try (var in = getClass().getResourceAsStream("/equipment.yml")) {
+                config.load(
+                        new java.io.InputStreamReader(in, java.nio.charset.StandardCharsets.UTF_8));
+            }
+            var metadata = config.getConfigurationSection("catalog-metadata");
+            for (String id : metadata.getKeys(false)) {
+                var section = metadata.getConfigurationSection(id);
+                definitions.put(
+                        id,
+                        new cn.yknrpg.model.ItemDefinition(
+                                id,
+                                cn.yknrpg.model.ItemDefinition.ItemSource.MYTHIC_MOBS,
+                                List.of(),
+                                cn.yknrpg.model.ItemDefinition.CatalogKind.valueOf(
+                                        section.getString("kind")),
+                                cn.yknrpg.model.ItemDefinition.Rarity.valueOf(
+                                        section.getString("rarity")),
+                                0));
+            }
+            var registry = new RpgRegistry(null, mythic);
+            var ctor =
+                    cn.yknrpg.api.ForgeItemAccess.class.getDeclaredConstructor(
+                            CustomItemFactory.class,
+                            cn.yknrpg.registry.ItemRegistry.class,
+                            RpgRegistry.class);
+            ctor.setAccessible(true);
+            var api =
+                    ctor.newInstance(
+                            new CustomItemFactory(null, catalog, mythic, pets), catalog, registry);
+            int armorCount = 0, weaponCount = 0;
+            for (var definition : definitions.values()) {
+                var stack =
+                        new TestStack(
+                                Material
+                                        .DIAMOND_SWORD); // Kind comes from the catalog, not
+                                                         // material.
+                stack.meta.data.put(new NamespacedKey("mythicmobs", "type"), definition.id());
+                stack.meta.name =
+                        Text.component("&5原始护甲名").clickEvent(ClickEvent.suggestCommand("/kept"));
+                stack.meta.lore = List.of(Text.component("&7防御：&a+20"));
+                boolean armor =
+                        definition.kind() == cn.yknrpg.model.ItemDefinition.CatalogKind.ARMOR;
+                boolean weapon =
+                        definition.kind() == cn.yknrpg.model.ItemDefinition.CatalogKind.WEAPON;
+                assertEquals(armor || weapon, api.forgeable(stack), definition.id());
+                assertEquals(weapon, api.isWeapon(stack));
+                assertEquals(weapon, api.weapon(stack).isPresent());
+                if (armor || weapon) {
+                    var item = api.item(stack).orElseThrow();
+                    assertEquals(
+                            armor
+                                    ? cn.yknrpg.api.ForgeItemAccess.Kind.ARMOR
+                                    : cn.yknrpg.api.ForgeItemAccess.Kind.WEAPON,
+                            item.kind());
+                    assertEquals(definition.id(), item.id());
+                    assertEquals(definition.rarity().name(), item.rarity());
+                    var name = stack.meta.name;
+                    var lore = List.copyOf(stack.meta.lore);
+                    api.refreshLore(stack);
+                    assertSame(name, stack.meta.name);
+                    assertEquals(lore, stack.meta.lore);
+                    assertEquals(0, stack.metaWrites);
+                }
+                if (armor) armorCount++;
+                if (weapon) weaponCount++;
+            }
+            assertEquals(132, armorCount);
+            assertEquals(105, weaponCount);
+            assertFalse(api.forgeable(null));
+            for (String id : List.of("OTHER_ARMOR", "YKI_MINING_ARMOR", "YKI_PET_ARMOR")) {
+                definitions.put(
+                        id,
+                        new cn.yknrpg.model.ItemDefinition(
+                                id,
+                                id.contains("PET")
+                                        ? cn.yknrpg.model.ItemDefinition.ItemSource.ECO_PETS
+                                        : cn.yknrpg.model.ItemDefinition.ItemSource.MYTHIC_MOBS,
+                                List.of(),
+                                id.contains("MINING")
+                                        ? cn.yknrpg.model.ItemDefinition.CatalogKind.MINING_ARMOR
+                                        : cn.yknrpg.model.ItemDefinition.CatalogKind.ARMOR,
+                                cn.yknrpg.model.ItemDefinition.Rarity.COMMON,
+                                0));
+                var stack = new TestStack(Material.DIAMOND_SWORD);
+                stack.meta.data.put(new NamespacedKey("mythicmobs", "type"), id);
+                assertFalse(api.forgeable(stack));
+            }
+        } finally {
+            blockType.set(Material.DIAMOND_SWORD, previous);
+        }
+    }
+
+    @Test
+    void crackedArmorLosesStatsSkillsAndSetMembershipAndRepairRestoresThem() throws Exception {
+        var serverField = field(org.bukkit.Bukkit.class, "server");
+        var oldServer = serverField.get(null);
+        var blockType = field(Material.class, "blockType");
+        var oldType = blockType.get(Material.DIAMOND_SWORD);
+        blockType.set(Material.DIAMOND_SWORD, (Supplier<?>) () -> null);
+        var forged = new java.util.concurrent.atomic.AtomicBoolean();
+        var cracked = new java.util.HashSet<String>();
+        var provider =
+                new cn.yknrpg.api.ForgeBonusProvider() {
+                    public double multiplier(ItemStack s, String stat) {
+                        return forged.get() ? 1.5 : 1;
+                    }
+
+                    public boolean disabled(ItemStack s) {
+                        return cracked.contains(
+                                ((TestStack) s)
+                                        .meta.data.get(new NamespacedKey("mythicmobs", "type")));
+                    }
+
+                    public List<Component> loreLines(ItemStack s) {
+                        return forged.get() ? List.of(Text.component("&6锻造 +15")) : List.of();
+                    }
+
+                    public double flat(ItemStack s, String stat) {
+                        return forged.get() && (stat.equals("health") || stat.equals("defense"))
+                                ? 10
+                                : 0;
+                    }
+
+                    public Component decorateName(ItemStack s, Component base) {
+                        return forged.get() ? base.append(Text.component("&6 +15")) : base;
+                    }
+                };
+        var services =
+                Proxy.newProxyInstance(
+                        getClass().getClassLoader(),
+                        new Class<?>[] {org.bukkit.plugin.ServicesManager.class},
+                        (p, method, args) -> method.getName().equals("load") ? provider : null);
+        var server =
+                Proxy.newProxyInstance(
+                        getClass().getClassLoader(),
+                        new Class<?>[] {org.bukkit.Server.class},
+                        (p, method, args) ->
+                                method.getName().equals("getServicesManager") ? services : null);
+        try {
+            var registry = new RpgRegistry(null, new MythicItems(null));
+            var statsCtor = RpgRegistry.Stats.class.getDeclaredConstructor(Map.class);
+            statsCtor.setAccessible(true);
+            var base = new java.util.EnumMap<Stat, Double>(Stat.class);
+            base.put(Stat.HEALTH, 25.0);
+            base.put(Stat.DEFENSE, 10.0);
+            var stats = statsCtor.newInstance(base);
+            var bonus = new java.util.EnumMap<Stat, Double>(Stat.class);
+            bonus.put(Stat.STRENGTH, 30.0);
+            var powerCtor =
+                    Class.forName("cn.yknrpg.rpg.RpgRegistry$ItemPower")
+                            .getDeclaredConstructors()[0];
+            powerCtor.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            var templates = (Map<String, Object>) field(RpgRegistry.class, "items").get(registry);
+            templates.put(
+                    "YKI_HELMET",
+                    powerCtor.newInstance("YKI_HELMET", RpgRegistry.Slot.HEAD, stats, List.of()));
+            templates.put(
+                    "YKI_CHEST",
+                    powerCtor.newInstance("YKI_CHEST", RpgRegistry.Slot.CHEST, stats, List.of()));
+            var setCtor =
+                    Class.forName("cn.yknrpg.rpg.RpgRegistry$SetPower")
+                            .getDeclaredConstructors()[0];
+            setCtor.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            var sets = (Map<String, Object>) field(RpgRegistry.class, "sets").get(registry);
+            sets.put(
+                    "armor",
+                    setCtor.newInstance(
+                            "armor",
+                            java.util.Set.of("YKI_HELMET", "YKI_CHEST"),
+                            2,
+                            statsCtor.newInstance(bonus),
+                            List.of()));
+            var helmet = new TestStack(Material.DIAMOND_SWORD);
+            helmet.meta.name = Text.component("&9护甲原名");
+            helmet.meta.lore = List.of(Text.component("&7生命：&a+25 | 防御：&a+10"));
+            helmet.meta.data.put(new NamespacedKey("mythicmobs", "type"), "YKI_HELMET");
+            var chest = helmet.clone();
+            chest.meta.data.put(new NamespacedKey("mythicmobs", "type"), "YKI_CHEST");
+            var slots = new HashMap<String, ItemStack>();
+            slots.put("getHelmet", helmet);
+            slots.put("getChestplate", chest);
+            serverField.set(null, server);
+            var originalName = helmet.meta.name;
+            var originalLore = List.copyOf(helmet.meta.lore);
+            assertEquals(50, registry.profile(player(slots)).stats().get(Stat.HEALTH));
+            assertEquals(30, registry.profile(player(slots)).stats().get(Stat.STRENGTH));
+            assertEquals(originalLore, helmet.meta.lore);
+            assertSame(originalName, helmet.meta.name);
+            assertEquals(0, helmet.metaWrites);
+            forged.set(true);
+            assertEquals(95, registry.profile(player(slots)).stats().get(Stat.HEALTH));
+            assertEquals(50, registry.profile(player(slots)).stats().get(Stat.DEFENSE));
+            assertEquals("护甲原名 +15", PLAIN.serialize(helmet.meta.name));
+            cracked.add("YKI_HELMET");
+            var broken = registry.profile(player(slots));
+            assertEquals(47.5, broken.stats().get(Stat.HEALTH));
+            assertEquals(25, broken.stats().get(Stat.DEFENSE));
+            assertEquals(
+                    0, broken.stats().get(Stat.STRENGTH), "cracked piece cannot complete a set");
+            assertTrue(registry.itemStats(helmet).values().isEmpty());
+            cracked.clear();
+            assertEquals(30, registry.profile(player(slots)).stats().get(Stat.STRENGTH));
+            assertEquals(95, registry.profile(player(slots)).stats().get(Stat.HEALTH));
+            var extra = helmet.clone();
+            extra.meta.lore = List.of(Text.component("&7防御：&a+10"));
+            ForgeSupport.rewrite(extra, Map.of(Stat.DEFENSE, 10.0));
+            ForgeSupport.rewrite(extra, Map.of(Stat.DEFENSE, 10.0));
+            assertEquals(
+                    1,
+                    extra.meta.lore.stream()
+                            .map(PLAIN::serialize)
+                            .filter("生命值：+10 (+10)"::equals)
+                            .count());
+        } finally {
+            serverField.set(null, oldServer);
+            blockType.set(Material.DIAMOND_SWORD, oldType);
+        }
+    }
+
+    @Test
     void forgeServiceUsesInstanceBaseDisablesSkillsAndRewritesLegacyLoreIdempotently()
             throws Exception {
         Field serverField = field(org.bukkit.Bukkit.class, "server");

@@ -184,7 +184,6 @@ public final class RpgRegistry {
             if (!ItemStatOverrides.hasOverrides(stack)) mythicItems.migrateWisdomLore(stack, itemId.get());
             String normalizedId = normalizeItemId(itemId.get());
             result.equippedIds.add(normalizedId);
-            if (armorPiece) result.armorIds.add(normalizedId);
             definition = items.get(normalizedId);
         }
         ItemStatOverrides.stripRetiredLore(stack);
@@ -192,6 +191,7 @@ public final class RpgRegistry {
             ForgeSupport.rewrite(stack, baseItemStats(stack, definition).values());
         }
         if (ForgeSupport.disabled(stack)) return;
+        if (armorPiece && itemId.isPresent()) result.armorIds.add(normalizeItemId(itemId.get()));
         if (definition != null) {
             if (!definition.slot().matches(actualSlot)) return;
             result.stats.add(itemStats(stack, definition));
