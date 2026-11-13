@@ -93,6 +93,13 @@ public final class RpgEngine implements Listener {
     private final Map<UUID, List<TimedBuff>> buffs = new HashMap<>();
     private final Map<UUID, PlayerWeaponShields> weaponShields = new HashMap<>();
     private final Set<UUID> queuedShieldSyncs = new HashSet<>();
+    /**
+     * 每位玩家最近一次的裝備檔案。檔案只取決於六個裝備槽的物品內容、rpg.yml（重載會經過 stop()）
+     * 和鍛造加成提供者，所以物品沒變時直接重用，省掉 tick 與每次攻擊都重新解析物品資料的開銷。
+     * 短暫的有效期用來兜住鍛造插件在物品不變的情況下改變結果的情形（例如它自己重載配置）。
+     */
+    private static final long PROFILE_CACHE_NANOS = 2_000_000_000L;
+    private final Map<UUID, CachedProfile> profileCache = new HashMap<>();
     private final Map<UUID, PendingProjectile> pendingProjectiles = new HashMap<>();
     private final Set<UUID> resolvedProjectiles = new HashSet<>();
     private final Map<UUID, ProjectileSnapshot> projectileSnapshots = new HashMap<>();
@@ -167,6 +174,7 @@ public final class RpgEngine implements Listener {
         resolvedProjectiles.clear();
         projectileSnapshots.clear();
         recentMainHandWeapons.clear();
+        profileCache.clear();
     }
 
     @EventHandler
@@ -183,6 +191,7 @@ public final class RpgEngine implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         clearWeaponShield(event.getPlayer(), true);
+        profileCache.remove(event.getPlayer().getUniqueId());
         // Equipment modifiers are non-persistent and AuraSkills unloads them
         // with the user. Removing WISDOM here can race AuraSkills' asynchronous
         // quit save and persist mana after it has been clamped to the unequipped
@@ -1068,6 +1077,7 @@ public final class RpgEngine implements Listener {
     }
 
     private void tickWeaponShields() {
+        if (weaponShields.isEmpty()) return;
         if (!enabled()) {
             for (UUID playerId : List.copyOf(weaponShields.keySet())) {
                 Player player = Bukkit.getPlayer(playerId);
@@ -1324,7 +1334,54 @@ public final class RpgEngine implements Listener {
     }
 
     private Profile effectiveProfile(Player player) {
-        return effectiveProfile(player, registry.profile(player));
+        return effectiveProfile(player, cachedBaseProfile(player));
+    }
+
+    private Profile cachedBaseProfile(Player player) {
+        UUID playerId = player.getUniqueId();
+        Object provider = cn.yknrpg.item.ForgeSupport.provider();
+        long now = System.nanoTime();
+        CachedProfile cached = profileCache.get(playerId);
+        if (cached != null && cached.provider() == provider && now - cached.expiresAt() < 0
+                && sameEquipment(cached.equipment(), player)) {
+            return cached.profile();
+        }
+        Profile profile = registry.profile(player);
+        // registry.profile 可能就地改寫物品 lore，所以快照必須在計算之後取。
+        profileCache.put(playerId, new CachedProfile(
+                snapshotEquipment(player), provider, now + PROFILE_CACHE_NANOS, profile));
+        return profile;
+    }
+
+    private record CachedProfile(ItemStack[] equipment, Object provider, long expiresAt, Profile profile) {}
+
+    private static ItemStack[] equipment(Player player) {
+        var inventory = player.getInventory();
+        return new ItemStack[] {
+                inventory.getItemInMainHand(), inventory.getItemInOffHand(), inventory.getHelmet(),
+                inventory.getChestplate(), inventory.getLeggings(), inventory.getBoots()};
+    }
+
+    private static boolean emptyStack(ItemStack stack) {
+        return stack == null || stack.getType().isAir() || stack.getAmount() <= 0;
+    }
+
+    private static ItemStack[] snapshotEquipment(Player player) {
+        ItemStack[] equipment = equipment(player);
+        for (int index = 0; index < equipment.length; index++) {
+            equipment[index] = emptyStack(equipment[index]) ? null : equipment[index].clone();
+        }
+        return equipment;
+    }
+
+    private static boolean sameEquipment(ItemStack[] snapshot, Player player) {
+        ItemStack[] current = equipment(player);
+        for (int index = 0; index < current.length; index++) {
+            boolean currentEmpty = emptyStack(current[index]);
+            if (currentEmpty != (snapshot[index] == null)) return false;
+            if (!currentEmpty && !snapshot[index].equals(current[index])) return false;
+        }
+        return true;
     }
 
     private Profile effectiveProfile(Player player, ItemStack eventItem, EquipmentSlot eventHand) {
