@@ -1,0 +1,40 @@
+{
+  "categories": {
+    "剑": "sword", "短刃": "knife", "双刃": "knife", "镰刀": "scythe",
+    "三叉戟": "polearm", "长枪": "polearm", "战旗": "standard", "战锤": "hammer",
+    "弓": "bow", "弩": "crossbow", "枪械": "gun", "法杖": "staff",
+    "法典": "book", "法器": "relic", "号角": "horn", "盾牌": "shield"
+  },
+  "profiles": {
+    "sword":    {"grip": [12,51], "first": {"rotation": [0,-90,24], "scale": 0.99}, "third": {"rotation": [0,-90,49], "scale": 1.12}},
+    "knife":    {"grip": [14,49], "first": {"rotation": [0,-86,18], "scale": 0.78}, "third": {"rotation": [0,-90,42], "scale": 0.83}},
+    "scythe":   {"grip": [16,46], "first": {"rotation": [0,-88,16], "scale": 1.02}, "third": {"rotation": [0,-90,35], "scale": 1.28}},
+    "polearm":  {"grip": [23,41], "first": {"rotation": [0,-90,18], "scale": 1.16}, "third": {"rotation": [0,-90,42], "scale": 1.55}},
+    "standard": {"grip": [19,44], "first": {"rotation": [0,-78,29], "scale": 1.03}, "third": {"rotation": [0,-83,51], "scale": 1.42}},
+    "hammer":   {"grip": [15,49], "first": {"rotation": [0,-86,22], "scale": 0.96}, "third": {"rotation": [0,-90,47], "scale": 1.15}},
+    "bow":      {"grip": [22,33], "first": {"rotation": [0,-80,23], "scale": 0.97}, "third": {"rotation": [0,-79,43], "scale": 1.12}},
+    "crossbow": {"grip": [19,44], "first": {"rotation": [0,-84,-29], "scale": 0.88}, "third": {"rotation": [0,-86,-34], "scale": 0.93}},
+    "gun":      {"grip": [17,40], "first": {"rotation": [0,-89,-19], "scale": 0.91}, "third": {"rotation": [0,-90,-24], "scale": 1.03}},
+    "staff":    {"grip": [20,44], "first": {"rotation": [0,-90,26], "scale": 1.04}, "third": {"rotation": [0,-90,49], "scale": 1.27}},
+    "book":     {"grip": [18,46], "first": {"rotation": [-16,-38,-7], "scale": 0.69}, "third": {"rotation": [-12,-30,-8], "scale": 0.63}},
+    "relic":    {"grip": [29,38], "first": {"rotation": [-4,-48,8], "scale": 0.74}, "third": {"rotation": [0,-40,12], "scale": 0.69}},
+    "horn":     {"grip": [26,37], "first": {"rotation": [0,-72,-10], "scale": 0.81}, "third": {"rotation": [0,-70,-8], "scale": 0.82}},
+    "shield":   {"grip": [31,34], "first": {"rotation": [0,-32,-5], "scale": 0.91}, "third": {"rotation": [0,-20,0], "scale": 1.04}},
+    "material": {"grip": [29,41], "first": {"rotation": [0,-46,12], "scale": 0.68}, "third": {"rotation": [0,-28,8], "scale": 0.55}},
+    "armor":    {"grip": [25,42], "first": {"rotation": [-5,-42,8], "scale": 0.74}, "third": {"rotation": [0,-32,6], "scale": 0.67}}
+  },
+  "grip_overrides": {
+    "YKI_WITCHBLINK_SCISSORS": [15,42],
+    "YKI_SKULLBARRAGE_LONGBOW": [24,32],
+    "YKI_MARROW_REQUIEM_CENSER": [31,12],
+    "YKI_REQUIEM_BELL": [41,25],
+    "YKI_SERAPHIC_CHALICE": [31,41],
+    "YKI_SOULPAWN_REQUIEM": [15,48],
+    "YKI_SOUL_CROWN_CENSER": [18,44],
+    "YKI_SPRINGWATER_CHARM": [48,12],
+    "YKI_VERDANT_CENSER": [47,10],
+    "YKI_PRISM_HANDCANNON": [14,41],
+    "YKI_STARFALL_CANNON": [16,42],
+    "YKI_VOIDNEEDLE_RAILGUN": [17,42]
+  }
+}

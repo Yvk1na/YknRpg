@@ -1,0 +1,12 @@
+{
+  "id": "YKI_PHOENIX_SABER",
+  "source": "docs/design/catalog-32-v2/source-images/phoenix_saber.png",
+  "texture": "textures/phoenix_saber.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  不死鸟炎刃. Thematic English item name: phoenix saber. One diagonal bladed weapon, handle lower-left and sharp tip upper-right, clearly separate blade, hilt and grip. Match the named sword/dagger/scissors type. Category WEAPON; rarity LEGENDARY. Descriptive inspiration: 永恒余烬同时带来焚灭与重生。 焚击周围敌人并治疗自身。 被动：余烬护命. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "AB2B9B1F2A659285DD43DE405765DFA0A91D9E1F275331239D10429F73EF87C0",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "F48BEEE7ADBEECF97FFEB689DB480465DB0A0CEFB3086C2A3C9DBF88F616C729"
+}

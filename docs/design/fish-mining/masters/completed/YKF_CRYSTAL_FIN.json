@@ -1,0 +1,10 @@
+{
+  "id": "YKF_CRYSTAL_FIN",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_CRYSTAL_FIN.png",
+  "texture": "textures/crystal_fin.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 晶化鱼鳍 (crystal fin), base material prismarine_shard. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 晶鳍守卫身上长出的矿晶鳍片。 / 迎光时会映出粼粼的水纹。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "A340C22D4FC93756F0D72083E0EB76CE48E1F20EB22C190A2C7B8F40862C540E",
+  "visual_review": "pending"
+}

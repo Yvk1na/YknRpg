@@ -176,6 +176,7 @@ if ($pluginYaml -notmatch '(?m)^depend:\s*\[MythicMobs,\s*AuraSkills\]\s*$') {
 $packEntries = Get-ZipEntries $craftEnginePack
 $requiredPackEntries = @(
     'yknrpg/pack.yml',
+    'yknrpg/catalog-animations.json',
     'yknrpg/configuration/items.yml',
     'yknrpg/resourcepack/assets/yknrpg/items/gui_crafting_table.json',
     'yknrpg/resourcepack/assets/yknrpg/items/gui_arrow.json',
@@ -184,14 +185,53 @@ $requiredPackEntries = @(
     'yknrpg/resourcepack/assets/yknrpg/textures/item/gui_crafting_table.png',
     'yknrpg/resourcepack/assets/yknrpg/textures/item/gui_arrow.png'
 )
+$boneSampleNames = @(
+    'wingbreaker_greatsword', 'ossuary_dragoon_helmet', 'ossuary_dragoon_chestplate',
+    'ossuary_dragoon_leggings', 'ossuary_dragoon_boots', 'bone_dragon_fang',
+    'ossuary_carapace', 'shattered_wingbone', 'wraithfire_dragonheart'
+)
+foreach ($name in $boneSampleNames) {
+    $requiredPackEntries += "yknrpg/resourcepack/assets/yknrpg_bone/items/$name.json"
+    $requiredPackEntries += "yknrpg/resourcepack/assets/yknrpg_bone/models/item/$name.json"
+    $requiredPackEntries += "yknrpg/resourcepack/assets/yknrpg_bone/textures/item/$name.png"
+}
+$requiredPackEntries += @(
+    'yknrpg/resourcepack/assets/yknrpg_bone/equipment/ossuary_dragoon.json',
+    'yknrpg/resourcepack/assets/yknrpg_bone/textures/entity/equipment/humanoid/ossuary_dragoon.png',
+    'yknrpg/resourcepack/assets/yknrpg_bone/textures/entity/equipment/humanoid_leggings/ossuary_dragoon.png'
+)
+$catalogAnimations = Read-ZipText $craftEnginePack 'yknrpg/catalog-animations.json' | ConvertFrom-Json
+if ($catalogAnimations.Count -ne 327 -or @($catalogAnimations.id | Sort-Object -Unique).Count -ne 327) {
+    throw 'Expected 327 distinct catalog presentations in the CraftEngine pack.'
+}
+foreach ($animation in $catalogAnimations) {
+    if ($animation.id -notmatch '^YKI_[A-Z0-9_]+$' -or
+        $animation.namespace -notin @('yknrpg_bone', 'yknrpg_items') -or
+        $animation.texture -ne $animation.id.Substring(4).ToLowerInvariant()) {
+        throw 'Invalid animated catalog resource path.'
+    }
+    $prefix = 'yknrpg/resourcepack/assets/' + $animation.namespace
+    $name = $animation.texture
+    $requiredPackEntries += "$prefix/items/$name.json"
+    $requiredPackEntries += "$prefix/models/item/$name.json"
+    $requiredPackEntries += "$prefix/textures/item/$name.png"
+    $requiredPackEntries += "$prefix/textures/item/$name.png.mcmeta"
+    $handName = $animation.handheld_texture
+    if ($handName -cne ($name + '_in_hand') -or $animation.icon_size -ne 32 -or $animation.handheld_size -ne 64) {
+        throw "Invalid inventory or held presentation: $name"
+    }
+    $requiredPackEntries += "$prefix/models/item/$handName.json"
+    $requiredPackEntries += "$prefix/textures/item/$handName.png"
+    $requiredPackEntries += "$prefix/textures/item/$handName.png.mcmeta"
+}
 foreach ($required in $requiredPackEntries) {
     if ($packEntries -notcontains $required) { throw "CraftEngine pack is missing $required" }
 }
 $allowedAssets = @($requiredPackEntries | Where-Object { $_ -match '/resourcepack/assets/' })
 $unexpectedAssets = @($packEntries | Where-Object {
-    $_ -match '^yknrpg/resourcepack/assets/yknrpg/.+\.[^/]+$' -and $_ -notin $allowedAssets
+    $_ -match '^yknrpg/resourcepack/assets/(yknrpg|yknrpg_bone|yknrpg_items)/.+\.[^/]+$' -and $_ -notin $allowedAssets
 })
-if ($unexpectedAssets.Count -gt 0) { throw 'CraftEngine pack may contain GUI assets only.' }
+if ($unexpectedAssets.Count -gt 0) { throw 'CraftEngine pack contains unexpected YknRpg assets.' }
 
 $mythicEntries = Get-ZipEntries $mythicMobsPack
 $requiredMythicEntries = @(

@@ -1,0 +1,10 @@
+{
+  "id": "YKM_REFINED_FROST_FEATHER",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_REFINED_FROST_FEATHER.png",
+  "texture": "textures/refined_frost_feather.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 冰羽晶簇 (refined frost feather), base material quartz. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 由九份冰羽晶凝炼的进阶材料。 / 用途: 挖矿工具与护甲进阶. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "F0ADBFCB80B5B7E132DAD3DBAAC850180A21BDE5777E49B5169D64AEB5E6F352",
+  "visual_review": "pending"
+}

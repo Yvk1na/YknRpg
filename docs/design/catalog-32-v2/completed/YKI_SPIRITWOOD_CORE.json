@@ -1,0 +1,12 @@
+{
+  "id": "YKI_SPIRITWOOD_CORE",
+  "source": "docs/design/catalog-32-v2/source-images/spiritwood_core.png",
+  "texture": "textures/spiritwood_core.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. A single distinct crafting ingredient or material, practical readable shape, not equipped gear. Simple silhouettes and clean material planes.  Subject:  灵木芯材. Thematic English item name: spiritwood core. A single loose crafting ingredient/relic, clearly shaped to match the name; not equipped gear, not a whole scene. Category ITEM; rarity UNCOMMON. Descriptive inspiration: 用活性树脂封存生机的雾林木芯。 用于制作法器骨架与森愈系锻材。 少见的. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "F6C5CD63DAA719848D022E3192AFD4B5BF0836B53D361463007DF73AE83AFF19",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "5D1E0B7CAB173DA4D8F09B56AA33382E46A6DEFA77340520F96B2FCF5F0C96EE"
+}

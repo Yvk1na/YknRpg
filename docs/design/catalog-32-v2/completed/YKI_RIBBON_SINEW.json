@@ -1,0 +1,12 @@
+{
+  "id": "YKI_RIBBON_SINEW",
+  "source": "docs/design/catalog-32-v2/source-images/ribbon_sinew.png",
+  "texture": "textures/ribbon_sinew.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. A single distinct crafting ingredient or material, practical readable shape, not equipped gear. Simple silhouettes and clean material planes.  Subject:  韧骨弦. Thematic English item name: ribbon sinew. A single loose crafting ingredient/relic, clearly shaped to match the name; not equipped gear, not a whole scene. Category ITEM; rarity UNCOMMON. Descriptive inspiration: 用骨织线和树脂强化的高张力弦材。 用于制作弓弩、机关与幽影系锻材。 少见的. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "9DF6B6918D75E08A733B04F5D43E47E2096CE0DC7B30B09596438EBAB03C331F",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "F72C21F1445D817009B2514BE34F2FE9FCB226D1C453ACC233E119E90E63941C"
+}

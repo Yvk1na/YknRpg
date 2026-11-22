@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_REEDGLOW_ROD",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_REEDGLOW_ROD.png",
+  "texture": "textures/tree_reedglow_rod.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 萤苇钓竿 (tree reedglow rod), base material fishing_rod. Visual form: unmistakable long slim fishing rod with reel and distinct handle low left, tall smooth arcing tip high right, fine short line and a small fishing float close to rod; no sharp metal blade or wand head. Lore for design: 苇绳传递鱼讯，微光标记溪面的每次轻颤。 / 基础属性. Set palette and materials: deep sage green reeds and straw yellow braiding, cream canvas, restrained warm firefly glints. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "3ACC2410BB5D476EFAAA45BDA0F96B4FA9A43A66D98C9F16D847211459F6A0FC",
+  "visual_review": "pending"
+}

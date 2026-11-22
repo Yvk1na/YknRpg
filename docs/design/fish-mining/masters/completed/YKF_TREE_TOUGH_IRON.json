@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_TOUGH_IRON",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_TOUGH_IRON.png",
+  "texture": "textures/tree_tough_iron.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 韧化铁件 (tree tough iron), base material iron_ingot. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 水底残留器件中难得完整的韧铁。 / 钓具材料 · 导环固定零件. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "A6D8A369521DC11E21309DCD80719F14E8A33C07E7055723D217AE8CE5D759CB",
+  "visual_review": "pending"
+}

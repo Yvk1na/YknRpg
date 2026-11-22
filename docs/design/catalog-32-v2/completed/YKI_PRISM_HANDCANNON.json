@@ -1,0 +1,18 @@
+{
+  "id": "YKI_PRISM_HANDCANNON",
+  "source": "docs/design/catalog-32-v2/source-images/prism_handcannon.png",
+  "texture": "textures/prism_handcannon.png",
+  "prompt": "Original Minecraft inventory pixel art, a magical relic core. A single thick angular triangular prism of smoky lavender quartz seated inside a dark pewter three-prong crescent bezel, with a short ribbon of spectral teal light refracted inside the pane. The gemstone occupies two thirds of the whole relic. Isolated object on a genuinely transparent square canvas, 3px margins. Crisp logical 32-pixel sprite enlarged, low saturation and connected hard-edged pixel clusters, readable at tiny size. One selective pale bevel, no words, no external glow, no lettering, no arm or person. The entire image depicts just the prism and its metal bezel.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "72F37639E74CCC36F754B71893CA495AC857118F912D11F000BB826B788E766A",
+  "visual_review": "passed",
+  "handheld": {
+    "texture": "textures/prism_handcannon_hand.png",
+    "effect_source": "effects/cells/prism_handcannon.png",
+    "sha256": "9D25B806E6ED8CD26A25177B530A3975AD9E2C79BCEDEDB01A772F35AB8FA980",
+    "effect_sha256": "1889549BB45FCFF1F05599B9CCED60CE88438D63DB98CF784835EFFE197EDC81"
+  },
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "1889549BB45FCFF1F05599B9CCED60CE88438D63DB98CF784835EFFE197EDC81"
+}

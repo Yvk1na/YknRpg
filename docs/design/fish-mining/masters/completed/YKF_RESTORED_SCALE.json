@@ -1,0 +1,10 @@
+{
+  "id": "YKF_RESTORED_SCALE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_RESTORED_SCALE.png",
+  "texture": "textures/restored_scale.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 净化鳞片 (restored scale), base material prismarine_shard. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 拭去淤泥后重新显露纹路的鳞片。 / 用于竿节加固与浮漂包覆的鳞材。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "81ECB906D1D27744F67B42689E4919B16C6746A6454E1DB2F94FD865B04AF342",
+  "visual_review": "pending"
+}

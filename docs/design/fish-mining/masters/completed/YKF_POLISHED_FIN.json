@@ -1,0 +1,10 @@
+{
+  "id": "YKF_POLISHED_FIN",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_POLISHED_FIN.png",
+  "texture": "textures/polished_fin.png",
+  "prompt": "Original Minecraft inventory icon for 磨光鳍片 (polished fin). A single elegant asymmetrical muted sea green fish fin with clear silver polished ridges, smooth edges, 3 fins of thin connected membrane, clearly processed and smaller than a whole fish. Lore for design: 打磨后的鳍片留下浅浅水纹。.  The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "B56D8EB284D5F28330CE84D397E51782BA0FD5D4176ED2D03FD6F48D42A533CB",
+  "visual_review": "pending"
+}

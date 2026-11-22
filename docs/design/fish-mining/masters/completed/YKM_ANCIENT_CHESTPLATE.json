@@ -1,0 +1,10 @@
+{
+  "id": "YKM_ANCIENT_CHESTPLATE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_ANCIENT_CHESTPLATE.png",
+  "texture": "textures/ancient_chestplate.png",
+  "prompt": "Original Minecraft inventory icon for 远古玄钛衣 (ancient chestplate). A full front-view chest garment with separate open sleeves and visible neck opening, no body. Fishing outfit has practical pockets and a weather-resistant collar. Mining outfit has reinforced shoulders, a tool strap or breastplate and leather edges. Lore for design: 以天然玄钛富集矿核铸成的勘探护具。. This set must use consistent materials and tones: graphite charcoal titanium (#373641), sharp pale forged titanium edges (#82808b), restrained ice-lilac crystal (#9b8eaf), low gold-free dark fantasy mining heavy armor. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "B61C099B9A22490F253A46B639A9794806835731CF939B26B3D6B9569E78E933",
+  "visual_review": "pending"
+}

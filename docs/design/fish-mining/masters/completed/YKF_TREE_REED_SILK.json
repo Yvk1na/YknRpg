@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_REED_SILK",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_REED_SILK.png",
+  "texture": "textures/tree_reed_silk.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 柔光苇丝 (tree reed silk), base material string. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 老苇茎内层天然生出的柔亮纤丝。 / 钓具材料 · 细线韧性夹层. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "1E2003D275E845EC4917CF6F15A9BCC513383AF19D8DB8AD022F7664C1CC2F76",
+  "visual_review": "pending"
+}

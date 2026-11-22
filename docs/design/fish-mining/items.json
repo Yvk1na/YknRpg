@@ -1,0 +1,2660 @@
+[
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOSSWEAVE_HELMET",
+    "name": "苔线钓帽",
+    "kind": "helmet",
+    "base": "leather_helmet",
+    "model": "yknfish:mossweave_helmet",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "苔丝与河砂编织出初学者的渔装。",
+      "钓鱼速度: +5",
+      "海怪率: +1%",
+      "需求钓鱼等级: 5",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOSSWEAVE_CHESTPLATE",
+    "name": "苔线钓衣",
+    "kind": "chestplate",
+    "base": "leather_chestplate",
+    "model": "yknfish:mossweave_chestplate",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "苔丝与河砂编织出初学者的渔装。",
+      "钓鱼速度: +5",
+      "海怪率: +1%",
+      "需求钓鱼等级: 5",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOSSWEAVE_LEGGINGS",
+    "name": "苔线长裤",
+    "kind": "leggings",
+    "base": "leather_leggings",
+    "model": "yknfish:mossweave_leggings",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "苔丝与河砂编织出初学者的渔装。",
+      "钓鱼速度: +5",
+      "海怪率: +1%",
+      "需求钓鱼等级: 5",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOSSWEAVE_BOOTS",
+    "name": "苔线钓靴",
+    "kind": "boots",
+    "base": "leather_boots",
+    "model": "yknfish:mossweave_boots",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "苔丝与河砂编织出初学者的渔装。",
+      "钓鱼速度: +5",
+      "海怪率: +1%",
+      "需求钓鱼等级: 5",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOSSWEAVE_ROD",
+    "name": "苔线钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:mossweave_rod",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "用水磨木枝支起第一段钓鱼旅程。",
+      "钓鱼速度: +20",
+      "海怪率: +6%",
+      "需求钓鱼等级: 5",
+      "低于需求等级时，钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCKTIDE_HELMET",
+    "name": "岩潮钓帽",
+    "kind": "helmet",
+    "base": "chainmail_helmet",
+    "model": "yknfish:rocktide_helmet",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "层叠岩甲守住暗流里的每一次等待。",
+      "钓鱼速度: +12",
+      "海怪率: +2%",
+      "需求钓鱼等级: 20",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCKTIDE_CHESTPLATE",
+    "name": "岩潮钓衣",
+    "kind": "chestplate",
+    "base": "chainmail_chestplate",
+    "model": "yknfish:rocktide_chestplate",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "层叠岩甲守住暗流里的每一次等待。",
+      "钓鱼速度: +12",
+      "海怪率: +2%",
+      "需求钓鱼等级: 20",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCKTIDE_LEGGINGS",
+    "name": "岩潮长裤",
+    "kind": "leggings",
+    "base": "chainmail_leggings",
+    "model": "yknfish:rocktide_leggings",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "层叠岩甲守住暗流里的每一次等待。",
+      "钓鱼速度: +12",
+      "海怪率: +2%",
+      "需求钓鱼等级: 20",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCKTIDE_BOOTS",
+    "name": "岩潮钓靴",
+    "kind": "boots",
+    "base": "chainmail_boots",
+    "model": "yknfish:rocktide_boots",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "层叠岩甲守住暗流里的每一次等待。",
+      "钓鱼速度: +12",
+      "海怪率: +2%",
+      "需求钓鱼等级: 20",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCKTIDE_ROD",
+    "name": "岩潮钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:rocktide_rod",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "琥珀封存的浮芯能听见岩缝中的潮声。",
+      "钓鱼速度: +52",
+      "海怪率: +12%",
+      "需求钓鱼等级: 20",
+      "低于需求等级时，钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTALFIN_HELMET",
+    "name": "晶鳍钓帽",
+    "kind": "helmet",
+    "base": "iron_helmet",
+    "model": "yknfish:crystalfin_helmet",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "矿晶鱼鳍将细小的水波折成清晰的纹路。",
+      "钓鱼速度: +25",
+      "海怪率: +4%",
+      "需求钓鱼等级: 40",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTALFIN_CHESTPLATE",
+    "name": "晶鳍钓衣",
+    "kind": "chestplate",
+    "base": "iron_chestplate",
+    "model": "yknfish:crystalfin_chestplate",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "矿晶鱼鳍将细小的水波折成清晰的纹路。",
+      "钓鱼速度: +25",
+      "海怪率: +4%",
+      "需求钓鱼等级: 40",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTALFIN_LEGGINGS",
+    "name": "晶鳍长裤",
+    "kind": "leggings",
+    "base": "iron_leggings",
+    "model": "yknfish:crystalfin_leggings",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "矿晶鱼鳍将细小的水波折成清晰的纹路。",
+      "钓鱼速度: +25",
+      "海怪率: +4%",
+      "需求钓鱼等级: 40",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTALFIN_BOOTS",
+    "name": "晶鳍钓靴",
+    "kind": "boots",
+    "base": "iron_boots",
+    "model": "yknfish:crystalfin_boots",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "矿晶鱼鳍将细小的水波折成清晰的纹路。",
+      "钓鱼速度: +25",
+      "海怪率: +4%",
+      "需求钓鱼等级: 40",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTALFIN_ROD",
+    "name": "晶鳍钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:crystalfin_rod",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "一缕晶光沿着鱼线潜入苍翠潭底。",
+      "钓鱼速度: +105",
+      "海怪率: +22%",
+      "需求钓鱼等级: 36",
+      "低于需求等级时，钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENTPOOL_HELMET",
+    "name": "古潭钓帽",
+    "kind": "helmet",
+    "base": "diamond_helmet",
+    "model": "yknfish:ancientpool_helmet",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "古老鳞片与活性纤丝铭记深潭的呼吸。",
+      "钓鱼速度: +42",
+      "海怪率: +7%",
+      "需求钓鱼等级: 70",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENTPOOL_CHESTPLATE",
+    "name": "古潭钓衣",
+    "kind": "chestplate",
+    "base": "diamond_chestplate",
+    "model": "yknfish:ancientpool_chestplate",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "古老鳞片与活性纤丝铭记深潭的呼吸。",
+      "钓鱼速度: +42",
+      "海怪率: +7%",
+      "需求钓鱼等级: 70",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENTPOOL_LEGGINGS",
+    "name": "古潭长裤",
+    "kind": "leggings",
+    "base": "diamond_leggings",
+    "model": "yknfish:ancientpool_leggings",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "古老鳞片与活性纤丝铭记深潭的呼吸。",
+      "钓鱼速度: +42",
+      "海怪率: +7%",
+      "需求钓鱼等级: 70",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENTPOOL_BOOTS",
+    "name": "古潭钓靴",
+    "kind": "boots",
+    "base": "diamond_boots",
+    "model": "yknfish:ancientpool_boots",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "古老鳞片与活性纤丝铭记深潭的呼吸。",
+      "钓鱼速度: +42",
+      "海怪率: +7%",
+      "需求钓鱼等级: 70",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENTPOOL_ROD",
+    "name": "古潭钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:ancientpool_rod",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "齿晶制成的鱼钩唤醒久未惊动的潭影。",
+      "钓鱼速度: +172",
+      "海怪率: +32%",
+      "需求钓鱼等级: 70",
+      "低于需求等级时，钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOONABYSS_HELMET",
+    "name": "月渊钓帽",
+    "kind": "helmet",
+    "base": "netherite_helmet",
+    "model": "yknfish:moonabyss_helmet",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "月映幽珠照亮流光古鳞，深水因你而动。",
+      "钓鱼速度: +60",
+      "海怪率: +11%",
+      "需求钓鱼等级: 100",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOONABYSS_CHESTPLATE",
+    "name": "月渊钓衣",
+    "kind": "chestplate",
+    "base": "netherite_chestplate",
+    "model": "yknfish:moonabyss_chestplate",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "月映幽珠照亮流光古鳞，深水因你而动。",
+      "钓鱼速度: +60",
+      "海怪率: +11%",
+      "需求钓鱼等级: 100",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOONABYSS_LEGGINGS",
+    "name": "月渊长裤",
+    "kind": "leggings",
+    "base": "netherite_leggings",
+    "model": "yknfish:moonabyss_leggings",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "月映幽珠照亮流光古鳞，深水因你而动。",
+      "钓鱼速度: +60",
+      "海怪率: +11%",
+      "需求钓鱼等级: 100",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOONABYSS_BOOTS",
+    "name": "月渊钓靴",
+    "kind": "boots",
+    "base": "netherite_boots",
+    "model": "yknfish:moonabyss_boots",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "月映幽珠照亮流光古鳞，深水因你而动。",
+      "钓鱼速度: +60",
+      "海怪率: +11%",
+      "需求钓鱼等级: 100",
+      "低于需求等级时，钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_MOONABYSS_ROD",
+    "name": "月渊钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:moonabyss_rod",
+    "file": "yknfish-equipment.yml",
+    "lore": [
+      "双珠映月，垂下的鱼线直指海怪的巢穴。",
+      "钓鱼速度: +240",
+      "海怪率: +44%",
+      "需求钓鱼等级: 42",
+      "低于需求等级时，钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INKSCALE_HELMET",
+    "name": "墨鳞钓帽",
+    "kind": "helmet",
+    "base": "leather_helmet",
+    "model": "yknfish:tree_inkscale_helmet",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "溪墨防水，薄鳞贴合溪畔的每一次垂钓。",
+      "基础属性",
+      "钓鱼速度: +4",
+      "海怪率: +0.75%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +2",
+      "额外海怪率: +0.25%",
+      "需求钓鱼等级: 16",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INKSCALE_CHESTPLATE",
+    "name": "墨鳞钓衣",
+    "kind": "chestplate",
+    "base": "leather_chestplate",
+    "model": "yknfish:tree_inkscale_chestplate",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "溪墨防水，薄鳞贴合溪畔的每一次垂钓。",
+      "基础属性",
+      "钓鱼速度: +4",
+      "海怪率: +0.75%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +2",
+      "额外海怪率: +0.25%",
+      "需求钓鱼等级: 16",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INKSCALE_LEGGINGS",
+    "name": "墨鳞长裤",
+    "kind": "leggings",
+    "base": "leather_leggings",
+    "model": "yknfish:tree_inkscale_leggings",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "溪墨防水，薄鳞贴合溪畔的每一次垂钓。",
+      "基础属性",
+      "钓鱼速度: +4",
+      "海怪率: +0.75%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +2",
+      "额外海怪率: +0.25%",
+      "需求钓鱼等级: 16",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INKSCALE_BOOTS",
+    "name": "墨鳞钓靴",
+    "kind": "boots",
+    "base": "leather_boots",
+    "model": "yknfish:tree_inkscale_boots",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "溪墨防水，薄鳞贴合溪畔的每一次垂钓。",
+      "基础属性",
+      "钓鱼速度: +4",
+      "海怪率: +0.75%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +2",
+      "额外海怪率: +0.25%",
+      "需求钓鱼等级: 16",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INKSCALE_ROD",
+    "name": "溪墨钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:tree_inkscale_rod",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "以墨囊封护竿身，让银鳞映出细小水纹。",
+      "基础属性",
+      "钓鱼速度: +18",
+      "海怪率: +4%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +8",
+      "额外海怪率: +2%",
+      "需求钓鱼等级: 16",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REEDGLOW_HELMET",
+    "name": "苇光钓帽",
+    "kind": "helmet",
+    "base": "leather_helmet",
+    "model": "yknfish:tree_reedglow_helmet",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "苇绳紧密交织，细碎萤光沿着衣缝流动。",
+      "基础属性",
+      "钓鱼速度: +8",
+      "海怪率: +1.25%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +5",
+      "额外海怪率: +0.75%",
+      "需求钓鱼等级: 24",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REEDGLOW_CHESTPLATE",
+    "name": "苇光钓衣",
+    "kind": "chestplate",
+    "base": "leather_chestplate",
+    "model": "yknfish:tree_reedglow_chestplate",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "苇绳紧密交织，细碎萤光沿着衣缝流动。",
+      "基础属性",
+      "钓鱼速度: +8",
+      "海怪率: +1.25%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +5",
+      "额外海怪率: +0.75%",
+      "需求钓鱼等级: 24",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REEDGLOW_LEGGINGS",
+    "name": "苇光长裤",
+    "kind": "leggings",
+    "base": "leather_leggings",
+    "model": "yknfish:tree_reedglow_leggings",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "苇绳紧密交织，细碎萤光沿着衣缝流动。",
+      "基础属性",
+      "钓鱼速度: +8",
+      "海怪率: +1.25%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +5",
+      "额外海怪率: +0.75%",
+      "需求钓鱼等级: 24",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REEDGLOW_BOOTS",
+    "name": "苇光钓靴",
+    "kind": "boots",
+    "base": "leather_boots",
+    "model": "yknfish:tree_reedglow_boots",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "苇绳紧密交织，细碎萤光沿着衣缝流动。",
+      "基础属性",
+      "钓鱼速度: +8",
+      "海怪率: +1.25%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +5",
+      "额外海怪率: +0.75%",
+      "需求钓鱼等级: 24",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REEDGLOW_ROD",
+    "name": "萤苇钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:tree_reedglow_rod",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "苇绳传递鱼讯，微光标记溪面的每次轻颤。",
+      "基础属性",
+      "钓鱼速度: +38",
+      "海怪率: +9%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +30",
+      "额外海怪率: +5%",
+      "需求钓鱼等级: 24",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEARPOOL_HELMET",
+    "name": "澄潭钓帽",
+    "kind": "helmet",
+    "base": "leather_helmet",
+    "model": "yknfish:tree_clearpool_helmet",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "清润塘胶封住接缝，韧铁守住溪流中的平稳。",
+      "基础属性",
+      "钓鱼速度: +15",
+      "海怪率: +2.5%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +8",
+      "额外海怪率: +1%",
+      "需求钓鱼等级: 32",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEARPOOL_CHESTPLATE",
+    "name": "澄潭钓衣",
+    "kind": "chestplate",
+    "base": "leather_chestplate",
+    "model": "yknfish:tree_clearpool_chestplate",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "清润塘胶封住接缝，韧铁守住溪流中的平稳。",
+      "基础属性",
+      "钓鱼速度: +15",
+      "海怪率: +2.5%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +8",
+      "额外海怪率: +1%",
+      "需求钓鱼等级: 32",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEARPOOL_LEGGINGS",
+    "name": "澄潭长裤",
+    "kind": "leggings",
+    "base": "leather_leggings",
+    "model": "yknfish:tree_clearpool_leggings",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "清润塘胶封住接缝，韧铁守住溪流中的平稳。",
+      "基础属性",
+      "钓鱼速度: +15",
+      "海怪率: +2.5%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +8",
+      "额外海怪率: +1%",
+      "需求钓鱼等级: 32",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEARPOOL_BOOTS",
+    "name": "澄潭钓靴",
+    "kind": "boots",
+    "base": "leather_boots",
+    "model": "yknfish:tree_clearpool_boots",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "清润塘胶封住接缝，韧铁守住溪流中的平稳。",
+      "基础属性",
+      "钓鱼速度: +15",
+      "海怪率: +2.5%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +8",
+      "额外海怪率: +1%",
+      "需求钓鱼等级: 32",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "穿戴在对应护甲栏时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEARPOOL_ROD",
+    "name": "净流钓竿",
+    "kind": "fishing_rod",
+    "base": "fishing_rod",
+    "model": "yknfish:tree_clearpool_rod",
+    "file": "yknfish-tree-equipment.yml",
+    "lore": [
+      "净洗铁件与弹性塘胶，让鱼线从容穿过暗流。",
+      "基础属性",
+      "钓鱼速度: +70",
+      "海怪率: +14%",
+      "森泉岛特性 （仅森泉岛有效）",
+      "额外钓鱼速度: +48",
+      "额外海怪率: +8%",
+      "需求钓鱼等级: 32",
+      "低于需求等级时，全部钓鱼属性不生效。",
+      "使用此鱼竿抛竿时生效。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_INK_SAC",
+    "name": "溪流墨囊",
+    "kind": "material",
+    "base": "ink_sac",
+    "model": "yknfish:tree_ink_sac",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "溪流鱿鱼储存墨汁的小囊袋。",
+      "钓具材料 · 防水涂层原液",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_FILTERED_INK",
+    "name": "滤净墨液",
+    "kind": "material",
+    "base": "black_dye",
+    "model": "yknfish:tree_filtered_ink",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "滤去河砂后留下的细腻墨液。",
+      "钓具材料 · 竿身防水涂层",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_DENSE_INK",
+    "name": "浓纹墨膏",
+    "kind": "material",
+    "base": "ink_sac",
+    "model": "yknfish:tree_dense_ink",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "缓慢凝缩的墨膏能绘出细密纹路。",
+      "钓具材料 · 导环防蚀涂层",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_NIGHT_INK",
+    "name": "夜纹墨珠",
+    "kind": "material",
+    "base": "black_dye",
+    "model": "yknfish:tree_night_ink",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "墨囊中偶然凝成的深色珠粒。",
+      "钓具材料 · 精密涂层添加剂",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_SILVER_SCALE",
+    "name": "溪鱼鳞屑",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknfish:tree_silver_scale",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "银鳞溪鱼身上脱落的轻薄鳞屑。",
+      "钓具材料 · 浮漂护片原料",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_POLISHED_SCALE",
+    "name": "磨亮银鳞",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknfish:tree_polished_scale",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "磨平鳞缘后映出柔和的溪水银光。",
+      "钓具材料 · 浮漂表面护片",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_FLEXIBLE_SCALE",
+    "name": "韧纹银鳞",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:tree_flexible_scale",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "逆流长成的细纹让鳞片格外柔韧。",
+      "钓具材料 · 竿节柔性衬片",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_RAINBOW_SCALE",
+    "name": "虹纹溪鳞",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknfish:tree_rainbow_scale",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "少数溪鱼鳞片中天然长出的虹彩。",
+      "钓具材料 · 浮漂反光饰片",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_GLOW_PARTICLE",
+    "name": "微光颗粒",
+    "kind": "material",
+    "base": "glowstone_dust",
+    "model": "yknfish:tree_glow_particle",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "萤光鱿鱼留下的细小发光颗粒。",
+      "钓具材料 · 夜钓标记原料",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_GLOW_DUST",
+    "name": "匀光粉末",
+    "kind": "material",
+    "base": "glowstone_dust",
+    "model": "yknfish:tree_glow_dust",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "研磨均匀的粉末散出稳定微光。",
+      "钓具材料 · 浮漂夜光涂料",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_GLOW_BEAD",
+    "name": "凝光珠粒",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknfish:tree_glow_bead",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "将微光凝聚起来的半透明珠粒。",
+      "钓具材料 · 浮漂发光标点",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_GLOW_HEART",
+    "name": "萤潮光核",
+    "kind": "material",
+    "base": "glow_ink_sac",
+    "model": "yknfish:tree_glow_heart",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "水光随轻晃在内里缓缓流转。",
+      "钓具材料 · 持续夜光芯材",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REED_FIBER",
+    "name": "芦苇纤维",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:tree_reed_fiber",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "从缠草溺尸身上解下的苇茎细丝。",
+      "钓具材料 · 鱼线编织原料",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REED_CORD",
+    "name": "拧制苇绳",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:tree_reed_cord",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "顺着纤维方向拧成的细软苇绳。",
+      "钓具材料 · 鱼线外层编织",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REED_BRAID",
+    "name": "密编苇束",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:tree_reed_braid",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "多股苇绳交错编成的紧实束带。",
+      "钓具材料 · 握柄缠带加固",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_REED_SILK",
+    "name": "柔光苇丝",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:tree_reed_silk",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "老苇茎内层天然生出的柔亮纤丝。",
+      "钓具材料 · 细线韧性夹层",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_SOFT_GEL",
+    "name": "软塘胶滴",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:tree_soft_gel",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "浅滩黏团留下的柔软胶滴。",
+      "钓具材料 · 黏合胶原料",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEAR_GEL",
+    "name": "澄清塘胶",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:tree_clear_gel",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "沉去泥沙后变得清透的塘胶。",
+      "钓具材料 · 浮漂接缝密封",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_ELASTIC_GEL",
+    "name": "弹性胶团",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:tree_elastic_gel",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "浓缩后仍能轻轻回弹的胶团。",
+      "钓具材料 · 握柄缓冲衬层",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_GEL_CRYSTAL",
+    "name": "净水胶晶",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknfish:tree_gel_crystal",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "黏团体内偶然凝结的清润晶粒。",
+      "钓具材料 · 防潮封装添加剂",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_RUST_FLAKE",
+    "name": "锈铁末",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknfish:tree_rust_flake",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "淤泥溺尸携带的锈蚀碎铁。",
+      "钓具材料 · 金属零件原料",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_CLEAN_IRON",
+    "name": "净洗铁片",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknfish:tree_clean_iron",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "洗去浮锈后还能使用的小铁片。",
+      "钓具材料 · 线轮侧板坯料",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_TOUGH_IRON",
+    "name": "韧化铁件",
+    "kind": "material",
+    "base": "iron_ingot",
+    "model": "yknfish:tree_tough_iron",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "水底残留器件中难得完整的韧铁。",
+      "钓具材料 · 导环固定零件",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TREE_FLOWING_IRON",
+    "name": "流纹铁芯",
+    "kind": "material",
+    "base": "iron_ingot",
+    "model": "yknfish:tree_flowing_iron",
+    "file": "yknfish-tree.yml",
+    "lore": [
+      "反复压合后浮现细密流纹的铁芯。",
+      "钓具材料 · 小型线轮轴芯",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_LEECH_TOOTH",
+    "name": "蠹虫细齿",
+    "kind": "material",
+    "base": "flint",
+    "model": "yknfish:leech_tooth",
+    "file": "yknfish.yml",
+    "lore": [
+      "从潭底蠹虫口中取下的细小尖齿。",
+      "齿缝里仍夹着细碎的河砂。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_SOAKED_FIBER",
+    "name": "浸水纤维",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:soaked_fiber",
+    "file": "yknfish.yml",
+    "lore": [
+      "苔背溺尸身上缠绕的坚韧水草。",
+      "离开水面后依然带着潮气。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROCK_CARAPACE",
+    "name": "岩纹甲壳",
+    "kind": "material",
+    "base": "turtle_scute",
+    "model": "yknfish:rock_carapace",
+    "file": "yknfish.yml",
+    "lore": [
+      "岩壳水蛛背部剥落的薄片。",
+      "层叠纹理如同水底的沉积岩。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CAVE_GEL",
+    "name": "洞穴凝胶",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:cave_gel",
+    "file": "yknfish.yml",
+    "lore": [
+      "洞穴黏团留下的半透明胶质。",
+      "里面封存着细小的苍翠苔芽。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTAL_FIN",
+    "name": "晶化鱼鳍",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:crystal_fin",
+    "file": "yknfish.yml",
+    "lore": [
+      "晶鳍守卫身上长出的矿晶鳍片。",
+      "迎光时会映出粼粼的水纹。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ANCIENT_SCALE",
+    "name": "古潭鳞片",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknfish:ancient_scale",
+    "file": "yknfish.yml",
+    "lore": [
+      "古潭巡游者身上斑驳的鳞片。",
+      "暗淡表面下藏着柔和的蓝光。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_RIVER_PEARL",
+    "name": "润泽河珠",
+    "kind": "material",
+    "base": "quartz",
+    "model": "yknfish:river_pearl",
+    "file": "yknfish.yml",
+    "lore": [
+      "海怪体内偶尔凝结的乳白珠粒。",
+      "被洞穴流水打磨得圆润细腻。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_VERDANT_CORE",
+    "name": "苍翠凝核",
+    "kind": "material",
+    "base": "emerald",
+    "model": "yknfish:verdant_core",
+    "file": "yknfish.yml",
+    "lore": [
+      "水草精华与矿物质凝成的硬核。",
+      "轻晃时能听到细微的水声。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_DEEP_PEARL",
+    "name": "幽潭明珠",
+    "kind": "material",
+    "base": "heart_of_the_sea",
+    "model": "yknfish:deep_pearl",
+    "file": "yknfish.yml",
+    "lore": [
+      "幽深洞潭孕育的澄澈宝珠。",
+      "像是将一整片宁静水面藏在其中。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_Driftwood",
+    "name": "水磨木枝",
+    "kind": "material",
+    "base": "stick",
+    "model": "yknfish:catch_driftwood",
+    "file": "yknfish.yml",
+    "lore": [
+      "沿地下水漂来的一小段树枝。",
+      "棱角已被水流磨得光滑。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_SoggyInvoice",
+    "name": "泡烂的矿工账单",
+    "kind": "material",
+    "base": "paper",
+    "model": "yknfish:catch_soggyinvoice",
+    "file": "yknfish.yml",
+    "lore": [
+      "今日支出：鱼饵。",
+      "今日收入：这张账单。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_LonelySock",
+    "name": "孤独的湿袜子",
+    "kind": "material",
+    "base": "gray_dye",
+    "model": "yknfish:catch_lonelysock",
+    "file": "yknfish.yml",
+    "lore": [
+      "另一只或许成了海怪的收藏品。",
+      "你决定暂时不去闻它。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_RetiredHook",
+    "name": "退休的鱼钩",
+    "kind": "material",
+    "base": "tripwire_hook",
+    "model": "yknfish:catch_retiredhook",
+    "file": "yknfish.yml",
+    "lore": [
+      "服役三十年，终于被钓上来了。",
+      "它管这次经历叫升职。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_CaveAmber",
+    "name": "洞潭琥珀",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknfish:catch_caveamber",
+    "file": "yknfish.yml",
+    "lore": [
+      "水底淤泥中发现的温润琥珀。",
+      "深处封着一缕很久以前的苔丝。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_SilverFossil",
+    "name": "银纹鱼化石",
+    "kind": "material",
+    "base": "bone",
+    "model": "yknfish:catch_silverfossil",
+    "file": "yknfish.yml",
+    "lore": [
+      "古老鱼骨在矿物中留下的痕迹。",
+      "细碎银纹勾勒出游动的模样。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_VerdantGeode",
+    "name": "苍翠晶簇",
+    "kind": "material",
+    "base": "amethyst_shard",
+    "model": "yknfish:catch_verdantgeode",
+    "file": "yknfish.yml",
+    "lore": [
+      "来自苍翠矿洞深处的水生矿晶。",
+      "晶面上还挂着不会散去的薄雾。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_Catch_MoonlitPearl",
+    "name": "月映幽珠",
+    "kind": "material",
+    "base": "heart_of_the_sea",
+    "model": "yknfish:catch_moonlitpearl",
+    "file": "yknfish.yml",
+    "lore": [
+      "没有月光的洞潭里升起的一点清辉。",
+      "珠中倒映着从未见过的夜空。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_POLISHED_TOOTH",
+    "name": "磨光虫齿",
+    "kind": "material",
+    "base": "flint",
+    "model": "yknfish:polished_tooth",
+    "file": "yknfish.yml",
+    "lore": [
+      "抛光后的虫齿露出细密切面。",
+      "鱼钩刃口的齿质材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_DENSE_TOOTH",
+    "name": "致密虫齿",
+    "kind": "material",
+    "base": "flint",
+    "model": "yknfish:dense_tooth",
+    "file": "yknfish.yml",
+    "lore": [
+      "多层齿质压合成坚硬的尖坯。",
+      "用于精加工鱼钩的高密度齿材。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_PRIME_TOOTH",
+    "name": "深潭齿晶",
+    "kind": "material",
+    "base": "amethyst_shard",
+    "model": "yknfish:prime_tooth",
+    "file": "yknfish.yml",
+    "lore": [
+      "齿质在深潭水压下凝成晶体。",
+      "鱼钩类制作材料中的珍贵齿晶。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TOUGH_FIBER",
+    "name": "韧化纤维",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:tough_fiber",
+    "file": "yknfish.yml",
+    "lore": [
+      "浸水纤维经梳理后更为均匀。",
+      "鱼线编织用的柔韧纤维。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_WOVEN_FIBER",
+    "name": "密织纤束",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:woven_fiber",
+    "file": "yknfish.yml",
+    "lore": [
+      "细密纤维被绞合为整束丝线。",
+      "用于鱼线与绑线的精制纤材。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_LIVING_FIBER",
+    "name": "活性纤丝",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:living_fiber",
+    "file": "yknfish.yml",
+    "lore": [
+      "丝束间仍流动着苍翠的微光。",
+      "鱼线类制作材料中的珍贵丝材。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CARAPACE_FRAGMENT",
+    "name": "岩甲碎屑",
+    "kind": "material",
+    "base": "clay_ball",
+    "model": "yknfish:carapace_fragment",
+    "file": "yknfish.yml",
+    "lore": [
+      "岩壳水蛛脱落的粗糙甲屑。",
+      "适合作为浮漂外壳的基础甲材。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_DENSE_CARAPACE",
+    "name": "致密岩甲",
+    "kind": "material",
+    "base": "turtle_scute",
+    "model": "yknfish:dense_carapace",
+    "file": "yknfish.yml",
+    "lore": [
+      "层层岩纹压成轻薄的坚固甲片。",
+      "用于浮漂外壳与竿节护片的甲材。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CRYSTAL_CARAPACE",
+    "name": "晶纹甲壳",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:crystal_carapace",
+    "file": "yknfish.yml",
+    "lore": [
+      "甲壳的岩纹中长出了透明晶脉。",
+      "浮漂外壳类制作材料中的珍贵甲材。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_DILUTE_GEL",
+    "name": "稀薄黏液",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:dilute_gel",
+    "file": "yknfish.yml",
+    "lore": [
+      "洞穴黏团残留的柔软胶液。",
+      "鱼线包覆与浮漂封装的基础胶材。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_CONCENTRATED_GEL",
+    "name": "浓缩凝胶",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:concentrated_gel",
+    "file": "yknfish.yml",
+    "lore": [
+      "除去杂质后的胶体澄澈而黏稠。",
+      "用于浮漂封装与竿节黏合的胶材。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_PRISTINE_GEL",
+    "name": "澄净胶晶",
+    "kind": "material",
+    "base": "slime_ball",
+    "model": "yknfish:pristine_gel",
+    "file": "yknfish.yml",
+    "lore": [
+      "纯净胶质凝成微微发亮的软晶。",
+      "钓具封装类制作材料中的珍贵胶晶。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_FIN_FRAGMENT",
+    "name": "粗糙鳍屑",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:fin_fragment",
+    "file": "yknfish.yml",
+    "lore": [
+      "晶鳍守卫身上脱落的细碎鳍片。",
+      "可作竿胚复合层的基础鳍材。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_POLISHED_FIN",
+    "name": "磨光鳍片",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:polished_fin",
+    "file": "yknfish.yml",
+    "lore": [
+      "打磨后的鳍片留下浅浅水纹。",
+      "用于竿胚复合层与导环的鳍材。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_PRISMATIC_FIN",
+    "name": "棱光鳍晶",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknfish:prismatic_fin",
+    "file": "yknfish.yml",
+    "lore": [
+      "数片晶化鱼鳍融成一束棱晶。",
+      "鱼竿类制作材料中的珍贵鳍晶。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_WORN_SCALE",
+    "name": "旧潭鳞屑",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:worn_scale",
+    "file": "yknfish.yml",
+    "lore": [
+      "古潭巡游者身上磨损的鳞屑。",
+      "可作竿节护片的基础鳞材。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_RESTORED_SCALE",
+    "name": "净化鳞片",
+    "kind": "material",
+    "base": "prismarine_shard",
+    "model": "yknfish:restored_scale",
+    "file": "yknfish.yml",
+    "lore": [
+      "拭去淤泥后重新显露纹路的鳞片。",
+      "用于竿节加固与浮漂包覆的鳞材。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_LUSTROUS_SCALE",
+    "name": "流光古鳞",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknfish:lustrous_scale",
+    "file": "yknfish.yml",
+    "lore": [
+      "古潭鳞片经凝炼后流转着蓝光。",
+      "钓具加固类制作材料中的珍贵鳞材。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_THREAD_SPOOL",
+    "name": "鱼线线轴",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:thread_spool",
+    "file": "yknfish.yml",
+    "lore": [
+      "将散乱短丝收拢成的基础线轴。",
+      "鱼线编织的基础材料。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_BRAIDED_LINE",
+    "name": "编织鱼线",
+    "kind": "material",
+    "base": "string",
+    "model": "yknfish:braided_line",
+    "file": "yknfish.yml",
+    "lore": [
+      "多股细线均匀绞合成整段长线。",
+      "鱼线类制作材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_FLOAT_CORE",
+    "name": "浮漂软芯",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknfish:float_core",
+    "file": "yknfish.yml",
+    "lore": [
+      "疏松而轻盈的小块芯料。",
+      "浮漂制作的基础芯材。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_SEALED_FLOAT_CORE",
+    "name": "密封浮芯",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknfish:sealed_float_core",
+    "file": "yknfish.yml",
+    "lore": [
+      "表层经过均匀封装的轻质芯料。",
+      "浮漂类制作材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_ROD_BLANK",
+    "name": "柔韧竿胚",
+    "kind": "material",
+    "base": "stick",
+    "model": "yknfish:rod_blank",
+    "file": "yknfish.yml",
+    "lore": [
+      "经过水磨与初步挑选的细长木胚。",
+      "鱼竿制作的基础胚料。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_REINFORCED_ROD_BLANK",
+    "name": "加固竿胚",
+    "kind": "material",
+    "base": "stick",
+    "model": "yknfish:reinforced_rod_blank",
+    "file": "yknfish.yml",
+    "lore": [
+      "多层木质贴合成平直的长胚。",
+      "鱼竿类制作材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_HOOK_BLANK",
+    "name": "粗制钩坯",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknfish:hook_blank",
+    "file": "yknfish.yml",
+    "lore": [
+      "尚未弯折与打磨的小块金属坯。",
+      "鱼钩制作的基础坯料。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknfish",
+    "id": "YKF_TEMPERED_HOOK_BLANK",
+    "name": "淬火钩坯",
+    "kind": "material",
+    "base": "iron_ingot",
+    "model": "yknfish:tempered_hook_blank",
+    "file": "yknfish.yml",
+    "lore": [
+      "经过淬炼的致密金属钩坯。",
+      "鱼钩类制作材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_PROSPECTOR_PICKAXE",
+    "name": "初探石镐",
+    "kind": "pickaxe",
+    "base": "stone_pickaxe",
+    "model": "yknmining:prospector_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "循着露头寻找第一条矿脉。",
+      "破坏力: 1",
+      "挖掘速度: +15%",
+      "采矿时运: +0",
+      "需求采矿等级: 0",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COPPER_PICKAXE",
+    "name": "铜铁锻镐",
+    "kind": "pickaxe",
+    "base": "iron_pickaxe",
+    "model": "yknmining:copper_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "赤铜与条铁铸就的坚实镐头。",
+      "破坏力: 2",
+      "挖掘速度: +30%",
+      "采矿时运: +10",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_JADE_PICKAXE",
+    "name": "翠金寻脉镐",
+    "kind": "pickaxe",
+    "base": "diamond_pickaxe",
+    "model": "yknmining:jade_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "翠玉与砂金指向更深处的矿藏。",
+      "破坏力: 3",
+      "挖掘速度: +55%",
+      "采矿时运: +25",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_PICKAXE",
+    "name": "深钴裂岩镐",
+    "kind": "pickaxe",
+    "base": "diamond_pickaxe",
+    "model": "yknmining:cobalt_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "钴蓝镐刃以银片和古树脂加固。",
+      "破坏力: 4",
+      "挖掘速度: +85%",
+      "采矿时运: +45",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_PICKAXE",
+    "name": "潮钛晶镐",
+    "kind": "pickaxe",
+    "base": "netherite_pickaxe",
+    "model": "yknmining:tidal_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "潮汐晶与玄钛共同分开顽岩。",
+      "破坏力: 5",
+      "挖掘速度: +120%",
+      "采矿时运: +70",
+      "需求采矿等级: 30",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ANCIENT_PICKAXE",
+    "name": "冰暮玄钛镐",
+    "kind": "pickaxe",
+    "base": "netherite_pickaxe",
+    "model": "yknmining:ancient_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "冰羽与暮紫晶镶嵌于玄钛镐刃。",
+      "破坏力: 6",
+      "挖掘速度: +160%",
+      "采矿时运: +100",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "工作台配方书可查看进阶材料。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COPPER_SWIFT_PICKAXE",
+    "name": "铜铁速掘镐",
+    "kind": "pickaxe",
+    "base": "iron_pickaxe",
+    "model": "yknmining:copper_swift_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "轻薄镐刃，适合快速采集入门金属。",
+      "破坏力: 2",
+      "挖掘速度: +45%",
+      "采矿时运: +0",
+      "专长: 赤铜矿、层纹铁矿",
+      "专长额外速度: +60% （合计 +105%）",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗铜铁锻镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_GOLD_FORTUNE_PICKAXE",
+    "name": "砂金聚宝镐",
+    "kind": "pickaxe",
+    "base": "diamond_pickaxe",
+    "model": "yknmining:gold_fortune_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "细筛般的镐齿，收拢砂金与翠玉碎粒。",
+      "破坏力: 3",
+      "挖掘速度: +30%",
+      "采矿时运: +35",
+      "专长: 砂脉金矿、苔翡翠",
+      "专长额外时运: +65 （合计 +100）",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗翠金寻脉镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_SWIFT_PICKAXE",
+    "name": "钴银穿岩镐",
+    "kind": "pickaxe",
+    "base": "diamond_pickaxe",
+    "model": "yknmining:cobalt_swift_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "钴刃与银锋交替切入深层金属矿脉。",
+      "破坏力: 4",
+      "挖掘速度: +80%",
+      "采矿时运: +15",
+      "专长: 深脉钴矿、银霜矿",
+      "专长额外速度: +100% （合计 +180%）",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗深钴裂岩镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_AMBER_FORTUNE_PICKAXE",
+    "name": "琥珀采脂镐",
+    "kind": "pickaxe",
+    "base": "diamond_pickaxe",
+    "model": "yknmining:amber_fortune_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "柔韧的树脂包边，保留下更多琥珀。",
+      "破坏力: 4",
+      "挖掘速度: +50%",
+      "采矿时运: +35",
+      "专长: 蜜脂琥珀",
+      "专长额外时运: +100 （合计 +135）",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗深钴裂岩镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_CRYSTAL_RESONANCE_PICKAXE",
+    "name": "潮晶共鸣镐",
+    "kind": "pickaxe",
+    "base": "netherite_pickaxe",
+    "model": "yknmining:crystal_resonance_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "顺着晶体纹理轻凿，汇聚三色晶屑。",
+      "破坏力: 5",
+      "挖掘速度: +90%",
+      "采矿时运: +35",
+      "专长: 潮汐蓝晶、暮紫晶、冰羽晶",
+      "专长额外时运: +90 （合计 +125）",
+      "需求采矿等级: 30",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗潮钛晶镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TITANIUM_FORTUNE_PICKAXE",
+    "name": "富钛重凿镐",
+    "kind": "pickaxe",
+    "base": "netherite_pickaxe",
+    "model": "yknmining:titanium_fortune_pickaxe",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "以富集钛加重镐首，凿取更多玄钛矿核。",
+      "破坏力: 6",
+      "挖掘速度: +85%",
+      "采矿时运: +50",
+      "专长: 玄纹钛矿、玄钛富集脉",
+      "专长额外时运: +150 （合计 +200）",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "低于需求等级时无法用此镐采矿。",
+      "可选专用分支，合成会消耗冰暮玄钛镐。",
+      "专长仅对所列矿物生效，受全局属性上限约束。",
+      "请在 YknRPG 图鉴中查看配方。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_MOSS_HELMET",
+    "name": "苔径勘探帽",
+    "kind": "helmet",
+    "base": "leather_helmet",
+    "model": "yknmining:moss_helmet",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "轻便衬里适合顺着苔径勘察矿脉。",
+      "挖掘速度: +5%",
+      "采矿时运: +2",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_HELMET",
+    "name": "翠金寻脉帽",
+    "kind": "helmet",
+    "base": "chainmail_helmet",
+    "model": "yknmining:cobalt_helmet",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "细密翠金护网帮助辨识岩层。",
+      "挖掘速度: +8%",
+      "采矿时运: +4",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_HELMET",
+    "name": "潮晶探脉帽",
+    "kind": "helmet",
+    "base": "iron_helmet",
+    "model": "yknmining:tidal_helmet",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "潮晶片与银叶在岩壁光影里相映。",
+      "挖掘速度: +12%",
+      "采矿时运: +8",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ANCIENT_HELMET",
+    "name": "远古玄钛帽",
+    "kind": "helmet",
+    "base": "netherite_helmet",
+    "model": "yknmining:ancient_helmet",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "以天然玄钛富集矿核铸成的勘探护具。",
+      "挖掘速度: +18%",
+      "采矿时运: +15",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_MOSS_CHESTPLATE",
+    "name": "苔径勘探衣",
+    "kind": "chestplate",
+    "base": "leather_chestplate",
+    "model": "yknmining:moss_chestplate",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "轻便衬里适合顺着苔径勘察矿脉。",
+      "挖掘速度: +7%",
+      "采矿时运: +3",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_CHESTPLATE",
+    "name": "翠金寻脉衣",
+    "kind": "chestplate",
+    "base": "chainmail_chestplate",
+    "model": "yknmining:cobalt_chestplate",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "细密翠金护网帮助辨识岩层。",
+      "挖掘速度: +11%",
+      "采矿时运: +6",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_CHESTPLATE",
+    "name": "潮晶探脉衣",
+    "kind": "chestplate",
+    "base": "iron_chestplate",
+    "model": "yknmining:tidal_chestplate",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "潮晶片与银叶在岩壁光影里相映。",
+      "挖掘速度: +16%",
+      "采矿时运: +11",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ANCIENT_CHESTPLATE",
+    "name": "远古玄钛衣",
+    "kind": "chestplate",
+    "base": "netherite_chestplate",
+    "model": "yknmining:ancient_chestplate",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "以天然玄钛富集矿核铸成的勘探护具。",
+      "挖掘速度: +24%",
+      "采矿时运: +20",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_MOSS_LEGGINGS",
+    "name": "苔径勘探护腿",
+    "kind": "leggings",
+    "base": "leather_leggings",
+    "model": "yknmining:moss_leggings",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "轻便衬里适合顺着苔径勘察矿脉。",
+      "挖掘速度: +6%",
+      "采矿时运: +2",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_LEGGINGS",
+    "name": "翠金寻脉护腿",
+    "kind": "leggings",
+    "base": "chainmail_leggings",
+    "model": "yknmining:cobalt_leggings",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "细密翠金护网帮助辨识岩层。",
+      "挖掘速度: +9%",
+      "采矿时运: +5",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_LEGGINGS",
+    "name": "潮晶探脉护腿",
+    "kind": "leggings",
+    "base": "iron_leggings",
+    "model": "yknmining:tidal_leggings",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "潮晶片与银叶在岩壁光影里相映。",
+      "挖掘速度: +14%",
+      "采矿时运: +10",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ANCIENT_LEGGINGS",
+    "name": "远古玄钛护腿",
+    "kind": "leggings",
+    "base": "netherite_leggings",
+    "model": "yknmining:ancient_leggings",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "以天然玄钛富集矿核铸成的勘探护具。",
+      "挖掘速度: +21%",
+      "采矿时运: +18",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_MOSS_BOOTS",
+    "name": "苔径勘探靴",
+    "kind": "boots",
+    "base": "leather_boots",
+    "model": "yknmining:moss_boots",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "轻便衬里适合顺着苔径勘察矿脉。",
+      "挖掘速度: +5%",
+      "采矿时运: +2",
+      "需求采矿等级: 5",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_COBALT_BOOTS",
+    "name": "翠金寻脉靴",
+    "kind": "boots",
+    "base": "chainmail_boots",
+    "model": "yknmining:cobalt_boots",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "细密翠金护网帮助辨识岩层。",
+      "挖掘速度: +8%",
+      "采矿时运: +4",
+      "需求采矿等级: 10",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_BOOTS",
+    "name": "潮晶探脉靴",
+    "kind": "boots",
+    "base": "iron_boots",
+    "model": "yknmining:tidal_boots",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "潮晶片与银叶在岩壁光影里相映。",
+      "挖掘速度: +12%",
+      "采矿时运: +8",
+      "需求采矿等级: 20",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ANCIENT_BOOTS",
+    "name": "远古玄钛靴",
+    "kind": "boots",
+    "base": "netherite_boots",
+    "model": "yknmining:ancient_boots",
+    "file": "yknmining-equipment.yml",
+    "lore": [
+      "以天然玄钛富集矿核铸成的勘探护具。",
+      "挖掘速度: +18%",
+      "采矿时运: +15",
+      "需求采矿等级: 40",
+      "采集属性仅在远古矿脉岛生效。",
+      "穿入对应护甲栏且达标时生效。",
+      "工作台配方书可查看进阶材料。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_RED_COPPER",
+    "name": "赤铜矿",
+    "kind": "material",
+    "base": "raw_copper",
+    "model": "yknmining:red_copper",
+    "file": "yknmining.yml",
+    "lore": [
+      "岩层里的赤红铜粒。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_RED_COPPER",
+    "name": "赤铜锭",
+    "kind": "material",
+    "base": "copper_ingot",
+    "model": "yknmining:refined_red_copper",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份赤铜矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_BANDED_IRON",
+    "name": "层纹铁矿",
+    "kind": "material",
+    "base": "raw_iron",
+    "model": "yknmining:banded_iron",
+    "file": "yknmining.yml",
+    "lore": [
+      "沿着天然层理延伸的铁质条带。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_BANDED_IRON",
+    "name": "精炼条铁",
+    "kind": "material",
+    "base": "iron_ingot",
+    "model": "yknmining:refined_banded_iron",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份层纹铁矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "普通"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_PLACER_GOLD",
+    "name": "砂脉金矿",
+    "kind": "material",
+    "base": "raw_gold",
+    "model": "yknmining:placer_gold",
+    "file": "yknmining.yml",
+    "lore": [
+      "河床冲积层中沉积的暖金碎粒。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_PLACER_GOLD",
+    "name": "砂金锭",
+    "kind": "material",
+    "base": "gold_ingot",
+    "model": "yknmining:refined_placer_gold",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份砂脉金矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_MOSS_JADE",
+    "name": "苔翡翠",
+    "kind": "material",
+    "base": "emerald",
+    "model": "yknmining:moss_jade",
+    "file": "yknmining.yml",
+    "lore": [
+      "苔根拥抱着通透的青翠矿心。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_MOSS_JADE",
+    "name": "苔翠凝玉",
+    "kind": "material",
+    "base": "emerald",
+    "model": "yknmining:refined_moss_jade",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份苔翡翠凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "少见的"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_DEEP_COBALT",
+    "name": "深脉钴矿",
+    "kind": "material",
+    "base": "lapis_lazuli",
+    "model": "yknmining:deep_cobalt",
+    "file": "yknmining.yml",
+    "lore": [
+      "深灰岩隙中聚集的皇家蓝钴晶。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_DEEP_COBALT",
+    "name": "精炼深钴",
+    "kind": "material",
+    "base": "lapis_lazuli",
+    "model": "yknmining:refined_deep_cobalt",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份深脉钴矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_SILVER_FROST",
+    "name": "银霜矿",
+    "kind": "material",
+    "base": "quartz",
+    "model": "yknmining:silver_frost",
+    "file": "yknmining.yml",
+    "lore": [
+      "贴伏于岩面的冷白银质叶片。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_SILVER_FROST",
+    "name": "银霜薄锭",
+    "kind": "material",
+    "base": "iron_nugget",
+    "model": "yknmining:refined_silver_frost",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份银霜矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_RESIN_AMBER",
+    "name": "蜜脂琥珀",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknmining:resin_amber",
+    "file": "yknmining.yml",
+    "lore": [
+      "古木根层里凝结的金黄树脂。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_RESIN_AMBER",
+    "name": "凝蜜琥珀",
+    "kind": "material",
+    "base": "honeycomb",
+    "model": "yknmining:refined_resin_amber",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份蜜脂琥珀凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "稀有"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_DARK_TITANIUM",
+    "name": "玄纹钛矿",
+    "kind": "material",
+    "base": "flint",
+    "model": "yknmining:dark_titanium",
+    "file": "yknmining.yml",
+    "lore": [
+      "玄黑岩石中的冷白分枝矿脉。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_DARK_TITANIUM",
+    "name": "精炼玄钛",
+    "kind": "material",
+    "base": "netherite_scrap",
+    "model": "yknmining:refined_dark_titanium",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份玄纹钛矿凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_TIDAL_CRYSTAL",
+    "name": "潮汐蓝晶",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknmining:tidal_crystal",
+    "file": "yknmining.yml",
+    "lore": [
+      "水蓝晶体保留着潮汐般的纹光。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_TIDAL_CRYSTAL",
+    "name": "潮汐晶簇",
+    "kind": "material",
+    "base": "prismarine_crystals",
+    "model": "yknmining:refined_tidal_crystal",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份潮汐蓝晶凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "史诗"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_DUSK_AMETHYST",
+    "name": "暮紫晶",
+    "kind": "material",
+    "base": "amethyst_shard",
+    "model": "yknmining:dusk_amethyst",
+    "file": "yknmining.yml",
+    "lore": [
+      "暮色般的紫晶沿岩隙生长。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_DUSK_AMETHYST",
+    "name": "暮紫晶簇",
+    "kind": "material",
+    "base": "amethyst_shard",
+    "model": "yknmining:refined_dusk_amethyst",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份暮紫晶凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_FROST_FEATHER",
+    "name": "冰羽晶",
+    "kind": "material",
+    "base": "ghast_tear",
+    "model": "yknmining:frost_feather",
+    "file": "yknmining.yml",
+    "lore": [
+      "浅冰蓝晶片叠成羽状边缘。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_FROST_FEATHER",
+    "name": "冰羽晶簇",
+    "kind": "material",
+    "base": "quartz",
+    "model": "yknmining:refined_frost_feather",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份冰羽晶凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "传说"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_ENRICHED_TITANIUM",
+    "name": "玄钛富集脉",
+    "kind": "material",
+    "base": "netherite_scrap",
+    "model": "yknmining:enriched_titanium",
+    "file": "yknmining.yml",
+    "lore": [
+      "天然富集腔里簇生的明亮矿核。",
+      "来源: 远古矿脉 · 和平采集",
+      "用途: 矿物精炼与挖矿装备",
+      "工作台放入 9 份可精炼为 1 份。",
+      "神话"
+    ]
+  },
+  {
+    "plugin": "yknmining",
+    "id": "YKM_REFINED_ENRICHED_TITANIUM",
+    "name": "玄钛矿核",
+    "kind": "material",
+    "base": "netherite_ingot",
+    "model": "yknmining:refined_enriched_titanium",
+    "file": "yknmining.yml",
+    "lore": [
+      "由九份玄钛富集脉凝炼的进阶材料。",
+      "用途: 挖矿工具与护甲进阶",
+      "在工作台配方书中查看用途。",
+      "神话"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "id": "YKM_GOLD_FORTUNE_PICKAXE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_GOLD_FORTUNE_PICKAXE.png",
+  "texture": "textures/gold_fortune_pickaxe.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 砂金聚宝镐 (gold fortune pickaxe), base material diamond_pickaxe. Visual form: unmistakable traditional two-ended mining pickaxe with a heavy transverse curved pick head and elongated diagonal handle, handle bottom left, mining head upper right; no blade of a sword. Lore for design: 细筛般的镐齿，收拢砂金与翠玉碎粒。 / 破坏力: 3. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "83C9FCBCACB625DBEDD2D9FC07F53D4D7D3AB8D9391ECE0D46D02E559CB223B4",
+  "visual_review": "pending"
+}

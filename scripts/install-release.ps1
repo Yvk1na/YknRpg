@@ -288,6 +288,7 @@ try {
     Expand-Archive -LiteralPath $EcoPetsPack -DestinationPath $temporaryEcoPetsPack
     foreach ($required in @(
         'pack.yml',
+        'catalog-animations.json',
         'configuration\items.yml',
         'resourcepack\assets\yknrpg\items\gui_crafting_table.json',
         'resourcepack\assets\yknrpg\items\gui_arrow.json'
@@ -296,12 +297,59 @@ try {
             throw "CraftEngine pack is missing $required"
         }
     }
-    $unexpectedAssets = @(Get-ChildItem -LiteralPath $temporaryPackRoot -File -Recurse |
+    $unexpectedAssets = @(Get-ChildItem -LiteralPath (Join-Path $temporaryPackRoot 'resourcepack\assets\yknrpg') -File -Recurse |
         Where-Object {
-            $_.FullName -like '*resourcepack\assets\yknrpg*' -and
             $_.BaseName -notin @('gui_arrow', 'gui_crafting_table')
         })
-    if ($unexpectedAssets.Count -gt 0) { throw 'CraftEngine pack may contain GUI assets only.' }
+    if ($unexpectedAssets.Count -gt 0) { throw 'CraftEngine GUI namespace contains unexpected assets.' }
+    $boneSampleNames = @(
+        'wingbreaker_greatsword', 'ossuary_dragoon_helmet', 'ossuary_dragoon_chestplate',
+        'ossuary_dragoon_leggings', 'ossuary_dragoon_boots', 'bone_dragon_fang',
+        'ossuary_carapace', 'shattered_wingbone', 'wraithfire_dragonheart'
+    )
+    $boneAssetPaths = @(
+        'resourcepack\assets\yknrpg_bone\equipment\ossuary_dragoon.json',
+        'resourcepack\assets\yknrpg_bone\textures\entity\equipment\humanoid\ossuary_dragoon.png',
+        'resourcepack\assets\yknrpg_bone\textures\entity\equipment\humanoid_leggings\ossuary_dragoon.png'
+    )
+    foreach ($name in $boneSampleNames) {
+        $boneAssetPaths += "resourcepack\assets\yknrpg_bone\items\$name.json"
+        $boneAssetPaths += "resourcepack\assets\yknrpg_bone\models\item\$name.json"
+        $boneAssetPaths += "resourcepack\assets\yknrpg_bone\textures\item\$name.png"
+    }
+    $catalogAnimations = Get-Content -LiteralPath (Join-Path $temporaryPackRoot 'catalog-animations.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($catalogAnimations.Count -ne 327 -or @($catalogAnimations.id | Sort-Object -Unique).Count -ne 327) {
+        throw 'Expected 327 distinct catalog presentations in the CraftEngine pack.'
+    }
+    foreach ($animation in $catalogAnimations) {
+        if ($animation.id -notmatch '^YKI_[A-Z0-9_]+$' -or
+            $animation.namespace -notin @('yknrpg_bone', 'yknrpg_items') -or
+            $animation.texture -ne $animation.id.Substring(4).ToLowerInvariant()) {
+            throw 'Invalid animated catalog resource path.'
+        }
+        $prefix = 'resourcepack\assets\' + $animation.namespace
+        $name = $animation.texture
+        $boneAssetPaths += "$prefix\items\$name.json"
+        $boneAssetPaths += "$prefix\models\item\$name.json"
+        $boneAssetPaths += "$prefix\textures\item\$name.png"
+        $boneAssetPaths += "$prefix\textures\item\$name.png.mcmeta"
+        $handName = $animation.handheld_texture
+        if ($handName -cne ($name + '_in_hand') -or $animation.icon_size -ne 32 -or $animation.handheld_size -ne 64) {
+            throw "Invalid inventory or held presentation: $name"
+        }
+        $boneAssetPaths += "$prefix\models\item\$handName.json"
+        $boneAssetPaths += "$prefix\textures\item\$handName.png"
+        $boneAssetPaths += "$prefix\textures\item\$handName.png.mcmeta"
+    }
+    $boneAssetPaths = @($boneAssetPaths | Sort-Object -Unique)
+    $boneSourceHashes = @{}
+    foreach ($relativePath in $boneAssetPaths) {
+        $source = Join-Path $temporaryPackRoot $relativePath
+        if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
+            throw "CraftEngine pack is missing bone dragon asset: $relativePath"
+        }
+        $boneSourceHashes[$relativePath] = Get-Sha256 $source
+    }
     $mythicSourceHashes = @{}
     foreach ($name in $mythicFileNames) {
         $source = Join-Path $temporaryMythicItems $name
@@ -434,6 +482,13 @@ try {
     if ($deployedAssetFiles.Count -ne 6) { throw "Expected 6 CraftEngine GUI asset files, found $($deployedAssetFiles.Count)." }
     if ($deployedAssetFiles | Where-Object { $_.BaseName -notin @('gui_arrow', 'gui_crafting_table') }) {
         throw 'Non-GUI CraftEngine assets remain after deployment.'
+    }
+    foreach ($relativePath in $boneAssetPaths) {
+        $deployedAsset = Join-Path $craftEngineTarget $relativePath
+        if (-not (Test-Path -LiteralPath $deployedAsset -PathType Leaf) -or
+            (Get-Sha256 $deployedAsset) -ne $boneSourceHashes[$relativePath]) {
+            throw "Deployed bone dragon asset failed SHA-256 verification: $relativePath"
+        }
     }
     $deployedEcoPetFiles = @(Get-ChildItem -LiteralPath $ecoPetsTarget -File -Recurse)
     if ($deployedEcoPetFiles.Count -ne 72) {

@@ -1,0 +1,12 @@
+{
+  "id": "YKI_BRAMBLE_LONGBOW",
+  "source": "docs/design/catalog-32-v2/source-images/bramble_longbow.png",
+  "texture": "textures/bramble_longbow.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  荆棘长弓. Thematic English item name: bramble longbow. One complete bow with recognizable curved limbs, taut string and central grip. Category WEAPON; rarity UNCOMMON. Descriptive inspiration: 箭矢会携带翠生荆棘的毒性。 被动：毒棘印记 [箭矢命中] 少见的 弓. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "6F6EF887A077D8BA66F2473494C149123C2AFDF90E03A12724BAD115E98660C1",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "546D9436F1156C39866A3CB2A571229761078A411074C740B9EEE783314559E8"
+}

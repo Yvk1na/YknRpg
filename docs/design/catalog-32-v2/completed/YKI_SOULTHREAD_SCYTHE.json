@@ -1,0 +1,13 @@
+{
+  "id": "YKI_SOULTHREAD_SCYTHE",
+  "source": "docs/design/catalog-32-v2/source-images/soulthread_scythe.png",
+  "texture": "textures/soulthread_scythe.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  缚魂镰. Thematic English item name: soulthread scythe. One complete hooked sickle or scythe, recognizable curved sharp blade and distinct grip. Category WEAPON; rarity RARE. Descriptive inspiration: 透明魂丝会从倒下的敌人身上回流至镰柄。 被动：摄魂 [击杀] 稀有 镰刀. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "33B560B13A9DF0108DDEC232A1EFB19B5F0382B678E41A38CE65A1769BC53EEF",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "DA75B1B2A4C6C2EC01F82BA57A810D026D7C53A4C8377188169DCD75D619673E"
+}

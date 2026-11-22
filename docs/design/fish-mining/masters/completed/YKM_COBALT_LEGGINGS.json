@@ -1,0 +1,10 @@
+{
+  "id": "YKM_COBALT_LEGGINGS",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_COBALT_LEGGINGS.png",
+  "texture": "textures/cobalt_leggings.png",
+  "prompt": "Original Minecraft inventory icon for 翠金寻脉护腿 (cobalt leggings). One full pair of trousers, clearly separate legs attached to one waistband. Front view, no boots. Fishing waders have cloth, reinforced knee seams and waterproof hems. Mining trousers have a sturdy belt, reinforced knees and protective plates. Lore for design: 细密翠金护网帮助辨识岩层。. This set must use consistent materials and tones: forest green (#38554a), worn antique brass plates (#a28c59), dark cobalt-grey leather straps (#424e5c), a small moss-jade clasp (#72a880); miner surveying equipment. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "BEC44FEA2409D694DFB19506FE14DEC0D9584CA0912DA7BA7A52A5C97C53A580",
+  "visual_review": "pending"
+}

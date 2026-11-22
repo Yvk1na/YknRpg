@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ROD_BLANK",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ROD_BLANK.png",
+  "texture": "textures/rod_blank.png",
+  "prompt": "Original Minecraft inventory icon for 柔韧竿胚 (rod blank). One young naturally curved pale brown wood fishing-rod blank, slim bottom-left to top-right stick with an end as thick and clear as a pencil, two pale sanded planes and minimal dark knots. Plain before reinforcement, no bait or line. Lore for design: 经过水磨与初步挑选的细长木胚。.  The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "7CA88ADE2C983A260F0CB605F4940BE2C7170B53032FE72BDAF88DE0D19F1713",
+  "visual_review": "pending"
+}

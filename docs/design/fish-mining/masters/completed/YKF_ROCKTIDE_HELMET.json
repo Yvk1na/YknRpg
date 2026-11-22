@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ROCKTIDE_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ROCKTIDE_HELMET.png",
+  "texture": "textures/rocktide_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 岩潮钓帽 (rocktide helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 层叠岩甲守住暗流里的每一次等待。. This set must use consistent materials and tones: charcoal slate layered plates (#485363), dark navy waterproof canvas (#35455d), a tiny muted amber clasp (#c18b48), silver grey edge chips; rugged cavern fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "52B9DF85EA65FEA53EB9B94CD7E24C010CC49FEA147D4F1FA17ECEB2FE79EBED",
+  "visual_review": "pending"
+}

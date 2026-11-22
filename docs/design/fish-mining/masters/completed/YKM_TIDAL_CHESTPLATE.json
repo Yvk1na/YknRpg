@@ -1,0 +1,10 @@
+{
+  "id": "YKM_TIDAL_CHESTPLATE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_TIDAL_CHESTPLATE.png",
+  "texture": "textures/tidal_chestplate.png",
+  "prompt": "Original Minecraft inventory icon for 潮晶探脉衣 (tidal chestplate). A full front-view chest garment with separate open sleeves and visible neck opening, no body. Fishing outfit has practical pockets and a weather-resistant collar. Mining outfit has reinforced shoulders, a tool strap or breastplate and leather edges. Lore for design: 潮晶片与银叶在岩壁光影里相映。. This set must use consistent materials and tones: rain-dark slate blue (#3e566c), brushed silver plates (#9baeb8), sharp sparse aqua crystal details (#74bfc0), strong charcoal edges; rugged crystal mine exploration armor. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "B415E292CFCEC4E4CE95F5F8A6D5CEC7CC7113E9A38A2AAFE9035A488229E81B",
+  "visual_review": "pending"
+}

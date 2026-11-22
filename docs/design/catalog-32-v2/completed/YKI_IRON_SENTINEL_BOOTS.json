@@ -1,0 +1,13 @@
+{
+  "id": "YKI_IRON_SENTINEL_BOOTS",
+  "source": "docs/design/catalog-32-v2/source-images/iron_sentinel_boots.png",
+  "texture": "textures/iron_sentinel_boots.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Only the specified individual armor slot. Keep all parts of this named set consistent with the exact material and colour scheme below. Use broad plates or cloth areas and a small clear set emblem; a recognisable empty helmet/chestplate/pair of leggings/pair of boots as appropriate.  Subject:  铁卫战靴. Thematic English item name: iron sentinel boots. One front-facing pair of matching boots together as a single inventory icon, visible soles and separated feet, not full legs or a character. Category ARMOR; rarity UNCOMMON. Descriptive inspiration: 铁卫套装 全套效果：壁垒反应 少见的 靴子. All four parts of this set share this exact design: Cool iron plate, dark navy undercloth, small brass rivets, sturdy angular sentry armor. Keep ornamentation modest and practical while retaining detailed pixel shading.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "E644054ABF8C1BD177368731407F7B96966A9D098FAC3E2F2F54FA2EE8434F55",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "61B8088CD9035F1EF4252D6AD95C3B7E262466636EFAAA94DD452870958C6807"
+}

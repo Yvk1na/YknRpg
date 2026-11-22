@@ -1,0 +1,12 @@
+{
+  "id": "YKI_VITAL_OATHSWORD",
+  "source": "docs/design/catalog-32-v2/source-images/vital_oathsword.png",
+  "texture": "textures/vital_oathsword.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  生息誓刃. Thematic English item name: vital oathsword. One diagonal bladed weapon, handle lower-left and sharp tip upper-right, clearly separate blade, hilt and grip. Match the named sword/dagger/scissors type. Category WEAPON; rarity EPIC. Descriptive inspiration: 将战斗能力与团队救援结合的誓约之刃。 治疗自身，并治疗、净化 8 格内队友；共有 3 次充能。 史诗 剑. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "2430560BD7ECFB9C83351E800F0AD4F53B3212D390A2B1845E61896E93C4FE72",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "BF403A3F1569B40824CFAD9E39081E50F3B09D2FCDCFCC06E5629477119CF11F"
+}

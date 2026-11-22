@@ -1,0 +1,10 @@
+{
+  "id": "YKF_WOVEN_FIBER",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_WOVEN_FIBER.png",
+  "texture": "textures/woven_fiber.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 密织纤束 (woven fiber), base material string. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 细密纤维被绞合为整束丝线。 / 用于鱼线与绑线的精制纤材。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "F51EB405C6F05926F34E5B52CD15DECBACDDD118F2307259DE2D5AD27190B3C7",
+  "visual_review": "pending"
+}

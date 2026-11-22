@@ -1,0 +1,10 @@
+{
+  "id": "YKM_JADE_PICKAXE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_JADE_PICKAXE.png",
+  "texture": "textures/jade_pickaxe.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 翠金寻脉镐 (jade pickaxe), base material diamond_pickaxe. Visual form: unmistakable traditional two-ended mining pickaxe with a heavy transverse curved pick head and elongated diagonal handle, handle bottom left, mining head upper right; no blade of a sword. Lore for design: 翠玉与砂金指向更深处的矿藏。 / 破坏力: 3. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "53DCB7603064CC4C05497E626CB794B35CD69307677DCD53068334E0F67F4524",
+  "visual_review": "pending"
+}

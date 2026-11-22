@@ -1,0 +1,12 @@
+{
+  "id": "YKI_CAMPWARD_SABER",
+  "source": "docs/design/catalog-32-v2/source-images/campward_saber.png",
+  "texture": "textures/campward_saber.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  营火守望剑. Thematic English item name: campward saber. One diagonal bladed weapon, handle lower-left and sharp tip upper-right, clearly separate blade, hilt and grip. Match the named sword/dagger/scissors type. Category WEAPON; rarity UNCOMMON. Descriptive inspiration: 剑脊封存一簇不熄营火，供长途跋涉者随时整备。 少见的 剑. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "sha256": "9631FB5E4CCAEF398ACE2569A1BB21B133CDE00442D9364B9597E902080DD394",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "829E3DF0001D020C5547ED2A5A4A85A2E0794938CA7BF97EE90E83F9A300F9AF"
+}

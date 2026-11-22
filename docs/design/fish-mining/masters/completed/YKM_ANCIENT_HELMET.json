@@ -1,0 +1,10 @@
+{
+  "id": "YKM_ANCIENT_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_ANCIENT_HELMET.png",
+  "texture": "textures/ancient_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 远古玄钛帽 (ancient helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 以天然玄钛富集矿核铸成的勘探护具。. This set must use consistent materials and tones: graphite charcoal titanium (#373641), sharp pale forged titanium edges (#82808b), restrained ice-lilac crystal (#9b8eaf), low gold-free dark fantasy mining heavy armor. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "59A989B1704FAB8CF2B9B3EC2DA91B1F19767244252F03BA45290684F1F0F653",
+  "visual_review": "pending"
+}

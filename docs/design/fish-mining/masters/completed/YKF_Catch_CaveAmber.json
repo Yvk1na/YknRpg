@@ -1,0 +1,10 @@
+{
+  "id": "YKF_Catch_CaveAmber",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_Catch_CaveAmber.png",
+  "texture": "textures/catch_caveamber.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 洞潭琥珀 (catch caveamber), base material honeycomb. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 水底淤泥中发现的温润琥珀。 / 深处封着一缕很久以前的苔丝。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "CB01E8798FFCF9B679F8BBF16548449E509EDB8F6C265085D42F622F7DC80963",
+  "visual_review": "pending"
+}

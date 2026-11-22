@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ANCIENTPOOL_ROD",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ANCIENTPOOL_ROD.png",
+  "texture": "textures/ancientpool_rod.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 古潭钓竿 (ancientpool rod), base material fishing_rod. Visual form: unmistakable long slim fishing rod with reel and distinct handle low left, tall smooth arcing tip high right, fine short line and a small fishing float close to rod; no sharp metal blade or wand head. Lore for design: 齿晶制成的鱼钩唤醒久未惊动的潭影。 / 钓鱼速度: +172. Set palette and materials: deep sea green weathered overlapping scales, muted antique bronze and one turquoise accent. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "7D4D0A8964332D915F7C4399E388A47599FCE9F1AEDA7A569E1EF0E79BC3A163",
+  "visual_review": "pending"
+}

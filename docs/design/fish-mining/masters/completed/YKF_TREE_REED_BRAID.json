@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_REED_BRAID",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_REED_BRAID.png",
+  "texture": "textures/tree_reed_braid.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 密编苇束 (tree reed braid), base material string. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 多股苇绳交错编成的紧实束带。 / 钓具材料 · 握柄缠带加固. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "5CC9338FD95E91776E8EFE3B4D839176927D7C62A02F0898D000EDA05EC1CDFE",
+  "visual_review": "pending"
+}

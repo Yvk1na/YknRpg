@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_POLISHED_SCALE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_POLISHED_SCALE.png",
+  "texture": "textures/tree_polished_scale.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 磨亮银鳞 (tree polished scale), base material iron_nugget. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 磨平鳞缘后映出柔和的溪水银光。 / 钓具材料 · 浮漂表面护片. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "531C058579D1B42A2902FC8CF772C6BA9569465C43639AC0BCBE8A7174C33EB4",
+  "visual_review": "pending"
+}

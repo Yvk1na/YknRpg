@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_FILTERED_INK",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_FILTERED_INK.png",
+  "texture": "textures/tree_filtered_ink.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 滤净墨液 (tree filtered ink), base material black_dye. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 滤去河砂后留下的细腻墨液。 / 钓具材料 · 竿身防水涂层. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "579677B04EFD7774484E0B56FAC39B8B2E447C8B0177C006B616E7DDB7FC2A92",
+  "visual_review": "pending"
+}

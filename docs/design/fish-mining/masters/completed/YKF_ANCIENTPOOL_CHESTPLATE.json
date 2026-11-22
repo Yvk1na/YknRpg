@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ANCIENTPOOL_CHESTPLATE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ANCIENTPOOL_CHESTPLATE.png",
+  "texture": "textures/ancientpool_chestplate.png",
+  "prompt": "Original Minecraft inventory icon for 古潭钓衣 (ancientpool chestplate). A full front-view chest garment with separate open sleeves and visible neck opening, no body. Fishing outfit has practical pockets and a weather-resistant collar. Mining outfit has reinforced shoulders, a tool strap or breastplate and leather edges. Lore for design: 古老鳞片与活性纤丝铭记深潭的呼吸。. This set must use consistent materials and tones: dark olive sea green aged scales (#375f52), antique bronze (#9d784a), weathered cream highlights (#bebb9a), tiny mineral turquoise accent; ancient deep-pool fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "B5945A4C3F5230FC25B0E95BC34D62825E2B348E044A9C7FCEA03376B2A7DD7D",
+  "visual_review": "pending"
+}

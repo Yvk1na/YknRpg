@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ANCIENTPOOL_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ANCIENTPOOL_HELMET.png",
+  "texture": "textures/ancientpool_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 古潭钓帽 (ancientpool helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 古老鳞片与活性纤丝铭记深潭的呼吸。. This set must use consistent materials and tones: dark olive sea green aged scales (#375f52), antique bronze (#9d784a), weathered cream highlights (#bebb9a), tiny mineral turquoise accent; ancient deep-pool fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "30BADB2519AC1AC294B80E5042071CB5CD447970B2CF08D538576B5E70D7343A",
+  "visual_review": "pending"
+}

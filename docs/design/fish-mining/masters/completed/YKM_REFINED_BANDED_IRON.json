@@ -1,0 +1,10 @@
+{
+  "id": "YKM_REFINED_BANDED_IRON",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_REFINED_BANDED_IRON.png",
+  "texture": "textures/refined_banded_iron.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 精炼条铁 (refined banded iron), base material iron_ingot. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 由九份层纹铁矿凝炼的进阶材料。 / 用途: 挖矿工具与护甲进阶. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "CE5F1EC8F5A97490F56BED6796B5438B8C14617C55719BB19EF2823EA89D895F",
+  "visual_review": "pending"
+}

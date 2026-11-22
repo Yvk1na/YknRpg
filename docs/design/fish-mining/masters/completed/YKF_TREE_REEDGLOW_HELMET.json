@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_REEDGLOW_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_REEDGLOW_HELMET.png",
+  "texture": "textures/tree_reedglow_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 苇光钓帽 (tree reedglow helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 苇绳紧密交织，细碎萤光沿着衣缝流动。. This set must use consistent materials and tones: sage olive cloth (#626d47), straw-gold braided edges (#b3985c), unbleached cream canvas highlights (#c3b589), small warm firefly clasp (#d9b367); reed-weave fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "A4F7FE131F9C161303DB03B3A7ACEBB59A11D33C99CD1EFDCC453D9B28ED2B86",
+  "visual_review": "pending"
+}

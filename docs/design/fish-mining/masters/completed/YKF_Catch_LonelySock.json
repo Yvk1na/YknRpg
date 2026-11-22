@@ -1,0 +1,10 @@
+{
+  "id": "YKF_Catch_LonelySock",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_Catch_LonelySock.png",
+  "texture": "textures/catch_lonelysock.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 孤独的湿袜子 (catch lonelysock), base material gray_dye. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 另一只或许成了海怪的收藏品。 / 你决定暂时不去闻它。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "E107514F89E9F2920525541F48F48DFF5D1E53489D37052A70C6571A4C080397",
+  "visual_review": "pending"
+}

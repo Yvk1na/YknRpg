@@ -1,0 +1,10 @@
+{
+  "id": "YKF_MOONABYSS_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_MOONABYSS_HELMET.png",
+  "texture": "textures/moonabyss_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 月渊钓帽 (moonabyss helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 月映幽珠照亮流光古鳞，深水因你而动。. This set must use consistent materials and tones: near-black ink indigo (#2b2d46), violet fish-scale plates (#5b526f), pale lunar silver (#c1bacf), small mist-lilac pearl detailing; elegant dark mysterious deep-water fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "ED8E4E874E02895845CD23D640A27E03D69577C205B1FE54A7C37559C030A900",
+  "visual_review": "pending"
+}

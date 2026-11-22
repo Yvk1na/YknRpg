@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ROCKTIDE_BOOTS",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ROCKTIDE_BOOTS.png",
+  "texture": "textures/rocktide_boots.png",
+  "prompt": "Original Minecraft inventory icon for 岩潮钓靴 (rocktide boots). One pair of sturdy boots, side by side facing forward, with separate soles and open cuffs. River fishing boots have clear low-profile rubber or leather feet, mineral mining boots have reinforced toe boxes and visibly thick soles. Lore for design: 层叠岩甲守住暗流里的每一次等待。. This set must use consistent materials and tones: charcoal slate layered plates (#485363), dark navy waterproof canvas (#35455d), a tiny muted amber clasp (#c18b48), silver grey edge chips; rugged cavern fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "55C057809ABC6EFC5A87149C95C335F02D70C982A2F0DFA46E556F6B848D514B",
+  "visual_review": "pending"
+}

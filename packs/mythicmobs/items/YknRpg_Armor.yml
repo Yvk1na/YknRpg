@@ -13,7 +13,7 @@ YKI_WAYFARER_HELMET:
     - '&7额外获得 12 速度与持续跳跃提升。'
     - ''
     - '&8普通 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wayfarer_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -32,7 +32,7 @@ YKI_WAYFARER_CHESTPLATE:
     - '&7额外获得 12 速度与持续跳跃提升。'
     - ''
     - '&8普通 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wayfarer_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -51,7 +51,7 @@ YKI_WAYFARER_LEGGINGS:
     - '&7额外获得 12 速度与持续跳跃提升。'
     - ''
     - '&8普通 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wayfarer_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -70,7 +70,7 @@ YKI_WAYFARER_BOOTS:
     - '&7额外获得 12 速度与持续跳跃提升。'
     - ''
     - '&8普通 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wayfarer_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -91,7 +91,7 @@ YKI_IRON_SENTINEL_HELMET:
     - '&8触发冷却：&a6秒'
     - ''
     - '&a少见的 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:iron_sentinel_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -112,7 +112,7 @@ YKI_IRON_SENTINEL_CHESTPLATE:
     - '&8触发冷却：&a6秒'
     - ''
     - '&a少见的 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:iron_sentinel_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -133,7 +133,7 @@ YKI_IRON_SENTINEL_LEGGINGS:
     - '&8触发冷却：&a6秒'
     - ''
     - '&a少见的 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:iron_sentinel_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -154,7 +154,7 @@ YKI_IRON_SENTINEL_BOOTS:
     - '&8触发冷却：&a6秒'
     - ''
     - '&a少见的 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:iron_sentinel_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -178,7 +178,7 @@ YKI_TIDECALLER_HELMET:
     - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
     - ''
     - '&9稀有 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:tidecaller_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -202,7 +202,7 @@ YKI_TIDECALLER_CHESTPLATE:
     - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
     - ''
     - '&9稀有 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:tidecaller_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -226,7 +226,7 @@ YKI_TIDECALLER_LEGGINGS:
     - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
     - ''
     - '&9稀有 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:tidecaller_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -250,7 +250,7 @@ YKI_TIDECALLER_BOOTS:
     - '&8魔力消耗：&360 &8| &8冷却：&a8秒'
     - ''
     - '&9稀有 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:tidecaller_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -271,7 +271,7 @@ YKI_NIGHTSTALKER_HELMET:
     - '&8触发冷却：&a2秒'
     - ''
     - '&5史诗 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:nightstalker_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -292,7 +292,7 @@ YKI_NIGHTSTALKER_CHESTPLATE:
     - '&8触发冷却：&a2秒'
     - ''
     - '&5史诗 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:nightstalker_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -313,7 +313,7 @@ YKI_NIGHTSTALKER_LEGGINGS:
     - '&8触发冷却：&a2秒'
     - ''
     - '&5史诗 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:nightstalker_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -334,7 +334,7 @@ YKI_NIGHTSTALKER_BOOTS:
     - '&8触发冷却：&a2秒'
     - ''
     - '&5史诗 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:nightstalker_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -353,7 +353,7 @@ YKI_WYRM_GUARD_HELMET:
     - '&8触发冷却：&a4秒'
     - ''
     - '&6传说 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wyrm_guard_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -372,7 +372,7 @@ YKI_WYRM_GUARD_CHESTPLATE:
     - '&8触发冷却：&a4秒'
     - ''
     - '&6传说 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wyrm_guard_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -391,7 +391,7 @@ YKI_WYRM_GUARD_LEGGINGS:
     - '&8触发冷却：&a4秒'
     - ''
     - '&6传说 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wyrm_guard_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -410,7 +410,7 @@ YKI_WYRM_GUARD_BOOTS:
     - '&8触发冷却：&a4秒'
     - ''
     - '&6传说 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:wyrm_guard_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -431,7 +431,7 @@ YKI_COSMIC_SAGE_HELMET:
     - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:cosmic_sage_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -452,7 +452,7 @@ YKI_COSMIC_SAGE_CHESTPLATE:
     - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:cosmic_sage_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -473,7 +473,7 @@ YKI_COSMIC_SAGE_LEGGINGS:
     - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:cosmic_sage_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -494,7 +494,7 @@ YKI_COSMIC_SAGE_BOOTS:
     - '&8魔力消耗：&3180 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:cosmic_sage_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -512,7 +512,7 @@ YKI_COPPER_TINKER_HELMET:
     - '&7持续获得急迫 I 与夜视。'
     - ''
     - '&8普通 头盔'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:copper_tinker_helmet', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -530,7 +530,7 @@ YKI_COPPER_TINKER_CHESTPLATE:
     - '&7持续获得急迫 I 与夜视。'
     - ''
     - '&8普通 胸甲'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:copper_tinker_chestplate', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -548,7 +548,7 @@ YKI_COPPER_TINKER_LEGGINGS:
     - '&7持续获得急迫 I 与夜视。'
     - ''
     - '&8普通 护腿'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:copper_tinker_leggings', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -567,7 +567,7 @@ YKI_COPPER_TINKER_BOOTS:
     - '&7持续获得急迫 I 与夜视。'
     - ''
     - '&8普通 靴子'
-  Options: {Unbreakable: true}
+  Options: {ItemModel: 'yknrpg_items:copper_tinker_boots', Unbreakable: true}
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -588,6 +588,7 @@ YKI_BRAMBLE_RANGER_HELMET:
     - ''
     - '&a少见的 头盔'
   Options:
+    ItemModel: 'yknrpg_items:bramble_ranger_helmet'
     Unbreakable: true
     Color: 47,92,52
   Enchantments: [DURABILITY:1]
@@ -610,6 +611,7 @@ YKI_BRAMBLE_RANGER_CHESTPLATE:
     - ''
     - '&a少见的 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:bramble_ranger_chestplate'
     Unbreakable: true
     Color: 47,92,52
   Enchantments: [DURABILITY:1]
@@ -632,6 +634,7 @@ YKI_BRAMBLE_RANGER_LEGGINGS:
     - ''
     - '&a少见的 护腿'
   Options:
+    ItemModel: 'yknrpg_items:bramble_ranger_leggings'
     Unbreakable: true
     Color: 47,92,52
   Enchantments: [DURABILITY:1]
@@ -654,6 +657,7 @@ YKI_BRAMBLE_RANGER_BOOTS:
     - ''
     - '&a少见的 靴子'
   Options:
+    ItemModel: 'yknrpg_items:bramble_ranger_boots'
     Unbreakable: true
     Color: 47,92,52
   Enchantments: [DURABILITY:1]
@@ -677,6 +681,7 @@ YKI_PHANTOM_DUELIST_HELMET:
     - ''
     - '&9稀有 头盔'
   Options:
+    ItemModel: 'yknrpg_items:phantom_duelist_helmet'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -702,6 +707,7 @@ YKI_PHANTOM_DUELIST_CHESTPLATE:
     - ''
     - '&9稀有 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:phantom_duelist_chestplate'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -727,6 +733,7 @@ YKI_PHANTOM_DUELIST_LEGGINGS:
     - ''
     - '&9稀有 护腿'
   Options:
+    ItemModel: 'yknrpg_items:phantom_duelist_leggings'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -752,6 +759,7 @@ YKI_PHANTOM_DUELIST_BOOTS:
     - ''
     - '&9稀有 靴子'
   Options:
+    ItemModel: 'yknrpg_items:phantom_duelist_boots'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -775,6 +783,7 @@ YKI_MOLTEN_BERSERKER_HELMET:
     - ''
     - '&5史诗 头盔'
   Options:
+    ItemModel: 'yknrpg_items:molten_berserker_helmet'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -798,6 +807,7 @@ YKI_MOLTEN_BERSERKER_CHESTPLATE:
     - ''
     - '&5史诗 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:molten_berserker_chestplate'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -821,6 +831,7 @@ YKI_MOLTEN_BERSERKER_LEGGINGS:
     - ''
     - '&5史诗 护腿'
   Options:
+    ItemModel: 'yknrpg_items:molten_berserker_leggings'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -844,6 +855,7 @@ YKI_MOLTEN_BERSERKER_BOOTS:
     - ''
     - '&5史诗 靴子'
   Options:
+    ItemModel: 'yknrpg_items:molten_berserker_boots'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -869,6 +881,7 @@ YKI_ABYSS_WARDEN_HELMET:
     - ''
     - '&6传说 头盔'
   Options:
+    ItemModel: 'yknrpg_items:abyss_warden_helmet'
     Unbreakable: true
     Trim:
       Material: lapis
@@ -894,6 +907,7 @@ YKI_ABYSS_WARDEN_CHESTPLATE:
     - ''
     - '&6传说 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:abyss_warden_chestplate'
     Unbreakable: true
     Trim:
       Material: lapis
@@ -919,6 +933,7 @@ YKI_ABYSS_WARDEN_LEGGINGS:
     - ''
     - '&6传说 护腿'
   Options:
+    ItemModel: 'yknrpg_items:abyss_warden_leggings'
     Unbreakable: true
     Trim:
       Material: lapis
@@ -944,6 +959,7 @@ YKI_ABYSS_WARDEN_BOOTS:
     - ''
     - '&6传说 靴子'
   Options:
+    ItemModel: 'yknrpg_items:abyss_warden_boots'
     Unbreakable: true
     Trim:
       Material: lapis
@@ -971,6 +987,7 @@ YKI_CHRONOWARDEN_HELMET:
     - ''
     - '&d神话 头盔'
   Options:
+    ItemModel: 'yknrpg_items:chronowarden_helmet'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -998,6 +1015,7 @@ YKI_CHRONOWARDEN_CHESTPLATE:
     - ''
     - '&d神话 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:chronowarden_chestplate'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1025,6 +1043,7 @@ YKI_CHRONOWARDEN_LEGGINGS:
     - ''
     - '&d神话 护腿'
   Options:
+    ItemModel: 'yknrpg_items:chronowarden_leggings'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1052,6 +1071,7 @@ YKI_CHRONOWARDEN_BOOTS:
     - ''
     - '&d神话 靴子'
   Options:
+    ItemModel: 'yknrpg_items:chronowarden_boots'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1076,6 +1096,7 @@ YKI_RECRUIT_VANGUARD_HELMET:
     - ''
     - '&8普通 头盔'
   Options:
+    ItemModel: 'yknrpg_items:recruit_vanguard_helmet'
     Unbreakable: true
     Color: 113,113,113
   Enchantments: [DURABILITY:1]
@@ -1098,6 +1119,7 @@ YKI_RECRUIT_VANGUARD_CHESTPLATE:
     - ''
     - '&8普通 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:recruit_vanguard_chestplate'
     Unbreakable: true
     Color: 113,113,113
   Enchantments: [DURABILITY:1]
@@ -1120,6 +1142,7 @@ YKI_RECRUIT_VANGUARD_LEGGINGS:
     - ''
     - '&8普通 护腿'
   Options:
+    ItemModel: 'yknrpg_items:recruit_vanguard_leggings'
     Unbreakable: true
     Color: 113,113,113
   Enchantments: [DURABILITY:1]
@@ -1143,6 +1166,7 @@ YKI_RECRUIT_VANGUARD_BOOTS:
     - ''
     - '&8普通 靴子'
   Options:
+    ItemModel: 'yknrpg_items:recruit_vanguard_boots'
     Unbreakable: true
     Color: 113,113,113
   Enchantments: [DURABILITY:1]
@@ -1165,6 +1189,7 @@ YKI_RUNE_ACOLYTE_HELMET:
     - ''
     - '&a少见的 头盔'
   Options:
+    ItemModel: 'yknrpg_items:rune_acolyte_helmet'
     Unbreakable: true
     Color: 79,54,123
   Enchantments: [DURABILITY:1]
@@ -1187,6 +1212,7 @@ YKI_RUNE_ACOLYTE_CHESTPLATE:
     - ''
     - '&a少见的 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:rune_acolyte_chestplate'
     Unbreakable: true
     Color: 79,54,123
   Enchantments: [DURABILITY:1]
@@ -1209,6 +1235,7 @@ YKI_RUNE_ACOLYTE_LEGGINGS:
     - ''
     - '&a少见的 护腿'
   Options:
+    ItemModel: 'yknrpg_items:rune_acolyte_leggings'
     Unbreakable: true
     Color: 79,54,123
   Enchantments: [DURABILITY:1]
@@ -1232,6 +1259,7 @@ YKI_RUNE_ACOLYTE_BOOTS:
     - ''
     - '&a少见的 靴子'
   Options:
+    ItemModel: 'yknrpg_items:rune_acolyte_boots'
     Unbreakable: true
     Color: 79,54,123
   Enchantments: [DURABILITY:1]
@@ -1253,6 +1281,7 @@ YKI_GRANITE_BULWARK_HELMET:
     - ''
     - '&9稀有 头盔'
   Options:
+    ItemModel: 'yknrpg_items:granite_bulwark_helmet'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1276,6 +1305,7 @@ YKI_GRANITE_BULWARK_CHESTPLATE:
     - ''
     - '&9稀有 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:granite_bulwark_chestplate'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1299,6 +1329,7 @@ YKI_GRANITE_BULWARK_LEGGINGS:
     - ''
     - '&9稀有 护腿'
   Options:
+    ItemModel: 'yknrpg_items:granite_bulwark_leggings'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1322,6 +1353,7 @@ YKI_GRANITE_BULWARK_BOOTS:
     - ''
     - '&9稀有 靴子'
   Options:
+    ItemModel: 'yknrpg_items:granite_bulwark_boots'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -1348,6 +1380,7 @@ YKI_STORM_EYE_HELMET:
     - ''
     - '&5史诗 头盔'
   Options:
+    ItemModel: 'yknrpg_items:storm_eye_helmet'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1374,6 +1407,7 @@ YKI_STORM_EYE_CHESTPLATE:
     - ''
     - '&5史诗 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:storm_eye_chestplate'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1400,6 +1434,7 @@ YKI_STORM_EYE_LEGGINGS:
     - ''
     - '&5史诗 护腿'
   Options:
+    ItemModel: 'yknrpg_items:storm_eye_leggings'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1426,6 +1461,7 @@ YKI_STORM_EYE_BOOTS:
     - ''
     - '&5史诗 靴子'
   Options:
+    ItemModel: 'yknrpg_items:storm_eye_boots'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1450,6 +1486,7 @@ YKI_VOID_ORACLE_HELMET:
     - ''
     - '&6传说 头盔'
   Options:
+    ItemModel: 'yknrpg_items:void_oracle_helmet'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -1474,6 +1511,7 @@ YKI_VOID_ORACLE_CHESTPLATE:
     - ''
     - '&6传说 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:void_oracle_chestplate'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -1498,6 +1536,7 @@ YKI_VOID_ORACLE_LEGGINGS:
     - ''
     - '&6传说 护腿'
   Options:
+    ItemModel: 'yknrpg_items:void_oracle_leggings'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -1523,6 +1562,7 @@ YKI_VOID_ORACLE_BOOTS:
     - ''
     - '&6传说 靴子'
   Options:
+    ItemModel: 'yknrpg_items:void_oracle_boots'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -1550,6 +1590,7 @@ YKI_SKYHUNTER_HELMET:
     - ''
     - '&d神话 头盔'
   Options:
+    ItemModel: 'yknrpg_items:skyhunter_helmet'
     Unbreakable: true
     Trim:
       Material: diamond
@@ -1577,6 +1618,7 @@ YKI_SKYHUNTER_CHESTPLATE:
     - ''
     - '&d神话 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:skyhunter_chestplate'
     Unbreakable: true
     Trim:
       Material: diamond
@@ -1604,6 +1646,7 @@ YKI_SKYHUNTER_LEGGINGS:
     - ''
     - '&d神话 护腿'
   Options:
+    ItemModel: 'yknrpg_items:skyhunter_leggings'
     Unbreakable: true
     Trim:
       Material: diamond
@@ -1631,6 +1674,7 @@ YKI_SKYHUNTER_BOOTS:
     - ''
     - '&d神话 靴子'
   Options:
+    ItemModel: 'yknrpg_items:skyhunter_boots'
     Unbreakable: true
     Trim:
       Material: diamond
@@ -1655,6 +1699,7 @@ YKI_MEADOW_MENDER_HELMET:
     - ''
     - '&8普通 头盔'
   Options:
+    ItemModel: 'yknrpg_items:meadow_mender_helmet'
     Unbreakable: true
     Color: 104,159,98
   Enchantments: [DURABILITY:1]
@@ -1677,6 +1722,7 @@ YKI_MEADOW_MENDER_CHESTPLATE:
     - ''
     - '&8普通 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:meadow_mender_chestplate'
     Unbreakable: true
     Color: 104,159,98
   Enchantments: [DURABILITY:1]
@@ -1699,6 +1745,7 @@ YKI_MEADOW_MENDER_LEGGINGS:
     - ''
     - '&8普通 护腿'
   Options:
+    ItemModel: 'yknrpg_items:meadow_mender_leggings'
     Unbreakable: true
     Color: 104,159,98
   Enchantments: [DURABILITY:1]
@@ -1722,6 +1769,7 @@ YKI_MEADOW_MENDER_BOOTS:
     - ''
     - '&8普通 靴子'
   Options:
+    ItemModel: 'yknrpg_items:meadow_mender_boots'
     Unbreakable: true
     Color: 104,159,98
   Enchantments: [DURABILITY:1]
@@ -1745,6 +1793,7 @@ YKI_FRONTIER_SCOUT_HELMET:
     - ''
     - '&8普通 头盔'
   Options:
+    ItemModel: 'yknrpg_items:frontier_scout_helmet'
     Unbreakable: true
     Color: 121,105,78
   Enchantments: [DURABILITY:1]
@@ -1768,6 +1817,7 @@ YKI_FRONTIER_SCOUT_CHESTPLATE:
     - ''
     - '&8普通 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:frontier_scout_chestplate'
     Unbreakable: true
     Color: 121,105,78
   Enchantments: [DURABILITY:1]
@@ -1791,6 +1841,7 @@ YKI_FRONTIER_SCOUT_LEGGINGS:
     - ''
     - '&8普通 护腿'
   Options:
+    ItemModel: 'yknrpg_items:frontier_scout_leggings'
     Unbreakable: true
     Color: 121,105,78
   Enchantments: [DURABILITY:1]
@@ -1814,6 +1865,7 @@ YKI_FRONTIER_SCOUT_BOOTS:
     - ''
     - '&8普通 靴子'
   Options:
+    ItemModel: 'yknrpg_items:frontier_scout_boots'
     Unbreakable: true
     Color: 121,105,78
   Enchantments: [DURABILITY:1]
@@ -1837,6 +1889,7 @@ YKI_COALFIRE_BRAWLER_HELMET:
     - ''
     - '&a少见的 头盔'
   Options:
+    ItemModel: 'yknrpg_items:coalfire_brawler_helmet'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -1862,6 +1915,7 @@ YKI_COALFIRE_BRAWLER_CHESTPLATE:
     - ''
     - '&a少见的 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:coalfire_brawler_chestplate'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -1887,6 +1941,7 @@ YKI_COALFIRE_BRAWLER_LEGGINGS:
     - ''
     - '&a少见的 护腿'
   Options:
+    ItemModel: 'yknrpg_items:coalfire_brawler_leggings'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -1913,6 +1968,7 @@ YKI_COALFIRE_BRAWLER_BOOTS:
     - ''
     - '&a少见的 靴子'
   Options:
+    ItemModel: 'yknrpg_items:coalfire_brawler_boots'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -1937,6 +1993,7 @@ YKI_DEEPCAVE_PROSPECTOR_HELMET:
     - ''
     - '&a少见的 头盔'
   Options:
+    ItemModel: 'yknrpg_items:deepcave_prospector_helmet'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1961,6 +2018,7 @@ YKI_DEEPCAVE_PROSPECTOR_CHESTPLATE:
     - ''
     - '&a少见的 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:deepcave_prospector_chestplate'
     Unbreakable: true
     Trim:
       Material: copper
@@ -1985,6 +2043,7 @@ YKI_DEEPCAVE_PROSPECTOR_LEGGINGS:
     - ''
     - '&a少见的 护腿'
   Options:
+    ItemModel: 'yknrpg_items:deepcave_prospector_leggings'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2009,6 +2068,7 @@ YKI_DEEPCAVE_PROSPECTOR_BOOTS:
     - ''
     - '&a少见的 靴子'
   Options:
+    ItemModel: 'yknrpg_items:deepcave_prospector_boots'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2035,6 +2095,7 @@ YKI_FROSTWOOD_HUNTSMAN_HELMET:
     - ''
     - '&9稀有 头盔'
   Options:
+    ItemModel: 'yknrpg_items:frostwood_huntsman_helmet'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2061,6 +2122,7 @@ YKI_FROSTWOOD_HUNTSMAN_CHESTPLATE:
     - ''
     - '&9稀有 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:frostwood_huntsman_chestplate'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2087,6 +2149,7 @@ YKI_FROSTWOOD_HUNTSMAN_LEGGINGS:
     - ''
     - '&9稀有 护腿'
   Options:
+    ItemModel: 'yknrpg_items:frostwood_huntsman_leggings'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2113,6 +2176,7 @@ YKI_FROSTWOOD_HUNTSMAN_BOOTS:
     - ''
     - '&9稀有 靴子'
   Options:
+    ItemModel: 'yknrpg_items:frostwood_huntsman_boots'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2137,6 +2201,7 @@ YKI_RUNEGLASS_SAVANT_HELMET:
     - ''
     - '&9稀有 头盔'
   Options:
+    ItemModel: 'yknrpg_items:runeglass_savant_helmet'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2161,6 +2226,7 @@ YKI_RUNEGLASS_SAVANT_CHESTPLATE:
     - ''
     - '&9稀有 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:runeglass_savant_chestplate'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2185,6 +2251,7 @@ YKI_RUNEGLASS_SAVANT_LEGGINGS:
     - ''
     - '&9稀有 护腿'
   Options:
+    ItemModel: 'yknrpg_items:runeglass_savant_leggings'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2210,6 +2277,7 @@ YKI_RUNEGLASS_SAVANT_BOOTS:
     - ''
     - '&9稀有 靴子'
   Options:
+    ItemModel: 'yknrpg_items:runeglass_savant_boots'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2234,6 +2302,7 @@ YKI_DAWN_CHANTER_HELMET:
     - ''
     - '&5史诗 头盔'
   Options:
+    ItemModel: 'yknrpg_items:dawn_chanter_helmet'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2258,6 +2327,7 @@ YKI_DAWN_CHANTER_CHESTPLATE:
     - ''
     - '&5史诗 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:dawn_chanter_chestplate'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2282,6 +2352,7 @@ YKI_DAWN_CHANTER_LEGGINGS:
     - ''
     - '&5史诗 护腿'
   Options:
+    ItemModel: 'yknrpg_items:dawn_chanter_leggings'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2307,6 +2378,7 @@ YKI_DAWN_CHANTER_BOOTS:
     - ''
     - '&5史诗 靴子'
   Options:
+    ItemModel: 'yknrpg_items:dawn_chanter_boots'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2332,6 +2404,7 @@ YKI_RIFT_SCHOLAR_HELMET:
     - ''
     - '&5史诗 头盔'
   Options:
+    ItemModel: 'yknrpg_items:rift_scholar_helmet'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2357,6 +2430,7 @@ YKI_RIFT_SCHOLAR_CHESTPLATE:
     - ''
     - '&5史诗 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:rift_scholar_chestplate'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2382,6 +2456,7 @@ YKI_RIFT_SCHOLAR_LEGGINGS:
     - ''
     - '&5史诗 护腿'
   Options:
+    ItemModel: 'yknrpg_items:rift_scholar_leggings'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2407,6 +2482,7 @@ YKI_RIFT_SCHOLAR_BOOTS:
     - ''
     - '&5史诗 靴子'
   Options:
+    ItemModel: 'yknrpg_items:rift_scholar_boots'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -2431,6 +2507,7 @@ YKI_PHOENIX_HIEROPHANT_HELMET:
     - ''
     - '&6传说 头盔'
   Options:
+    ItemModel: 'yknrpg_items:phoenix_hierophant_helmet'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -2455,6 +2532,7 @@ YKI_PHOENIX_HIEROPHANT_CHESTPLATE:
     - ''
     - '&6传说 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:phoenix_hierophant_chestplate'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -2479,6 +2557,7 @@ YKI_PHOENIX_HIEROPHANT_LEGGINGS:
     - ''
     - '&6传说 护腿'
   Options:
+    ItemModel: 'yknrpg_items:phoenix_hierophant_leggings'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -2504,6 +2583,7 @@ YKI_PHOENIX_HIEROPHANT_BOOTS:
     - ''
     - '&6传说 靴子'
   Options:
+    ItemModel: 'yknrpg_items:phoenix_hierophant_boots'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -2530,6 +2610,7 @@ YKI_TEMPEST_FALCONER_HELMET:
     - ''
     - '&6传说 头盔'
   Options:
+    ItemModel: 'yknrpg_items:tempest_falconer_helmet'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2556,6 +2637,7 @@ YKI_TEMPEST_FALCONER_CHESTPLATE:
     - ''
     - '&6传说 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:tempest_falconer_chestplate'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2582,6 +2664,7 @@ YKI_TEMPEST_FALCONER_LEGGINGS:
     - ''
     - '&6传说 护腿'
   Options:
+    ItemModel: 'yknrpg_items:tempest_falconer_leggings'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2608,6 +2691,7 @@ YKI_TEMPEST_FALCONER_BOOTS:
     - ''
     - '&6传说 靴子'
   Options:
+    ItemModel: 'yknrpg_items:tempest_falconer_boots'
     Unbreakable: true
     Trim:
       Material: copper
@@ -2635,6 +2719,7 @@ YKI_SUNCROWN_DUELIST_HELMET:
     - ''
     - '&d神话 头盔'
   Options:
+    ItemModel: 'yknrpg_items:suncrown_duelist_helmet'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2662,6 +2747,7 @@ YKI_SUNCROWN_DUELIST_CHESTPLATE:
     - ''
     - '&d神话 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:suncrown_duelist_chestplate'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2689,6 +2775,7 @@ YKI_SUNCROWN_DUELIST_LEGGINGS:
     - ''
     - '&d神话 护腿'
   Options:
+    ItemModel: 'yknrpg_items:suncrown_duelist_leggings'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2716,6 +2803,7 @@ YKI_SUNCROWN_DUELIST_BOOTS:
     - ''
     - '&d神话 靴子'
   Options:
+    ItemModel: 'yknrpg_items:suncrown_duelist_boots'
     Unbreakable: true
     Trim:
       Material: quartz
@@ -2743,6 +2831,7 @@ YKI_REALMSEEKER_HELMET:
     - ''
     - '&d神话 头盔'
   Options:
+    ItemModel: 'yknrpg_items:realmseeker_helmet'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2770,6 +2859,7 @@ YKI_REALMSEEKER_CHESTPLATE:
     - ''
     - '&d神话 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:realmseeker_chestplate'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2797,6 +2887,7 @@ YKI_REALMSEEKER_LEGGINGS:
     - ''
     - '&d神话 护腿'
   Options:
+    ItemModel: 'yknrpg_items:realmseeker_leggings'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2824,6 +2915,7 @@ YKI_REALMSEEKER_BOOTS:
     - ''
     - '&d神话 靴子'
   Options:
+    ItemModel: 'yknrpg_items:realmseeker_boots'
     Unbreakable: true
     Trim:
       Material: emerald
@@ -2856,9 +2948,14 @@ YKI_OSSUARY_DRAGOON_HELMET:
     - '&5史诗 头盔'
   Options:
     Unbreakable: true
+    ItemModel: 'yknrpg_bone:ossuary_dragoon_helmet'
     Trim:
       Material: quartz
       Pattern: rib
+  Equippable:
+    Model: 'yknrpg_bone:ossuary_dragoon'
+    Slot: HEAD
+    EquipSound: item.armor.equip_iron
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -2886,9 +2983,14 @@ YKI_OSSUARY_DRAGOON_CHESTPLATE:
     - '&5史诗 胸甲'
   Options:
     Unbreakable: true
+    ItemModel: 'yknrpg_bone:ossuary_dragoon_chestplate'
     Trim:
       Material: quartz
       Pattern: rib
+  Equippable:
+    Model: 'yknrpg_bone:ossuary_dragoon'
+    Slot: CHEST
+    EquipSound: item.armor.equip_iron
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -2916,9 +3018,14 @@ YKI_OSSUARY_DRAGOON_LEGGINGS:
     - '&5史诗 护腿'
   Options:
     Unbreakable: true
+    ItemModel: 'yknrpg_bone:ossuary_dragoon_leggings'
     Trim:
       Material: quartz
       Pattern: rib
+  Equippable:
+    Model: 'yknrpg_bone:ossuary_dragoon'
+    Slot: LEGS
+    EquipSound: item.armor.equip_iron
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -2947,9 +3054,14 @@ YKI_OSSUARY_DRAGOON_BOOTS:
     - '&5史诗 靴子'
   Options:
     Unbreakable: true
+    ItemModel: 'yknrpg_bone:ossuary_dragoon_boots'
     Trim:
       Material: quartz
       Pattern: rib
+  Equippable:
+    Model: 'yknrpg_bone:ossuary_dragoon'
+    Slot: FEET
+    EquipSound: item.armor.equip_iron
   Enchantments: [DURABILITY:1]
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
@@ -2975,6 +3087,7 @@ YKI_ENDSUN_GUARD_HELMET:
     - ''
     - '&6传说 头盔'
   Options:
+    ItemModel: 'yknrpg_items:endsun_guard_helmet'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -3003,6 +3116,7 @@ YKI_ENDSUN_GUARD_CHESTPLATE:
     - ''
     - '&6传说 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:endsun_guard_chestplate'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -3031,6 +3145,7 @@ YKI_ENDSUN_GUARD_LEGGINGS:
     - ''
     - '&6传说 护腿'
   Options:
+    ItemModel: 'yknrpg_items:endsun_guard_leggings'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -3059,6 +3174,7 @@ YKI_ENDSUN_GUARD_BOOTS:
     - ''
     - '&6传说 靴子'
   Options:
+    ItemModel: 'yknrpg_items:endsun_guard_boots'
     Unbreakable: true
     Trim:
       Material: redstone
@@ -3094,6 +3210,7 @@ YKI_ENDWITCH_REBEL_HELMET:
     - ''
     - '&d神话 头盔'
   Options:
+    ItemModel: 'yknrpg_items:endwitch_rebel_helmet'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -3128,6 +3245,7 @@ YKI_ENDWITCH_REBEL_CHESTPLATE:
     - ''
     - '&d神话 胸甲'
   Options:
+    ItemModel: 'yknrpg_items:endwitch_rebel_chestplate'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -3162,6 +3280,7 @@ YKI_ENDWITCH_REBEL_LEGGINGS:
     - ''
     - '&d神话 护腿'
   Options:
+    ItemModel: 'yknrpg_items:endwitch_rebel_leggings'
     Unbreakable: true
     Trim:
       Material: amethyst
@@ -3196,6 +3315,7 @@ YKI_ENDWITCH_REBEL_BOOTS:
     - ''
     - '&d神话 靴子'
   Options:
+    ItemModel: 'yknrpg_items:endwitch_rebel_boots'
     Unbreakable: true
     Trim:
       Material: amethyst

@@ -1,0 +1,10 @@
+{
+  "id": "YKF_MOONABYSS_CHESTPLATE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_MOONABYSS_CHESTPLATE.png",
+  "texture": "textures/moonabyss_chestplate.png",
+  "prompt": "Original Minecraft inventory icon for 月渊钓衣 (moonabyss chestplate). A full front-view chest garment with separate open sleeves and visible neck opening, no body. Fishing outfit has practical pockets and a weather-resistant collar. Mining outfit has reinforced shoulders, a tool strap or breastplate and leather edges. Lore for design: 月映幽珠照亮流光古鳞，深水因你而动。. This set must use consistent materials and tones: near-black ink indigo (#2b2d46), violet fish-scale plates (#5b526f), pale lunar silver (#c1bacf), small mist-lilac pearl detailing; elegant dark mysterious deep-water fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "95A0A1A3D54AE9C2C326DDFC7D4364BA199DAE4B93447D5E673C19DC43554617",
+  "visual_review": "pending"
+}

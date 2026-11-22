@@ -1,0 +1,10 @@
+{
+  "id": "YKM_COBALT_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_COBALT_HELMET.png",
+  "texture": "textures/cobalt_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 翠金寻脉帽 (cobalt helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 细密翠金护网帮助辨识岩层。. This set must use consistent materials and tones: forest green (#38554a), worn antique brass plates (#a28c59), dark cobalt-grey leather straps (#424e5c), a small moss-jade clasp (#72a880); miner surveying equipment. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "3DF892C190B30B7965B398683D4BFDBDC20AFB6761F8F8735C783C91CA6FAFDD",
+  "visual_review": "pending"
+}

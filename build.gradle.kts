@@ -1753,10 +1753,50 @@ val generateCraftEngineAssets by tasks.registering(Exec::class) {
     outputs.dir("packs/craftengine/resourcepack/assets/yknrpg")
 }
 
+val generateBoneDragonAssets by tasks.registering(Exec::class) {
+    group = "distribution"
+    description = "生成骨龙系列像素材质与穿戴贴图"
+    commandLine(
+        "powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
+        layout.projectDirectory.file("tools/generate_bone_dragon_assets.ps1").asFile.absolutePath
+    )
+    inputs.file("tools/generate_bone_dragon_assets.ps1")
+    inputs.dir("docs/design/bone-dragon-64-v1/textures")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_bone/equipment")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_bone/textures/entity/equipment")
+    outputs.file("docs/design/bone-dragon-items-preview.png")
+}
+
+val generateCatalogAnimations by tasks.registering(Exec::class) {
+    group = "distribution"
+    description = "编译已审核素材的主题帧动画"
+    dependsOn(generateBoneDragonAssets)
+    commandLine("powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
+        layout.projectDirectory.file("tools/generate_catalog_animations.ps1").asFile.absolutePath)
+    inputs.files("tools/generate_catalog_animations.ps1", "tools/CatalogTextureAnimation.cs",
+        "tools/catalog_grips.json", "tools/catalog_hand_poses.ps1",
+        "tools/catalog_animation_rules.json", "docs/design/catalog-32-v2/catalog.json",
+        "docs/design/bone-dragon-64-v1/manifest.json")
+    inputs.file("docs/design/catalog-32-v2/animations.json")
+    inputs.dir("docs/design/catalog-32-v2/completed")
+    inputs.dir("docs/design/catalog-32-v2/textures")
+    inputs.dir("docs/design/catalog-32-v2/effects/cells")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_items")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_bone/textures/item")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_bone/models/item")
+    outputs.dir("packs/craftengine/resourcepack/assets/yknrpg_bone/items")
+    outputs.file("packs/craftengine/catalog-animations.json")
+}
+
+tasks.test {
+    dependsOn(generateCatalogAnimations)
+    inputs.files(generateCatalogAnimations.map { it.outputs.files })
+}
+
 val craftEnginePack by tasks.registering(Zip::class) {
     group = "distribution"
     description = "打包 CraftEngine 资源包"
-    dependsOn(generateCraftEngineAssets, validateYaml)
+    dependsOn(generateCraftEngineAssets, generateCatalogAnimations, validateYaml)
     archiveFileName = "YknRpg-CraftEngine-Pack-${project.version}.zip"
     destinationDirectory = layout.buildDirectory.dir("distributions")
     from("packs/craftengine") {

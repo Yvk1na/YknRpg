@@ -14,7 +14,7 @@ YKI_RECRUIT_BLADE:
     - '&8被动冷却：&a2秒'
     - ''
     - '&8普通 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:recruit_blade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_FIELD_MEDIC_WAND:
@@ -33,7 +33,7 @@ YKI_FIELD_MEDIC_WAND:
     - '&8魔力消耗：&320 &8| &8冷却：&a6秒'
     - ''
     - '&8普通 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:field_medic_wand', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_GALE_SHORTBOW:
@@ -53,7 +53,7 @@ YKI_GALE_SHORTBOW:
     - '&8魔力消耗：&325 &8| &8冷却：&a1.5秒'
     - ''
     - '&a少见的 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:gale_shortbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_BASTION_GREATSWORD:
@@ -72,7 +72,7 @@ YKI_BASTION_GREATSWORD:
     - '&8魔力消耗：&330 &8| &8冷却：&a10秒'
     - ''
     - '&a少见的 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:bastion_greatsword', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_RIFTWALKER_EDGE:
@@ -91,7 +91,7 @@ YKI_RIFTWALKER_EDGE:
     - '&8魔力消耗：&345 &8| &8冷却：&a0.5秒'
     - ''
     - '&9稀有 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:riftwalker_edge', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_GLACIER_SCEPTER:
@@ -110,7 +110,7 @@ YKI_GLACIER_SCEPTER:
     - '&8魔力消耗：&360 &8| &8冷却：&a2.5秒'
     - ''
     - '&9稀有 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:glacier_scepter', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_EARTHSHATTER_CLAYMORE:
@@ -129,7 +129,7 @@ YKI_EARTHSHATTER_CLAYMORE:
     - '&8魔力消耗：&380 &8| &8冷却：&a6秒'
     - ''
     - '&5史诗 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:earthshatter_claymore', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_VITAL_OATHSWORD:
@@ -149,7 +149,7 @@ YKI_VITAL_OATHSWORD:
     - '&8魔力消耗：&370 &8| &8充能恢复：&a12秒'
     - ''
     - '&5史诗 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:vital_oathsword', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_DRAGONSTORM_SPEAR:
@@ -168,7 +168,7 @@ YKI_DRAGONSTORM_SPEAR:
     - '&8魔力消耗：&3110 &8| &8冷却：&a4秒'
     - ''
     - '&6传说 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:dragonstorm_spear', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_ASTRAL_GRIMOIRE:
@@ -187,7 +187,7 @@ YKI_ASTRAL_GRIMOIRE:
     - '&8魔力消耗：&3120 &8| &8冷却：&a7秒'
     - ''
     - '&6传说 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:astral_grimoire', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CELESTIAL_VERDICT:
@@ -208,7 +208,7 @@ YKI_CELESTIAL_VERDICT:
     - '&8魔力消耗：&3150 &8| &8冷却：&a3秒'
     - ''
     - '&d神话 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:celestial_verdict', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_GENESIS_LONGBOW:
@@ -229,7 +229,7 @@ YKI_GENESIS_LONGBOW:
     - '&8魔力消耗：&3130 &8| &8冷却：&a2秒'
     - ''
     - '&d神话 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:genesis_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_COPPER_FALCHION:
@@ -249,7 +249,7 @@ YKI_COPPER_FALCHION:
     - '&8被动冷却：&a2秒'
     - ''
     - '&8普通 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:copper_falchion', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_HEARTHWARD_BRANCH:
@@ -269,7 +269,7 @@ YKI_HEARTHWARD_BRANCH:
     - '&8魔力消耗：&318 &8| &8冷却：&a7秒'
     - ''
     - '&8普通 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:hearthward_branch', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_BRAMBLE_LONGBOW:
@@ -289,7 +289,7 @@ YKI_BRAMBLE_LONGBOW:
     - '&8魔力消耗：&325 &8| &8冷却：&a1.5秒'
     - ''
     - '&a少见的 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:bramble_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WARDEN_MAUL:
@@ -309,7 +309,7 @@ YKI_WARDEN_MAUL:
     - '&8魔力消耗：&335 &8| &8冷却：&a10秒'
     - ''
     - '&a少见的 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:warden_maul', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_PRISM_HANDCANNON:
@@ -330,7 +330,7 @@ YKI_PRISM_HANDCANNON:
     - '&8魔力消耗：&350 &8| &8冷却：&a2.5秒'
     - ''
     - '&9稀有 枪械'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:prism_handcannon', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_VERDANT_CENSER:
@@ -350,7 +350,7 @@ YKI_VERDANT_CENSER:
     - '&8魔力消耗：&360 &8| &8冷却：&a9秒'
     - ''
     - '&9稀有 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:verdant_censer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_INFERNO_CHAINBLADE:
@@ -369,7 +369,7 @@ YKI_INFERNO_CHAINBLADE:
     - '&8魔力消耗：&380 &8| &8冷却：&a6秒'
     - ''
     - '&5史诗 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:inferno_chainblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WARSONG_HORN:
@@ -388,7 +388,7 @@ YKI_WARSONG_HORN:
     - '&8魔力消耗：&390 &8| &8冷却：&a18秒'
     - ''
     - '&5史诗 号角'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:warsong_horn', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_PHOENIX_SABER:
@@ -411,7 +411,7 @@ YKI_PHOENIX_SABER:
     - '&8被动冷却：&a30秒'
     - ''
     - '&6传说 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:phoenix_saber', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_LEVIATHAN_TRIDENT:
@@ -431,7 +431,7 @@ YKI_LEVIATHAN_TRIDENT:
     - '&8魔力消耗：&3105 &8| &8冷却：&a5秒'
     - ''
     - '&6传说 三叉戟'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:leviathan_trident', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CHRONOSPLITTER:
@@ -454,7 +454,7 @@ YKI_CHRONOSPLITTER:
     - '&8魔力消耗：&3160 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:chronosplitter', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WORLDROOT_CODEX:
@@ -473,7 +473,7 @@ YKI_WORLDROOT_CODEX:
     - '&8魔力消耗：&3180 &8| &8冷却：&a10秒'
     - ''
     - '&d神话 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:worldroot_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_TRAILBLAZER_SPEAR:
@@ -493,7 +493,7 @@ YKI_TRAILBLAZER_SPEAR:
     - '&8魔力消耗：&316 &8| &8冷却：&a6秒'
     - ''
     - '&8普通 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:trailblazer_spear', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_QUARTZ_RAPIER:
@@ -514,7 +514,7 @@ YKI_QUARTZ_RAPIER:
     - '&8魔力消耗：&330 &8| &8冷却：&a5秒'
     - ''
     - '&a少见的 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:quartz_rapier', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_PHANTOM_TWINBLADE:
@@ -534,7 +534,7 @@ YKI_PHANTOM_TWINBLADE:
     - '&8魔力消耗：&350 &8| &8冷却：&a5.5秒'
     - ''
     - '&9稀有 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:phantom_twinblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_VOIDNEEDLE_RAILGUN:
@@ -553,7 +553,7 @@ YKI_VOIDNEEDLE_RAILGUN:
     - '&8魔力消耗：&385 &8| &8冷却：&a4秒'
     - ''
     - '&5史诗 枪械'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:voidneedle_railgun', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_ECLIPSE_SCYTHE:
@@ -571,7 +571,7 @@ YKI_ECLIPSE_SCYTHE:
     - '&8魔力消耗：&3110 &8| &8冷却：&a6.5秒'
     - ''
     - '&6传说 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:eclipse_scythe', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_STARFALL_CANNON:
@@ -590,7 +590,7 @@ YKI_STARFALL_CANNON:
     - '&8魔力消耗：&3155 &8| &8冷却：&a5.5秒'
     - ''
     - '&d神话 枪械'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:starfall_cannon', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SUNFORGED_BLADE:
@@ -610,7 +610,7 @@ YKI_SUNFORGED_BLADE:
     - '&8魔力消耗：&375 &8| &8冷却：&a5秒'
     - ''
     - '&5史诗 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:sunforged_blade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_THUNDERHEAD_REPEATER:
@@ -630,7 +630,7 @@ YKI_THUNDERHEAD_REPEATER:
     - '&8魔力消耗：&360 &8| &8被动冷却：&a2.5秒'
     - ''
     - '&5史诗 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:thunderhead_repeater', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WARPATH_PIKE:
@@ -650,7 +650,7 @@ YKI_WARPATH_PIKE:
     - '&8魔力消耗：&375 &8| &8冷却：&a4.5秒'
     - ''
     - '&5史诗 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:warpath_pike', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_VEILHOOK_SICKLE:
@@ -670,7 +670,7 @@ YKI_VEILHOOK_SICKLE:
     - '&8被动冷却：&a3秒'
     - ''
     - '&5史诗 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:veilhook_sickle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_REQUIEM_BELL:
@@ -690,7 +690,7 @@ YKI_REQUIEM_BELL:
     - '&8魔力消耗：&380 &8| &8冷却：&a9秒'
     - ''
     - '&5史诗 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:requiem_bell', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_OATHKEEPER_MAUL:
@@ -709,7 +709,7 @@ YKI_OATHKEEPER_MAUL:
     - '&8魔力消耗：&380 &8| &8冷却：&a15秒'
     - ''
     - '&5史诗 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:oathkeeper_maul', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_ARCFLAME_STAFF:
@@ -728,7 +728,7 @@ YKI_ARCFLAME_STAFF:
     - '&8魔力消耗：&390 &8| &8冷却：&a6秒'
     - ''
     - '&5史诗 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:arcflame_staff', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOVEREIGN_HOLYBLADE:
@@ -748,7 +748,7 @@ YKI_SOVEREIGN_HOLYBLADE:
     - '&8魔力消耗：&3145 &8| &8冷却：&a6秒'
     - ''
     - '&d神话 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:sovereign_holyblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SKYREND_LONGBOW:
@@ -768,7 +768,7 @@ YKI_SKYREND_LONGBOW:
     - '&8魔力消耗：&3120 &8| &8冷却：&a3.5秒'
     - ''
     - '&d神话 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:skyrend_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_HEAVENPIERCER_LANCE:
@@ -788,7 +788,7 @@ YKI_HEAVENPIERCER_LANCE:
     - '&8魔力消耗：&3155 &8| &8冷却：&a4.5秒'
     - ''
     - '&d神话 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:heavenpiercer_lance', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_NAMELESS_REAPER:
@@ -810,7 +810,7 @@ YKI_NAMELESS_REAPER:
     - '&8被动冷却：&a4秒'
     - ''
     - '&d神话 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:nameless_reaper', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOULRECALL_CODEX:
@@ -831,7 +831,7 @@ YKI_SOULRECALL_CODEX:
     - '&8魔力消耗：&3180 &8| &8冷却：&a12秒'
     - ''
     - '&d神话 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:soulrecall_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CITADEL_STANDARD:
@@ -851,7 +851,7 @@ YKI_CITADEL_STANDARD:
     - '&8魔力消耗：&3145 &8| &8冷却：&a20秒'
     - ''
     - '&d神话 战旗'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:citadel_standard', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_LAWWEAVER_CODEX:
@@ -870,7 +870,7 @@ YKI_LAWWEAVER_CODEX:
     - '&8魔力消耗：&3175 &8| &8冷却：&a7秒'
     - ''
     - '&d神话 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:lawweaver_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_OAKEN_HUNTER_BOW:
@@ -890,7 +890,7 @@ YKI_OAKEN_HUNTER_BOW:
     - '&8魔力消耗：&314 &8| &8冷却：&a2.5秒'
     - ''
     - '&8普通 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:oaken_hunter_bow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_MILITIA_CROSSBOW:
@@ -910,7 +910,7 @@ YKI_MILITIA_CROSSBOW:
     - '&8被动冷却：&a3秒'
     - ''
     - '&8普通 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:militia_crossbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_STONEWARD_MAUL:
@@ -929,7 +929,7 @@ YKI_STONEWARD_MAUL:
     - '&8魔力消耗：&318 &8| &8冷却：&a9秒'
     - ''
     - '&8普通 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:stoneward_maul', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_GLOOM_SICKLE:
@@ -948,7 +948,7 @@ YKI_GLOOM_SICKLE:
     - '&8被动冷却：&a4秒'
     - ''
     - '&8普通 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:gloom_sickle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SPRINGWATER_CHARM:
@@ -967,7 +967,7 @@ YKI_SPRINGWATER_CHARM:
     - '&8魔力消耗：&320 &8| &8冷却：&a8秒'
     - ''
     - '&8普通 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:springwater_charm', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CINDER_APPRENTICE_STAFF:
@@ -987,7 +987,7 @@ YKI_CINDER_APPRENTICE_STAFF:
     - '&8魔力消耗：&322 &8| &8冷却：&a3秒'
     - ''
     - '&8普通 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:cinder_apprentice_staff', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WATCHMAN_HALBERD:
@@ -1006,7 +1006,7 @@ YKI_WATCHMAN_HALBERD:
     - '&8魔力消耗：&318 &8| &8冷却：&a5秒'
     - ''
     - '&8普通 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:watchman_halberd', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_TEMPEST_PIKE:
@@ -1025,7 +1025,7 @@ YKI_TEMPEST_PIKE:
     - '&8魔力消耗：&332 &8| &8冷却：&a5秒'
     - ''
     - '&a少见的 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:tempest_pike', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_NIGHTSHADE_SICKLE:
@@ -1044,7 +1044,7 @@ YKI_NIGHTSHADE_SICKLE:
     - '&8被动冷却：&a4秒'
     - ''
     - '&a少见的 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:nightshade_sickle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_EMBERWEAVE_STAFF:
@@ -1064,7 +1064,7 @@ YKI_EMBERWEAVE_STAFF:
     - '&8魔力消耗：&338 &8| &8冷却：&a4.5秒'
     - ''
     - '&a少见的 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:emberweave_staff', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_BLOOMSONG_TOME:
@@ -1084,7 +1084,7 @@ YKI_BLOOMSONG_TOME:
     - '&8魔力消耗：&340 &8| &8冷却：&a8秒'
     - ''
     - '&a少见的 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:bloomsong_tome', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_FROSTBOLT_CROSSBOW:
@@ -1103,7 +1103,7 @@ YKI_FROSTBOLT_CROSSBOW:
     - '&8魔力消耗：&325 &8| &8被动冷却：&a2秒'
     - ''
     - '&a少见的 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:frostbolt_crossbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_TIDEBREAKER_TRIDENT:
@@ -1122,7 +1122,7 @@ YKI_TIDEBREAKER_TRIDENT:
     - '&8魔力消耗：&335 &8| &8冷却：&a5秒'
     - ''
     - '&a少见的 三叉戟'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:tidebreaker_trident', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_RALLYING_BUGLE:
@@ -1141,7 +1141,7 @@ YKI_RALLYING_BUGLE:
     - '&8魔力消耗：&345 &8| &8冷却：&a14秒'
     - ''
     - '&a少见的 号角'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:rallying_bugle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_COMET_LONGBOW:
@@ -1160,7 +1160,7 @@ YKI_COMET_LONGBOW:
     - '&8魔力消耗：&352 &8| &8冷却：&a2秒'
     - ''
     - '&9稀有 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:comet_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SKYLINE_GLAIVE:
@@ -1180,7 +1180,7 @@ YKI_SKYLINE_GLAIVE:
     - '&8魔力消耗：&355 &8| &8冷却：&a4秒'
     - ''
     - '&9稀有 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:skyline_glaive', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOULTHREAD_SCYTHE:
@@ -1198,7 +1198,7 @@ YKI_SOULTHREAD_SCYTHE:
     - '&8被动冷却：&a4秒'
     - ''
     - '&9稀有 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:soulthread_scythe', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_RUNEBULWARK_HAMMER:
@@ -1217,7 +1217,7 @@ YKI_RUNEBULWARK_HAMMER:
     - '&8魔力消耗：&360 &8| &8冷却：&a11秒'
     - ''
     - '&9稀有 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:runebulwark_hammer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_MOONWELL_CODEX:
@@ -1237,7 +1237,7 @@ YKI_MOONWELL_CODEX:
     - '&8魔力消耗：&365 &8| &8冷却：&a9秒'
     - ''
     - '&9稀有 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:moonwell_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_VOLTAIC_ARBALEST:
@@ -1257,7 +1257,7 @@ YKI_VOLTAIC_ARBALEST:
     - '&8魔力消耗：&340 &8| &8被动冷却：&a2.5秒'
     - ''
     - '&9稀有 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:voltaic_arbalest', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CORALBOUND_TRIDENT:
@@ -1277,7 +1277,7 @@ YKI_CORALBOUND_TRIDENT:
     - '&8魔力消耗：&358 &8| &8冷却：&a5秒'
     - ''
     - '&9稀有 三叉戟'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:coralbound_trident', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOLARWIND_LONGBOW:
@@ -1297,7 +1297,7 @@ YKI_SOLARWIND_LONGBOW:
     - '&8魔力消耗：&3115 &8| &8冷却：&a2.5秒'
     - ''
     - '&6传说 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:solarwind_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_STORMCORE_REPEATER:
@@ -1317,7 +1317,7 @@ YKI_STORMCORE_REPEATER:
     - '&8魔力消耗：&385 &8| &8被动冷却：&a2.5秒'
     - ''
     - '&6传说 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:stormcore_repeater', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_COLOSSUS_WARHAMMER:
@@ -1336,7 +1336,7 @@ YKI_COLOSSUS_WARHAMMER:
     - '&8魔力消耗：&3125 &8| &8冷却：&a14秒'
     - ''
     - '&6传说 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:colossus_warhammer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_NEBULA_SCEPTER:
@@ -1355,7 +1355,7 @@ YKI_NEBULA_SCEPTER:
     - '&8魔力消耗：&3125 &8| &8冷却：&a4秒'
     - ''
     - '&6传说 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:nebula_scepter', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SERAPHIC_CHALICE:
@@ -1375,7 +1375,7 @@ YKI_SERAPHIC_CHALICE:
     - '&8魔力消耗：&3145 &8| &8冷却：&a11秒'
     - ''
     - '&6传说 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:seraphic_chalice', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_DRAGONBANNER_HORN:
@@ -1395,7 +1395,7 @@ YKI_DRAGONBANNER_HORN:
     - '&8魔力消耗：&3135 &8| &8冷却：&a18秒'
     - ''
     - '&6传说 号角'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:dragonbanner_horn', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_MIRAGE_DAGGERS:
@@ -1415,7 +1415,7 @@ YKI_MIRAGE_DAGGERS:
     - '&8魔力消耗：&3105 &8| &8冷却：&a4秒'
     - ''
     - '&6传说 短刃'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:mirage_daggers', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 骨龙主题史诗职业兵装。
@@ -1436,7 +1436,7 @@ YKI_WINGBREAKER_GREATSWORD:
     - '&8魔力消耗：&380 &8| &8冷却：&a5秒'
     - ''
     - '&5史诗 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {Unbreakable: true, Glint: true, ItemModel: 'yknrpg_bone:wingbreaker_greatsword'}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SKULLBARRAGE_LONGBOW:
@@ -1456,7 +1456,7 @@ YKI_SKULLBARRAGE_LONGBOW:
     - '&8魔力消耗：&365 &8| &8冷却：&a2秒'
     - ''
     - '&5史诗 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {Unbreakable: true, Glint: true, ItemModel: 'yknrpg_items:skullbarrage_longbow'}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_DRAGONSPINE_LANCE:
@@ -1476,7 +1476,7 @@ YKI_DRAGONSPINE_LANCE:
     - '&8魔力消耗：&375 &8| &8冷却：&a4.5秒'
     - ''
     - '&5史诗 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:dragonspine_lance', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_GRAVETALON_SICKLE:
@@ -1496,7 +1496,7 @@ YKI_GRAVETALON_SICKLE:
     - '&8被动冷却：&a2.5秒'
     - ''
     - '&5史诗 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {Unbreakable: true, Glint: true, ItemModel: 'yknrpg_items:gravetalon_sickle'}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_MARROW_REQUIEM_CENSER:
@@ -1516,7 +1516,7 @@ YKI_MARROW_REQUIEM_CENSER:
     - '&8魔力消耗：&390 &8| &8冷却：&a10秒'
     - ''
     - '&5史诗 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {Unbreakable: true, Glint: true, ItemModel: 'yknrpg_items:marrow_requiem_censer'}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_OSSUARY_BULWARK:
@@ -1535,7 +1535,7 @@ YKI_OSSUARY_BULWARK:
     - '&8魔力消耗：&390 &8| &8冷却：&a14秒'
     - ''
     - '&5史诗 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:ossuary_bulwark', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WRAITHFIRE_SCEPTER:
@@ -1554,7 +1554,7 @@ YKI_WRAITHFIRE_SCEPTER:
     - '&8魔力消耗：&3100 &8| &8冷却：&a6秒'
     - ''
     - '&5史诗 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {Unbreakable: true, Glint: true, ItemModel: 'yknrpg_items:wraithfire_scepter'}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 烬日冥卫·阿努赫主题传说职业兵装。
@@ -1575,7 +1575,7 @@ YKI_ENDSUN_EDICT_BLADE:
     - '&8魔力消耗：&3125 &8| &8冷却：&a6秒'
     - ''
     - '&6传说 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:endsun_edict_blade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SUNFALL_REPEATER:
@@ -1595,7 +1595,7 @@ YKI_SUNFALL_REPEATER:
     - '&8魔力消耗：&3110 &8| &8冷却：&a2.5秒'
     - ''
     - '&6传说 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:sunfall_repeater', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOLAR_AEGIS_LANCE:
@@ -1616,7 +1616,7 @@ YKI_SOLAR_AEGIS_LANCE:
     - '&8魔力消耗：&3120 &8| &8冷却：&a7秒'
     - ''
     - '&6传说 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:solar_aegis_lance', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SCYTHE_ECHO_SICKLE:
@@ -1635,7 +1635,7 @@ YKI_SCYTHE_ECHO_SICKLE:
     - '&8被动冷却：&a2.5秒'
     - ''
     - '&6传说 镰刀'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:scythe_echo_sickle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOUL_CROWN_CENSER:
@@ -1655,7 +1655,7 @@ YKI_SOUL_CROWN_CENSER:
     - '&8魔力消耗：&3140 &8| &8冷却：&a10秒'
     - ''
     - '&6传说 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:soul_crown_censer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_HEARTFURNACE_WARHAMMER:
@@ -1675,7 +1675,7 @@ YKI_HEARTFURNACE_WARHAMMER:
     - '&8魔力消耗：&3135 &8| &8冷却：&a14秒'
     - ''
     - '&6传说 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:heartfurnace_warhammer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_BLACK_SUN_CODEX:
@@ -1694,7 +1694,7 @@ YKI_BLACK_SUN_CODEX:
     - '&8魔力消耗：&3150 &8| &8冷却：&a7秒'
     - ''
     - '&6传说 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:black_sun_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 终焉之魔女·伊芙蕾雅主题神话职业兵装。
@@ -1716,7 +1716,7 @@ YKI_FATESEVER_HOLYBLADE:
     - '&8魔力消耗：&3160 &8| &8冷却：&a5秒'
     - ''
     - '&d神话 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:fatesever_holyblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SEVENFOLD_END_BOW:
@@ -1735,7 +1735,7 @@ YKI_SEVENFOLD_END_BOW:
     - '&8魔力消耗：&3145 &8| &8冷却：&a2秒'
     - ''
     - '&d神话 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:sevenfold_end_bow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_HEAVEN_INVERSION_LANCE:
@@ -1755,7 +1755,7 @@ YKI_HEAVEN_INVERSION_LANCE:
     - '&8魔力消耗：&3165 &8| &8冷却：&a4.5秒'
     - ''
     - '&d神话 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:heaven_inversion_lance', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WITCHBLINK_SCISSORS:
@@ -1775,7 +1775,7 @@ YKI_WITCHBLINK_SCISSORS:
     - '&8魔力消耗：&3125 &8| &8冷却：&a4秒'
     - ''
     - '&d神话 双刃'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:witchblink_scissors', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SOULPAWN_REQUIEM:
@@ -1795,7 +1795,7 @@ YKI_SOULPAWN_REQUIEM:
     - '&8魔力消耗：&3190 &8| &8冷却：&a11秒'
     - ''
     - '&d神话 法器'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:soulpawn_requiem', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_WORLD_END_BULWARK:
@@ -1815,7 +1815,7 @@ YKI_WORLD_END_BULWARK:
     - '&8魔力消耗：&3170 &8| &8冷却：&a18秒'
     - ''
     - '&d神话 盾牌'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:world_end_bulwark', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_SILENT_CHANT_CODEX:
@@ -1835,7 +1835,7 @@ YKI_SILENT_CHANT_CODEX:
     - '&8魔力消耗：&3195 &8| &8冷却：&a8秒'
     - ''
     - '&d神话 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:silent_chant_codex', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 功能兵装：保持正常武器属性，技能侧重采集、探索、移动、自救与团队整备。
@@ -1855,7 +1855,7 @@ YKI_VEINSEEKER_MAUL:
     - '&8魔力消耗：&315 &8| &8冷却：&a30秒'
     - ''
     - '&8普通 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:veinseeker_maul', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 少见
@@ -1875,7 +1875,7 @@ YKI_TRAILSCOUT_SHORTBLADE:
     - '&8魔力消耗：&322 &8| &8冷却：&a30秒'
     - ''
     - '&a少见的 短刃'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:trailscout_shortblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_CAMPWARD_SABER:
@@ -1894,7 +1894,7 @@ YKI_CAMPWARD_SABER:
     - '&8魔力消耗：&328 &8| &8冷却：&a30秒'
     - ''
     - '&a少见的 剑'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:campward_saber', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 稀有
@@ -1917,7 +1917,7 @@ YKI_TIDESEEKER_LANCE:
     - '&8魔力消耗：&340 &8| &8冷却：&a45秒'
     - ''
     - '&9稀有 长枪'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:tideseeker_lance', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_RESCUE_BEACON_CROSSBOW:
@@ -1936,7 +1936,7 @@ YKI_RESCUE_BEACON_CROSSBOW:
     - '&8魔力消耗：&355 &8| &8冷却：&a20秒'
     - ''
     - '&9稀有 弩'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:rescue_beacon_crossbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_TRUESIGHT_LONGBOW:
@@ -1955,7 +1955,7 @@ YKI_TRUESIGHT_LONGBOW:
     - '&8魔力消耗：&348 &8| &8冷却：&a16秒'
     - ''
     - '&9稀有 弓'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:truesight_longbow', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 史诗
@@ -1976,7 +1976,7 @@ YKI_SKYHOOK_TWINBLADE:
     - '&8魔力消耗：&345 &8| &8冷却：&a4秒'
     - ''
     - '&5史诗 双刃'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:skyhook_twinblade', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_MARCHING_SANCTUARY_MAUL:
@@ -1995,7 +1995,7 @@ YKI_MARCHING_SANCTUARY_MAUL:
     - '&8魔力消耗：&385 &8| &8冷却：&a20秒'
     - ''
     - '&5史诗 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:marching_sanctuary_maul', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_RIFTGUIDE_DAGGER:
@@ -2016,7 +2016,7 @@ YKI_RIFTGUIDE_DAGGER:
     - '&8魔力消耗：&365 &8| &8冷却：&a9秒'
     - ''
     - '&5史诗 短刃'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:riftguide_dagger', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 传说
@@ -2037,7 +2037,7 @@ YKI_EXPEDITION_WARHAMMER:
     - '&8魔力消耗：&390 &8| &8冷却：&a30秒'
     - ''
     - '&6传说 战锤'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:expedition_warhammer', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 YKI_HOMECOMING_CHRONICLE:
@@ -2057,7 +2057,7 @@ YKI_HOMECOMING_CHRONICLE:
     - '&8冷却：&a45秒'
     - ''
     - '&6传说 法典'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:homecoming_chronicle', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]
 
 # 神话
@@ -2081,5 +2081,5 @@ YKI_ASTRAL_WAYFARER_STAFF:
     - '&8魔力消耗：&385 &8| &8冷却：&a5秒'
     - ''
     - '&d神话 法杖'
-  Options: {Unbreakable: true, Glint: true}
+  Options: {ItemModel: 'yknrpg_items:astral_wayfarer_staff', Unbreakable: true, Glint: true}
   Hide: [ATTRIBUTES, UNBREAKABLE, ENCHANTS]

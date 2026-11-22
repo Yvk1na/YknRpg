@@ -1,0 +1,10 @@
+{
+  "id": "YKF_ROCKTIDE_LEGGINGS",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_ROCKTIDE_LEGGINGS.png",
+  "texture": "textures/rocktide_leggings.png",
+  "prompt": "Original Minecraft inventory icon for 岩潮长裤 (rocktide leggings). One full pair of trousers, clearly separate legs attached to one waistband. Front view, no boots. Fishing waders have cloth, reinforced knee seams and waterproof hems. Mining trousers have a sturdy belt, reinforced knees and protective plates. Lore for design: 层叠岩甲守住暗流里的每一次等待。. This set must use consistent materials and tones: charcoal slate layered plates (#485363), dark navy waterproof canvas (#35455d), a tiny muted amber clasp (#c18b48), silver grey edge chips; rugged cavern fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "E8E954EF2904DE691DA973DF0001E7AE1956B4638CFDEA9DDD7FD913CB9E1FAB",
+  "visual_review": "pending"
+}

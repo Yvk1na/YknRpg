@@ -1,0 +1,64 @@
+{
+  "title": "骨龙系列 · 64×64 像素样品",
+  "subtitle": "独立图标：64×64｜下图为 4 倍像素放大预览",
+  "comparison_title": "同等显示大小：16×16 / 64×64",
+  "mode": "imagegen built-in, then nearest-neighbor export to 64x64",
+  "purpose": "preview only",
+  "prompt_common": "Use case: stylized-concept. Asset type: one Minecraft Java item sprite for a bone-dragon RPG series. The attached image is a STYLE AND THEME REFERENCE only, not an edit target. Draw only the single requested item, isolated on a fully transparent canvas. Match the ivory bone, charcoal/blue-gray metal, and small cyan soul-fire accents of the reference. IMPORTANT: design on a logical 64 by 64 pixel grid and present it as a clean nearest-neighbor enlargement; crisp square pixel clusters and hard pixel stair-step edges, no antialiasing, blur, soft glow, grain, or tiny painterly marks. A detailed but readable vanilla-inspired pixel sprite with deliberate 1-pixel outlines, bone cracks and bevels, 12-20 restrained colors. Center the full item with a 4-logical-pixel transparent safety margin. No text, labels, frame, shadow on the background, UI, or extra objects. ",
+  "assets": [
+    {
+      "id": "wingbreaker_greatsword",
+      "name": "断翼斩龙剑",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-5a58003b-3442-40c4-871e-3d7faa1ec0e2.png",
+      "prompt_detail": "One diagonal greatsword, handle bottom-left and point top-right. An ivory segmented dragon-wingbone blade with two small backward bone barbs, dark slate grip and guard, a narrow cyan channel near the blade core, clear pointed cutting edge. Preserve the familiar Minecraft sword pose, not a staff."
+    },
+    {
+      "id": "ossuary_dragoon_helmet",
+      "name": "葬骨龙骑盔",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-f799ad00-3b4e-435f-ad2a-40b2a2455eab.png",
+      "prompt_detail": "One front-facing wearable helmet icon, not a creature portrait. Ivory dragon-skull brow and two short swept-back horns, dark slate cheek guards, a black T-shaped face opening, small cyan eyes. Clearly read as a compact equippable helmet."
+    },
+    {
+      "id": "ossuary_dragoon_chestplate",
+      "name": "葬骨龙骑胸铠",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-a7c56231-31dd-4518-8f8d-b8770002ec4c.png",
+      "prompt_detail": "One front-facing symmetrical chestplate icon with shoulder guards and waist. Ivory rib bones laid over charcoal-blue armor, sculpted bone sternum, a tiny cyan soul-heart gem at the center, restrained cracks. The silhouette must unmistakably read as Minecraft chest armor."
+    },
+    {
+      "id": "ossuary_dragoon_leggings",
+      "name": "葬骨龙骑腿铠",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-d03e5a27-a0d2-4145-a97e-864d982fac0d.png",
+      "prompt_detail": "One single front-facing pair of armored leggings, not a whole character. Dark blue-slate leg plates, ivory segmented dragon-bone thigh and knee guards, small worn cracks, a bone belt, two clearly separated legs. Familiar Minecraft leggings icon silhouette."
+    },
+    {
+      "id": "ossuary_dragoon_boots",
+      "name": "葬骨龙骑战靴",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-1479c7b7-bf0e-4395-b937-33a5339b3495.png",
+      "prompt_detail": "One single pair of front-facing armored boots together as one inventory icon. Dark blue-slate boots with ivory wraps and angular skeletal dragon toe plates, a few short side bone spurs, clean readable soles. Familiar Minecraft boots icon silhouette; not legs or a character."
+    },
+    {
+      "id": "bone_dragon_fang",
+      "name": "骨龙獠牙",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-a50de46e-c753-4e6d-be5f-3dc4d6a15801.png",
+      "prompt_detail": "One single curved skeletal dragon fang, diagonal from its thick ivory broken root at the upper right to a long tapered sharp point at lower left. Detailed warm bone ridges and a few thin cracks, dark slate outline. No metal, no handle, no extra fragments. Clearly a crafting ingredient."
+    },
+    {
+      "id": "ossuary_carapace",
+      "name": "万骨甲壳",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-bb05edbb-c73e-4449-804d-93ec1295daf3.png",
+      "prompt_detail": "One single roughly oval broken carapace plate made from fused dragon ribs. Three ivory bone ridges arch over a dark blue-slate base, cracked irregular edges, a tiny cyan soul-fire seam. This is a loose crafting fragment, not wearable chest armor."
+    },
+    {
+      "id": "shattered_wingbone",
+      "name": "碎裂翼骨",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-78db658a-6dda-465c-be3f-ad86ca2221b0.png",
+      "prompt_detail": "One single broken dragon wingbone fragment as a crafting ingredient, diagonal. A long ivory bone with a jointed end, rough splintered break and visible bone grain/cracks, 2-3 small loose chips nearby, strong compact silhouette. No flesh, no skin, no wings or whole dragon."
+    },
+    {
+      "id": "wraithfire_dragonheart",
+      "name": "怨火龙心",
+      "generated_source": "C:/Users/y/.codex/generated_images/01a06b83-b076-7063-9536-2f239ef1471a/exec-94b5840d-26f6-449c-92ae-e41b6281f695.png",
+      "prompt_detail": "One single compact soul-fire dragon-heart crafting ingredient. A dark blue-slate heart core surrounded by an ivory rib cage, cyan soul-fire peeking between the bones, and only 2-3 small solid cyan flame tongues above it. Crisp pixels with no hazy glow or smoke. Clearly heart shaped, no background."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "YKI_VOLTAIC_ARBALEST",
+  "source": "docs/design/catalog-32-v2/source-images/voltaic_arbalest.png",
+  "texture": "textures/voltaic_arbalest.png",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original YknRpg Minecraft RPG item sprite on a genuinely transparent square canvas. The input image is our USER-APPROVED style sample only, illustrating connected pixel clusters, clear shape, restrained materials and purposeful pale accents. Do not copy its sword silhouette or bone palette for unrelated items.\r\nArt direction: attractive hand-authored logical 32x32 pixel art, rendered as a crisp nearest-neighbor enlargement. Strong recognisable silhouette filling about 27x27 logical pixels with 2-3 pixels of safety margin. Main material planes in 3-4 connected large stepped colour clusters, at most 12-18 controlled palette colours. One main colour family and one small themed accent. Readable clean bevels and modest shadow, sharp connected pixel shapes. Shape and colour communicate category and theme, strong enough to read in a small inventory slot. Avoid a thick black cartoon outline; use coloured dark edges. Quiet material surfaces with selective detail at meaningful structural parts.\r\nOrthographic game icon. No text, no background, no character, no scenery, no particles, no fog, no aura, no smooth rendering, no realistic gradients, no anti-aliasing, no filigree or jewellery spread over every surface, no scattered white glints, no noisy micro-detail. The entire isolated object is visible. Keep the functional weapon category exact. Sword/staff/spear handles at lower left with head or blade toward upper right; preserve clearly recognisable bow, crossbow, scythe, book, bell, horn and gun shapes as appropriate. Thicken thin shafts enough to read at 32 pixels.  Subject:  伏流重弩. Thematic English item name: voltaic arbalest. One compact crossbow inventory icon, recognizable bow limbs and wooden/metal stock, fully visible. Category WEAPON; rarity RARE. Descriptive inspiration: 弩身储存的伏流会追随箭矢落点劈落。 被动：伏雷 [投射物命中] 稀有 弩. \r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "1E499D148EEE26465F9CE7F896A544DA8E7FEA7D9A139AB46DDA7F78DD1273DC",
+  "visual_review": "passed",
+  "visual_review_notes": "Checked enlarged silhouette and native 32-pixel draft on a dark inventory background.",
+  "motion_review": "passed",
+  "motion_review_sha256": "6A56ADFF7EA67102E0192A2A851B8A9B41E3A185536F179D52CCBCF670AB56AC"
+}

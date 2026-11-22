@@ -1,0 +1,10 @@
+{
+  "id": "YKF_MOONABYSS_ROD",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_MOONABYSS_ROD.png",
+  "texture": "textures/moonabyss_rod.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 月渊钓竿 (moonabyss rod), base material fishing_rod. Visual form: unmistakable long slim fishing rod with reel and distinct handle low left, tall smooth arcing tip high right, fine short line and a small fishing float close to rod; no sharp metal blade or wand head. Lore for design: 双珠映月，垂下的鱼线直指海怪的巢穴。 / 钓鱼速度: +240. Set palette and materials: near-black indigo fisher cloth, violet scaled plates, pale lunar silver crescent and a restrained lilac pearl. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "156AA69DE493B07ED144BA8F6C1C2C55313CA261E88BE70C25DADA8E8A2ACBE0",
+  "visual_review": "pending"
+}

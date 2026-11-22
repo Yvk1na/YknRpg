@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_RUST_FLAKE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_RUST_FLAKE.png",
+  "texture": "textures/tree_rust_flake.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 锈铁末 (tree rust flake), base material iron_nugget. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 淤泥溺尸携带的锈蚀碎铁。 / 钓具材料 · 金属零件原料. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "9746EB8A2B0BB5FBF91279EB6C795E9B4E328B1147058883C3ABAB58608E63B9",
+  "visual_review": "pending"
+}

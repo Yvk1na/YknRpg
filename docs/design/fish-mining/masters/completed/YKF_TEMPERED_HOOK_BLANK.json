@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TEMPERED_HOOK_BLANK",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TEMPERED_HOOK_BLANK.png",
+  "texture": "textures/tempered_hook_blank.png",
+  "prompt": "Original Minecraft inventory icon for 淬火钩坯 (tempered hook blank). One small thick tempered steel J-shaped fishing hook blank, a sharp angular hook point, dense dark gunmetal body with a thin steely aqua edge and a solid small eyelet. A clean shape, clearly distinct from a rusty hook. Lore for design: 经过淬炼的致密金属钩坯。.  The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "9ECBF121078C81A3F3E4043A142EB26F88FCFF3A93794462951395EB3D4738E3",
+  "visual_review": "pending"
+}

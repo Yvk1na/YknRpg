@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_REEDGLOW_CHESTPLATE",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_REEDGLOW_CHESTPLATE.png",
+  "texture": "textures/tree_reedglow_chestplate.png",
+  "prompt": "Original Minecraft inventory icon for 苇光钓衣 (tree reedglow chestplate). A full front-view chest garment with separate open sleeves and visible neck opening, no body. Fishing outfit has practical pockets and a weather-resistant collar. Mining outfit has reinforced shoulders, a tool strap or breastplate and leather edges. Lore for design: 苇绳紧密交织，细碎萤光沿着衣缝流动。. This set must use consistent materials and tones: sage olive cloth (#626d47), straw-gold braided edges (#b3985c), unbleached cream canvas highlights (#c3b589), small warm firefly clasp (#d9b367); reed-weave fishing gear. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "E1AA7DDEE908F8B10A4484A03F9C91124D8D0AAD9A9BF38E51D71431E3C3424B",
+  "visual_review": "pending"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "YKM_ANCIENT_LEGGINGS",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKM_ANCIENT_LEGGINGS.png",
+  "texture": "textures/ancient_leggings.png",
+  "prompt": "Original Minecraft inventory icon for 远古玄钛护腿 (ancient leggings). One full pair of trousers, clearly separate legs attached to one waistband. Front view, no boots. Fishing waders have cloth, reinforced knee seams and waterproof hems. Mining trousers have a sturdy belt, reinforced knees and protective plates. Lore for design: 以天然玄钛富集矿核铸成的勘探护具。. This set must use consistent materials and tones: graphite charcoal titanium (#373641), sharp pale forged titanium edges (#82808b), restrained ice-lilac crystal (#9b8eaf), low gold-free dark fantasy mining heavy armor. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "D4D97CB5C6CF040898004EE031C756B87FEFA33BDCE51FC0158EC5A94E93F8EB",
+  "visual_review": "pending"
+}

@@ -4,3 +4,13 @@ build/
 out/
 *.iml
 .idea/
+/docs/design/catalog-64/
+/docs/design/catalog-32-v2/effects/items/
+/docs/design/catalog-32-v2/source-images/
+/docs/design/bone-dragon-64-v1/source-images/
+/docs/design/bone-dragon-items-preview.png
+/docs/design/fish-mining/sources/
+/docs/design/fish-mining/patches/
+/packs/craftengine/catalog-animations.json
+/packs/craftengine/resourcepack/assets/yknrpg_bone/
+/packs/craftengine/resourcepack/assets/yknrpg_items/

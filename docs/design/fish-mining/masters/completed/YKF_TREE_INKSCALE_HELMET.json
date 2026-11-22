@@ -1,0 +1,10 @@
+{
+  "id": "YKF_TREE_INKSCALE_HELMET",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_TREE_INKSCALE_HELMET.png",
+  "texture": "textures/tree_inkscale_helmet.png",
+  "prompt": "Original Minecraft inventory icon for 墨鳞钓帽 (tree inkscale helmet). One centered headgear icon. For fishing use a practical broad-brim fisher hat or waxed hood with dark empty opening, dipping brim and identifiable local ornament. For mining use a compact sturdy prospecting cap or armored mining helmet with a reinforced brim and a small lamp or clasp. Front view. No visible face. Lore for design: 溪墨防水，薄鳞贴合溪畔的每一次垂钓。. This set must use consistent materials and tones: inky midnight cloth (#303b4d), rain-polished blue slate fish-scale panels (#536477), warm pale grey bindings (#a1a49d), modest stream outfit. The attached image is a reference for readable size/contrast and pixel cluster craft, not a shape to trace. Create a hand-authored logical 32×32 pixel-art sprite, visibly enlarged with square nearest-neighbor clusters, 3-4 related tones per main material. Use hard-color steps, deliberate geometric shadow and highlights, compact readable silhouette centered on a square canvas with 3-pixel clear margins. Practical grounded dark fantasy style. Fully transparent RGBA background, no glow, no drop shadow, no text, no checkerboard, no wearer, no arms, no environment, exactly one item icon.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "3C0CC79CE5660033C750C1F963A3BBF41F4D0D1CFCC084663083419DCCC8E4B2",
+  "visual_review": "pending"
+}

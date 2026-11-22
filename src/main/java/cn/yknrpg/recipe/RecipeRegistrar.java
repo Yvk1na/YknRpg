@@ -161,10 +161,33 @@ public final class RecipeRegistrar {
         for (Map.Entry<Character, IngredientSpec> entry : ingredients.entrySet()) {
             IngredientSpec ingredient = entry.getValue();
             RecipeChoice choice = ingredient.customItemId() != null
-                    ? new RecipeChoice.ExactChoice(factory.ingredient(ingredient))
+                    ? exactIngredient(ingredient)
                     : new RecipeChoice.MaterialChoice(ingredient.material());
             recipe.setIngredient(entry.getKey(), choice);
         }
         return recipe;
+    }
+
+    private RecipeChoice.ExactChoice exactIngredient(IngredientSpec ingredient) {
+        var current = factory.ingredient(ingredient);
+        var id = ingredient.customItemId();
+        String namespace = id.startsWith("YKF_") ? "yknfish" : id.startsWith("YKM_") ? "yknmining" : null;
+        boolean catalogItem = id.startsWith("YKI_");
+        if (namespace == null && !catalogItem) return new RecipeChoice.ExactChoice(current);
+        var meta = current.getItemMeta();
+        var model = meta == null ? null : meta.getItemModel();
+        if (model == null || !model.getKey().equals(id.substring(4).toLowerCase(Locale.ROOT))) {
+            return new RecipeChoice.ExactChoice(current);
+        }
+        boolean matchingNamespace = catalogItem
+                ? model.getNamespace().equals("yknrpg_items") || model.getNamespace().equals("yknrpg_bone")
+                : namespace.equals(model.getNamespace());
+        if (!matchingNamespace) {
+            return new RecipeChoice.ExactChoice(current);
+        }
+        var legacy = current.clone();
+        meta.setItemModel(null);
+        legacy.setItemMeta(meta);
+        return new RecipeChoice.ExactChoice(current, legacy);
     }
 }

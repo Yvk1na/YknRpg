@@ -1,0 +1,10 @@
+{
+  "id": "YKF_LEECH_TOOTH",
+  "source": "D:\\codex projects\\yknitems\\docs\\design\\fish-mining\\sources\\YKF_LEECH_TOOTH.png",
+  "texture": "textures/leech_tooth.png",
+  "prompt": "Create one original Minecraft Java inventory item, not an illustration. Subject 蠹虫细齿 (leech tooth), base material flint. Visual form: one loose compact crafting ingredient, mineral, fish fragment or small keepsake as the item name specifies; its natural material and form are obvious. For raw ore: jagged raw stone and a distinct exposed mineral seam. For refined ore: deliberate compact cast ingot, cut crystal or neatly processed component reflecting the corresponding substance. No hands, pedestal or landscape.. Lore for design: 从潭底蠹虫口中取下的细小尖齿。 / 齿缝里仍夹着细碎的河砂。. The input is a style sample only. Do not borrow its sword shape, bone motif or colors. A clean, handmade 32x32 logical pixel sprite on a genuinely transparent perfectly square canvas, enlarged with nearest-neighbor. Dark, muted fantasy materials, deliberate color clusters, angular planes, crisp bevels, 3 levels of shading, minimal focused detail and clear recognizable silhouette at inventory size. Favor medium-value base colors and compact silhouettes. The complete single icon is centered and occupies about 80% of canvas; leave margins on all sides. No lettering, diagrams, border, checkerboard, glow or background.\r\n",
+  "mode": "imagegen built-in; nearest-neighbor 64x64 export",
+  "solid_alpha": true,
+  "sha256": "A26C6DF74E50354FA0805DDF6A6CDE47FB394BC1DB3EBDE509BB5C9E5E089904",
+  "visual_review": "pending"
+}
