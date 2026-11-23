@@ -1,0 +1,4580 @@
+[
+  {
+    "id": "YKI_ABYSS_ECHO_CRYSTAL",
+    "32": {
+      "distinct_frames": 6,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 6
+    },
+    "64": {
+      "distinct_frames": 6,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 8
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ABYSS_WARDEN_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 325
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 781
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ABYSS_WARDEN_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 226
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 579
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ABYSS_WARDEN_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 121
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 304
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ABYSS_WARDEN_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 111
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 228
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ABYSSAL_NACRE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 321
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 968
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ARCFLAME_STAFF",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 87
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 288
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ARCHER_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 157
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 61,
+      "pixels_delta_at_least_8": 424
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ASSASSIN_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 263
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 800
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ASTRAL_GRIMOIRE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 230
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 582
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ASTRAL_WAYFARER_STAFF",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 81
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 69,
+      "pixels_delta_at_least_8": 231
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BASTION_GREATSWORD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 55
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 68
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BLACK_SUN_CINDER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 352
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 102,
+      "pixels_delta_at_least_8": 632
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BLACK_SUN_CODEX",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 260
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 71,
+      "pixels_delta_at_least_8": 543
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BLACK_SUN_CORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 117
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 116,
+      "pixels_delta_at_least_8": 170
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BLOOMSONG_TOME",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 151
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 422
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BONE_DRAGON_FANG",
+    "32": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 50
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 118
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BONEWEAVE_THREAD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 222
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 196
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRAMBLE_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 44
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 149
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRAMBLE_RANGER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 106
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 259
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRAMBLE_RANGER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 109
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 401
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRAMBLE_RANGER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 97
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 251
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRAMBLE_RANGER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 35
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 68
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_BRINE_PEARL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 254
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 517
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CAMPWARD_SABER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 35
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 65
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CASTER_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 186
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 89,
+      "pixels_delta_at_least_8": 585
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CELESTIAL_CORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 84,
+      "pixels_delta_at_least_8": 346
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 102,
+      "pixels_delta_at_least_8": 1004
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CELESTIAL_VERDICT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 102
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 99,
+      "pixels_delta_at_least_8": 305
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHARGED_COAL",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 294
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 636
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONO_SHARD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 252
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 101,
+      "pixels_delta_at_least_8": 694
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONOSPLITTER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 67
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 101,
+      "pixels_delta_at_least_8": 176
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONOWARDEN_BOOTS",
+    "32": {
+      "distinct_frames": 13,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 314
+    },
+    "64": {
+      "distinct_frames": 13,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 687
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONOWARDEN_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 231
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 646
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONOWARDEN_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 78,
+      "pixels_delta_at_least_8": 216
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 95,
+      "pixels_delta_at_least_8": 633
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CHRONOWARDEN_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 146
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 384
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CINDER_APPRENTICE_STAFF",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 71
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 145
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CINDERVAULT_COAL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 349
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 673
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CITADEL_STANDARD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 81
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 287
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COALFIRE_BRAWLER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 145
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 341
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COALFIRE_BRAWLER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 205
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 634
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COALFIRE_BRAWLER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 132
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 69,
+      "pixels_delta_at_least_8": 367
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COALFIRE_BRAWLER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 128
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 345
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COLOSSUS_WARHAMMER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 93
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 233
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COMET_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 98
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 244
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COPPER_FALCHION",
+    "32": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 46
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 17,
+      "pixels_delta_at_least_8": 60
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COPPER_TINKER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 120
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 107
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COPPER_TINKER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 54
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 116
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COPPER_TINKER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 57
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 17,
+      "pixels_delta_at_least_8": 81
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COPPER_TINKER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 51
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 20
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CORALBOUND_TRIDENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 102
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 217
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COSMIC_SAGE_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 191
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 71,
+      "pixels_delta_at_least_8": 430
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COSMIC_SAGE_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 204
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 64,
+      "pixels_delta_at_least_8": 483
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COSMIC_SAGE_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 72,
+      "pixels_delta_at_least_8": 75
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 79,
+      "pixels_delta_at_least_8": 184
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_COSMIC_SAGE_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 132
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 72,
+      "pixels_delta_at_least_8": 377
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_CREATION_CRUCIBLE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 163
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 428
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DAWN_CHANTER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 82
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 247
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DAWN_CHANTER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 129
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 384
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DAWN_CHANTER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 62
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 207
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DAWN_CHANTER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 48
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 172
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DAWNSTAR_RELIC",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 69,
+      "pixels_delta_at_least_8": 213
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 101,
+      "pixels_delta_at_least_8": 543
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEATH_RULER_CROWN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 130
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 77,
+      "pixels_delta_at_least_8": 328
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEATHBLOOM_STIGMA",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 61
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 158
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEEPCAVE_PROSPECTOR_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 111
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 140
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEEPCAVE_PROSPECTOR_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 75
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 59
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEEPCAVE_PROSPECTOR_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 58
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 135
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEEPCAVE_PROSPECTOR_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 53
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 77
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DEEPSTONE_CHUNK",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 53
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 9,
+      "pixels_delta_at_least_8": 4
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DRAGONBANNER_HORN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 73
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 223
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DRAGONBREATH_ALLOY",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 186
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 410
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DRAGONSPINE_LANCE",
+    "32": {
+      "distinct_frames": 13,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 84
+    },
+    "64": {
+      "distinct_frames": 13,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 196
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DRAGONSTORM_SPEAR",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 85
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 94,
+      "pixels_delta_at_least_8": 258
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_DREAMWOOD_HEART",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 473
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 1295
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_EARTHSHATTER_CLAYMORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 48
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 86
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ECLIPSE_SCYTHE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 75
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 218
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ECLIPSE_VEIL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 129
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 416
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ELDER_SAP",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 129
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 416
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_EMBER_DUST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 59
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 168
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_EMBERWEAVE_STAFF",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 101
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 239
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENCHANTED_DIAMOND",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 186
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 76,
+      "pixels_delta_at_least_8": 316
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENCHANTED_GOLD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 73
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 23,
+      "pixels_delta_at_least_8": 138
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENCHANTED_LAPIS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 145
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 380
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENCHANTED_REDSTONE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 65
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 129
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_END_CRYSTAL_HEART",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 96,
+      "pixels_delta_at_least_8": 248
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 125,
+      "pixels_delta_at_least_8": 692
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_EDICT_BLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 116
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 83,
+      "pixels_delta_at_least_8": 251
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_GUARD_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 75,
+      "pixels_delta_at_least_8": 177
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 113,
+      "pixels_delta_at_least_8": 380
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_GUARD_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 170
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 450
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_GUARD_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 80,
+      "pixels_delta_at_least_8": 234
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 101,
+      "pixels_delta_at_least_8": 631
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_GUARD_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 139
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 118,
+      "pixels_delta_at_least_8": 354
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDSUN_HEARTFURNACE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 110,
+      "pixels_delta_at_least_8": 305
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 123,
+      "pixels_delta_at_least_8": 540
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDWITCH_REBEL_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 68,
+      "pixels_delta_at_least_8": 155
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 86,
+      "pixels_delta_at_least_8": 342
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDWITCH_REBEL_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 127
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 377
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDWITCH_REBEL_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 68,
+      "pixels_delta_at_least_8": 101
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 380
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_ENDWITCH_REBEL_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 109
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 79,
+      "pixels_delta_at_least_8": 263
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_EXPEDITION_WARHAMMER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 75
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 22,
+      "pixels_delta_at_least_8": 176
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FATESEVER_HOLYBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 75,
+      "pixels_delta_at_least_8": 66
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 121,
+      "pixels_delta_at_least_8": 180
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FIELD_MEDIC_WAND",
+    "32": {
+      "distinct_frames": 8,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 29
+    },
+    "64": {
+      "distinct_frames": 8,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 36
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FORGED_IRON",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 146
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 12,
+      "pixels_delta_at_least_8": 78
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FRONTIER_SCOUT_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 47
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 18
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FRONTIER_SCOUT_CHESTPLATE",
+    "32": {
+      "distinct_frames": 10,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 23
+    },
+    "64": {
+      "distinct_frames": 10,
+      "peak_rgb_delta": 12,
+      "pixels_delta_at_least_8": 5
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FRONTIER_SCOUT_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 58
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 54
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FRONTIER_SCOUT_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 72
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 33
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FROSTBOLT_CROSSBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 104
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 248
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FROSTWOOD_HUNTSMAN_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 150
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 323
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FROSTWOOD_HUNTSMAN_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 101
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 338
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FROSTWOOD_HUNTSMAN_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 75
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 212
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FROSTWOOD_HUNTSMAN_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 94
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 257
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_FUNERAL_PETAL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 327
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 770
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GALE_SHORTBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 54
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 206
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GENESIS_CORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 84,
+      "pixels_delta_at_least_8": 507
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 1206
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GENESIS_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 121
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 478
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GLACIER_SCEPTER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 94
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 238
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GLOOM_SICKLE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 63
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 25
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRANITE_BULWARK_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 92
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 30
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRANITE_BULWARK_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 117
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 90
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRANITE_BULWARK_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 70
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 106
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRANITE_BULWARK_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 118
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 10,
+      "pixels_delta_at_least_8": 74
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRANITE_PLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 106
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 9,
+      "pixels_delta_at_least_8": 24
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRAVE_MOSS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 113
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 22,
+      "pixels_delta_at_least_8": 255
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRAVEBLOOM",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 192
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 654
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_GRAVETALON_SICKLE",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 118
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 61,
+      "pixels_delta_at_least_8": 283
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEALER_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 366
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 983
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEARTFURNACE_WARHAMMER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 87,
+      "pixels_delta_at_least_8": 189
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 111,
+      "pixels_delta_at_least_8": 494
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEARTHWARD_BRANCH",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 114
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 282
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEAVEN_INVERSION_LANCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 33
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 106
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEAVENPIERCER_LANCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 53
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 130
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HEAVENS_COMPASS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 264
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 906
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HELLFORGE_PRISM",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 341
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 98,
+      "pixels_delta_at_least_8": 768
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HOMECOMING_CHRONICLE",
+    "32": {
+      "distinct_frames": 12,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 28
+    },
+    "64": {
+      "distinct_frames": 12,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 72
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_HUNTERS_LEATHER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 60
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 9
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_INFERNO_CHAINBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 72,
+      "pixels_delta_at_least_8": 121
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 102,
+      "pixels_delta_at_least_8": 307
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_IRON_SENTINEL_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 74
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 57
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_IRON_SENTINEL_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 125
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 17,
+      "pixels_delta_at_least_8": 211
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_IRON_SENTINEL_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 83
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 124
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_IRON_SENTINEL_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 246
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 127
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_JUDGEMENT_AMETHYST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 143
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 438
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LANCER_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 182
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 445
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LAST_RITES_SEAL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 99
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 240
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LAWWEAVER_CODEX",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 136
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 420
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LEVIATHAN_HEART",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 420
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 98,
+      "pixels_delta_at_least_8": 1222
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LEVIATHAN_TRIDENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 98
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 77,
+      "pixels_delta_at_least_8": 265
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LIFESONG_GRAIL",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 106
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 232
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_LIVING_RESIN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 208
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 449
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MARCHING_SANCTUARY_MAUL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 91
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 273
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MARROW_REQUIEM_CENSER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 78
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 167
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MEADOW_MENDER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 116
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 281
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MEADOW_MENDER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 140
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 353
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MEADOW_MENDER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 107
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 218
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MEADOW_MENDER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 61
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 176
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MILITIA_CROSSBOW",
+    "32": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 91
+    },
+    "64": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 104
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MIRAGE_DAGGERS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 49
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 125
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MISTWOOD_SAP",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 140
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 265
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOLTEN_BERSERKER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 78,
+      "pixels_delta_at_least_8": 262
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 98,
+      "pixels_delta_at_least_8": 533
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOLTEN_BERSERKER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 82,
+      "pixels_delta_at_least_8": 260
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 99,
+      "pixels_delta_at_least_8": 635
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOLTEN_BERSERKER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 109,
+      "pixels_delta_at_least_8": 158
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 128,
+      "pixels_delta_at_least_8": 451
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOLTEN_BERSERKER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 161
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 86,
+      "pixels_delta_at_least_8": 400
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOLTEN_SIGIL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 107,
+      "pixels_delta_at_least_8": 148
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 117,
+      "pixels_delta_at_least_8": 391
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOONSHADOW_FIBER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 74
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 224
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_MOONWELL_CODEX",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 110
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 19,
+      "pixels_delta_at_least_8": 268
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NAMELESS_REAPER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 117
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 71,
+      "pixels_delta_at_least_8": 402
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NEBULA_SCEPTER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 148
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 395
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NETHER_STAR_CORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 195
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 66,
+      "pixels_delta_at_least_8": 578
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NIGHTSHADE_SICKLE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 161
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 375
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NIGHTSTALKER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 132
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 299
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NIGHTSTALKER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 150
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 59,
+      "pixels_delta_at_least_8": 332
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NIGHTSTALKER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 117
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 302
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_NIGHTSTALKER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 81
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 62,
+      "pixels_delta_at_least_8": 224
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OAKEN_HUNTER_BOW",
+    "32": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 68
+    },
+    "64": {
+      "distinct_frames": 14,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 86
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OATHKEEPER_MAUL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 87
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 19,
+      "pixels_delta_at_least_8": 211
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_BULWARK",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 133
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 366
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_CARAPACE",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 196
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 511
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_DRAGOON_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 200
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 426
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_DRAGOON_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 126
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 315
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_DRAGOON_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 134
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 105,
+      "pixels_delta_at_least_8": 314
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_OSSUARY_DRAGOON_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 112
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 303
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_DUELIST_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 82
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 237
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_DUELIST_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 136
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 434
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_DUELIST_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 85
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 279
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_DUELIST_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 63
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 122
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_SILK",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 137
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 344
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHANTOM_TWINBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 53
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 134
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHARAOH_EDICT_TABLET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 188
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 647
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_EMBER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 109,
+      "pixels_delta_at_least_8": 277
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 142,
+      "pixels_delta_at_least_8": 725
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_HIEROPHANT_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 87,
+      "pixels_delta_at_least_8": 214
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 110,
+      "pixels_delta_at_least_8": 451
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_HIEROPHANT_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 97,
+      "pixels_delta_at_least_8": 307
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 106,
+      "pixels_delta_at_least_8": 879
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_HIEROPHANT_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 128,
+      "pixels_delta_at_least_8": 227
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 134,
+      "pixels_delta_at_least_8": 649
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_HIEROPHANT_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 99,
+      "pixels_delta_at_least_8": 177
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 137,
+      "pixels_delta_at_least_8": 466
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PHOENIX_SABER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 126
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 114,
+      "pixels_delta_at_least_8": 351
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PREDATOR_FANG",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 38
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 14,
+      "pixels_delta_at_least_8": 26
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PRIMORDIAL_CATALYST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 178
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 593
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PRISM_HANDCANNON",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 45
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 177
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_PRISMATIC_SCALE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 287
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 724
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_QUARTZ_RAPIER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 35
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 44
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RALLYING_BUGLE",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 106
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 192
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_REALMSEEKER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 142
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 21,
+      "pixels_delta_at_least_8": 318
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_REALMSEEKER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 100
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 307
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_REALMSEEKER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 65
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 215
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_REALMSEEKER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 66
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 217
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RECRUIT_BLADE",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 35
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 23
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RECRUIT_VANGUARD_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 110
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 12,
+      "pixels_delta_at_least_8": 28
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RECRUIT_VANGUARD_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 82
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 61
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RECRUIT_VANGUARD_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 70
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 62
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RECRUIT_VANGUARD_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 81
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 12,
+      "pixels_delta_at_least_8": 67
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_REQUIEM_BELL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 80
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 268
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RESCUE_BEACON_CROSSBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 66
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 163
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIBBON_SINEW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 72
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 41
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFT_SCHOLAR_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 153
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 104,
+      "pixels_delta_at_least_8": 354
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFT_SCHOLAR_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 173
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 393
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFT_SCHOLAR_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 159
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 61,
+      "pixels_delta_at_least_8": 443
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFT_SCHOLAR_LEGGINGS",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 44,
+      "pixels_delta_at_least_8": 134
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 83,
+      "pixels_delta_at_least_8": 281
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFTGUIDE_DAGGER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 133
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 90,
+      "pixels_delta_at_least_8": 330
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RIFTWALKER_EDGE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 116
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 318
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNE_ACOLYTE_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 153
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 368
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNE_ACOLYTE_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 133
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 369
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNE_ACOLYTE_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 119
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 363
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNE_ACOLYTE_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 102
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 306
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNEBULWARK_HAMMER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 165
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 515
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNED_QUARTZ",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 44
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 68
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNEGLASS_SAVANT_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 188
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 478
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNEGLASS_SAVANT_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 292
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 823
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNEGLASS_SAVANT_HELMET",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 87
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 214
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_RUNEGLASS_SAVANT_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 114
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 290
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SABER_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 71,
+      "pixels_delta_at_least_8": 213
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 524
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SCYTHE_ECHO_SICKLE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 44
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 184
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SEA_KINGS_CROWN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 65,
+      "pixels_delta_at_least_8": 366
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 1092
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SEISMIC_GEODE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 274
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 692
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SERAPHIC_CHALICE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 221
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 620
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SEVENFOLD_END_BOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 63
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 139
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SEVERED_FATE_THREAD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 47,
+      "pixels_delta_at_least_8": 61
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 128
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SHATTERED_WINGBONE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 112
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 352
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SILENT_CHANT_CODEX",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 72,
+      "pixels_delta_at_least_8": 532
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 92,
+      "pixels_delta_at_least_8": 1408
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SILENT_RUNE_ASH",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 161
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 271
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SIREN_TEAR",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 168
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 447
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKULLBARRAGE_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 68,
+      "pixels_delta_at_least_8": 73
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 176
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYGLASS_PLUME",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 164
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 460
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYHOOK_TWINBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 146
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 68,
+      "pixels_delta_at_least_8": 488
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYHUNTER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 60,
+      "pixels_delta_at_least_8": 212
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 663
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYHUNTER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 72,
+      "pixels_delta_at_least_8": 149
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 89,
+      "pixels_delta_at_least_8": 511
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYHUNTER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 476
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 102,
+      "pixels_delta_at_least_8": 1708
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYHUNTER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 150
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 374
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYLINE_GLAIVE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 68
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 44,
+      "pixels_delta_at_least_8": 157
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SKYREND_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 102
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 54,
+      "pixels_delta_at_least_8": 235
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOLAR_AEGIS_FRAGMENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 240
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 105,
+      "pixels_delta_at_least_8": 698
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOLAR_AEGIS_LANCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 69,
+      "pixels_delta_at_least_8": 127
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 297
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOLAR_MANE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 121,
+      "pixels_delta_at_least_8": 420
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 128,
+      "pixels_delta_at_least_8": 1251
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOLARWIND_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 179
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 95,
+      "pixels_delta_at_least_8": 464
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOUL_CROWN_CENSER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 96
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 199
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOULFIRE_MARROW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 87,
+      "pixels_delta_at_least_8": 192
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 111,
+      "pixels_delta_at_least_8": 508
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOULPAWN_REQUIEM",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 19
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 62
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOULRECALL_CODEX",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 143
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 409
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOULSOIL_PULP",
+    "32": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 47
+    },
+    "64": {
+      "distinct_frames": 9,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 15
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOULTHREAD_SCYTHE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 42
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 44
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SOVEREIGN_HOLYBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 67
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 174
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SPECTRAL_LIGAMENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 239
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 598
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SPIRITWOOD_CORE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 221
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 549
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SPRINGWATER_CHARM",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 24,
+      "pixels_delta_at_least_8": 116
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 211
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STARFALL_CANNON",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 106
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 63,
+      "pixels_delta_at_least_8": 333
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STELLAR_AMETHYST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 47,
+      "pixels_delta_at_least_8": 90
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 90,
+      "pixels_delta_at_least_8": 197
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STONEWARD_MAUL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 46
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 19
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORM_EYE_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 44,
+      "pixels_delta_at_least_8": 167
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 398
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORM_EYE_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 78,
+      "pixels_delta_at_least_8": 170
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 437
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORM_EYE_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 69,
+      "pixels_delta_at_least_8": 103
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 86,
+      "pixels_delta_at_least_8": 205
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORM_EYE_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 136
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 71,
+      "pixels_delta_at_least_8": 375
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORMCORE_REPEATER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 46,
+      "pixels_delta_at_least_8": 140
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 47,
+      "pixels_delta_at_least_8": 277
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_STORMFEATHER_CROWN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 223
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 74,
+      "pixels_delta_at_least_8": 627
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNCROWN_DUELIST_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 174
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 43,
+      "pixels_delta_at_least_8": 493
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNCROWN_DUELIST_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 41,
+      "pixels_delta_at_least_8": 225
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 750
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNCROWN_DUELIST_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 161
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 489
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNCROWN_DUELIST_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 76
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 44,
+      "pixels_delta_at_least_8": 218
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNDRIED_HIDE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 144
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 9,
+      "pixels_delta_at_least_8": 6
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNFALL_REPEATER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 147
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 391
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_SUNFORGED_BLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 47
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 112
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TANK_CREST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 221
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 49,
+      "pixels_delta_at_least_8": 563
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPERED_COPPER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 133
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 29
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_FALCONER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 182
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 57,
+      "pixels_delta_at_least_8": 414
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_FALCONER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 68,
+      "pixels_delta_at_least_8": 302
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 82,
+      "pixels_delta_at_least_8": 1015
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_FALCONER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 70,
+      "pixels_delta_at_least_8": 142
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 88,
+      "pixels_delta_at_least_8": 369
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_FALCONER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 129
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 61,
+      "pixels_delta_at_least_8": 374
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_PIKE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 73
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 202
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TEMPEST_PINION",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 146
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 64,
+      "pixels_delta_at_least_8": 401
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_THUNDERHEAD_REPEATER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 96
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 244
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDAL_SALT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 125
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 302
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDEBREAKER_TRIDENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 51
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 111
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDECALLER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 267
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 720
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDECALLER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 214
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 55,
+      "pixels_delta_at_least_8": 597
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDECALLER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 50,
+      "pixels_delta_at_least_8": 86
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 255
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDECALLER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 319
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 895
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TIDESEEKER_LANCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 107
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 73,
+      "pixels_delta_at_least_8": 310
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TITAN_BASALT",
+    "32": {
+      "distinct_frames": 7,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 62
+    },
+    "64": {
+      "distinct_frames": 7,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 138
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TRAILBLAZER_SPEAR",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 39
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 16,
+      "pixels_delta_at_least_8": 23
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TRAILSCOUT_SHORTBLADE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 54
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 18,
+      "pixels_delta_at_least_8": 56
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TRUESIGHT_LONGBOW",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 43
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 22,
+      "pixels_delta_at_least_8": 87
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_TWIN_ECLIPSE_ESSENCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 89,
+      "pixels_delta_at_least_8": 313
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 97,
+      "pixels_delta_at_least_8": 679
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VEILHOOK_SICKLE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 48
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 137
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VEINSEEKER_MAUL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 119
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 15,
+      "pixels_delta_at_least_8": 66
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VERDANT_CENSER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 49
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 111
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VERDANT_ESSENCE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 173
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 38,
+      "pixels_delta_at_least_8": 422
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VITAL_OATHSWORD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 62
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 17,
+      "pixels_delta_at_least_8": 69
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOID_ORACLE_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 42,
+      "pixels_delta_at_least_8": 415
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 47,
+      "pixels_delta_at_least_8": 1006
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOID_ORACLE_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 74,
+      "pixels_delta_at_least_8": 179
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 78,
+      "pixels_delta_at_least_8": 456
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOID_ORACLE_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 66,
+      "pixels_delta_at_least_8": 126
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 97,
+      "pixels_delta_at_least_8": 313
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOID_ORACLE_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 76
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 189
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOID_PEARL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 67,
+      "pixels_delta_at_least_8": 502
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 1194
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOIDNEEDLE_RAILGUN",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 53,
+      "pixels_delta_at_least_8": 24
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 77,
+      "pixels_delta_at_least_8": 64
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOLCANIC_GLASS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 138
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 22,
+      "pixels_delta_at_least_8": 247
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_VOLTAIC_ARBALEST",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 136
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 33,
+      "pixels_delta_at_least_8": 301
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WARDEN_MAUL",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 93
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 11,
+      "pixels_delta_at_least_8": 51
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WARPATH_PIKE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 46
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 36,
+      "pixels_delta_at_least_8": 125
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WARSONG_HORN",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 28,
+      "pixels_delta_at_least_8": 89
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 31,
+      "pixels_delta_at_least_8": 257
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WATCHMAN_HALBERD",
+    "32": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 68
+    },
+    "64": {
+      "distinct_frames": 15,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 51
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WAYFARER_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 30,
+      "pixels_delta_at_least_8": 151
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 17,
+      "pixels_delta_at_least_8": 116
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WAYFARER_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 65
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 13,
+      "pixels_delta_at_least_8": 39
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WAYFARER_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 90
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 18,
+      "pixels_delta_at_least_8": 114
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WAYFARER_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 110
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 10,
+      "pixels_delta_at_least_8": 24
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WINDWORN_FEATHER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 226
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 52,
+      "pixels_delta_at_least_8": 600
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WINGBREAKER_GREATSWORD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 39,
+      "pixels_delta_at_least_8": 39
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 45,
+      "pixels_delta_at_least_8": 73
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WITCHBLINK_SCISSORS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 85,
+      "pixels_delta_at_least_8": 176
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 97,
+      "pixels_delta_at_least_8": 466
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WITCHMARK_SHARD",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 79,
+      "pixels_delta_at_least_8": 140
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 88,
+      "pixels_delta_at_least_8": 333
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WORLD_END_BULWARK",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 25,
+      "pixels_delta_at_least_8": 107
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 27,
+      "pixels_delta_at_least_8": 369
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WORLDROOT_CODEX",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 48,
+      "pixels_delta_at_least_8": 145
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 62,
+      "pixels_delta_at_least_8": 376
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WORLDROOT_SEED",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 51,
+      "pixels_delta_at_least_8": 216
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 56,
+      "pixels_delta_at_least_8": 663
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WORLDSPINE_FRAGMENT",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 26,
+      "pixels_delta_at_least_8": 249
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 58,
+      "pixels_delta_at_least_8": 683
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WRAITHFIRE_DRAGONHEART",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 80,
+      "pixels_delta_at_least_8": 208
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 91,
+      "pixels_delta_at_least_8": 613
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WRAITHFIRE_SCEPTER",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 90,
+      "pixels_delta_at_least_8": 134
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 107,
+      "pixels_delta_at_least_8": 321
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WYRM_GUARD_BOOTS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 32,
+      "pixels_delta_at_least_8": 105
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 29,
+      "pixels_delta_at_least_8": 263
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WYRM_GUARD_CHESTPLATE",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 37,
+      "pixels_delta_at_least_8": 149
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 472
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WYRM_GUARD_HELMET",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 35,
+      "pixels_delta_at_least_8": 135
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 449
+    },
+    "needs_motion_review": false
+  },
+  {
+    "id": "YKI_WYRM_GUARD_LEGGINGS",
+    "32": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 34,
+      "pixels_delta_at_least_8": 65
+    },
+    "64": {
+      "distinct_frames": 16,
+      "peak_rgb_delta": 40,
+      "pixels_delta_at_least_8": 240
+    },
+    "needs_motion_review": false
+  }
+]

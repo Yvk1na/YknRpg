@@ -1,0 +1,98 @@
+[
+  {
+    "id": "YKI_VITAL_OATHSWORD",
+    "ok": true
+  },
+  {
+    "id": "YKI_GLACIER_SCEPTER",
+    "ok": true
+  },
+  {
+    "id": "YKI_COPPER_FALCHION",
+    "ok": true
+  },
+  {
+    "id": "YKI_FIELD_MEDIC_WAND",
+    "ok": true
+  },
+  {
+    "id": "YKI_BASTION_GREATSWORD",
+    "ok": true
+  },
+  {
+    "id": "YKI_GENESIS_LONGBOW",
+    "ok": true
+  },
+  {
+    "id": "YKI_ASTRAL_GRIMOIRE",
+    "ok": true
+  },
+  {
+    "id": "YKI_PRISM_HANDCANNON",
+    "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 18d04999-a089-4d8b-bb3e-c162d7553366. safety_violations=[illicit].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"illicit\\\"\\n      ]\\n    }\\n  }\\n}\")"
+  },
+  {
+    "id": "YKI_BRAMBLE_LONGBOW",
+    "ok": true
+  },
+  {
+    "id": "YKI_HEARTHWARD_BRANCH",
+    "ok": true
+  },
+  {
+    "id": "YKI_WARSONG_HORN",
+    "ok": true
+  },
+  {
+    "id": "YKI_WARDEN_MAUL",
+    "ok": true
+  },
+  {
+    "id": "YKI_PHOENIX_SABER",
+    "ok": true
+  },
+  {
+    "id": "YKI_WORLDROOT_CODEX",
+    "ok": true
+  },
+  {
+    "id": "YKI_VERDANT_CENSER",
+    "ok": true
+  },
+  {
+    "id": "YKI_TRAILBLAZER_SPEAR",
+    "ok": true
+  },
+  {
+    "id": "YKI_VOIDNEEDLE_RAILGUN",
+    "ok": true
+  },
+  {
+    "id": "YKI_QUARTZ_RAPIER",
+    "ok": true
+  },
+  {
+    "id": "YKI_LEVIATHAN_TRIDENT",
+    "ok": true
+  },
+  {
+    "id": "YKI_CHRONOSPLITTER",
+    "ok": true
+  },
+  {
+    "id": "YKI_INFERNO_CHAINBLADE",
+    "ok": true
+  },
+  {
+    "id": "YKI_STARFALL_CANNON",
+    "ok": true
+  },
+  {
+    "id": "YKI_PHANTOM_TWINBLADE",
+    "ok": true
+  },
+  {
+    "id": "YKI_ECLIPSE_SCYTHE",
+    "ok": true
+  }
+]
