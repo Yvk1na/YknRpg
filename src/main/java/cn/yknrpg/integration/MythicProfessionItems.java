@@ -19,7 +19,9 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
+import java.util.function.Function;
 
 /** 生活职业插件使用 MythicMobs 物品及 Bukkit 无序配方，无需连接其私有实现。 */
 public final class MythicProfessionItems {
@@ -129,18 +131,45 @@ public final class MythicProfessionItems {
     private List<IngredientSpec> ingredients(ShapelessRecipe recipe) {
         List<IngredientSpec> result = new ArrayList<>();
         for (RecipeChoice choice : recipe.getChoiceList()) {
-            if (choice instanceof RecipeChoice.ExactChoice exact && exact.getChoices().size() == 1) {
-                ItemStack stack = exact.getChoices().getFirst();
-                result.add(mythicItems.itemId(stack).map(IngredientSpec::custom)
-                        .orElseGet(() -> IngredientSpec.material(stack.getType())));
-            } else if (choice instanceof RecipeChoice.MaterialChoice materials && materials.getChoices().size() == 1) {
-                result.add(IngredientSpec.material(materials.getChoices().getFirst()));
-            } else {
-                throw new IllegalStateException(pluginName + " 配方包含不支持的可选材料：" + recipe.getKey());
-            }
+            result.add(resolveIngredient(choice, recipe.getKey()));
         }
         while (result.size() < 9) result.add(IngredientSpec.empty());
         return List.copyOf(result);
+    }
+
+    IngredientSpec resolveIngredient(RecipeChoice choice, NamespacedKey recipeKey) {
+        return resolveIngredient(choice, recipeKey, pluginName, mythicItems::itemId);
+    }
+
+    static IngredientSpec resolveIngredient(
+            RecipeChoice choice,
+            NamespacedKey recipeKey,
+            String pluginName,
+            Function<ItemStack, Optional<String>> customItemIdLookup) {
+        if (choice instanceof RecipeChoice.ExactChoice exact) {
+            List<ItemStack> choices = exact.getChoices();
+            if (choices.isEmpty()) {
+                throw new IllegalStateException(pluginName + " 配方包含不支持的可选材料：" + recipeKey);
+            }
+            IngredientSpec expected = toIngredientSpec(choices.getFirst(), customItemIdLookup);
+            for (int index = 1; index < choices.size(); index++) {
+                if (!toIngredientSpec(choices.get(index), customItemIdLookup).equals(expected)) {
+                    throw new IllegalStateException(pluginName + " 配方包含不支持的可选材料：" + recipeKey);
+                }
+            }
+            return expected;
+        }
+        if (choice instanceof RecipeChoice.MaterialChoice materials && materials.getChoices().size() == 1) {
+            return IngredientSpec.material(materials.getChoices().getFirst());
+        }
+        throw new IllegalStateException(pluginName + " 配方包含不支持的可选材料：" + recipeKey);
+    }
+
+    private static IngredientSpec toIngredientSpec(
+            ItemStack stack, Function<ItemStack, Optional<String>> customItemIdLookup) {
+        return customItemIdLookup.apply(stack)
+                .map(IngredientSpec::custom)
+                .orElseGet(() -> IngredientSpec.material(stack.getType()));
     }
 
     CatalogKind kind(Material material) {
