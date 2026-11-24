@@ -8,7 +8,7 @@
   "profiles": {
     "sword":    {"grip": [12,51], "first": {"rotation": [0,-90,24], "scale": 0.99}, "third": {"rotation": [0,-90,49], "scale": 1.12}},
     "knife":    {"grip": [14,49], "first": {"rotation": [0,-86,18], "scale": 0.78}, "third": {"rotation": [0,-90,42], "scale": 0.83}},
-    "scythe":   {"grip": [16,46], "first": {"rotation": [0,-88,16], "scale": 1.02}, "third": {"rotation": [0,-90,35], "scale": 1.28}},
+    "scythe":   {"grip": [16,46], "first": {"rotation": [0,92,16], "scale": 1.02}, "third": {"rotation": [0,90,35], "scale": 1.28}},
     "polearm":  {"grip": [23,41], "first": {"rotation": [0,-90,18], "scale": 1.16}, "third": {"rotation": [0,-90,42], "scale": 1.55}},
     "standard": {"grip": [19,44], "first": {"rotation": [0,-78,29], "scale": 1.03}, "third": {"rotation": [0,-83,51], "scale": 1.42}},
     "hammer":   {"grip": [15,49], "first": {"rotation": [0,-86,22], "scale": 0.96}, "third": {"rotation": [0,-90,47], "scale": 1.15}},

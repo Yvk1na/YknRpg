@@ -111,6 +111,11 @@ class CatalogAnimationAssetsTest {
                     double rx = Math.toRadians(rotation.get(0));
                     double ry = Math.toRadians(rotation.get(1) * mirror);
                     double rz = Math.toRadians(rotation.get(2) * mirror);
+                    if ("scythe".equals(entry.get("grip_profile"))) {
+                        // The hook extends toward positive texture X from the shaft.
+                        assertTrue(-Math.cos(rz) * Math.sin(ry) < 0,
+                                "Scythe hook must face negative model depth: " + id + " " + path);
+                    }
                     double x = (((Number) grip.get(0)).doubleValue() - 31.5) * scale.get(0) / 4;
                     double y = (31.5 - ((Number) grip.get(1)).doubleValue()) * scale.get(1) / 4;
                     double across = x * Math.cos(rz) - y * Math.sin(rz);
